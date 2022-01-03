@@ -14,11 +14,11 @@ We can test out the URL parameter by adding payloads to see how the web applicat
 
 Suppose there isn't input validation, and instead of accessing the PDF files at /var/www/app/CVs location, the web application retrieves files from other directories, which in this case /etc/passwd. Each .. entry moves one directory until it reaches the root directory /. Then it changes the directory to /etc, and from there, it read the passwd file.
 
-![https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/3037513935e3242f74bd0fe97833b5ac.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/3037513935e3242f74bd0fe97833b5ac.png)
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/3037513935e3242f74bd0fe97833b5ac.png)
 
 As a result, the web application sends back the file's content to the user.
 
-![https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/c12d34456ebe25bafffeb829c58f98c0.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/c12d34456ebe25bafffeb829c58f98c0.png)
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/c12d34456ebe25bafffeb829c58f98c0.png)
 
 Similarly, if the web application runs on a Windows server, the attacker needs to provide Windows paths. For example, if the attacker wants to read the boot.ini file located in c:\boot.ini, then the attacker can try the following depending on the target OS version:
 
@@ -30,7 +30,19 @@ The same concept applies here as with Linux operating systems, where we climb up
 
 Sometimes, developers will add filters to limit access to only certain files or directories. Below are some common OS files you could use when testing.
 
-[Untitled](https://www.notion.so/6ec57002313a482298e1bd4499232308)
+| **Location**                | <p><strong>Description</strong><br></p>                                                                                                                           |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /etc/issue                  | <p>contains a message or system identification to be printed before the login prompt.<br></p>                                                                     |
+| /etc/profile                | controls system-wide default variables, such as Export variables, File creation mask (umask), Terminal types, Mail messages to indicate when new mail has arrived |
+| /proc/version               | <p>specifies the version of the Linux kernel<br></p>                                                                                                              |
+| /etc/passwd                 | <p>has all registered user that has access to a system<br></p>                                                                                                    |
+| /etc/shadow                 | <p>contains information about the system's users' passwords<br></p>                                                                                               |
+| /root/.bash\_history        | <p>contains the history commands for root user<br></p>                                                                                                            |
+| /var/log/dmessage           | <p>contains global system messages, including the messages that are logged during system startup<br></p>                                                          |
+| /var/mail/root              | all emails for root user                                                                                                                                          |
+| /root/.ssh/id\_rsa          | Private SSH keys for a root or any known valid user on the server                                                                                                 |
+| /var/log/apache2/access.log | the accessed requests for Apache  webserver                                                                                                                       |
+| C:\boot.ini                 | contains the boot options for computers with BIOS firmware                                                                                                        |
 
 ***
 

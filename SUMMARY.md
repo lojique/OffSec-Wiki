@@ -6,13 +6,20 @@
 
 * [Penetration Testing Student](ine/penetration-testing-student/README.md)
   * [Pentesting Prerequisites](ine/penetration-testing-student/pentesting-prerequisites/README.md)
-    * [INE](ine/penetration-testing-student/pentesting-prerequisites/ine.md)
-    * [HTTP Traffic Sniffing](ine/penetration-testing-student/pentesting-prerequisites/http-traffic-sniffing.md)
-    * [Binary Arithmetic Basics](ine/penetration-testing-student/pentesting-prerequisites/binary-arithmetic-basics.md)
-    * [Protocols](ine/penetration-testing-student/pentesting-prerequisites/protocols.md)
-    * [Internet Protocols (IP)](ine/penetration-testing-student/pentesting-prerequisites/internet-protocols-ip.md)
-    * [Link Layer Devices & Protocols](ine/penetration-testing-student/pentesting-prerequisites/link-layer-devices-and-protocols.md)
-    * [TCP & UDP](ine/penetration-testing-student/pentesting-prerequisites/tcp-and-udp.md)
+    * [Introduction](ine/penetration-testing-student/pentesting-prerequisites/introduction/README.md)
+      * [HTTP Traffic Sniffing](ine/penetration-testing-student/pentesting-prerequisites/introduction/http-traffic-sniffing.md)
+      * [Binary Arithmetic Basics](ine/penetration-testing-student/pentesting-prerequisites/introduction/binary-arithmetic-basics.md)
+    * [Networking](ine/penetration-testing-student/pentesting-prerequisites/networking/README.md)
+      * [Protocols](ine/penetration-testing-student/pentesting-prerequisites/networking/protocols.md)
+      * [Internet Protocols (IP)](ine/penetration-testing-student/pentesting-prerequisites/networking/internet-protocols-ip.md)
+      * [Link Layer Devices & Protocols](ine/penetration-testing-student/pentesting-prerequisites/networking/link-layer-devices-and-protocols.md)
+      * [TCP & UDP](ine/penetration-testing-student/pentesting-prerequisites/networking/tcp-and-udp.md)
+      * [Firewall & Defense](ine/penetration-testing-student/pentesting-prerequisites/networking/firewall-and-defense.md)
+    * [Web Applications](ine/penetration-testing-student/pentesting-prerequisites/web-applications.md)
+    * [Penetration Testing](ine/penetration-testing-student/pentesting-prerequisites/penetration-testing.md)
+  * [Penetration Testing: Preliminary Skills & Programming](ine/penetration-testing-student/penetration-testing-preliminary-skills-and-programming.md)
+  * [Penetration Testing Basics](ine/penetration-testing-student/penetration-testing-basics.md)
+  * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
 
 ## TryHackMe
 

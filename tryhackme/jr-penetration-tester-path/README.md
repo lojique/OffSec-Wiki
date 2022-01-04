@@ -5,6 +5,19 @@ coverY: 0
 
 # Jr Penetration Tester Path
 
-1. list
-2. list
-3. list 3
+1. Introduction to Web Hacking
+   * Walking An Application
+   * Content Discovery
+   * Subdomain Enumeration
+   * Authentication Bypass
+   * IDOR
+   * [file-inclusion.md](file-inclusion.md "mention")
+   * SSRF
+   * Cross-site Scripting (XSS)
+   * Command Injection
+   * SQL Injection
+2. Burp Suite
+3. Network Security
+4. Vulnerability Research
+5. Metasploit
+6. Privilege Escalation

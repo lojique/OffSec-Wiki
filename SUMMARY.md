@@ -15,6 +15,7 @@
       * [TCP & UDP](ine/penetration-testing-student/pentesting-prerequisites/networking/tcp-and-udp.md)
       * [Firewall & Defense](ine/penetration-testing-student/pentesting-prerequisites/networking/firewall-and-defense.md)
       * [Lab - Find the Secret Server](ine/penetration-testing-student/pentesting-prerequisites/networking/lab-find-the-secret-server.md)
+      * [Wireshark](ine/penetration-testing-student/pentesting-prerequisites/networking/wireshark.md)
     * [Web Applications](ine/penetration-testing-student/pentesting-prerequisites/web-applications.md)
     * [Penetration Testing](ine/penetration-testing-student/pentesting-prerequisites/penetration-testing.md)
   * [Penetration Testing: Preliminary Skills & Programming](ine/penetration-testing-student/penetration-testing-preliminary-skills-and-programming.md)

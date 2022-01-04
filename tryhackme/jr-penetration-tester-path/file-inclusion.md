@@ -8,7 +8,7 @@ Path traversal vulnerabilities occur when the user's input is passed to a functi
 
 The following graph shows how a web application stores files in /var/www/app. The happy path would be the user requesting the contents of userCV.pdf from a defined path /var/www/app/CVs.
 
-![image](https://tryhackme-images.s3.amazonaws.com/user-uploads/5d617515c8cd8348d0b4e68f/room-content/45d9c1baacda290c1f95858e27f740c9.png)
+![](../../.gitbook/assets/45d9c1baacda290c1f95858e27f740c9.png)
 
 We can test out the URL parameter by adding payloads to see how the web application behaves. Path traversal attacks, also known as the dot-dot-slash attack, take advantage of moving the directory one step up using the double dots ../. If the attacker finds the entry point, which in this case get.php?file=, then the attacker may send something as follows, http://webapp.thm/get.php?file=../../../../etc/passwd
 
@@ -41,7 +41,7 @@ Sometimes, developers will add filters to limit access to only certain files or 
 | /var/log/dmessage           | <p>contains global system messages, including the messages that are logged during system startup<br></p>                                                          |
 | /var/mail/root              | all emails for root user                                                                                                                                          |
 | /root/.ssh/id\_rsa          | Private SSH keys for a root or any known valid user on the server                                                                                                 |
-| /var/log/apache2/access.log | the accessed requests for Apache  webserver                                                                                                                       |
+| /var/log/apache2/access.log | the accessed requests for Apache webserver                                                                                                                        |
 | C:\boot.ini                 | contains the boot options for computers with BIOS firmware                                                                                                        |
 
 ***

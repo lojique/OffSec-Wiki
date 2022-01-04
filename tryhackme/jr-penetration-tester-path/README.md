@@ -5,21 +5,6 @@ coverY: 0
 
 # Jr Penetration Tester Path
 
-1. [test](file-inclusion.md#path-traversal)
+1. list
 2. list
 3. list 3
-
-
-
-#### idk what to do
-
-dlasfd
-
-{% embed url="https://portswigger.net/web-security/host-header" %}
-
-#### okay then
-
-## yes
-
-## wow
-

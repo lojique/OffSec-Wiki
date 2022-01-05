@@ -19,6 +19,8 @@
       * [Lab - Data Exfiltration](ine/penetration-testing-student/pentesting-prerequisites/networking/lab-data-exfiltration.md)
     * [Web Applications](ine/penetration-testing-student/pentesting-prerequisites/web-applications/README.md)
       * [HTTP Protocol Basics](ine/penetration-testing-student/pentesting-prerequisites/web-applications/http-protocol-basics.md)
+      * [HTTP Cookies](ine/penetration-testing-student/pentesting-prerequisites/web-applications/http-cookies.md)
+      * [Same Origin Policy](ine/penetration-testing-student/pentesting-prerequisites/web-applications/same-origin-policy.md)
     * [Penetration Testing](ine/penetration-testing-student/pentesting-prerequisites/penetration-testing.md)
   * [Penetration Testing: Preliminary Skills & Programming](ine/penetration-testing-student/penetration-testing-preliminary-skills-and-programming.md)
   * [Penetration Testing Basics](ine/penetration-testing-student/penetration-testing-basics.md)

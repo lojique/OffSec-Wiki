@@ -23,7 +23,16 @@
       * [Same Origin Policy](ine/penetration-testing-student/pentesting-prerequisites/web-applications/same-origin-policy.md)
     * [Penetration Testing](ine/penetration-testing-student/pentesting-prerequisites/penetration-testing.md)
   * [Penetration Testing: Preliminary Skills & Programming](ine/penetration-testing-student/penetration-testing-preliminary-skills-and-programming.md)
-  * [Penetration Testing Basics](ine/penetration-testing-student/penetration-testing-basics.md)
+  * [Penetration Testing Basics](ine/penetration-testing-student/penetration-testing-basics/README.md)
+    * [Information Gathering](ine/penetration-testing-student/penetration-testing-basics/information-gathering/README.md)
+      * [Subdomain Enumeration](ine/penetration-testing-student/penetration-testing-basics/information-gathering/subdomain-enumeration.md)
+    * [Footprinting & Scanning](ine/penetration-testing-student/penetration-testing-basics/footprinting-and-scanning/README.md)
+      * [Mapping a Network](ine/penetration-testing-student/penetration-testing-basics/footprinting-and-scanning/mapping-a-network.md)
+    * [Vulnerability Assessment](ine/penetration-testing-student/penetration-testing-basics/vulnerability-assessment.md)
+    * [Web Attacks](ine/penetration-testing-student/penetration-testing-basics/web-attacks.md)
+    * [System Attacks](ine/penetration-testing-student/penetration-testing-basics/system-attacks.md)
+    * [Network Attacks](ine/penetration-testing-student/penetration-testing-basics/network-attacks.md)
+    * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)
   * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
 
 ## TryHackMe

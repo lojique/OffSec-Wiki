@@ -29,6 +29,7 @@
     * [Footprinting & Scanning](ine/penetration-testing-student/penetration-testing-basics/footprinting-and-scanning/README.md)
       * [Mapping a Network](ine/penetration-testing-student/penetration-testing-basics/footprinting-and-scanning/mapping-a-network.md)
       * [Port Scanning](ine/penetration-testing-student/penetration-testing-basics/footprinting-and-scanning/port-scanning.md)
+      * [Lab - Scanning and OS Fingerprinting](ine/penetration-testing-student/penetration-testing-basics/footprinting-and-scanning/lab-scanning-and-os-fingerprinting.md)
     * [Vulnerability Assessment](ine/penetration-testing-student/penetration-testing-basics/vulnerability-assessment.md)
     * [Web Attacks](ine/penetration-testing-student/penetration-testing-basics/web-attacks.md)
     * [System Attacks](ine/penetration-testing-student/penetration-testing-basics/system-attacks.md)

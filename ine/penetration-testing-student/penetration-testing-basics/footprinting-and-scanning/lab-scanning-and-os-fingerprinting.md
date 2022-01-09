@@ -358,3 +358,46 @@ Now let's answer the questions
 
 7\. A NoSQL database and SQL database services are running on different machines. Can we use Nmap scripts to extract some information from those?
 
+### NoSQL
+
+* I didn't really know what NoSQL was, but after researching MongoDB, I learned that it's classified as a NoSQL database program.  This [article ](https://www.mongodb.com/nosql-explained)explains it well.&#x20;
+* NoSQL database service is running on target-2 so the syntax would be:
+
+```bash
+# there was a LOT of info, so I piped it to less
+nmap -p 27017 --script mongodb-info target-2 | less
+```
+
+![](<../../../../.gitbook/assets/image (3).png>)
+
+```bash
+nmap -p 27017 --script mongodb-databases target-2
+```
+
+![](<../../../../.gitbook/assets/2022-01-08 20\_15\_55-INE Labs - Brave.png>)
+
+Looks like there's no authentication needed
+
+![](<../../../../.gitbook/assets/2022-01-08 20\_19\_45-INE Labs - Brave.png>)
+
+### MySQL
+
+Now we basically just repeat what we did for Mongodb against mysql
+
+![](<../../../../.gitbook/assets/image (5).png>)
+
+![](<../../../../.gitbook/assets/2022-01-08 20\_32\_04-INE Labs - Brave.png>)
+
+![](<../../../../.gitbook/assets/2022-01-08 20\_35\_03-INE Labs - Brave.png>)
+
+As you can see, we can gather a ton of information from nmap's NSE scripts
+
+{% hint style="danger" %}
+Using a wildcard, such as --script mysql-\* could get your requests blocked because a host can be configured to do that. Thse wildcards can generate a lot of noise and prevent you from making further requests
+{% endhint %}
+
+![](<../../../../.gitbook/assets/image (10).png>)
+
+## Resources
+
+* [https://nmap.org/nsedoc/categories/discovery.html](https://nmap.org/nsedoc/categories/discovery.html)

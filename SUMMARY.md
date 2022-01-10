@@ -36,6 +36,7 @@
       * [HTTP Verbs](ine/penetration-testing-student/penetration-testing-basics/web-attacks/http-verbs.md)
       * [Directories and Files Enumeration](ine/penetration-testing-student/penetration-testing-basics/web-attacks/directories-and-files-enumeration.md)
       * [Lab - Dirbuster](ine/penetration-testing-student/penetration-testing-basics/web-attacks/lab-dirbuster.md)
+      * [Google Hacking](ine/penetration-testing-student/penetration-testing-basics/web-attacks/google-hacking.md)
     * [System Attacks](ine/penetration-testing-student/penetration-testing-basics/system-attacks.md)
     * [Network Attacks](ine/penetration-testing-student/penetration-testing-basics/network-attacks.md)
     * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)

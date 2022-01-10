@@ -368,7 +368,7 @@ Now let's answer the questions
 nmap -p 27017 --script mongodb-info target-2 | less
 ```
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 ```bash
 nmap -p 27017 --script mongodb-databases target-2

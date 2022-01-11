@@ -106,7 +106,7 @@ Host: www.example.site
 * You can then use the size you got to build the PUT message
   * Example: Upload a page displaying info about the PHP installation on a server
 
-![](<../../../../.gitbook/assets/image (6).png>)
+![](<../../../../.gitbook/assets/image (6) (1).png>)
 
 ### Uploading a PHP Shell with PUT
 
@@ -133,7 +133,7 @@ Host: www.example.site
 Remember that PUT requires that we pass the content length. So we have to know the shell size
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14) (1).png>)
 
 * We can then build a valid PUT request
 

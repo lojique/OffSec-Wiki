@@ -30,7 +30,7 @@ The best tools for this lab are: - Nmap - Linux Terminal
 
 Because we know that there are other machines on the same network as our Kali GUI instance, we need to know what our IP is in order to run a scan for the correct range
 
-![](<../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
 
 Pinging one of the local machines helps us make sure we scan the right network of IP range (in this case: 192.110.145.\*)
 

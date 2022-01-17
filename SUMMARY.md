@@ -47,6 +47,8 @@
 
 * [Jr Penetration Tester Path](tryhackme/jr-penetration-tester-path/README.md)
   * [File Inclusion](tryhackme/jr-penetration-tester-path/file-inclusion.md)
+* [Writeups](tryhackme/writeups/README.md)
+  * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
 
 ## HackTheBox
 

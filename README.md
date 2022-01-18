@@ -7,6 +7,16 @@ description: >-
 
 # Welcome!
 
+## About Me
+
+My name is Adam.&#x20;
+
+I currently work as Cyber Security Analyst, dipping my feet into Cyber Threat Intelligence and a heavy interest in Penetration Testing
+
+I plan on using this book to document and store information that I deem worth saving and share it with others so that others can learn too
+
+It should be noted that a lot of **information is copy/pasted from other resources and that content belongs to the original writers/rightful owners**. I will try to keep that consistent where needed
+
 ## Connect with me!
 
 TryHackMe: [https://tryhackme.com/p/lojique](https://tryhackme.com/p/lojique)

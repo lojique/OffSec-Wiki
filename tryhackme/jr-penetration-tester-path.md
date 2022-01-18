@@ -11,7 +11,7 @@ coverY: 0
    * Subdomain Enumeration
    * Authentication Bypass
    * IDOR
-   * [file-inclusion.md](file-inclusion.md "mention")
+   * File Inclusion
    * SSRF
    * Cross-site Scripting (XSS)
    * Command Injection

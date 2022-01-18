@@ -9,9 +9,9 @@ description: >-
 
 ## About Me
 
-My name is Adam.&#x20;
+My name is Adam
 
-I currently work as Cyber Security Analyst, dipping my feet into Cyber Threat Intelligence and a heavy interest in Penetration Testing
+I currently work as Cyber Security Analyst with a heavy interest in Penetration Testing
 
 I plan on using this book to document and store information that I deem worth saving and share it with others so that others can learn too
 

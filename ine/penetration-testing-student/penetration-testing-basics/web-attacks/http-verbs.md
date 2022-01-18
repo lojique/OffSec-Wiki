@@ -89,51 +89,51 @@ Host: www.example.site
 
 * enumerate available methods or verbs
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1).png>)
 
 ### Exploiting DELETE
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../../.gitbook/assets/image (21) (1).png>)
 
-![Logging in becomes impossible for every user](../../../../.gitbook/assets/image.png)
+![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1).png>)
 
 ### Exploiting PUT
 
 * you have to know the size of the file you want to upload on the server
 
-![](<../../../../.gitbook/assets/image (10).png>)
+![](<../../../../.gitbook/assets/image (10) (1).png>)
 
 * You can then use the size you got to build the PUT message
   * Example: Upload a page displaying info about the PHP installation on a server
 
-![](<../../../../.gitbook/assets/image (6) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1) (1).png>)
 
 ### Uploading a PHP Shell with PUT
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (11) (1).png>)
 
 * This can be used by passing our commands via the cmd GET parameter
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../../.gitbook/assets/image (20) (1).png>)
 
 * The shell has the same permissions of the web server it runs on.
 * For example, we can write a file
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (1).png>)
 
 * We can also read it
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (1).png>)
 
 * And we can even read a system file
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 {% hint style="warning" %}
 Remember that PUT requires that we pass the content length. So we have to know the shell size
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
 
 * We can then build a valid PUT request
 

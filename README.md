@@ -13,7 +13,7 @@ My name is Adam
 
 I currently work as Cyber Security Analyst with a heavy interest in Penetration Testing
 
-Outside of work, I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning Italian (ever so slowly)
+Outside of work, I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning Italian (ever so slowly). I also understand some French, Swedish, Norwegian and Danish
 
 I plan on using this book to document and store information that I deem worth saving and share it with others so that others can learn too
 

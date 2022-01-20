@@ -2,7 +2,7 @@
 
 Most web apps use some kind of backend database to store the data they process. To interact with it, Structured Query Language (SQL) is used.
 
-![](<../../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
 
 SQLi attacks allow an unauthorized user to take control over SQL statements used by a web app
 
@@ -58,7 +58,7 @@ select field from table; -- this is another comment
 
 ### SELECT Example
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 These two queries provide the same result
 
@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23).png>)
+![](<../../../../.gitbook/assets/image (23) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -85,7 +85,7 @@ You can also perform a UNION with some chosen data:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT 'Example', 'Data';
 ```
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../../.gitbook/assets/image (26) (1).png>)
 
 ## SQL Queries Inside Web Apps
 
@@ -99,7 +99,7 @@ In order to do the same thing from within a web app, the web app must
 
 PHP example code of a connection to a MySQL database and execution of a static query
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (1).png>)
 
 ## Vulnerable Dynamic Queries
 
@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24).png>)
+![](<../../../../.gitbook/assets/image (24) (1).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -157,23 +157,23 @@ Testing an input for SQLi means trying to inject:
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (25) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 
 We see that id is an injection point
 
-![](<../../../../.gitbook/assets/image (15).png>)
+![](<../../../../.gitbook/assets/image (15) (1).png>)
 
 ## Boolean Based SQLi
 
 You want to transform a query in a True/False condition, which reflects its state to the web app output
 
-![always true condition](<../../../../.gitbook/assets/image (21).png>)
+![always true condition](<../../../../.gitbook/assets/image (21) (1).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22).png>)
+![always false condition](<../../../../.gitbook/assets/image (22) (1).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 
@@ -191,7 +191,7 @@ If our payload makes the results of the original query empty, then we can have t
 SELECT description FROM item WHERE id='' UNION SELECT user(); -- -';
 ```
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (1).png>)
 
 The comment tells MySQL to ignore everything that will be added right after. This is because we don't want the web application to add other strings to our query
 
@@ -203,7 +203,7 @@ The reason for the third dash is because most browsers automatically remove trai
 
 You first need to know how many fields the vulnerable query selects
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (18) (1).png>)
 
 We know the injection is here, but we get an error which means the number of fields of the original query and our payload do not match
 
@@ -225,7 +225,7 @@ We'll inject some known values and checking the results
 
 Now we can exploit the injection. As an example, we'll query for user()
 
-![](<../../../../.gitbook/assets/image (31).png>)
+![](<../../../../.gitbook/assets/image (31) (1).png>)
 
 ### Avoiding SQL Disaster
 

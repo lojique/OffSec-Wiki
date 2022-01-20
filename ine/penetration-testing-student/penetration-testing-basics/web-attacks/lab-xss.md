@@ -1,0 +1,3 @@
+# Lab - XSS
+
+To be added...

@@ -99,7 +99,7 @@ In order to do the same thing from within a web app, the web app must
 
 PHP example code of a connection to a MySQL database and execution of a static query
 
-![](<../../../../.gitbook/assets/image (17) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1).png>)
 
 ## Vulnerable Dynamic Queries
 
@@ -191,7 +191,7 @@ If our payload makes the results of the original query empty, then we can have t
 SELECT description FROM item WHERE id='' UNION SELECT user(); -- -';
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
 
 The comment tells MySQL to ignore everything that will be added right after. This is because we don't want the web application to add other strings to our query
 

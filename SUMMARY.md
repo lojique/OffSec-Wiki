@@ -48,6 +48,7 @@
     * [Network Attacks](ine/penetration-testing-student/penetration-testing-basics/network-attacks.md)
       * [Authentication Cracking](ine/penetration-testing-student/penetration-testing-basics/network-attacks/authentication-cracking.md)
       * [Lab - Bruteforce and Password cracking Live](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-bruteforce-and-password-cracking-live.md)
+      * [Windows Shares](ine/penetration-testing-student/penetration-testing-basics/network-attacks/windows-shares.md)
     * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)
   * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
 

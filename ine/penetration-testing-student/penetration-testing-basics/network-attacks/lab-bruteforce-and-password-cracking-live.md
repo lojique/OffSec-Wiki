@@ -66,7 +66,7 @@ nmap -p22 --script=ssh-brute --script-args userdb=users.lst,passdb=/usr/share/nm
 
 Now we verify the credentials
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (1).png>)
 
 ### Metasploit
 

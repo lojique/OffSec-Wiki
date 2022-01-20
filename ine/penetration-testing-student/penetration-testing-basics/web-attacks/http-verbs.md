@@ -119,7 +119,7 @@ Host: www.example.site
 * The shell has the same permissions of the web server it runs on.
 * For example, we can write a file
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
 
 * We can also read it
 

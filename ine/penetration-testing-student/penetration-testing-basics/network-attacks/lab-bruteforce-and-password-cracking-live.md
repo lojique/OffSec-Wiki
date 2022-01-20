@@ -84,4 +84,4 @@ Now type run and enter
 
 ![](<../../../../.gitbook/assets/image (18).png>)
 
-As you can see, the password for root is attack and we're given a shell that we can interact in and verify that we are indeed root
+As you can see, the password for root is attack and we're given a session that we can interact with using `sessions -i <id number>` and verify that we are indeed root

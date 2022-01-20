@@ -45,7 +45,7 @@
       * [Malware](ine/penetration-testing-student/penetration-testing-basics/system-attacks/malware.md)
       * [Password Attacks](ine/penetration-testing-student/penetration-testing-basics/system-attacks/password-attacks.md)
       * [Buffer Overflow Attacks](ine/penetration-testing-student/penetration-testing-basics/system-attacks/buffer-overflow-attacks.md)
-    * [Network Attacks](ine/penetration-testing-student/penetration-testing-basics/network-attacks/README.md)
+    * [Network Attacks](ine/penetration-testing-student/penetration-testing-basics/network-attacks.md)
       * [Authentication Cracking](ine/penetration-testing-student/penetration-testing-basics/network-attacks/authentication-cracking.md)
       * [Lab - Bruteforce and Password cracking Live](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-bruteforce-and-password-cracking-live.md)
     * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)

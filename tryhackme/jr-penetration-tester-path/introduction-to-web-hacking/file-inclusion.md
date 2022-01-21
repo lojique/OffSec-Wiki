@@ -203,3 +203,9 @@ As a developer, it's important to be aware of web application vulnerabilities, h
 5. Carefully analyze the web application and allow only protocols and PHP wrappers that are in need.&#x20;
 6. Never trust user input, and make sure to implement proper input validation against file inclusion.&#x20;
 7. Implement whitelisting for file names and locations as well as blacklisting.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Information courtesy of [Yas3r](https://tryhackme.com/p/Yas3r)
+
+Go to the room [here](https://tryhackme.com/room/fileinc).

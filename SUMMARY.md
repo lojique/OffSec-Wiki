@@ -54,7 +54,7 @@
 
 ## TryHackMe
 
-* [Jr Penetration Tester Path](tryhackme/jr-penetration-tester-path/README.md)
+* [Jr Penetration Tester Path](tryhackme/jr-penetration-tester-path.md)
   * [Introduction to Web Hacking](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/README.md)
     * [Walking An Application](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/walking-an-application.md)
     * [Content Discovery](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/content-discovery.md)

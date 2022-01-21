@@ -53,7 +53,7 @@ Potential SSRF vulnerabilities can be spotted in web applications in many differ
 
 When a full URL is used in a parameter in the address bar:
 
-![](<../../../.gitbook/assets/image (25).png>)
+![](<../../../.gitbook/assets/image (25) (1).png>)
 
 A hidden field in a form:
 
@@ -99,7 +99,7 @@ First, create a customer account and sign in. Once you've signed in, visit `http
 
 If you choose one of the avatars and then click the Update Avatar button, you'll see the form change and, above it, display your currently selected avatar. Viewing the page source will show your current avatar is displayed using the data URI scheme, and the image content is base64 encoded as per the screenshot below.
 
-![](<../../../.gitbook/assets/image (29).png>)
+![](<../../../.gitbook/assets/image (29) (1).png>)
 
 Now let's try making the request again but changing the avatar value to private in hopes that the server will access the resource and get past the IP address block. To do this, firstly, right-click on one of the radio buttons on the avatar form and select Inspect:
 

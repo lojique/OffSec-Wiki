@@ -46,7 +46,7 @@ Suppose there isn't input validation, and instead of accessing the PDF files at 
 
 As a result, the web application sends back the file's content to the user.
 
-![](<../../../.gitbook/assets/image (25) (1).png>)
+![](<../../../.gitbook/assets/image (25) (1) (1).png>)
 
 Similarly, if the web application runs on a Windows server, the attacker needs to provide Windows paths. For example, if the attacker wants to read the <mark style="color:red;">`boot.ini`</mark> file located in <mark style="color:red;">`c:\boot.ini`</mark>, then the attacker can try the following depending on the target OS version:
 

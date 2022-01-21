@@ -2,7 +2,7 @@
 
 Most web apps use some kind of backend database to store the data they process. To interact with it, Structured Query Language (SQL) is used.
 
-![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 SQLi attacks allow an unauthorized user to take control over SQL statements used by a web app
 
@@ -67,7 +67,7 @@ select Name, Description from products where ID='1';
 select Name, Description from products where Name='Shoes';
 ```
 
-![](<../../../../.gitbook/assets/image (4).png>)
+![](<../../../../.gitbook/assets/image (4) (1).png>)
 
 ### UNION Example
 
@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -85,7 +85,7 @@ You can also perform a UNION with some chosen data:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT 'Example', 'Data';
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
 
 ## SQL Queries Inside Web Apps
 
@@ -203,7 +203,7 @@ The reason for the third dash is because most browsers automatically remove trai
 
 You first need to know how many fields the vulnerable query selects
 
-![](<../../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
 
 We know the injection is here, but we get an error which means the number of fields of the original query and our payload do not match
 

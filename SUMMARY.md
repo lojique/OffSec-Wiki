@@ -62,9 +62,15 @@
     * [Authentication Bypass](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/authentication-bypass.md)
     * [IDOR](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/idor.md)
     * [File Inclusion](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/file-inclusion.md)
+    * [SSRF](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/ssrf.md)
 * [Writeups](tryhackme/writeups/README.md)
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
 
 ## HackTheBox
 
 * [Coming soon...](hackthebox/coming-soon....md)
+
+***
+
+* [Web Hacking](web-hacking/README.md)
+  * [SSRF](web-hacking/ssrf.md)

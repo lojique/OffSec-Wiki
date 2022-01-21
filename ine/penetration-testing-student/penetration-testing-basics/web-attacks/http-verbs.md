@@ -123,7 +123,7 @@ Host: www.example.site
 
 * We can also read it
 
-![](<../../../../.gitbook/assets/image (12) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (12) (1) (1) (1).png>)
 
 * And we can even read a system file
 

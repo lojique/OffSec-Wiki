@@ -30,7 +30,7 @@ If the developer of an app does not enforce buffers limits, an attacker could fi
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (10).png>)
 
@@ -56,7 +56,7 @@ To save some stack space for later use, the application can simply reserve some 
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../../.gitbook/assets/image (26) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (16) (1).png>)
 

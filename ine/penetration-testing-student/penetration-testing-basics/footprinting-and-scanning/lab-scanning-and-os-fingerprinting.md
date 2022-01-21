@@ -330,7 +330,7 @@ Now let's answer the questions
    * There are 6 machines
 2. What ports are open on `pc1.ine.local` machine?
 
-![](<../../../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
 3\. What OS is running on machine `pc1.ine.local` machine?
 

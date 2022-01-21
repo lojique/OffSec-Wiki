@@ -25,6 +25,8 @@ A successful SSRF attack can result in any of the following:
 
 ## SSRF Examples
 
+This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helping to explain this room
+
 ![](../../../.gitbook/assets/image.png)
 
 ![](<../../../.gitbook/assets/image (23).png>)

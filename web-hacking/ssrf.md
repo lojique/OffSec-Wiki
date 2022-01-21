@@ -141,3 +141,8 @@ There are a lot of other types of payload that can be used (such as URL encoding
 Information courtesy of [falconfeast](https://tryhackme.com/p/falconfeast)
 
 Go to the room [here](https://tryhackme.com/room/ssrf)
+
+Resources for SSRF stuff\
+[https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery)\
+[https://cobalt.io/blog/from-ssrf-to-port-scanner](https://cobalt.io/blog/from-ssrf-to-port-scanner)\
+[https://github.com/swisskyrepo/SSRFmap](https://github.com/swisskyrepo/SSRFmap)\

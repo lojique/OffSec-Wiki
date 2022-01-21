@@ -11,7 +11,7 @@ coverY: 0
    * Subdomain Enumeration
    * Authentication Bypass
    * IDOR
-   * File Inclusion
+   * [File Inclusion](introduction-to-web-hacking/file-inclusion.md)
    * SSRF
    * Cross-site Scripting (XSS)
    * Command Injection

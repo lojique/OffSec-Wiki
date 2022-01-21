@@ -54,7 +54,14 @@
 
 ## TryHackMe
 
-* [Jr Penetration Tester Path](tryhackme/jr-penetration-tester-path.md)
+* [Jr Penetration Tester Path](tryhackme/jr-penetration-tester-path/README.md)
+  * [Introduction to Web Hacking](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/README.md)
+    * [Walking An Application](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/walking-an-application.md)
+    * [Content Discovery](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/content-discovery.md)
+    * [Subdomain Enumeration](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/subdomain-enumeration.md)
+    * [Authentication Bypass](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/authentication-bypass.md)
+    * [IDOR](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/idor.md)
+    * [File Inclusion](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/file-inclusion.md)
 * [Writeups](tryhackme/writeups/README.md)
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
 

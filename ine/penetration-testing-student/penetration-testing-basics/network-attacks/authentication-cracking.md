@@ -23,7 +23,7 @@ To get detailed information about a module, you can use the `-U` command line sw
 
 You can check the available modules in the "supported services" section of the help
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![](<../../../../.gitbook/assets/image (30) (1).png>)
 
 To launch a dictionary attack against a service with a list of usernames (inside a users.txt file) and a list of passwords (pass.txt file):
 

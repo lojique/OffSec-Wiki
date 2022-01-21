@@ -58,7 +58,7 @@ select field from table; -- this is another comment
 
 ### SELECT Example
 
-![](<../../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
 These two queries provide the same result
 
@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -159,7 +159,7 @@ Testing an input for SQLi means trying to inject:
 
 ![](<../../../../.gitbook/assets/image (14) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 
@@ -171,9 +171,9 @@ We see that id is an injection point
 
 You want to transform a query in a True/False condition, which reflects its state to the web app output
 
-![always true condition](<../../../../.gitbook/assets/image (21) (1).png>)
+![always true condition](<../../../../.gitbook/assets/image (21) (1) (1).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22) (1).png>)
+![always false condition](<../../../../.gitbook/assets/image (22) (1) (1).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 
@@ -219,9 +219,9 @@ Once we know how many fields are in the query, we can test which fields are part
 
 We'll inject some known values and checking the results
 
-![](<../../../../.gitbook/assets/image (5).png>)
+![](<../../../../.gitbook/assets/image (5) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../../.gitbook/assets/image (20) (1).png>)
 
 Now we can exploit the injection. As an example, we'll query for user()
 

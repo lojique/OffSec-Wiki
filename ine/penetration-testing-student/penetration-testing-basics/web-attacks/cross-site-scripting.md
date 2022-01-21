@@ -110,7 +110,7 @@ For example, you can display the current cookies using:
 <script>alert(document.cookie)</script>
 ```
 
-![](<../../../../.gitbook/assets/image (5) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1).png>)
 
 This code sends cookie content to an attacker-controlled site
 

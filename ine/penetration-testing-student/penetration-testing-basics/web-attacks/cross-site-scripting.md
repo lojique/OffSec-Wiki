@@ -76,7 +76,7 @@ Triggered by posting a link on a social network or via a phishing campaign. When
 
 Some browsers like Chrome have a reflected XSS filter built in so they will not run some XSS reflected attacks
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
 
 However, they can only filter trivial and known XSS attacks since there are advanced methods that can bypass anti-XSS filters
 

@@ -102,7 +102,7 @@ The basic page we've already worked with doesn't have any filter, so to try thes
 
 Try it for yourself: try to enter the old payloads such as "`http://127.0.0.1:3306`" or `http://localhost:3306` -- you'll get something like:
 
-![](<../.gitbook/assets/image (20).png>)
+![](<../.gitbook/assets/image (20) (1).png>)
 
 As expected, this is because there are SSRF checks in place, but still it's possible to bypass them. It's also possible that if you try to access `http://[::]:3306`, you might get "target not reachable". When this happens it can be the result of how the framework is handling input in the application. If it was a PHP application then this would work, but flask/Django might interpret these payloads differently. If you fail with that payload, try removing the brackets (i.e try `http://:::3306`): remember that the third colon indicates the separation between port and IP.
 

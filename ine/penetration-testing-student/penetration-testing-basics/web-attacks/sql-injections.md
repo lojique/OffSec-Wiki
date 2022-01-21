@@ -2,7 +2,7 @@
 
 Most web apps use some kind of backend database to store the data they process. To interact with it, Structured Query Language (SQL) is used.
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
 
 SQLi attacks allow an unauthorized user to take control over SQL statements used by a web app
 
@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -159,13 +159,13 @@ Testing an input for SQLi means trying to inject:
 
 ![](<../../../../.gitbook/assets/image (14) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 
 We see that id is an injection point
 
-![](<../../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1).png>)
 
 ## Boolean Based SQLi
 
@@ -203,17 +203,17 @@ The reason for the third dash is because most browsers automatically remove trai
 
 You first need to know how many fields the vulnerable query selects
 
-![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 We know the injection is here, but we get an error which means the number of fields of the original query and our payload do not match
 
 Trying with two fields seems to work
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 Trying with three fields verifies if the original query just has two fields
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1).png>)
 
 Once we know how many fields are in the query, we can test which fields are part of the output page
 
@@ -221,11 +221,11 @@ We'll inject some known values and checking the results
 
 ![](<../../../../.gitbook/assets/image (5) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
 
 Now we can exploit the injection. As an example, we'll query for user()
 
-![](<../../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 ### Avoiding SQL Disaster
 

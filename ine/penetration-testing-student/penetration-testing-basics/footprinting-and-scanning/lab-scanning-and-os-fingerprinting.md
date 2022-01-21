@@ -338,7 +338,7 @@ Now let's answer the questions
 
 4\. What services are running on `pc2.ine.local` machine?
 
-![](<../../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (1).png>)
 
 5\. What is the version of the FTP server running on one of the machines?
 
@@ -368,7 +368,7 @@ Now let's answer the questions
 nmap -p 27017 --script mongodb-info target-2 | less
 ```
 
-![](<../../../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 ```bash
 nmap -p 27017 --script mongodb-databases target-2

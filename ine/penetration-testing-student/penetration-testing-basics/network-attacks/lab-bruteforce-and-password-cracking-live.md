@@ -78,7 +78,7 @@ Then type: `use auxiliary/scanner/ssh/ssh_login`
 
 View options with "show options" and set the ones we need as such:
 
-![](<../../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
 Now type run and enter
 

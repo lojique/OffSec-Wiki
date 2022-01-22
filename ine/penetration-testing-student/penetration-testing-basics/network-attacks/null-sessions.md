@@ -55,7 +55,104 @@ To perform the same operations of nbstat, we can use nmblookup with the same com
 nmblookup -A <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (25) (1).png>)
 
 ## Smbclient
 
+An FTP-like client to access Windows shares
+
+```
+smbclient -L //10.130.40.80 -N
+```
+
+`-N` forces the tool to not ask for a password
+
+![](<../../../../.gitbook/assets/image (5).png>)
+
+Smbclient can detects the very same shares detected by NET VIEW but also displays adminsitrative tools that are hidden when using Windows standard tools (IPC$, Admin$, and C$)
+
+## Checking for Null Sessions
+
+In this example, we'll exploit the IPC$ administrative share by trying to connect to it without valid credentials
+
+### with Windows
+
+This tells Windows to connect to the IPC$ share by using both an empty password and username
+
+```
+NET USE \\<target IP>\IPC$ '' \u:''
+```
+
+![](<../../../../.gitbook/assets/image (9).png>)
+
+This command does not work with C$
+
+![](<../../../../.gitbook/assets/image (31).png>)
+
+### with Linux
+
+We can do the same checks by using smbclient
+
+```
+smbclient \\<target IP>/IPC$ -N
+```
+
+![](<../../../../.gitbook/assets/image (19).png>)
+
+## Exploiting Null Sessions
+
+We can exploit null sessions using the WIndows NET command but there are some automated tools we can also leverage
+
+### Enum
+
+[Enum](http://packetstormsecurity.com/search/?q=win32+enum\&s=files) is a command line utility that can retrieve information from a system vulnerable to null session attacks
+
+```
+enum -S <target IP> 
+```
+
+![](<../../../../.gitbook/assets/image (21).png>)
+
+\-S enumerate shares on a machine
+
+\-U enumerates users
+
+![](<../../../../.gitbook/assets/image (23).png>)
+
+\-P if you need to mount a network authentication attack, you can check the password policy
+
+![](<../../../../.gitbook/assets/image (25).png>)
+
+Checking password policies before running an authentication attack lets you find-tune an attack tool to:
+
+* Prevent accounts locking
+* Prevent false positives
+* Choose your dictionary or your bruteforcer configuration (know the min/max password length helps you save time)
+
+### Winfo
+
+Another command line [utility](http://packetstormsecurity.com/search/?q=winfo\&s=files) used to automate null session exploitation
+
+the -n switch tells the tool to use null sessions
+
+```
+winfo <target IP> -n
+```
+
+### Enum4Linux
+
+enum4linux is a PERL script that can perform the same operations of enum and Winfo
+
+By default it performs:
+
+* User enumeration
+* Share enumeration
+* Group and member enumeration
+* Password policy extraction
+* OS information detection
+* A nmblookup run
+* Printer information extraction
+
+## About Null Sessions
+
+Even if by default they are not enabled on modern Microsoft operations systems, you can sometimes find them on enterprise networks because of retro compatibility with legacy systems and applications

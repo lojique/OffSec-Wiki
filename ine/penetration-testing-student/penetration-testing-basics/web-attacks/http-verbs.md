@@ -93,7 +93,7 @@ Host: www.example.site
 
 ### Exploiting DELETE
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1).png>)
 
 ![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
@@ -127,7 +127,7 @@ Host: www.example.site
 
 * And we can even read a system file
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
 
 {% hint style="warning" %}
 Remember that PUT requires that we pass the content length. So we have to know the shell size

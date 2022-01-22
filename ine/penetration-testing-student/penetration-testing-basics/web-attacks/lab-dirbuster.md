@@ -33,7 +33,7 @@ First we will ping the web app just to make sure we can reach it
 
 Next, we'll run an nmap scan on the target to gather some info
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png>)
 
 We know an Apache HTTP web server is running on port 80 with the version of 2.4.7
 
@@ -53,8 +53,8 @@ We'll let this run for a while and also increase the number of running threads t
 
 And after waiting for a while we check the 'Results - Tree View' tab and see something interesting
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1).png>)
 
 Checking out the file reveals all username and plain-text passwords stored on here
 
-![](<../../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1).png>)

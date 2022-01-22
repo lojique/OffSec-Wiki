@@ -58,7 +58,7 @@ select field from table; -- this is another comment
 
 ### SELECT Example
 
-![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 These two queries provide the same result
 
@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -159,7 +159,7 @@ Testing an input for SQLi means trying to inject:
 
 ![](<../../../../.gitbook/assets/image (14) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 
@@ -171,7 +171,7 @@ We see that id is an injection point
 
 You want to transform a query in a True/False condition, which reflects its state to the web app output
 
-![always true condition](<../../../../.gitbook/assets/image (21) (1) (1).png>)
+![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
 ![always false condition](<../../../../.gitbook/assets/image (22) (1) (1).png>)
 
@@ -219,13 +219,13 @@ Once we know how many fields are in the query, we can test which fields are part
 
 We'll inject some known values and checking the results
 
-![](<../../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
 
 Now we can exploit the injection. As an example, we'll query for user()
 
-![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 ### Avoiding SQL Disaster
 

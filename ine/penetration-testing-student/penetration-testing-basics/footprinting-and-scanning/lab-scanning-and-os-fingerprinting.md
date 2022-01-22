@@ -354,7 +354,7 @@ Now let's answer the questions
 
 * As for the domain, we know the machine is `target-3` with IP `192.110.145.6`
 
-![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 7\. A NoSQL database and SQL database services are running on different machines. Can we use Nmap scripts to extract some information from those?
 
@@ -384,7 +384,7 @@ Looks like there's no authentication needed
 
 Now we basically just repeat what we did for Mongodb against mysql
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/2022-01-08 20\_32\_04-INE Labs - Brave.png>)
 

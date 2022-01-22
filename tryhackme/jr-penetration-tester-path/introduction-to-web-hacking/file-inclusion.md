@@ -36,7 +36,7 @@ Path traversal vulnerabilities occur when the user's input is passed to a functi
 
 The following graph shows how a web application stores files in <mark style="color:red;">`/var/www/app`</mark>. The happy path would be the user requesting the contents of userCV.pdf from a defined path <mark style="color:red;">`/var/www/app/CVs`</mark>.
 
-![](<../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1).png>)
 
 We can test out the URL parameter by adding payloads to see how the web application behaves. Path traversal attacks, also known as the <mark style="color:red;">`dot-dot-slash`</mark> attack, take advantage of moving the directory one step up using the double dots <mark style="color:red;">`../`</mark>. If the attacker finds the entry point, which in this case <mark style="color:red;">`get.php?file=`</mark>, then the attacker may send something as follows, <mark style="color:red;">`http://webapp.thm/get.php?file=../../../../etc/passwd`</mark>
 
@@ -46,7 +46,7 @@ Suppose there isn't input validation, and instead of accessing the PDF files at 
 
 As a result, the web application sends back the file's content to the user.
 
-![](<../../../.gitbook/assets/image (25) (1) (1).png>)
+![](<../../../.gitbook/assets/image (25) (1) (1) (1).png>)
 
 Similarly, if the web application runs on a Windows server, the attacker needs to provide Windows paths. For example, if the attacker wants to read the <mark style="color:red;">`boot.ini`</mark> file located in <mark style="color:red;">`c:\boot.ini`</mark>, then the attacker can try the following depending on the target OS version:
 
@@ -186,7 +186,7 @@ The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker t
 
 An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 #### RFI steps
 

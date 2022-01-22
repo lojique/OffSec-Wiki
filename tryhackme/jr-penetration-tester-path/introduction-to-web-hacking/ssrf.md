@@ -29,7 +29,7 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ![](../../../.gitbook/assets/image.png)
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
@@ -45,7 +45,7 @@ We use the following code which tells us where we want to go and stops the remai
 server.website.thm/flag?id=9&x=
 ```
 
-![](<../../../.gitbook/assets/image (31).png>)
+![](<../../../.gitbook/assets/image (31) (1).png>)
 
 ## Finding an SSRF
 
@@ -53,7 +53,7 @@ Potential SSRF vulnerabilities can be spotted in web applications in many differ
 
 When a full URL is used in a parameter in the address bar:
 
-![](<../../../.gitbook/assets/image (25) (1).png>)
+![](<../../../.gitbook/assets/image (25) (1) (1).png>)
 
 A hidden field in a form:
 

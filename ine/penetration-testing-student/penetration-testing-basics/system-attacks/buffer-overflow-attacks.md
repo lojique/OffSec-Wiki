@@ -62,7 +62,7 @@ To save some stack space for later use, the application can simply reserve some 
 
 ### Overflows in the Stack
 
-![](<../../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (13).png>)
 

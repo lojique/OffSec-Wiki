@@ -25,7 +25,7 @@ john -incremental -users:<users list> <file to crack>
 
 You can use `--show` to display the passwords recovered by John
 
-![](<../../../../.gitbook/assets/image (21) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1).png>)
 
 ### Dictionary Attack
 
@@ -41,7 +41,7 @@ Mangling rules help with case differences or some digits at the end of a word
 
 For example, variations on "cat" could be: cat12, caT, CAT, Cat, CAt, c@t and so on...
 
-![In this example, the crackme file was cracked using the John default wordlist](<../../../../.gitbook/assets/image (25) (1) (1) (1).png>)
+![In this example, the crackme file was cracked using the John default wordlist](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (22) (1).png>)
 

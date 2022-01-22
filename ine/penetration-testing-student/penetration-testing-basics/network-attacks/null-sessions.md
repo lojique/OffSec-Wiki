@@ -27,7 +27,7 @@ A Windows command line tool that can display information about a target
 
 `nbtstat -A <IP>` displays information about a target
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../../.gitbook/assets/image (29) (1).png>)
 
 * Here we see the names of the machine running at 10.130.40.80
 * The record type <00> tells us that ELS-WINXP is a workstation
@@ -43,7 +43,7 @@ Once an attacker knows that a machine has the File Server service running, they 
 NET VIEW <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (27).png>)
+![](<../../../../.gitbook/assets/image (27) (1).png>)
 
 ## Nmblookup
 
@@ -55,7 +55,7 @@ To perform the same operations of nbstat, we can use nmblookup with the same com
 nmblookup -A <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (25) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1).png>)
 
 ## Smbclient
 
@@ -87,7 +87,7 @@ NET USE \\<target IP>\IPC$ '' \u:''
 
 This command does not work with C$
 
-![](<../../../../.gitbook/assets/image (31).png>)
+![](<../../../../.gitbook/assets/image (31) (1).png>)
 
 ### with Linux
 
@@ -97,7 +97,7 @@ We can do the same checks by using smbclient
 smbclient \\<target IP>/IPC$ -N
 ```
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 ## Exploiting Null Sessions
 
@@ -121,7 +121,7 @@ enum -S <target IP>
 
 \-P if you need to mount a network authentication attack, you can check the password policy
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (25) (1).png>)
 
 Checking password policies before running an authentication attack lets you find-tune an attack tool to:
 

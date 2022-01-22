@@ -54,4 +54,4 @@ httprint -P0 -h <target hosts> -s <signature file>
 // -s sets the signature file to use
 ```
 
-![httprint example](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![httprint example](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)

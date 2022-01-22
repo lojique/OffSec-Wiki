@@ -15,7 +15,7 @@ NetBIOS can supply some of the following information when querying a computer:
 * Domain
 * Network shares
 
-![Structure of NetBIOS](<../../../../.gitbook/assets/image (16).png>)
+![Structure of NetBIOS](<../../../../.gitbook/assets/image (16) (1).png>)
 
 The NetBIOS layer sits between the application layer and the IP layer
 

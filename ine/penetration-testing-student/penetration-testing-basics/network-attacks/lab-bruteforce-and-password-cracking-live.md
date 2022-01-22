@@ -42,11 +42,11 @@ The command I ran to find the password for student was:
 hydra -l student -P /usr/share/wordlists/rockyou.txt demo.ine.local ssh -f
 ```
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
 
 Here's confirmation that it works
 
-![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
 [This](https://linuxconfig.org/ssh-password-testing-with-hydra-on-kali-linux) can help with using Hydra for ssh
 
@@ -78,7 +78,7 @@ Then type: `use auxiliary/scanner/ssh/ssh_login`
 
 View options with "show options" and set the ones we need as such:
 
-![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 Now type run and enter
 

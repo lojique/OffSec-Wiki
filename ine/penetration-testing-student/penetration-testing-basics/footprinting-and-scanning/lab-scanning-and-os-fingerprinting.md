@@ -30,7 +30,7 @@ The best tools for this lab are: - Nmap - Linux Terminal
 
 Because we know that there are other machines on the same network as our Kali GUI instance, we need to know what our IP is in order to run a scan for the correct range
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
 
 Pinging one of the local machines helps us make sure we scan the right network of IP range (in this case: 192.110.145.\*)
 
@@ -342,7 +342,7 @@ Now let's answer the questions
 
 5\. What is the version of the FTP server running on one of the machines?
 
-![Although our most recent nmap scan answers this question, this particular does as well but with less info to search through](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![Although our most recent nmap scan answers this question, this particular does as well but with less info to search through](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
 
 6\. A caching server is also running on one of the machines. What is the domain name of that machine?
 
@@ -396,7 +396,7 @@ As you can see, we can gather a ton of information from nmap's NSE scripts
 Using a wildcard, such as --script mysql-\* could get your requests blocked because a host can be configured to do that. Thse wildcards can generate a lot of noise and prevent you from making further requests
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (10) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (10) (1) (1) (1) (1).png>)
 
 ## Resources
 

@@ -46,7 +46,7 @@ Attackers user XSS to attack the users of a website by:
 
 You have to look at every user input, and test if it is somehow displayed on the output of the web application
 
-![A search parameter is submitted through a form and gets displayed on the output (Reflection point). Searched string is passed through a GET parameter](<../../../../.gitbook/assets/image (6) (1) (1).png>)
+![A search parameter is submitted through a form and gets displayed on the output (Reflection point). Searched string is passed through a GET parameter](<../../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 After finding a reflection point, you have to understand if you can inject HTML code and see if it somehow gets to the output of the page; this lets you control the output page
 
@@ -54,7 +54,7 @@ Looking at the HTML sources of the output page helps to understand how to build 
 
 ![](<../../../../.gitbook/assets/image (4) (1) (1).png>)
 
-![The injected \<i> tag outputted "test string" in italics so the HTML has been interpreted](<../../../../.gitbook/assets/image (14) (1) (1) (1).png>)
+![The injected \<i> tag outputted "test string" in italics so the HTML has been interpreted](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
 
 To test the XSS, you can inject some valid HTML/JS code like:
 

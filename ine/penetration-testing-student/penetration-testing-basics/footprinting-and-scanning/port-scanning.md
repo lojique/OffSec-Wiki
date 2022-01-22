@@ -30,13 +30,13 @@ nmap -Pn
 
 ### Common Ports w/ Service
 
-![](<../../../../.gitbook/assets/image (10) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png>)
 
 ### Spotting a Firewall
 
-![version not recognized regardless of open http port](<../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![version not recognized regardless of open http port](<../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
-![service type not recognized. "tcpwrapped" means TCP handshake completed, but remote host closed the connection w/o receiving any data](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
+![service type not recognized. "tcpwrapped" means TCP handshake completed, but remote host closed the connection w/o receiving any data](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png>)
 
 You can use `--reason` to show an explanation of why a port is marked open or closed
 

@@ -48,10 +48,15 @@
     * [Network Attacks](ine/penetration-testing-student/penetration-testing-basics/network-attacks.md)
       * [Authentication Cracking](ine/penetration-testing-student/penetration-testing-basics/network-attacks/authentication-cracking.md)
       * [Lab - Bruteforce and Password cracking Live](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-bruteforce-and-password-cracking-live.md)
+      * [Lab - Bruteforce and Password cracking Offline](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-bruteforce-and-password-cracking-offline.md)
       * [Windows Shares](ine/penetration-testing-student/penetration-testing-basics/network-attacks/windows-shares.md)
       * [Null Sessions](ine/penetration-testing-student/penetration-testing-basics/network-attacks/null-sessions.md)
       * [Lab - Null Session](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-null-session.md)
       * [ARP Poisoning](ine/penetration-testing-student/penetration-testing-basics/network-attacks/arp-poisoning.md)
+      * [Lab - Metasploit](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-metasploit.md)
+      * [Meterpreter](ine/penetration-testing-student/penetration-testing-basics/network-attacks/meterpreter.md)
+      * [Beyond Remote Code Execution](ine/penetration-testing-student/penetration-testing-basics/network-attacks/beyond-remote-code-execution.md)
+      * [Shells](ine/penetration-testing-student/penetration-testing-basics/network-attacks/shells.md)
     * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)
   * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
 
@@ -68,12 +73,17 @@
     * [SSRF](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/ssrf.md)
 * [Writeups](tryhackme/writeups/README.md)
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
+* [Web Hacking](tryhackme/web-hacking/README.md)
+  * [SSRF](tryhackme/web-hacking/ssrf.md)
 
 ## HackTheBox
 
 * [Coming soon...](hackthebox/coming-soon....md)
 
-***
+## Shells
 
-* [Web Hacking](web-hacking/README.md)
-  * [SSRF](web-hacking/ssrf.md)
+* [Shells (Linux, Windows, MSFVenom)](shells/shells-linux-windows-msfvenom/README.md)
+  * [Linux Shells](shells/shells-linux-windows-msfvenom/linux-shells.md)
+  * [Windows Shells](shells/shells-linux-windows-msfvenom/windows-shells.md)
+  * [MSFVenom](shells/shells-linux-windows-msfvenom/msfvenom.md)
+  * [Full TTYs](shells/shells-linux-windows-msfvenom/full-ttys.md)

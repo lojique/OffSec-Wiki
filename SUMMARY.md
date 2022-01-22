@@ -50,6 +50,8 @@
       * [Lab - Bruteforce and Password cracking Live](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-bruteforce-and-password-cracking-live.md)
       * [Windows Shares](ine/penetration-testing-student/penetration-testing-basics/network-attacks/windows-shares.md)
       * [Null Sessions](ine/penetration-testing-student/penetration-testing-basics/network-attacks/null-sessions.md)
+      * [Lab - Null Session](ine/penetration-testing-student/penetration-testing-basics/network-attacks/lab-null-session.md)
+      * [ARP Poisoning](ine/penetration-testing-student/penetration-testing-basics/network-attacks/arp-poisoning.md)
     * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)
   * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
 

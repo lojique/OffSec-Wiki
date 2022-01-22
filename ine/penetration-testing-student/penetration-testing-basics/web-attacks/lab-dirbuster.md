@@ -47,13 +47,13 @@ We've been told which wordlist to use
 
 I used these extensions so I get try to get the most valuable information returned
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1).png>)
 
 We'll let this run for a while and also increase the number of running threads to get results faster
 
 And after waiting for a while we check the 'Results - Tree View' tab and see something interesting
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Checking out the file reveals all username and plain-text passwords stored on here
 

@@ -34,7 +34,7 @@ If the developer of an app does not enforce buffers limits, an attacker could fi
 
 ![](<../../../../.gitbook/assets/image (10).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 
 ## The Stack
 

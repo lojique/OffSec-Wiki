@@ -117,7 +117,7 @@ enum -S <target IP>
 
 \-U enumerates users
 
-![](<../../../../.gitbook/assets/image (23).png>)
+![](<../../../../.gitbook/assets/image (23) (1).png>)
 
 \-P if you need to mount a network authentication attack, you can check the password policy
 

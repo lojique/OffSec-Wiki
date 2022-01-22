@@ -128,7 +128,7 @@ To see this happen for yourself, go to `http://MACHINEIP:5000/filessrf`, you'll 
 
 So if now we try to read the file we'll be able to see the contents:
 
-![](<../.gitbook/assets/image (34).png>)
+![](<../.gitbook/assets/image (34) (1).png>)
 
 Remember is that it's unlikely that we'll be able to read files from any higher privileged user such as "root".
 

@@ -110,7 +110,7 @@ Host: www.example.site
 
 ### Uploading a PHP Shell with PUT
 
-![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 * This can be used by passing our commands via the cmd GET parameter
 

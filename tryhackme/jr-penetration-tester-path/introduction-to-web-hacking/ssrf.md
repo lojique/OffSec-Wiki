@@ -29,7 +29,7 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ![](../../../.gitbook/assets/image.png)
 
-![](<../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
@@ -107,7 +107,7 @@ Now let's try making the request again but changing the avatar value to private 
 
 And then edit the value of the radio button to private:
 
-![](<../../../.gitbook/assets/image (33).png>)
+![](<../../../.gitbook/assets/image (33) (1).png>)
 
 And then click the Update Avatar button. Unfortunately, it looks like the web application has a deny list in place and has blocked access to the /private endpoint.
 

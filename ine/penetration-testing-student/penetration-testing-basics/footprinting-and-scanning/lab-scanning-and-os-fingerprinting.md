@@ -342,7 +342,7 @@ Now let's answer the questions
 
 5\. What is the version of the FTP server running on one of the machines?
 
-![Although our most recent nmap scan answers this question, this particular does as well but with less info to search through](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![Although our most recent nmap scan answers this question, this particular does as well but with less info to search through](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 6\. A caching server is also running on one of the machines. What is the domain name of that machine?
 

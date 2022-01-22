@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -173,7 +173,7 @@ You want to transform a query in a True/False condition, which reflects its stat
 
 ![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22) (1) (1).png>)
+![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 

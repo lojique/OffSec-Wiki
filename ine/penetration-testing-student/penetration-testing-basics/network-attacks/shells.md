@@ -30,9 +30,9 @@ Its size is much bigger
 
 ## Using Metasploit to Catch a Shell
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../../.gitbook/assets/image (34) (1).png>)
 
-![](<../../../../.gitbook/assets/image (36).png>)
+![](<../../../../.gitbook/assets/image (36) (1).png>)
 
 ### Upgrading to Meterpreter Shell
 

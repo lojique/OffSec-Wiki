@@ -93,7 +93,7 @@ Host: www.example.site
 
 ### Exploiting DELETE
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1).png>)
 
 ![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
@@ -110,30 +110,30 @@ Host: www.example.site
 
 ### Uploading a PHP Shell with PUT
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
 
 * This can be used by passing our commands via the cmd GET parameter
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1).png>)
 
 * The shell has the same permissions of the web server it runs on.
 * For example, we can write a file
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
 
 * We can also read it
 
-![](<../../../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
 * And we can even read a system file
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="warning" %}
 Remember that PUT requires that we pass the content length. So we have to know the shell size
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
 
 * We can then build a valid PUT request
 

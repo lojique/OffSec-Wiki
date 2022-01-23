@@ -25,7 +25,7 @@ john -incremental -users:<users list> <file to crack>
 
 You can use `--show` to display the passwords recovered by John
 
-![](<../../../../.gitbook/assets/image (21) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
 ### Dictionary Attack
 

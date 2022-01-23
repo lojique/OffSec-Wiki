@@ -12,13 +12,13 @@ description: >-
 
 In some scenarios, web applications are written to request access to files on a given system, including images, static text, and so on via parameters. Parameters are query parameter strings attached to the URL that could be used to retrieve data or perform actions based on user input. The following graph explains and breaking down the essential parts of the URL.
 
-![](<../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
 For example, parameters are used with Google searching, where <mark style="color:red;">`GET`</mark> <mark style="color:red;"></mark><mark style="color:red;"></mark> requests pass user input into the search engine. <mark style="color:red;">`https://www.google.com/search?q=TryHackMe`</mark>
 
 Let's discuss a scenario where a user requests to access files from a webserver. First, the user sends an HTTP request to the webserver that includes a file to display. For example, if a user wants to access and display their `CV` within the web application, the request may look as follows, <mark style="color:red;">`http://webapp.thm/get.php?file=userCV.pdf`</mark>, where the file is the parameter and the <mark style="color:red;">`userCV.pdf`</mark>, is the required file to access.﻿
 
-![](<../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 ### Why do file inclusion vulnerabilities happen?
 
@@ -186,7 +186,7 @@ The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker t
 
 An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
 
-![](<../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 #### RFI steps
 

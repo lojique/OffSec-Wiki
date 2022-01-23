@@ -97,7 +97,7 @@ We can do the same checks by using smbclient
 smbclient \\<target IP>/IPC$ -N
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
 ## Exploiting Null Sessions
 
@@ -111,7 +111,7 @@ We can exploit null sessions using the WIndows NET command but there are some au
 enum -S <target IP> 
 ```
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../../.gitbook/assets/image (21) (1).png>)
 
 \-S enumerate shares on a machine
 

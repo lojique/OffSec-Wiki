@@ -25,3 +25,6 @@ The best tools for this lab are:
 
 ## My Solution
 
+{% embed url="https://www.hackingarticles.in/beginner-guide-john-the-ripper-part-1" %}
+
+{% embed url="https://samsclass.info/123/proj10/p12-hashcat.htm" %}

@@ -25,7 +25,7 @@ During an ARP poisoning attack, three actors are involved:
 * Two network nodes (clients, servers, routers, printers,...)
 * The attacker
 
-![](<../../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
 
 ## Gratuitous ARP Replies
 

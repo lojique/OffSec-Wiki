@@ -57,7 +57,10 @@
       * [Meterpreter](ine/penetration-testing-student/penetration-testing-basics/network-attacks/meterpreter.md)
       * [Beyond Remote Code Execution](ine/penetration-testing-student/penetration-testing-basics/network-attacks/beyond-remote-code-execution.md)
       * [Shells](ine/penetration-testing-student/penetration-testing-basics/network-attacks/shells.md)
-    * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps.md)
+    * [Next Steps](ine/penetration-testing-student/penetration-testing-basics/next-steps/README.md)
+      * [Black-box Penetration Test 1](ine/penetration-testing-student/penetration-testing-basics/next-steps/black-box-penetration-test-1.md)
+      * [Black-box Penetration Test 2](ine/penetration-testing-student/penetration-testing-basics/next-steps/black-box-penetration-test-2.md)
+      * [Black-box Penetration Test 3](ine/penetration-testing-student/penetration-testing-basics/next-steps/black-box-penetration-test-3.md)
   * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
 
 ## TryHackMe
@@ -87,3 +90,4 @@
   * [Windows Shells](shells/shells-linux-windows-msfvenom/windows-shells.md)
   * [MSFVenom](shells/shells-linux-windows-msfvenom/msfvenom.md)
   * [Full TTYs](shells/shells-linux-windows-msfvenom/full-ttys.md)
+  * [Meterpreter](shells/shells-linux-windows-msfvenom/meterpreter.md)

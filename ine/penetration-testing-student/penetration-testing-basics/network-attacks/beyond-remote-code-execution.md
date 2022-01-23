@@ -30,6 +30,6 @@ Ability to upload a simple interactive webshell on the web server
 
 For output that contains spaces won't be captured, but we can encode it and decode it after
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../../.gitbook/assets/image (34) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (14).png>)

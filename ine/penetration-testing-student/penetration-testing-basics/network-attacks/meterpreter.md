@@ -127,7 +127,7 @@ getsystem
 In modern Windows operating systems, the User Account Control policy prevent privilege escalation
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (25) (1).png>)
 
 You can bypass that restriction by u sing the `bypassuac` module
 
@@ -153,7 +153,7 @@ As you can imagine, this process name is not very stealthy and is also suspiciou
 
 A user checking their process list may notice something strange on their  machine
 
-![](<../../../../.gitbook/assets/image (35).png>)
+![](<../../../../.gitbook/assets/image (35) (1).png>)
 
 Therefore, in order to remain stealthy, we can use the `migrate` command to attach our session on a different process
 
@@ -180,7 +180,7 @@ exploit
 
 You can navigate the hard drive by using Unix-like shell commands
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../../.gitbook/assets/image (29) (1).png>)
 
 ## Uploading and Downloading
 
@@ -194,4 +194,4 @@ You can run a standard OS shell
 shell
 ```
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../../.gitbook/assets/image (26) (1).png>)

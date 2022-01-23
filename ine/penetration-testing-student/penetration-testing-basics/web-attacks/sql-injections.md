@@ -85,7 +85,7 @@ You can also perform a UNION with some chosen data:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT 'Example', 'Data';
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1).png>)
 
 ## SQL Queries Inside Web Apps
 
@@ -159,7 +159,7 @@ Testing an input for SQLi means trying to inject:
 
 ![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 

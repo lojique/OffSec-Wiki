@@ -342,3 +342,11 @@ The first three are exactly the same as the first compromised machine so we'll f
 
 
 
+## Resources
+
+* [https://blog.pentesteracademy.com/socks4-proxy-pivoting-by-metasploit-74436b45392a](https://blog.pentesteracademy.com/socks4-proxy-pivoting-by-metasploit-74436b45392a)
+* [https://securityintelligence.com/posts/socks-proxy-primer-what-is-socks5-and-why-should-you-use-it/](https://securityintelligence.com/posts/socks-proxy-primer-what-is-socks5-and-why-should-you-use-it/)
+* [https://nullsweep.com/pivot-cheatsheet-for-pentesters/](https://nullsweep.com/pivot-cheatsheet-for-pentesters/)
+* [https://blog.pentesteracademy.com/network-pivoting-using-metasploit-and-proxychains-c04472f8eed0](https://blog.pentesteracademy.com/network-pivoting-using-metasploit-and-proxychains-c04472f8eed0)
+* [https://www.offensive-security.com/metasploit-unleashed/proxytunnels/](https://www.offensive-security.com/metasploit-unleashed/proxytunnels/)
+*

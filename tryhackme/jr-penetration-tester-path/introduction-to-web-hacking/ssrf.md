@@ -29,15 +29,15 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ![](../../../.gitbook/assets/image.png)
 
-![](<../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (32) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
 ### Practical
 
-![](<../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 We use the following code which tells us where we want to go and stops the remaining path from being appended to the end of our URL and instead turns it into a parameter (?x=) on the query string by using <mark style="color:red;">`&x=`</mark>
 
@@ -45,7 +45,7 @@ We use the following code which tells us where we want to go and stops the remai
 server.website.thm/flag?id=9&x=
 ```
 
-![](<../../../.gitbook/assets/image (31) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 ## Finding an SSRF
 
@@ -53,7 +53,7 @@ Potential SSRF vulnerabilities can be spotted in web applications in many differ
 
 When a full URL is used in a parameter in the address bar:
 
-![](<../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
 
 A hidden field in a form:
 
@@ -61,11 +61,11 @@ A hidden field in a form:
 
 A partial URL such as just the hostname:
 
-![](<../../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 Or perhaps only the path of the URL:
 
-![](<../../../.gitbook/assets/image (20) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
 Some of these examples are easier to exploit than others, and this is where a lot of trial and error will be required to find a working payload.
 
@@ -95,23 +95,23 @@ We've come across two new endpoints during a content discovery exercise against 
 
 First, create a customer account and sign in. Once you've signed in, visit `https://10-10-124-231.p.thmlabs.com/customers/new-account-page` to view the new avatar selection feature. By viewing the page source of the avatar form, you'll see the avatar form field value contains the path to the image. The background-image style can confirm this in the above DIV element as per the screenshot below:
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (1).png>)
 
 If you choose one of the avatars and then click the Update Avatar button, you'll see the form change and, above it, display your currently selected avatar. Viewing the page source will show your current avatar is displayed using the data URI scheme, and the image content is base64 encoded as per the screenshot below.
 
-![](<../../../.gitbook/assets/image (29) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
 
 Now let's try making the request again but changing the avatar value to private in hopes that the server will access the resource and get past the IP address block. To do this, firstly, right-click on one of the radio buttons on the avatar form and select Inspect:
 
-![](<../../../.gitbook/assets/image (30) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1).png>)
 
 And then edit the value of the radio button to private:
 
-![](<../../../.gitbook/assets/image (33) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
 
 And then click the Update Avatar button. Unfortunately, it looks like the web application has a deny list in place and has blocked access to the /private endpoint.
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
 As you can see from the error message, the path cannot start with **/private** but don't worry, we've still got a trick up our sleeve to bypass this rule. We can use a directory traversal trick to reach our desired endpoint. Try setting the avatar value to `x/../private`
 

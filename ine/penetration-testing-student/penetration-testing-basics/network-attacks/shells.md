@@ -1,6 +1,6 @@
 # Shells
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (25) (1).png>)
 
 ## Staged Payloads
 
@@ -10,15 +10,15 @@ It is a downloader  part that needs to download and execute the rest of the payl
 
 It is much smaller
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../../.gitbook/assets/image (29) (1).png>)
 
 You're required to use a Metasploit listener in order to receive the shell connection
 
 The listerner payload has to be exactly the same as the msfvenom payload
 
-![](<../../../../.gitbook/assets/image (35).png>)
+![](<../../../../.gitbook/assets/image (35) (1).png>)
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../../.gitbook/assets/image (26) (1).png>)
 
 ## Stageless Payloads
 
@@ -26,13 +26,13 @@ A standalone program that doesn't need anything additional, just the netcat list
 
 Its size is much bigger
 
-![](<../../../../.gitbook/assets/image (37).png>)
+![](<../../../../.gitbook/assets/image (37) (1).png>)
 
 ## Using Metasploit to Catch a Shell
 
-![](<../../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (36) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1).png>)
 
 ### Upgrading to Meterpreter Shell
 

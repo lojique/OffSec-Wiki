@@ -8,7 +8,7 @@ description: Basic introduction to Server Side request forgery vulnerability(SSR
 
 SSRF is a vulnerability in web applications whereby an attacker can make further HTTP requests through the server. An attacker can make use of this vulnerability to communicate with any internal services on the server's network which are generally protected by firewalls.
 
-![](<../../.gitbook/assets/image (26) (1) (1).png>)
+![](<../../.gitbook/assets/image (26) (1) (1) (1).png>)
 
 Focusing on the above diagram, in a normal case the attacker would only be able to visit the website and see the website data.&#x20;
 
@@ -86,7 +86,7 @@ Initially, start by searching for the localhost IP (127.0.0.1) with any port to 
 
 If we try this payload on our VM we will see the following output:
 
-![](<../../.gitbook/assets/image (35) (1) (1).png>)
+![](<../../.gitbook/assets/image (35) (1) (1) (1).png>)
 
 This shows that the port 3306 is open.
 
@@ -102,13 +102,13 @@ The basic page we've already worked with doesn't have any filter, so to try thes
 
 Try it for yourself: try to enter the old payloads such as "`http://127.0.0.1:3306`" or `http://localhost:3306` -- you'll get something like:
 
-![](<../../.gitbook/assets/image (20) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
 
 As expected, this is because there are SSRF checks in place, but still it's possible to bypass them. It's also possible that if you try to access `http://[::]:3306`, you might get "target not reachable". When this happens it can be the result of how the framework is handling input in the application. If it was a PHP application then this would work, but flask/Django might interpret these payloads differently. If you fail with that payload, try removing the brackets (i.e try `http://:::3306`): remember that the third colon indicates the separation between port and IP.
 
 So if we enter: `http://:::3306` we see something like:
 
-![](<../../.gitbook/assets/image (12) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1).png>)
 
 It is possible that the IPv6 payload may also be detected. In that case what we usually do is to encode our IP: either into a decimal format or a hexadecimal format.
 
@@ -128,7 +128,7 @@ To see this happen for yourself, go to `http://MACHINEIP:5000/filessrf`, you'll 
 
 So if now we try to read the file we'll be able to see the contents:
 
-![](<../../.gitbook/assets/image (34) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (34) (1) (1) (1) (1) (1).png>)
 
 Remember is that it's unlikely that we'll be able to read files from any higher privileged user such as "root".
 

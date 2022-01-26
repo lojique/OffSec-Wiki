@@ -78,6 +78,8 @@
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
 * [Web Hacking](tryhackme/web-hacking/README.md)
   * [SSRF](tryhackme/web-hacking/ssrf.md)
+* [Linux](tryhackme/linux/README.md)
+  * [Linux Strength Training](tryhackme/linux/linux-strength-training.md)
 
 ## HackTheBox
 

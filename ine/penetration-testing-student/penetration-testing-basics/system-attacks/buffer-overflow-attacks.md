@@ -24,17 +24,17 @@ Buffers have finite size; they can only contain a certain amount of data
 
 If a client-server app is designed to accept only 8-characters long usernames, the username buffer will by 8 bytes long
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
 
 If the developer of an app does not enforce buffers limits, an attacker could find a way to write data beyond those limits, thus actually writing arbitrary code in the computer RAM; this can be exploited to get control over the program execution flow
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (10) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (10) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1) (1).png>)
 
 ## The Stack
 
@@ -56,17 +56,17 @@ To save some stack space for later use, the application can simply reserve some 
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
 
 ### Overflows in the Stack
 
-![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (13) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 ## The Stack in an Application
 

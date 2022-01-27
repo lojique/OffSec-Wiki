@@ -73,7 +73,7 @@ To retrieve information about the exploited machine: name, OS, architecture, sys
 sysinfo
 ```
 
-![](<../../../../.gitbook/assets/image (28) (1).png>)
+![](<../../../../.gitbook/assets/image (28) (1) (1).png>)
 
 ### Network configuration
 
@@ -83,7 +83,7 @@ To print the network configuration:
 ifconfig
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
 ### Routing information
 
@@ -99,7 +99,7 @@ route
 getuid
 ```
 
-![](<../../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 ### Privilege Escalation
 
@@ -109,7 +109,7 @@ To just current privileges on Windows
 run post/windows/gather/win_privs
 ```
 
-![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1).png>)
 
 
 
@@ -119,7 +119,7 @@ You can use `getsystem` if the owner of the process does not have high privilege
 getsystem
 ```
 
-![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 ### Bypassing UAC
 
@@ -143,7 +143,7 @@ set session <id>
 
 Launch the exploit to get a new Meterpreter session with the UAC policy disabled and use `getsystem`
 
-![](<../../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../../.gitbook/assets/image (10) (1) (1).png>)
 
 ## Staying Stealthy
 
@@ -174,7 +174,7 @@ set session <id>
 exploit
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 ## Exploring the Victim System
 
@@ -184,7 +184,7 @@ You can navigate the hard drive by using Unix-like shell commands
 
 ## Uploading and Downloading
 
-![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 ## Running an OS Shell
 
@@ -194,4 +194,4 @@ You can run a standard OS shell
 shell
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)

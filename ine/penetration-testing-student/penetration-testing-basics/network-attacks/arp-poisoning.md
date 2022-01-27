@@ -6,7 +6,7 @@ The next hop could be a router, switch or the destination host
 
 To identify the MAC address of a host, computers use the Address Resolution Protocol
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
 
 After the MAC address resolution is comnplete, hosts save the destination address in their ARP cache table
 
@@ -35,11 +35,11 @@ In other words, the attacker sends a reply without waiting for a host to perform
 
 The attacker exploits gratuitous ARP messages to tell the victims that they can reach a specific IP address at the attacker's machine MAC address
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 This must be done on every victim
 
-![](<../../../../.gitbook/assets/image (22) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
 As soon as the ARP cache table contains fake information, every packet of every communication between the poisoned nodes will be sent to the attacker's machine
 

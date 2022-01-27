@@ -18,7 +18,7 @@ For example, parameters are used with Google searching, where <mark style="color
 
 Let's discuss a scenario where a user requests to access files from a webserver. First, the user sends an HTTP request to the webserver that includes a file to display. For example, if a user wants to access and display their `CV` within the web application, the request may look as follows, <mark style="color:red;">`http://webapp.thm/get.php?file=userCV.pdf`</mark>, where the file is the parameter and the <mark style="color:red;">`userCV.pdf`</mark>, is the required file to access.﻿
 
-![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
 
 ### Why do file inclusion vulnerabilities happen?
 
@@ -42,7 +42,7 @@ We can test out the URL parameter by adding payloads to see how the web applicat
 
 Suppose there isn't input validation, and instead of accessing the PDF files at <mark style="color:red;">`/var/www/app/CVs`</mark> location, the web application retrieves files from other directories, which in this case <mark style="color:red;">`/etc/passwd`</mark>. Each <mark style="color:red;">`..`</mark> entry moves one directory until it reaches the root directory <mark style="color:red;">`/`</mark>. Then it changes the directory to <mark style="color:red;">`/etc`</mark>, and from there, it read the <mark style="color:red;">`passwd`</mark> file.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
 
 As a result, the web application sends back the file's content to the user.
 
@@ -170,7 +170,7 @@ First, we can send the following payload to bypass it: ....//....//....//....//.
 
 This works because the PHP filter only matches and replaces the first subset string ../ it finds and doesn't do another pass, leaving what is pictured below.
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1).png>)
 
 4\. Finally, we'll discuss the case where the developer forces the include to read from a defined directory! For example, if the web application asks to supply input that has to include a directory such as: http://webapp.thm/index.php?lang=languages/EN.php then, to exploit this, we need to include the directory in the payload like so: ?lang=languages/../../../../../etc/passwd
 
@@ -186,7 +186,7 @@ The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker t
 
 An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
 
-![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
 
 #### RFI steps
 

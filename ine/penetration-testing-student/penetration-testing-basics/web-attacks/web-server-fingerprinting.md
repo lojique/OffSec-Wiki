@@ -23,7 +23,7 @@ nc <target address> 80
 HEAD / HTTP/1.0
 ```
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
 ## Fingerprinting with OpenSSL
 
@@ -54,4 +54,4 @@ httprint -P0 -h <target hosts> -s <signature file>
 // -s sets the signature file to use
 ```
 
-![httprint example](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1).png>)
+![httprint example](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1) (1).png>)

@@ -18,7 +18,7 @@ The listerner payload has to be exactly the same as the msfvenom payload
 
 ![](<../../../../.gitbook/assets/image (35) (1).png>)
 
-![](<../../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
 
 ## Stageless Payloads
 
@@ -26,13 +26,13 @@ A standalone program that doesn't need anything additional, just the netcat list
 
 Its size is much bigger
 
-![](<../../../../.gitbook/assets/image (37) (1).png>)
+![](<../../../../.gitbook/assets/image (37) (1) (1).png>)
 
 ## Using Metasploit to Catch a Shell
 
 ![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (36) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
 
 ### Upgrading to Meterpreter Shell
 

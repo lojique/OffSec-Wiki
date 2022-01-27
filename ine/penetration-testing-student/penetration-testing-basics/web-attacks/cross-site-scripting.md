@@ -46,7 +46,7 @@ Attackers user XSS to attack the users of a website by:
 
 You have to look at every user input, and test if it is somehow displayed on the output of the web application
 
-![A search parameter is submitted through a form and gets displayed on the output (Reflection point). Searched string is passed through a GET parameter](<../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![A search parameter is submitted through a form and gets displayed on the output (Reflection point). Searched string is passed through a GET parameter](<../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
 After finding a reflection point, you have to understand if you can inject HTML code and see if it somehow gets to the output of the page; this lets you control the output page
 
@@ -54,7 +54,7 @@ Looking at the HTML sources of the output page helps to understand how to build 
 
 ![](<../../../../.gitbook/assets/image (4) (1) (1).png>)
 
-![The injected \<i> tag outputted "test string" in italics so the HTML has been interpreted](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
+![The injected \<i> tag outputted "test string" in italics so the HTML has been interpreted](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1) (1).png>)
 
 To test the XSS, you can inject some valid HTML/JS code like:
 
@@ -76,7 +76,7 @@ Triggered by posting a link on a social network or via a phishing campaign. When
 
 Some browsers like Chrome have a reflected XSS filter built in so they will not run some XSS reflected attacks
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 However, they can only filter trivial and known XSS attacks since there are advanced methods that can bypass anti-XSS filters
 
@@ -110,7 +110,7 @@ For example, you can display the current cookies using:
 <script>alert(document.cookie)</script>
 ```
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png>)
 
 This code sends cookie content to an attacker-controlled site
 

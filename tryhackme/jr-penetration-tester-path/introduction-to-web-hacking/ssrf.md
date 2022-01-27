@@ -31,7 +31,7 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
@@ -45,7 +45,7 @@ We use the following code which tells us where we want to go and stops the remai
 server.website.thm/flag?id=9&x=
 ```
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
 
 ## Finding an SSRF
 
@@ -61,11 +61,11 @@ A hidden field in a form:
 
 A partial URL such as just the hostname:
 
-![](<../../../.gitbook/assets/image (7) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
 Or perhaps only the path of the URL:
 
-![](<../../../.gitbook/assets/image (20) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
 
 Some of these examples are easier to exploit than others, and this is where a lot of trial and error will be required to find a working payload.
 
@@ -103,19 +103,19 @@ If you choose one of the avatars and then click the Update Avatar button, you'll
 
 Now let's try making the request again but changing the avatar value to private in hopes that the server will access the resource and get past the IP address block. To do this, firstly, right-click on one of the radio buttons on the avatar form and select Inspect:
 
-![](<../../../.gitbook/assets/image (30) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1).png>)
 
 And then edit the value of the radio button to private:
 
-![](<../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1).png>)
 
 And then click the Update Avatar button. Unfortunately, it looks like the web application has a deny list in place and has blocked access to the /private endpoint.
 
-![](<../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 As you can see from the error message, the path cannot start with **/private** but don't worry, we've still got a trick up our sleeve to bypass this rule. We can use a directory traversal trick to reach our desired endpoint. Try setting the avatar value to `x/../private`
 
-![](<../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1).png>)
 
 You'll see we have now bypassed the rule, and the user updated the avatar. This trick works because when the web server receives the request for `x/../private`, it knows that the ../ string means to move up a directory that now translates the request to just /private.
 

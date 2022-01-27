@@ -10,7 +10,7 @@ It is a downloader  part that needs to download and execute the rest of the payl
 
 It is much smaller
 
-![](<../../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
 
 You're required to use a Metasploit listener in order to receive the shell connection
 

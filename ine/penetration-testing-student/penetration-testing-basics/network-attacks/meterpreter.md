@@ -180,7 +180,7 @@ exploit
 
 You can navigate the hard drive by using Unix-like shell commands
 
-![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 ## Uploading and Downloading
 

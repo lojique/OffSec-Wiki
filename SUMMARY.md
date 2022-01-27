@@ -93,3 +93,7 @@
   * [MSFVenom](shells/shells-linux-windows-msfvenom/msfvenom.md)
   * [Full TTYs](shells/shells-linux-windows-msfvenom/full-ttys.md)
   * [Meterpreter](shells/shells-linux-windows-msfvenom/meterpreter.md)
+
+## Methodology
+
+* [Pentesting Methodology Mindmap](methodology/pentesting-methodology-mindmap.md)

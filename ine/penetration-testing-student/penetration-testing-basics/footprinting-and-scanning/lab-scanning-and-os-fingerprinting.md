@@ -30,7 +30,7 @@ The best tools for this lab are: - Nmap - Linux Terminal
 
 Because we know that there are other machines on the same network as our Kali GUI instance, we need to know what our IP is in order to run a scan for the correct range
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Pinging one of the local machines helps us make sure we scan the right network of IP range (in this case: 192.110.145.\*)
 
@@ -334,7 +334,7 @@ Now let's answer the questions
 
 3\. What OS is running on machine `pc1.ine.local` machine?
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 4\. What services are running on `pc2.ine.local` machine?
 
@@ -354,7 +354,7 @@ Now let's answer the questions
 
 * As for the domain, we know the machine is `target-3` with IP `192.110.145.6`
 
-![](<../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
 
 7\. A NoSQL database and SQL database services are running on different machines. Can we use Nmap scripts to extract some information from those?
 

@@ -24,7 +24,7 @@ Buffers have finite size; they can only contain a certain amount of data
 
 If a client-server app is designed to accept only 8-characters long usernames, the username buffer will by 8 bytes long
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
 
 If the developer of an app does not enforce buffers limits, an attacker could find a way to write data beyond those limits, thus actually writing arbitrary code in the computer RAM; this can be exploited to get control over the program execution flow
 
@@ -64,7 +64,7 @@ To save some stack space for later use, the application can simply reserve some 
 
 ![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
@@ -84,7 +84,7 @@ A raw overflow that just overwrites some memory locations will crash the app, wh
 
 We should understand that if an attacker manages to overflow Local Variable 1, they are able to overwrite Base Pointer and then Return Address
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
 
 If they overwrite Return Address with the right value, they are able to control the execution flow of the program
 

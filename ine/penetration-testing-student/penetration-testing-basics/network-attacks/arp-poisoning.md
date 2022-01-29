@@ -10,7 +10,7 @@ To identify the MAC address of a host, computers use the Address Resolution Prot
 
 After the MAC address resolution is comnplete, hosts save the destination address in their ARP cache table
 
-![](<../../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1).png>)
 
 If an attacker finds a way to manipulate the ARP cache, they will also be able to receive traffic destined to other IP addresses
 
@@ -25,7 +25,7 @@ During an ARP poisoning attack, three actors are involved:
 * Two network nodes (clients, servers, routers, printers,...)
 * The attacker
 
-![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1).png>)
 
 ## Gratuitous ARP Replies
 
@@ -39,7 +39,7 @@ The attacker exploits gratuitous ARP messages to tell the victims that they can 
 
 This must be done on every victim
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
 
 As soon as the ARP cache table contains fake information, every packet of every communication between the poisoned nodes will be sent to the attacker's machine
 

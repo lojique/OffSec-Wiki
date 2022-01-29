@@ -1,6 +1,6 @@
 # Shells
 
-![](<../../../../.gitbook/assets/image (25) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1).png>)
 
 ## Staged Payloads
 
@@ -30,9 +30,9 @@ Its size is much bigger
 
 ## Using Metasploit to Catch a Shell
 
-![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1) (1) (1).png>)
 
 ### Upgrading to Meterpreter Shell
 

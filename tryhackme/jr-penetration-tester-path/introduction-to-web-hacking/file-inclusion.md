@@ -36,17 +36,17 @@ Path traversal vulnerabilities occur when the user's input is passed to a functi
 
 The following graph shows how a web application stores files in <mark style="color:red;">`/var/www/app`</mark>. The happy path would be the user requesting the contents of userCV.pdf from a defined path <mark style="color:red;">`/var/www/app/CVs`</mark>.
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 We can test out the URL parameter by adding payloads to see how the web application behaves. Path traversal attacks, also known as the <mark style="color:red;">`dot-dot-slash`</mark> attack, take advantage of moving the directory one step up using the double dots <mark style="color:red;">`../`</mark>. If the attacker finds the entry point, which in this case <mark style="color:red;">`get.php?file=`</mark>, then the attacker may send something as follows, <mark style="color:red;">`http://webapp.thm/get.php?file=../../../../etc/passwd`</mark>
 
 Suppose there isn't input validation, and instead of accessing the PDF files at <mark style="color:red;">`/var/www/app/CVs`</mark> location, the web application retrieves files from other directories, which in this case <mark style="color:red;">`/etc/passwd`</mark>. Each <mark style="color:red;">`..`</mark> entry moves one directory until it reaches the root directory <mark style="color:red;">`/`</mark>. Then it changes the directory to <mark style="color:red;">`/etc`</mark>, and from there, it read the <mark style="color:red;">`passwd`</mark> file.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 As a result, the web application sends back the file's content to the user.
 
-![](<../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Similarly, if the web application runs on a Windows server, the attacker needs to provide Windows paths. For example, if the attacker wants to read the <mark style="color:red;">`boot.ini`</mark> file located in <mark style="color:red;">`c:\boot.ini`</mark>, then the attacker can try the following depending on the target OS version:
 
@@ -170,7 +170,7 @@ First, we can send the following payload to bypass it: ....//....//....//....//.
 
 This works because the PHP filter only matches and replaces the first subset string ../ it finds and doesn't do another pass, leaving what is pictured below.
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1).png>)
 
 4\. Finally, we'll discuss the case where the developer forces the include to read from a defined directory! For example, if the web application asks to supply input that has to include a directory such as: http://webapp.thm/index.php?lang=languages/EN.php then, to exploit this, we need to include the directory in the payload like so: ?lang=languages/../../../../../etc/passwd
 
@@ -186,7 +186,7 @@ The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker t
 
 An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
 
-![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1).png>)
 
 #### RFI steps
 

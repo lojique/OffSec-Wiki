@@ -43,7 +43,7 @@ Once an attacker knows that a machine has the File Server service running, they 
 NET VIEW <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (27) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1).png>)
 
 ## Nmblookup
 
@@ -55,7 +55,7 @@ To perform the same operations of nbstat, we can use nmblookup with the same com
 nmblookup -A <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
 
 ## Smbclient
 
@@ -83,7 +83,7 @@ This tells Windows to connect to the IPC$ share by using both an empty password 
 NET USE \\<target IP>\IPC$ '' \u:''
 ```
 
-![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 This command does not work with C$
 
@@ -97,7 +97,7 @@ We can do the same checks by using smbclient
 smbclient \\<target IP>/IPC$ -N
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
 
 ## Exploiting Null Sessions
 
@@ -111,17 +111,17 @@ We can exploit null sessions using the WIndows NET command but there are some au
 enum -S <target IP> 
 ```
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1).png>)
 
 \-S enumerate shares on a machine
 
 \-U enumerates users
 
-![](<../../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 \-P if you need to mount a network authentication attack, you can check the password policy
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
 
 Checking password policies before running an authentication attack lets you find-tune an attack tool to:
 

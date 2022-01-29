@@ -4,7 +4,7 @@ description: Using Google's advanced query commands to find specific resources
 
 # Google Hacking
 
-![](<../../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
 Combining commands can lead to some pretty complex expressions
 

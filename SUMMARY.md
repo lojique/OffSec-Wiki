@@ -61,7 +61,8 @@
       * [Black-box Penetration Test 1](ine/penetration-testing-student/penetration-testing-basics/next-steps/black-box-penetration-test-1.md)
       * [Black-box Penetration Test 2](ine/penetration-testing-student/penetration-testing-basics/next-steps/black-box-penetration-test-2.md)
       * [Black-box Penetration Test 3](ine/penetration-testing-student/penetration-testing-basics/next-steps/black-box-penetration-test-3.md)
-  * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation.md)
+  * [eJPT Exam Preparation](ine/penetration-testing-student/ejpt-exam-preparation/README.md)
+    * [Black-box Penetration Test 1](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-1.md)
 
 ## TryHackMe
 

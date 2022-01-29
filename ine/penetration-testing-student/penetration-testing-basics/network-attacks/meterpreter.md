@@ -83,7 +83,7 @@ To print the network configuration:
 ifconfig
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
 
 ### Routing information
 
@@ -91,7 +91,7 @@ ifconfig
 route
 ```
 
-![](<../../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 ### Current User
 
@@ -127,7 +127,7 @@ getsystem
 In modern Windows operating systems, the User Account Control policy prevent privilege escalation
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (25) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1).png>)
 
 You can bypass that restriction by u sing the `bypassuac` module
 
@@ -184,7 +184,7 @@ You can navigate the hard drive by using Unix-like shell commands
 
 ## Uploading and Downloading
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
 
 ## Running an OS Shell
 

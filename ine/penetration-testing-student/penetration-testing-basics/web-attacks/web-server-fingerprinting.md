@@ -23,7 +23,7 @@ nc <target address> 80
 HEAD / HTTP/1.0
 ```
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Fingerprinting with OpenSSL
 

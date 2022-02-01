@@ -42,3 +42,12 @@ chmod +s payload
 cd <SHAREDD_FOLDER>
 ./payload #ROOT shell
 ```
+
+## Resources
+
+****[**https://tryhackme.com/room/linuxprivesc**](https://tryhackme.com/room/linuxprivesc) **(Task 19)**
+
+****[**https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/**](https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/)****\
+****[**https://www.hackingarticles.in/linux-privilege-escalation-using-misconfigured-nfs/**](https://www.hackingarticles.in/linux-privilege-escalation-using-misconfigured-nfs/)****
+
+****

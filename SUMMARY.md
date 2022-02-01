@@ -97,6 +97,11 @@
   * [Full TTYs](shells/shells-linux-windows-msfvenom/full-ttys.md)
   * [Meterpreter](shells/shells-linux-windows-msfvenom/meterpreter.md)
 
+## Linux/Unix
+
+* [Linux Privilege Escalation](linux-unix/linux-privilege-escalation/README.md)
+  * [NFS no\_root\_squash/no\_all\_squash misconfig PE](linux-unix/linux-privilege-escalation/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
+
 ## Methodology
 
 * [Pentesting Methodology Mindmap](methodology/pentesting-methodology-mindmap.md)

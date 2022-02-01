@@ -42,7 +42,3 @@ chmod +s payload
 cd <SHAREDD_FOLDER>
 ./payload #ROOT shell
 ```
-
-## Learn - TryHackMe
-
-****[**https://tryhackme.com/room/linuxprivesc**](https://tryhackme.com/room/linuxprivesc) **(Task 19)**

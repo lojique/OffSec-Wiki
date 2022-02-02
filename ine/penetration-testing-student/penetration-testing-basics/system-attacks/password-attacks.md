@@ -43,7 +43,7 @@ For example, variations on "cat" could be: cat12, caT, CAT, Cat, CAt, c@t and so
 
 ![In this example, the crackme file was cracked using the John default wordlist](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ![dictionary mangling enabled](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1) (1).png>)
 

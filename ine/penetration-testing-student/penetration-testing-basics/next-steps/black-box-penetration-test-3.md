@@ -122,7 +122,7 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 
 ![](<../../../../.gitbook/assets/image (41) (1).png>)
 
-![](<../../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../../.gitbook/assets/image (61) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (9) (1).png>)
 

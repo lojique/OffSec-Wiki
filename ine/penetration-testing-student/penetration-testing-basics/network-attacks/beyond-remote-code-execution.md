@@ -12,7 +12,7 @@ To check if code execution is occuring
 
 ### Ping
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
 
 ## Uploading a Webshell
 

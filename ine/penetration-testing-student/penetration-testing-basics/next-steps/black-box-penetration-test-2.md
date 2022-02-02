@@ -241,7 +241,7 @@ find / -name flag
 
 ![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
 
-![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1) (1).png>)
+![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
 The shell that we have is pretty limited, so it would be in our best interest to gain a meterpreter shell
 

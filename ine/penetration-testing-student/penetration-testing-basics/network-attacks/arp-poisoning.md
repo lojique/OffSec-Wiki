@@ -39,7 +39,7 @@ The attacker exploits gratuitous ARP messages to tell the victims that they can 
 
 This must be done on every victim
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 As soon as the ARP cache table contains fake information, every packet of every communication between the poisoned nodes will be sent to the attacker's machine
 

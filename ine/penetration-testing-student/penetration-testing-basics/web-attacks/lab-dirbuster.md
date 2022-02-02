@@ -47,7 +47,7 @@ We've been told which wordlist to use
 
 I used these extensions so I get try to get the most valuable information returned
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We'll let this run for a while and also increase the number of running threads to get results faster
 

@@ -173,7 +173,7 @@ You want to transform a query in a True/False condition, which reflects its stat
 
 ![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
+![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 

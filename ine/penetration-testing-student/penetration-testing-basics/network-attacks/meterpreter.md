@@ -91,7 +91,7 @@ ifconfig
 route
 ```
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 ### Current User
 
@@ -153,7 +153,7 @@ As you can imagine, this process name is not very stealthy and is also suspiciou
 
 A user checking their process list may notice something strange on their  machine
 
-![](<../../../../.gitbook/assets/image (35) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (35) (1) (1) (1).png>)
 
 Therefore, in order to remain stealthy, we can use the `migrate` command to attach our session on a different process
 
@@ -180,7 +180,7 @@ exploit
 
 You can navigate the hard drive by using Unix-like shell commands
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
 
 ## Uploading and Downloading
 

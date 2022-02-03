@@ -29,7 +29,7 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ![](../../../.gitbook/assets/image.png)
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
 
@@ -37,7 +37,7 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ### Practical
 
-![](<../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
 
 We use the following code which tells us where we want to go and stops the remaining path from being appended to the end of our URL and instead turns it into a parameter (?x=) on the query string by using <mark style="color:red;">`&x=`</mark>
 
@@ -57,7 +57,7 @@ When a full URL is used in a parameter in the address bar:
 
 A hidden field in a form:
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 A partial URL such as just the hostname:
 
@@ -99,7 +99,7 @@ First, create a customer account and sign in. Once you've signed in, visit `http
 
 If you choose one of the avatars and then click the Update Avatar button, you'll see the form change and, above it, display your currently selected avatar. Viewing the page source will show your current avatar is displayed using the data URI scheme, and the image content is base64 encoded as per the screenshot below.
 
-![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1).png>)
 
 Now let's try making the request again but changing the avatar value to private in hopes that the server will access the resource and get past the IP address block. To do this, firstly, right-click on one of the radio buttons on the avatar form and select Inspect:
 

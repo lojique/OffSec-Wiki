@@ -27,7 +27,7 @@ A Windows command line tool that can display information about a target
 
 `nbtstat -A <IP>` displays information about a target
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
 
 * Here we see the names of the machine running at 10.130.40.80
 * The record type <00> tells us that ELS-WINXP is a workstation
@@ -117,7 +117,7 @@ enum -S <target IP>
 
 \-U enumerates users
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
 
 \-P if you need to mount a network authentication attack, you can check the password policy
 

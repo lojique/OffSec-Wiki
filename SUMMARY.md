@@ -80,6 +80,7 @@
 * [Writeups](tryhackme/writeups/README.md)
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
   * [Simple CTF](tryhackme/writeups/simple-ctf.md)
+  * [RootMe](tryhackme/writeups/rootme.md)
 * [Web Hacking](tryhackme/web-hacking/README.md)
   * [SSRF](tryhackme/web-hacking/ssrf.md)
 * [Linux](tryhackme/linux/README.md)

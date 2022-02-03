@@ -53,7 +53,7 @@ We'll let this run for a while and also increase the number of running threads t
 
 And after waiting for a while we check the 'Results - Tree View' tab and see something interesting
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Checking out the file reveals all username and plain-text passwords stored on here
 

@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -99,7 +99,7 @@ In order to do the same thing from within a web app, the web app must
 
 PHP example code of a connection to a MySQL database and execution of a static query
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Vulnerable Dynamic Queries
 
@@ -165,7 +165,7 @@ Taking note of the **id** GET parameter, since this is a user input, we can test
 
 We see that id is an injection point
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Boolean Based SQLi
 
@@ -213,7 +213,7 @@ Trying with two fields seems to work
 
 Trying with three fields verifies if the original query just has two fields
 
-![](<../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 Once we know how many fields are in the query, we can test which fields are part of the output page
 

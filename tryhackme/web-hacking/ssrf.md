@@ -86,7 +86,7 @@ Initially, start by searching for the localhost IP (127.0.0.1) with any port to 
 
 If we try this payload on our VM we will see the following output:
 
-![](<../../.gitbook/assets/image (35) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (35) (1) (1) (1) (1).png>)
 
 This shows that the port 3306 is open.
 
@@ -128,7 +128,7 @@ To see this happen for yourself, go to `http://MACHINEIP:5000/filessrf`, you'll 
 
 So if now we try to read the file we'll be able to see the contents:
 
-![](<../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Remember is that it's unlikely that we'll be able to read files from any higher privileged user such as "root".
 

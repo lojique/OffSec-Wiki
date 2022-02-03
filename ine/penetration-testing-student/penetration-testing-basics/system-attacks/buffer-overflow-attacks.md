@@ -84,7 +84,7 @@ A raw overflow that just overwrites some memory locations will crash the app, wh
 
 We should understand that if an attacker manages to overflow Local Variable 1, they are able to overwrite Base Pointer and then Return Address
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png>)
 
 If they overwrite Return Address with the right value, they are able to control the execution flow of the program
 

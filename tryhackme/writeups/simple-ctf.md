@@ -82,10 +82,6 @@ Nmap done: 1 IP address (1 host up) scanned in 14.57 seconds
 ### Dirsearch
 
 ```bash
-dirsearch -u http://10.10.37.78 -w /usr/share/dirb/wordlists/common.txt -x 404 -t 100
-```
-
-```bash
 ┌──(lvksus㉿kali)-[~]
 └─$ dirsearch -u http://10.10.37.78 -w /usr/share/dirb/wordlists/common.txt -x 404 -t 100
 
@@ -168,4 +164,5 @@ The user 'Mitch' should change their password to something secure such as: <mark
 
 ### **SQLi Sanitization**
 
-Client-Side and Server-Side input validation and sanitization Secure Coding & SDLC
+* Client-Side and Server-Side input validation and sanitization
+* Secure Coding & SDLC

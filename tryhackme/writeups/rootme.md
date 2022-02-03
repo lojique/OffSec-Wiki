@@ -6,6 +6,8 @@ description: A ctf for beginners, can you root me?
 
 The room can be accessed [here](https://tryhackme.com/room/easyctf)
 
+\*\*\*Still editing this writeup\*\*\*
+
 ## Reconnaissance
 
 ### Nmap Scan

@@ -8,6 +8,8 @@ The room can be accessed [here](https://tryhackme.com/room/easyctf)
 
 ## Information Gathering
 
+I typically start with a Rustscan, simply because it gives me open ports faster. Once I get this, I might use Nmap for specific ports.
+
 ### Rustscan Scan
 
 ```bash
@@ -77,9 +79,13 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 14.57 seconds
 ```
 
+Right away, seeing port 2222 for SSH is very strange. We see that FTP is using version vsftpd 3.0.3 and the HTTP website is running on Apache version 2.4.18
+
 ## Enumeration
 
 ### Dirsearch
+
+I use my favorite directory brute-forcer to look for any directories that might seem interesting
 
 ```bash
 ┌──(lvksus㉿kali)-[~]
@@ -115,10 +121,12 @@ This Content Management System is vulnerable to [CVE-2019-9053: Unauthenticated 
 
 ### Proof of Concept&#x20;
 
+As shown in the image below, we see that the site produces output when we use some kind of SQL statement
+
 ![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_POC.png>)
 
 {% hint style="info" %}
-Used this for termcolor issue
+Used this for termcolor issue when trying to run the exploit
 
 [https://www.reddit.com/r/tryhackme/comments/p6v195/help\_with\_simple\_ctf/](https://www.reddit.com/r/tryhackme/comments/p6v195/help\_with\_simple\_ctf/)
 {% endhint %}
@@ -131,15 +139,27 @@ username: <mark style="color:green;">`mitch`</mark>\
 email: <mark style="color:green;">`admin@admin.com`</mark>\
 password: <mark style="color:green;">`secret`</mark>
 
+With these credentials and knowing the fact that SSH port 2222 was open, it would make the most sense to see if we can log into that service
+
 ![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_ssh+user.txt.png>)
+
+As we see, they work and we are able to grab the user.txt
 
 ## Privilege Escalation
 
+Next comes privilege escalation. Let's see what commands mitch is able to run as root
+
 ![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_Pasted image 20220202112308.png>)
+
+Vim is a very powerful text editor. We'll check out the infamous GTFObins for a list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems
+
+In our case, we want to be able to run Vim in such a way that will grant our low privilege user the ability to become root
 
 [https://gtfobins.github.io/gtfobins/vim/#sudo](https://gtfobins.github.io/gtfobins/vim/#sudo)
 
 ![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_sudo vim.png>)
+
+Just from a simple line of input, we are now root
 
 ```bash
 mitch@Machine:/home$ sudo -l
@@ -166,3 +186,7 @@ The user 'Mitch' should change their password to something secure such as: <mark
 
 * Client-Side and Server-Side input validation and sanitization
 * Secure Coding & SDLC
+
+### Removal of root privileges
+
+* Unless there's a justifiable reason that mitch should be able to run Vim as root, those privileges should be taken away

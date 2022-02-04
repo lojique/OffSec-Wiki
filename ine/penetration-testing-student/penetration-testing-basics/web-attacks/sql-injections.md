@@ -2,7 +2,7 @@
 
 Most web apps use some kind of backend database to store the data they process. To interact with it, Structured Query Language (SQL) is used.
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 SQLi attacks allow an unauthorized user to take control over SQL statements used by a web app
 
@@ -85,7 +85,7 @@ You can also perform a UNION with some chosen data:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT 'Example', 'Data';
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## SQL Queries Inside Web Apps
 
@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -159,13 +159,13 @@ Testing an input for SQLi means trying to inject:
 
 ![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 
 We see that id is an injection point
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Boolean Based SQLi
 
@@ -191,7 +191,7 @@ If our payload makes the results of the original query empty, then we can have t
 SELECT description FROM item WHERE id='' UNION SELECT user(); -- -';
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1).png>)
 
 The comment tells MySQL to ignore everything that will be added right after. This is because we don't want the web application to add other strings to our query
 
@@ -203,7 +203,7 @@ The reason for the third dash is because most browsers automatically remove trai
 
 You first need to know how many fields the vulnerable query selects
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We know the injection is here, but we get an error which means the number of fields of the original query and our payload do not match
 
@@ -219,7 +219,7 @@ Once we know how many fields are in the query, we can test which fields are part
 
 We'll inject some known values and checking the results
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1).png>)
 

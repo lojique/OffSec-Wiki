@@ -384,7 +384,7 @@ Looks like there's no authentication needed
 
 Now we basically just repeat what we did for Mongodb against mysql
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/2022-01-08 20\_32\_04-INE Labs - Brave.png>)
 

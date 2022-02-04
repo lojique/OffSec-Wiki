@@ -34,7 +34,7 @@ If the developer of an app does not enforce buffers limits, an attacker could fi
 
 ![](<../../../../.gitbook/assets/image (10) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## The Stack
 
@@ -56,9 +56,9 @@ To save some stack space for later use, the application can simply reserve some 
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
 
 ### Overflows in the Stack
 
@@ -84,7 +84,7 @@ A raw overflow that just overwrites some memory locations will crash the app, wh
 
 We should understand that if an attacker manages to overflow Local Variable 1, they are able to overwrite Base Pointer and then Return Address
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1).png>)
 
 If they overwrite Return Address with the right value, they are able to control the execution flow of the program
 

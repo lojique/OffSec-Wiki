@@ -88,7 +88,9 @@
 
 ## HackTheBox
 
-* [Coming soon...](hackthebox/coming-soon....md)
+* [Writeups](hackthebox/writeups/README.md)
+  * [Easy Boxes](hackthebox/writeups/easy-boxes/README.md)
+    * [Horizontall](hackthebox/writeups/easy-boxes/horizontall.md)
 
 ## Shells
 

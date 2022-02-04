@@ -6,7 +6,7 @@ The next hop could be a router, switch or the destination host
 
 To identify the MAC address of a host, computers use the Address Resolution Protocol
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1).png>)
 
 After the MAC address resolution is comnplete, hosts save the destination address in their ARP cache table
 
@@ -25,7 +25,7 @@ During an ARP poisoning attack, three actors are involved:
 * Two network nodes (clients, servers, routers, printers,...)
 * The attacker
 
-![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Gratuitous ARP Replies
 

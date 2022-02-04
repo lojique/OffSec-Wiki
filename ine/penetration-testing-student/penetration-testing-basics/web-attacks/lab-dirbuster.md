@@ -29,17 +29,17 @@ The best tools for this lab are:
 
 First we will ping the web app just to make sure we can reach it
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Next, we'll run an nmap scan on the target to gather some info
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We know an Apache HTTP web server is running on port 80 with the version of 2.4.7
 
 Don't forget about checking out the website itself!
 
-![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Now we'll set up Dirbuster
 

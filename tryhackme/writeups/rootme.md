@@ -38,7 +38,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100 
 ```
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 Here we can see that we can upload files. So we should be interested in uploading a reverse shell
 
@@ -50,7 +50,7 @@ And we should be able to execute it here
 
 Here's the PHP reverse shell. Now I start an netcat listener
 
-![](<../../.gitbook/assets/image (64).png>)
+![](<../../.gitbook/assets/image (64) (1).png>)
 
 And attempt to load the file, however, php is not permitted
 
@@ -66,7 +66,7 @@ The php reverse shell can be found here:
 
 As we can see, it accepted the file!
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../.gitbook/assets/image (34) (1).png>)
 
 ## Getting a Shell
 
@@ -82,15 +82,15 @@ This was quite helpful
 
 Once again, our file was accepted and uploaded
 
-![](<../../.gitbook/assets/image (54).png>)
+![](<../../.gitbook/assets/image (54) (1).png>)
 
 And there's our shell!
 
-![](<../../.gitbook/assets/image (55).png>)
+![](<../../.gitbook/assets/image (55) (1).png>)
 
 Here is where the user.txt file is
 
-![](<../../.gitbook/assets/image (29).png>)
+![](<../../.gitbook/assets/image (29) (1).png>)
 
 ## Privilege Escalation
 
@@ -119,7 +119,7 @@ This article helped me better understand SUID:
 
 Basically, you can change the permission of any file either using the “Numerical” method or “Symbolic” method. As result, it will **replace x from s** as shown in the below image which denotes especial execution permission with the higher privilege to a particular file/command. Since we are enabling SUID for Owner (user) therefore **bit 4** or **symbol s** will be added before read/write/execution operation.
 
-![](<../../.gitbook/assets/image (38).png>)
+![](<../../.gitbook/assets/image (38) (1).png>)
 
 If you execute **ls -al** with the file name and then you observe the small ‘s’ symbol as in the above image, then its means SUID bit is enabled for that file and can be executed with root privileges.
 
@@ -152,7 +152,7 @@ Here's how we can do this
 
 [https://gtfobins.github.io/gtfobins/python/#suid](https://gtfobins.github.io/gtfobins/python/#suid)
 
-![](<../../.gitbook/assets/image (46).png>)
+![](<../../.gitbook/assets/image (46) (1).png>)
 
 It works!
 
@@ -160,6 +160,6 @@ It works!
 
 Now let's get the flag
 
-![](<../../.gitbook/assets/image (36).png>)
+![](<../../.gitbook/assets/image (36) (1).png>)
 
 We're done!

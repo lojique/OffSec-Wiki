@@ -12,7 +12,7 @@ description: >-
 
 In some scenarios, web applications are written to request access to files on a given system, including images, static text, and so on via parameters. Parameters are query parameter strings attached to the URL that could be used to retrieve data or perform actions based on user input. The following graph explains and breaking down the essential parts of the URL.
 
-![](<../../../.gitbook/assets/image (24) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1).png>)
 
 For example, parameters are used with Google searching, where <mark style="color:red;">`GET`</mark> <mark style="color:red;"></mark><mark style="color:red;"></mark> requests pass user input into the search engine. <mark style="color:red;">`https://www.google.com/search?q=TryHackMe`</mark>
 
@@ -46,7 +46,7 @@ Suppose there isn't input validation, and instead of accessing the PDF files at 
 
 As a result, the web application sends back the file's content to the user.
 
-![](<../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Similarly, if the web application runs on a Windows server, the attacker needs to provide Windows paths. For example, if the attacker wants to read the <mark style="color:red;">`boot.ini`</mark> file located in <mark style="color:red;">`c:\boot.ini`</mark>, then the attacker can try the following depending on the target OS version:
 
@@ -170,7 +170,7 @@ First, we can send the following payload to bypass it: ....//....//....//....//.
 
 This works because the PHP filter only matches and replaces the first subset string ../ it finds and doesn't do another pass, leaving what is pictured below.
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Finally, we'll discuss the case where the developer forces the include to read from a defined directory! For example, if the web application asks to supply input that has to include a directory such as: http://webapp.thm/index.php?lang=languages/EN.php then, to exploit this, we need to include the directory in the payload like so: ?lang=languages/../../../../../etc/passwd
 

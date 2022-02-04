@@ -27,7 +27,7 @@ A Windows command line tool that can display information about a target
 
 `nbtstat -A <IP>` displays information about a target
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1).png>)
 
 * Here we see the names of the machine running at 10.130.40.80
 * The record type <00> tells us that ELS-WINXP is a workstation
@@ -55,7 +55,7 @@ To perform the same operations of nbstat, we can use nmblookup with the same com
 nmblookup -A <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
 
 ## Smbclient
 
@@ -67,7 +67,7 @@ smbclient -L //10.130.40.80 -N
 
 `-N` forces the tool to not ask for a password
 
-![](<../../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (1).png>)
 
 Smbclient can detects the very same shares detected by NET VIEW but also displays adminsitrative tools that are hidden when using Windows standard tools (IPC$, Admin$, and C$)
 
@@ -121,7 +121,7 @@ enum -S <target IP>
 
 \-P if you need to mount a network authentication attack, you can check the password policy
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
 
 Checking password policies before running an authentication attack lets you find-tune an attack tool to:
 

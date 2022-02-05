@@ -85,6 +85,8 @@
   * [SSRF](tryhackme/web-hacking/ssrf.md)
 * [Linux](tryhackme/linux/README.md)
   * [Linux Strength Training](tryhackme/linux/linux-strength-training.md)
+* [Windows](tryhackme/windows/README.md)
+  * [Active Directory](tryhackme/windows/active-directory.md)
 
 ## HackTheBox
 

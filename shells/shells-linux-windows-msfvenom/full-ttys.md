@@ -87,3 +87,11 @@ If for some reason you cannot obtain a full TTY you **still can interact with pr
 ```bash
 expect -c 'spawn sudo -S cat "/root/root.txt";expect "*password*";send "<THE_PASSWORD
 ```
+
+## rlwrap
+
+```bash
+sudo apt install rlwrap
+rlwrap -cAr nc -nvlp [PORT]
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```

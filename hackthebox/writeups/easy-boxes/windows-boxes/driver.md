@@ -10,7 +10,7 @@ Afterwards I'll use Nmap to gather more information
 nmap -Pn -n -T4 -v -p- -A -sV 10.129.154.147
 ```
 
-![](<../../../../.gitbook/assets/image (22).png>)
+![](<../../../../.gitbook/assets/image (22) (1).png>)
 
 HTTP Port 80,  NetBIOS Port 139, SMB Port 445 and Windows Remote Management over HTTP Port 5985
 
@@ -39,4 +39,42 @@ I try some default credentials such as <mark style="color:green;">`admin:admin`<
 
 Navigating through the site, we can only access "Firmware Updates" which brings us to this page where we can upload a file
 
+![](<../../../../.gitbook/assets/image (20) (1).png>)
+
+{% embed url="https://pentestlab.blog/2017/12/13/smb-share-scf-file-attacks" %}
+
 ![](<../../../../.gitbook/assets/image (20).png>)
+
+![](<../../../../.gitbook/assets/image (21).png>)
+
+![](<../../../../.gitbook/assets/image (29).png>)
+
+![](<../../../../.gitbook/assets/image (72).png>)
+
+![](<../../../../.gitbook/assets/image (55).png>)
+
+![](<../../../../.gitbook/assets/image (64).png>)
+
+{% embed url="https://book.hacktricks.xyz/pentesting/5985-5986-pentesting-winrm" %}
+
+![](<../../../../.gitbook/assets/image (7).png>)
+
+![](<../../../../.gitbook/assets/image (33).png>)
+
+{% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}
+
+![](<../../../../.gitbook/assets/image (22).png>)
+
+![](<../../../../.gitbook/assets/image (37).png>)
+
+![](<../../../../.gitbook/assets/image (15).png>)
+
+![](<../../../../.gitbook/assets/image (17).png>)
+
+![](<../../../../.gitbook/assets/image (18).png>)
+
+![](<../../../../.gitbook/assets/image (38).png>)
+
+![](<../../../../.gitbook/assets/image (19).png>)
+
+![](<../../../../.gitbook/assets/image (71).png>)

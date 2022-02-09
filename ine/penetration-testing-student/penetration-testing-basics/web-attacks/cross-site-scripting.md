@@ -76,7 +76,7 @@ Triggered by posting a link on a social network or via a phishing campaign. When
 
 Some browsers like Chrome have a reflected XSS filter built in so they will not run some XSS reflected attacks
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 However, they can only filter trivial and known XSS attacks since there are advanced methods that can bypass anti-XSS filters
 
@@ -84,7 +84,7 @@ However, they can only filter trivial and known XSS attacks since there are adva
 
 Cannot be blocked by Anti-XSS filters
 
-Occur when the payload is sent to the vulnerable web server and then **stored**.&#x20;
+Occur when the payload is sent to the vulnerable web server and then **stored**.
 
 * When a web page of the vulnerable website pulls the stored malicious code and puts it within the HTML output, it will deliver the XSS payload.
 
@@ -95,8 +95,6 @@ The most common vector for persistent attacks are HTML forms that submit content
 * Elements like comments, user profiles, and form posts are a potential vector for attacks
 
 Example: If an attacker manages to inject a malicious script in a forum post, every person opening that post will run the script; this, for example, could let an attack silently steal visitors' cookies and impersonate them without even knowing their login credentials
-
-
 
 ## Cookie Stealing via XSS
 

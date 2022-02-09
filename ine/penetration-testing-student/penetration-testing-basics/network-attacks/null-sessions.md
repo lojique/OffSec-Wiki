@@ -27,7 +27,7 @@ A Windows command line tool that can display information about a target
 
 `nbtstat -A <IP>` displays information about a target
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * Here we see the names of the machine running at 10.130.40.80
 * The record type <00> tells us that ELS-WINXP is a workstation
@@ -97,7 +97,7 @@ We can do the same checks by using smbclient
 smbclient \\<target IP>/IPC$ -N
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1).png>)
 
 ## Exploiting Null Sessions
 
@@ -111,7 +111,7 @@ We can exploit null sessions using the WIndows NET command but there are some au
 enum -S <target IP> 
 ```
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1).png>)
 
 \-S enumerate shares on a machine
 

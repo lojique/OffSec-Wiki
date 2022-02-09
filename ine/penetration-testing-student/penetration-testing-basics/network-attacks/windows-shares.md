@@ -6,7 +6,7 @@ Network Basic Input Output System
 
 Servers and clients use NetBIOS when viewing network shares on the local area network
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
 
 NetBIOS can supply some of the following information when querying a computer:
 

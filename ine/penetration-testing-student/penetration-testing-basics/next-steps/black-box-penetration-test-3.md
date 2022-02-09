@@ -84,11 +84,11 @@ Nmap done: 3 IP addresses (3 hosts up) scanned in 6.98 seconds
 
 ### Dirb
 
-![](<../../../../.gitbook/assets/image (21) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1).png>)
 
 ### Website
 
-![](<../../../../.gitbook/assets/image (55) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (32) (1).png>)
 
@@ -104,11 +104,11 @@ use exploit/multi/http/werkzeug_debug_rce
 
 ![](<../../../../.gitbook/assets/image (49) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (59) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (8).png>)
 
@@ -156,9 +156,9 @@ dirb http://192.6.232.5:8080
 
 ![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (44).png>)
 
@@ -202,7 +202,7 @@ stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38
 
 ![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (42) (1) (1).png>)
 
@@ -226,7 +226,7 @@ username=robert | password=robert@1234567890!@#
 
 ![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6).png>)
 
-![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 ```c
 #include <stdio.h>

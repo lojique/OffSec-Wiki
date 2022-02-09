@@ -83,7 +83,7 @@ To print the network configuration:
 ifconfig
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1).png>)
 
 ### Routing information
 
@@ -91,7 +91,7 @@ ifconfig
 route
 ```
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png>)
 
 ### Current User
 
@@ -109,7 +109,7 @@ To just current privileges on Windows
 run post/windows/gather/win_privs
 ```
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1).png>)
 
 You can use `getsystem` if the owner of the process does not have high privileges on the victim system
 
@@ -176,11 +176,11 @@ exploit
 
 You can navigate the hard drive by using Unix-like shell commands
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1).png>)
 
 ## Uploading and Downloading
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
 
 ## Running an OS Shell
 

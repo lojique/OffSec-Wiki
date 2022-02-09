@@ -42,7 +42,7 @@ We can test out the URL parameter by adding payloads to see how the web applicat
 
 Suppose there isn't input validation, and instead of accessing the PDF files at <mark style="color:red;">`/var/www/app/CVs`</mark> location, the web application retrieves files from other directories, which in this case <mark style="color:red;">`/etc/passwd`</mark>. Each <mark style="color:red;">`..`</mark> entry moves one directory until it reaches the root directory <mark style="color:red;">`/`</mark>. Then it changes the directory to <mark style="color:red;">`/etc`</mark>, and from there, it read the <mark style="color:red;">`passwd`</mark> file.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 As a result, the web application sends back the file's content to the user.
 
@@ -182,7 +182,7 @@ The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker t
 
 An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
 
-![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1).png>)
 
 #### RFI steps
 

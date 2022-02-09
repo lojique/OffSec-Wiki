@@ -38,7 +38,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100 
 ```
 
-![](<../../.gitbook/assets/image (15) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1).png>)
 
 Here we can see that we can upload files. So we should be interested in uploading a reverse shell
 
@@ -50,11 +50,11 @@ And we should be able to execute it here
 
 Here's the PHP reverse shell. Now I start an netcat listener
 
-![](<../../.gitbook/assets/image (64) (1).png>)
+![](<../../.gitbook/assets/image (64) (1) (1).png>)
 
 And attempt to load the file, however, php is not permitted
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 What we can do, is bypass the filter by renaming the file to something like shell.php.jpg
 
@@ -86,11 +86,11 @@ Once again, our file was accepted and uploaded
 
 And there's our shell!
 
-![](<../../.gitbook/assets/image (55) (1).png>)
+![](<../../.gitbook/assets/image (55) (1) (1).png>)
 
 Here is where the user.txt file is
 
-![](<../../.gitbook/assets/image (29) (1).png>)
+![](<../../.gitbook/assets/image (29) (1) (1).png>)
 
 ## Privilege Escalation
 
@@ -119,7 +119,7 @@ This article helped me better understand SUID:
 
 Basically, you can change the permission of any file either using the “Numerical” method or “Symbolic” method. As result, it will **replace x from s** as shown in the below image which denotes especial execution permission with the higher privilege to a particular file/command. Since we are enabling SUID for Owner (user) therefore **bit 4** or **symbol s** will be added before read/write/execution operation.
 
-![](<../../.gitbook/assets/image (38) (1).png>)
+![](<../../.gitbook/assets/image (38) (1) (1).png>)
 
 If you execute **ls -al** with the file name and then you observe the small ‘s’ symbol as in the above image, then its means SUID bit is enabled for that file and can be executed with root privileges.
 
@@ -142,7 +142,7 @@ find / -perm -u=s -type f 2>/dev/null
 
 What stands out is /usr/bin/python
 
-![](<../../.gitbook/assets/image (70).png>)
+![](<../../.gitbook/assets/image (70) (1).png>)
 
 ![](<../../.gitbook/assets/image (23).png>)
 

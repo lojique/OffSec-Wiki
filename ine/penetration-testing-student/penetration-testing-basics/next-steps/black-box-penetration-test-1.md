@@ -101,7 +101,7 @@ Web Server IP: 192.104.6.3
 
 Going to the website (demo.ine.local), it seems to be the way to get a foothold into the web server due to the fact that it's running v-cms v1.0
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
 
 We'll go ahead and fire up metasploit and search for available exploits
 
@@ -109,7 +109,7 @@ We'll go ahead and fire up metasploit and search for available exploits
 
 The second option makes the most sense
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
 
 We should read information about the exploit so we understand what's happening
 
@@ -127,11 +127,11 @@ Now we'll configure the options as such
 
 After typing run (or exploit), we get ourselves a meterpreter session!
 
-![](<../../../../.gitbook/assets/image (7) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
 Let's see what user we are
 
-![](<../../../../.gitbook/assets/image (38) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (38) (1) (1) (1) (1) (1).png>)
 
 Wow we're root!
 
@@ -157,7 +157,7 @@ bash
 
 Here is the network that we couldn't reach: `192.57.96.2`
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
 
 To get back to our meterpreter shell, we'll enter in "exit" 3 times
 
@@ -215,7 +215,7 @@ sessions -i 3
 portfwd add -l 4242 -p 21 -r 192.57.96.3
 ```
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
 
 ## Scanning Second Target
 
@@ -233,7 +233,7 @@ While searching for exploits, it becomes obvious we need the vsftpd exploit
 
 Now we'll set up the payload and run it
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1).png>)
 
 Awesome, we got on the other machine!
 
@@ -241,6 +241,6 @@ Awesome, we got on the other machine!
 
 Now let's get that last flag
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
 
 We have successfully exploited both machines and retrieved both flags!

@@ -2,7 +2,7 @@
 
 Most web apps use some kind of backend database to store the data they process. To interact with it, Structured Query Language (SQL) is used.
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 SQLi attacks allow an unauthorized user to take control over SQL statements used by a web app
 
@@ -58,7 +58,7 @@ select field from table; -- this is another comment
 
 ### SELECT Example
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 These two queries provide the same result
 
@@ -99,7 +99,7 @@ In order to do the same thing from within a web app, the web app must
 
 PHP example code of a connection to a MySQL database and execution of a static query
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Vulnerable Dynamic Queries
 
@@ -165,15 +165,15 @@ Taking note of the **id** GET parameter, since this is a user input, we can test
 
 We see that id is an injection point
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Boolean Based SQLi
 
 You want to transform a query in a True/False condition, which reflects its state to the web app output
 
-![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1).png>)
+![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 
@@ -199,7 +199,7 @@ The reason for the third dash is because most browsers automatically remove trai
 
 You first need to know how many fields the vulnerable query selects
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We know the injection is here, but we get an error which means the number of fields of the original query and our payload do not match
 
@@ -217,7 +217,7 @@ We'll inject some known values and checking the results
 
 ![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Now we can exploit the injection. As an example, we'll query for user()
 

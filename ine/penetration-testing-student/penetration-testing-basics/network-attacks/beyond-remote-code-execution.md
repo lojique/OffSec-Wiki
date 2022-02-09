@@ -8,11 +8,11 @@ To check if code execution is occuring
 
 ### Time-Based Method
 
-![](<../../../../.gitbook/assets/image (27) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1).png>)
 
 ### Ping
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 ## Uploading a Webshell
 
@@ -24,7 +24,7 @@ Ability to upload a simple interactive webshell on the web server
 
 ### Curl
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 

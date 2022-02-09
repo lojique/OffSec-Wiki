@@ -114,7 +114,7 @@ Host: www.example.site
 
 * This can be used by passing our commands via the cmd GET parameter
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * The shell has the same permissions of the web server it runs on.
 * For example, we can write a file

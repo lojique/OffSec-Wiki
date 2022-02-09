@@ -83,7 +83,7 @@ To print the network configuration:
 ifconfig
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
 
 ### Routing information
 
@@ -110,8 +110,6 @@ run post/windows/gather/win_privs
 ```
 
 ![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
-
-
 
 You can use `getsystem` if the owner of the process does not have high privileges on the victim system
 
@@ -151,7 +149,7 @@ Checking pid with `getpid` shows the process you're currently running on
 
 As you can imagine, this process name is not very stealthy and is also suspicious
 
-A user checking their process list may notice something strange on their  machine
+A user checking their process list may notice something strange on their machine
 
 ![](<../../../../.gitbook/assets/image (35) (1) (1) (1) (1).png>)
 
@@ -163,8 +161,6 @@ We have to choose a process with the same privileges we currently have
 ps -U SYSTEM
 migrate <PID> //simply using migrate should work as well if you don't want to be specific
 ```
-
-
 
 ## Dumping the Password Database
 

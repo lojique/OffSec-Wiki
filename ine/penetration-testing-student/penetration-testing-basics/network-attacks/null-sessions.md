@@ -43,7 +43,7 @@ Once an attacker knows that a machine has the File Server service running, they 
 NET VIEW <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1) (1).png>)
 
 ## Nmblookup
 

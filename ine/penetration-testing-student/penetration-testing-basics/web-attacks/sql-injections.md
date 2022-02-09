@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -173,7 +173,7 @@ You want to transform a query in a True/False condition, which reflects its stat
 
 ![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 
@@ -182,8 +182,6 @@ Since there is no image or view counter, this is clearly an exploitable SQL inje
 Many times, some of the results of a query are directly displayed on the output page
 
 This can be exploited using the **UNION** SQL command
-
-
 
 If our payload makes the results of the original query empty, then we can have the results of another, attacker controlled, query shown on the page
 
@@ -196,8 +194,6 @@ SELECT description FROM item WHERE id='' UNION SELECT user(); -- -';
 The comment tells MySQL to ignore everything that will be added right after. This is because we don't want the web application to add other strings to our query
 
 The reason for the third dash is because most browsers automatically remove trailing spaces in the URL so, if you need to inject a comment via a GET request, you have to add a character after the trailing space of the comment
-
-
 
 ### Exploiting UNION SQL Injections
 
@@ -221,7 +217,7 @@ We'll inject some known values and checking the results
 
 ![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Now we can exploit the injection. As an example, we'll query for user()
 
@@ -253,8 +249,6 @@ sqlmap -u 'http://victim.site/view.php?id=1141' -p id --technique=U
 ```
 
 This tests the id parameter of the GET request for view.php and tells SQLMap to use a UNION based SQLi technique
-
-
 
 To exploit a POST parameter:
 

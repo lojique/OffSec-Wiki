@@ -10,15 +10,15 @@ SSRF is a vulnerability in web applications whereby an attacker can make further
 
 ![](<../../.gitbook/assets/image (26) (1) (1) (1) (1) (1).png>)
 
-Focusing on the above diagram, in a normal case the attacker would only be able to visit the website and see the website data.&#x20;
+Focusing on the above diagram, in a normal case the attacker would only be able to visit the website and see the website data.
 
-The server running the website is allowed to communicate to the internal GitLab or Postgres database, but the user may not, because the firewall in the middle only allows access to ports 80 (HTTP) and 443 (HTTPS).&#x20;
+The server running the website is allowed to communicate to the internal GitLab or Postgres database, but the user may not, because the firewall in the middle only allows access to ports 80 (HTTP) and 443 (HTTPS).
 
-However, SSRF would give an attacker the power to make a connection to Postgres and see its data by first connecting to the website server, and then using that to connect to the database.&#x20;
+However, SSRF would give an attacker the power to make a connection to Postgres and see its data by first connecting to the website server, and then using that to connect to the database.
 
-Postgres would think that the website is requesting something from the database, but in reality, it's the attacker making use of an SSRF vulnerability in website to get the data.&#x20;
+Postgres would think that the website is requesting something from the database, but in reality, it's the attacker making use of an SSRF vulnerability in website to get the data.
 
-The process would usually be something like this: an attacker finds an SSRF vulnerability on a website.&#x20;
+The process would usually be something like this: an attacker finds an SSRF vulnerability on a website.
 
 The firewall allows all requests to the website. The attacker then exploits the SSRF vulnerability by forcing the webserver to request data from the database, which it then returns to the attacker.
 
@@ -102,7 +102,7 @@ The basic page we've already worked with doesn't have any filter, so to try thes
 
 Try it for yourself: try to enter the old payloads such as "`http://127.0.0.1:3306`" or `http://localhost:3306` -- you'll get something like:
 
-![](<../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1).png>)
 
 As expected, this is because there are SSRF checks in place, but still it's possible to bypass them. It's also possible that if you try to access `http://[::]:3306`, you might get "target not reachable". When this happens it can be the result of how the framework is handling input in the application. If it was a PHP application then this would work, but flask/Django might interpret these payloads differently. If you fail with that payload, try removing the brackets (i.e try `http://:::3306`): remember that the third colon indicates the separation between port and IP.
 
@@ -145,4 +145,4 @@ Go to the room [here](https://tryhackme.com/room/ssrf)
 Resources for SSRF stuff\
 [https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery)\
 [https://cobalt.io/blog/from-ssrf-to-port-scanner](https://cobalt.io/blog/from-ssrf-to-port-scanner)\
-[https://github.com/swisskyrepo/SSRFmap](https://github.com/swisskyrepo/SSRFmap)\
+[https://github.com/swisskyrepo/SSRFmap](https://github.com/swisskyrepo/SSRFmap)\\

@@ -12,7 +12,7 @@ Server-Side Request Forgery is a vulnerability that allows a malicious user to c
 
 ### Types of SSRF
 
-There are two types of SSRF vulnerability; the first is a regular SSRF where data is returned to the attacker's screen. The second is a Blind SSRF vulnerability where an SSRF occurs, but no information is returned to the attacker's screen.&#x20;
+There are two types of SSRF vulnerability; the first is a regular SSRF where data is returned to the attacker's screen. The second is a Blind SSRF vulnerability where an SSRF occurs, but no information is returned to the attacker's screen.
 
 ### What's the impact?
 
@@ -33,7 +33,7 @@ This [video ](https://www.youtube.com/watch?v=zWGOJSnH0HI)is excellent in helpin
 
 ![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (24) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1).png>)
 
 ### Practical
 
@@ -65,7 +65,7 @@ A partial URL such as just the hostname:
 
 Or perhaps only the path of the URL:
 
-![](<../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1).png>)
 
 Some of these examples are easier to exploit than others, and this is where a lot of trial and error will be required to find a working payload.
 

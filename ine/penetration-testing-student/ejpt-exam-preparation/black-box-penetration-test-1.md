@@ -26,8 +26,8 @@
 ## Recommended tools
 
 * Dirb
-* Metasploit framework (recommended version: 5)&#x20;
-* Nmap&#x20;
+* Metasploit framework (recommended version: 5)
+* Nmap
 * Netcat
 
 ## My Solution
@@ -272,9 +272,9 @@ role1:tomcat
 
 ![](<../../../.gitbook/assets/image (17) (1).png>)
 
-![](<../../../.gitbook/assets/image (27).png>)
+![](<../../../.gitbook/assets/image (27) (1).png>)
 
-![](<../../../.gitbook/assets/image (22) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (55) (1) (1).png>)
 
@@ -282,7 +282,7 @@ role1:tomcat
 
 ![](<../../../.gitbook/assets/image (53) (1).png>)
 
-![](<../../../.gitbook/assets/image (41) (1).png>)
+![](<../../../.gitbook/assets/image (41) (1) (1).png>)
 
 > The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 
@@ -341,7 +341,7 @@ use windows/mssql/mssql_payload
 
 ![](<../../../.gitbook/assets/image (66) (1).png>)
 
-![](<../../../.gitbook/assets/image (54) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
@@ -366,4 +366,3 @@ ssh developer@172.16.64.182
 ### Flag
 
 ![](<../../../.gitbook/assets/image (51) (1).png>)
-

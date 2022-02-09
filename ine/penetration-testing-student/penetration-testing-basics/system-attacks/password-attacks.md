@@ -43,9 +43,9 @@ For example, variations on "cat" could be: cat12, caT, CAT, Cat, CAt, c@t and so
 
 ![In this example, the crackme file was cracked using the John default wordlist](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![dictionary mangling enabled](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1) (1).png>)
+![dictionary mangling enabled](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1) (1) (1).png>)
 
 ## Rainbow Tables
 
@@ -61,6 +61,6 @@ A limit of rainbow tables is the storage space needed to guarantee successful cr
 
 ### Ophcrack
 
-Rainbow cracking tool aimed at Windows password recovery&#x20;
+Rainbow cracking tool aimed at Windows password recovery
 
 Can run on Windows, Linux, Unix and OSX

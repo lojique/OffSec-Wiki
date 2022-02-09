@@ -56,7 +56,7 @@ And attempt to load the file, however, php is not permitted
 
 ![](<../../.gitbook/assets/image (17).png>)
 
-What we can do, is bypass the filter by renaming the file to something like shell.php.jpg&#x20;
+What we can do, is bypass the filter by renaming the file to something like shell.php.jpg
 
 The php reverse shell can be found here:
 
@@ -82,7 +82,7 @@ This was quite helpful
 
 Once again, our file was accepted and uploaded
 
-![](<../../.gitbook/assets/image (54) (1).png>)
+![](<../../.gitbook/assets/image (54) (1) (1).png>)
 
 And there's our shell!
 
@@ -113,7 +113,7 @@ This article helped me better understand SUID:
 
 ### **What is SUID Permission?**
 
-**SUID:** Set User ID is a type of permission that allows users to execute a file with the permissions of a specified user. Those files which have suid permissions run with higher privileges.  Assume we are accessing the target system as a non-root user and we found suid bit enabled binaries, then those file/program/command can run with root privileges. ****&#x20;
+**SUID:** Set User ID is a type of permission that allows users to execute a file with the permissions of a specified user. Those files which have suid permissions run with higher privileges. Assume we are accessing the target system as a non-root user and we found suid bit enabled binaries, then those file/program/command can run with root privileges. \*\*\*\*
 
 **How to set suid?**
 
@@ -131,7 +131,7 @@ In Linux, some of the existing binaries and commands can be used by non-root use
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-* **/** denotes  start from the top (root) of the file system and find every directory
+* **/** denotes start from the top (root) of the file system and find every directory
 * **-perm** denotes search for the permissions that follow
 * **-u=s** denotes look for files that are owned by the root user
 * **-type** states the type of file we are looking for

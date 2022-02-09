@@ -29,7 +29,7 @@ The best tools for this lab are:
 
 First we will ping the web app just to make sure we can reach it
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Next, we'll run an nmap scan on the target to gather some info
 
@@ -47,7 +47,7 @@ We've been told which wordlist to use
 
 I used these extensions so I get try to get the most valuable information returned
 
-![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We'll let this run for a while and also increase the number of running threads to get results faster
 

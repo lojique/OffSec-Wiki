@@ -139,7 +139,7 @@ Wow we're root!
 
 We can try to retrieve the first flag. The first place I would check is root's home directory
 
-![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
 Now that we've gotten the first flag, we need to do the second part, which is find the other machine in the setup which is not accessible from the Kali machine but is accessible from the web server
 
@@ -163,7 +163,7 @@ To get back to our meterpreter shell, we'll enter in "exit" 3 times
 
 ### Autoroute
 
-In order to compromise the other machine  which is on a different network, we need to use this machine  for routing traffic from a normally non-routable network
+In order to compromise the other machine which is on a different network, we need to use this machine for routing traffic from a normally non-routable network
 
 We want to leverage this newly discovered information and attack this additional network. Metasploit has an **autoroute** meterpreter script that will allow us to attack this second network through our first compromised machine
 
@@ -243,4 +243,4 @@ Now let's get that last flag
 
 ![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
-We have successfully exploited both  machines and retrieved both flags!
+We have successfully exploited both machines and retrieved both flags!

@@ -12,9 +12,9 @@ description: >-
 
 In some scenarios, web applications are written to request access to files on a given system, including images, static text, and so on via parameters. Parameters are query parameter strings attached to the URL that could be used to retrieve data or perform actions based on user input. The following graph explains and breaking down the essential parts of the URL.
 
-![](<../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1).png>)
 
-For example, parameters are used with Google searching, where <mark style="color:red;">`GET`</mark> <mark style="color:red;"></mark><mark style="color:red;"></mark> requests pass user input into the search engine. <mark style="color:red;">`https://www.google.com/search?q=TryHackMe`</mark>
+For example, parameters are used with Google searching, where <mark style="color:red;">`GET`</mark> requests pass user input into the search engine. <mark style="color:red;">`https://www.google.com/search?q=TryHackMe`</mark>
 
 Let's discuss a scenario where a user requests to access files from a webserver. First, the user sends an HTTP request to the webserver that includes a file to display. For example, if a user wants to access and display their `CV` within the web application, the request may look as follows, <mark style="color:red;">`http://webapp.thm/get.php?file=userCV.pdf`</mark>, where the file is the parameter and the <mark style="color:red;">`userCV.pdf`</mark>, is the required file to access.﻿
 
@@ -42,7 +42,7 @@ We can test out the URL parameter by adding payloads to see how the web applicat
 
 Suppose there isn't input validation, and instead of accessing the PDF files at <mark style="color:red;">`/var/www/app/CVs`</mark> location, the web application retrieves files from other directories, which in this case <mark style="color:red;">`/etc/passwd`</mark>. Each <mark style="color:red;">`..`</mark> entry moves one directory until it reaches the root directory <mark style="color:red;">`/`</mark>. Then it changes the directory to <mark style="color:red;">`/etc`</mark>, and from there, it read the <mark style="color:red;">`passwd`</mark> file.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
 
 As a result, the web application sends back the file's content to the user.
 
@@ -76,7 +76,7 @@ Sometimes, developers will add filters to limit access to only certain files or 
 
 LFI attacks against web applications are often due to a developers' lack of security awareness. With PHP, using functions such as <mark style="color:red;">`include`</mark>, <mark style="color:red;">`require`</mark>, <mark style="color:red;">`include_once`</mark>, and <mark style="color:red;">`require_once`</mark> often contribute to vulnerable web applications. In this room, we'll be picking on PHP, but it's worth noting LFI vulnerabilities also occur when using other languages such as ASP, JSP, or even in Node.js apps. LFI exploits follow the same concepts as path traversal.
 
-1. Suppose the web application provides two languages, and the user can select between the <mark style="color:red;">`EN`</mark> and <mark style="color:red;">`AR`</mark>&#x20;
+1. Suppose the web application provides two languages, and the user can select between the <mark style="color:red;">`EN`</mark> and <mark style="color:red;">`AR`</mark>
 
 ```php
 <?PHP 
@@ -90,9 +90,7 @@ Theoretically, we can access and display any readable file on the server from th
 
 In this case, it works because there isn't a directory specified in the <mark style="color:red;">`include`</mark> function and no input validation.
 
-
-
-&#x20;2\. Next, In the following code, the developer decided to specify the directory inside the function.
+2\. Next, In the following code, the developer decided to specify the directory inside the function.
 
 ```php
 <?PHP
@@ -110,7 +108,7 @@ Again the payload looks similar to the path traversal, but the include function 
 
 ## More LFI Stuff
 
-&#x20;1\. In the first two cases, we checked the code for the web app, and then we knew how to exploit it. However, in this case, we are performing black box testing, in which we don't have the source code. In this case, errors are significant in understanding how the data is passed and processed into the web app.
+1\. In the first two cases, we checked the code for the web app, and then we knew how to exploit it. However, in this case, we are performing black box testing, in which we don't have the source code. In this case, errors are significant in understanding how the data is passed and processed into the web app.
 
 In this scenario, we have the following entry point: <mark style="color:red;">`http://webapp.thm/index.php?lang=EN`</mark>. If we enter an invalid input, such as THM, we get the following error
 
@@ -149,8 +147,6 @@ The <mark style="color:red;">`%00`</mark> trick is fixed and not working with PH
 2\. In this section, the developer decided to filter keywords to avoid disclosing sensitive information! The <mark style="color:red;">`/etc/passwd`</mark> file is being filtered. There are two possible methods to bypass the filter. First, by using the NullByte <mark style="color:red;">`%00`</mark> or the current directory trick at the end of the filtered keyword <mark style="color:red;">`/.`</mark>. The exploit will be similar to <mark style="color:red;">`http://webapp.thm/index.php?lang=/etc/passwd/`</mark>. We could also use <mark style="color:red;">`http://webapp.thm/index.php?lang=/etc/passwd%00`</mark>.
 
 To make it clearer, if we try this concept in the file system using <mark style="color:red;">`cd ..`</mark>, it will get you back one step; however, if you do <mark style="color:red;">`cd .`</mark>, It stays in the current directory. Similarly, if we try <mark style="color:red;">`/etc/passwd/..`</mark>, it results to be <mark style="color:red;">`/etc/`</mark> and that's because we moved one to the root. Now if we try <mark style="color:red;">`/etc/passwd/.`</mark>, the result will be <mark style="color:red;">`/etc/passwd`</mark> since dot refers to the current directory.
-
-
 
 3\. Next, in the following scenarios, the developer starts to use input validation by filtering some keywords. Let's test out and check the error message!
 
@@ -203,11 +199,11 @@ First, the attacker injects the malicious URL, which points to the attacker's se
 As a developer, it's important to be aware of web application vulnerabilities, how to find them, and prevention methods. To prevent the file inclusion vulnerabilities, some common suggestions include:
 
 1. Keep system and services, including web application frameworks, updated with the latest version.
-2. Turn off PHP errors to avoid leaking the path of the application and other potentially revealing information.&#x20;
-3. A Web Application Firewall (WAF) is a good option to help mitigate web application attacks.&#x20;
-4. Disable some PHP features that cause file inclusion vulnerabilities if your web app doesn't need them, such as <mark style="color:red;">`allow_url_fopen`</mark> on and <mark style="color:red;">`allow_url_include`</mark>.&#x20;
-5. Carefully analyze the web application and allow only protocols and PHP wrappers that are in need.&#x20;
-6. Never trust user input, and make sure to implement proper input validation against file inclusion.&#x20;
+2. Turn off PHP errors to avoid leaking the path of the application and other potentially revealing information.
+3. A Web Application Firewall (WAF) is a good option to help mitigate web application attacks.
+4. Disable some PHP features that cause file inclusion vulnerabilities if your web app doesn't need them, such as <mark style="color:red;">`allow_url_fopen`</mark> on and <mark style="color:red;">`allow_url_include`</mark>.
+5. Carefully analyze the web application and allow only protocols and PHP wrappers that are in need.
+6. Never trust user input, and make sure to implement proper input validation against file inclusion.
 7. Implement whitelisting for file names and locations as well as blacklisting.
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_

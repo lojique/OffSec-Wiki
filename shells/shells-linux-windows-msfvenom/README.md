@@ -12,7 +12,7 @@ description: 'Source: https://book.hacktricks.xyz/shells/shells'
 
 ## ​[**Full TTYs**](full-ttys.md) <a href="#full-ttys" id="full-ttys"></a>
 
-## ****[**Meterpreter Cheatsheet**​](https://app.gitbook.com/s/S6TiS3WSrHJpPmBhQW7n/\~/changes/r4Gqo9LXfLbc6Y5m0ffK/shells/shells-linux-windows-msfvenom/meterpreter) <a href="#full-ttys" id="full-ttys"></a>
+## \*\*\*\*[**Meterpreter Cheatsheet**​](meterpreter.md) <a href="#full-ttys" id="full-ttys"></a>
 
 ## **Auto-generated shells** <a href="#auto-generated-shells" id="auto-generated-shells"></a>
 

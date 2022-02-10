@@ -20,12 +20,3 @@ Mimimatz can be used to dump Windows hashes
 | $2$, $2a$, $2b$, $2x$, $2y$ | Bcrypt (Popular for web applications)                      |
 | $6$                         | sha512crypt (Default for most Linux/Unix systems)          |
 
-## Resources
-
-{% embed url="https://hashcat.net/wiki/doku.php?id=example_hashes" %}
-
-{% embed url="https://hashes.com/en/decrypt/hash" %}
-
-{% embed url="https://crackstation.net" %}
-
-{% embed url="https://md5hashing.net/hash" %}

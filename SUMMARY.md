@@ -2,6 +2,25 @@
 
 * [Welcome!](README.md)
 
+## Methodology
+
+* [Pentesting Methodology Mindmap](methodology/pentesting-methodology-mindmap.md)
+
+***
+
+* [OffSec Notes](offsec-notes/README.md)
+  * [Enumeration](offsec-notes/enumeration.md)
+  * [Linux/Unix](offsec-notes/linux-unix.md)
+  * [Windows](offsec-notes/windows.md)
+  * [Web](offsec-notes/web/README.md)
+    * [XSS](offsec-notes/web/xss.md)
+    * [SQL Injection](offsec-notes/web/sql-injection.md)
+  * [Password Cracking](offsec-notes/password-cracking/README.md)
+    * [Resources](offsec-notes/password-cracking/password-cracking.md)
+  * [Shells](offsec-notes/shells.md)
+  * [Network Attacks](offsec-notes/network-attacks.md)
+  * [Port Forwarding](offsec-notes/port-forwarding.md)
+
 ## INE
 
 * [Penetration Testing Student](ine/penetration-testing-student/README.md)
@@ -118,15 +137,7 @@
 * [Linux Privilege Escalation](linux-unix/linux-privilege-escalation/README.md)
   * [NFS no\_root\_squash/no\_all\_squash misconfig PE](linux-unix/linux-privilege-escalation/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
 
-## Methodology
-
-* [Pentesting Methodology Mindmap](methodology/pentesting-methodology-mindmap.md)
-
 ## Web App Pentesting
 
 * [80, 443](web-app-pentesting/80-443/README.md)
   * [Jenkins](web-app-pentesting/80-443/jenkins.md)
-
-***
-
-* [Password Cracking](password-cracking.md)

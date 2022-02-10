@@ -97,6 +97,13 @@
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
 
+## HTB Academy
+
+* [Junior Penetration Tester](htb-academy/junior-penetration-tester/README.md)
+  * [Getting Started](htb-academy/junior-penetration-tester/getting-started/README.md)
+    * [Cheat Sheet](htb-academy/junior-penetration-tester/getting-started/cheat-sheet.md)
+    * [Pentesting Basics](htb-academy/junior-penetration-tester/getting-started/pentesting-basics.md)
+
 ## Shells
 
 * [Shells (Linux, Windows, MSFVenom)](shells/shells-linux-windows-msfvenom/README.md)

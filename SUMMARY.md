@@ -120,6 +120,7 @@
       * [Driver](hackthebox/writeups/easy-boxes/windows-boxes/driver.md)
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
+* [Goals](hackthebox/goals.md)
 
 ## Shells
 
@@ -135,3 +136,4 @@
   * [Shells](general-notes/shells.md)
   * [Ports](general-notes/ports.md)
   * [Cheat Sheet](general-notes/cheat-sheet.md)
+  * [Service Scanning](general-notes/service-scanning.md)

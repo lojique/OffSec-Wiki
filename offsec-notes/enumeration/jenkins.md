@@ -18,7 +18,7 @@ Without credentials you can look inside _**/asynchPeople/**_ path or _**/securit
 
 You may be able to get the Jenkins version from the path _**/oops**_ or _**/error**_
 
-![](broken-reference)
+![](../../web-app-pentesting/80-443/broken-reference)
 
 Using cURL
 

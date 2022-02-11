@@ -9,15 +9,20 @@
 ***
 
 * [OffSec Notes](offsec-notes/README.md)
-  * [Enumeration](offsec-notes/enumeration.md)
-  * [Linux/Unix](offsec-notes/linux-unix.md)
+  * [Enumeration](offsec-notes/enumeration/README.md)
+    * [Jenkins](offsec-notes/enumeration/jenkins.md)
+  * [Linux/Unix](offsec-notes/linux-unix/README.md)
+    * [Linux Privilege Escalation](offsec-notes/linux-unix/linux-privilege-escalation/README.md)
+      * [NFS no\_root\_squash/no\_all\_squash misconfig PE](offsec-notes/linux-unix/linux-privilege-escalation/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
   * [Windows](offsec-notes/windows.md)
   * [Web](offsec-notes/web/README.md)
     * [XSS](offsec-notes/web/xss.md)
     * [SQL Injection](offsec-notes/web/sql-injection.md)
   * [Password Cracking](offsec-notes/password-cracking/README.md)
     * [Resources](offsec-notes/password-cracking/password-cracking.md)
-  * [Shells](offsec-notes/shells.md)
+  * [Shells](offsec-notes/shells/README.md)
+    * [Msfvenom](offsec-notes/shells/msfvenom.md)
+    * [TTY Shells](offsec-notes/shells/tty-shells.md)
   * [Network Attacks](offsec-notes/network-attacks.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
 
@@ -116,28 +121,17 @@
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
 
-## HTB Academy
-
-* [Junior Penetration Tester](htb-academy/junior-penetration-tester/README.md)
-  * [Getting Started](htb-academy/junior-penetration-tester/getting-started/README.md)
-    * [Cheat Sheet](htb-academy/junior-penetration-tester/getting-started/cheat-sheet.md)
-    * [Pentesting Basics](htb-academy/junior-penetration-tester/getting-started/pentesting-basics.md)
-
 ## Shells
 
 * [Shells (Linux, Windows, MSFVenom)](shells/shells-linux-windows-msfvenom/README.md)
   * [Linux Shells](shells/shells-linux-windows-msfvenom/linux-shells.md)
-  * [Windows Shells](shells/shells-linux-windows-msfvenom/windows-shells.md)
-  * [MSFVenom](shells/shells-linux-windows-msfvenom/msfvenom.md)
   * [Full TTYs](shells/shells-linux-windows-msfvenom/full-ttys.md)
   * [Meterpreter](shells/shells-linux-windows-msfvenom/meterpreter.md)
 
-## Linux/Unix
+***
 
-* [Linux Privilege Escalation](linux-unix/linux-privilege-escalation/README.md)
-  * [NFS no\_root\_squash/no\_all\_squash misconfig PE](linux-unix/linux-privilege-escalation/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
-
-## Web App Pentesting
-
-* [80, 443](web-app-pentesting/80-443/README.md)
-  * [Jenkins](web-app-pentesting/80-443/jenkins.md)
+* [General Notes](general-notes/README.md)
+  * [OWASP Top 10](general-notes/owasp-top-10.md)
+  * [Shells](general-notes/shells.md)
+  * [Ports](general-notes/ports.md)
+  * [Cheat Sheet](general-notes/cheat-sheet.md)

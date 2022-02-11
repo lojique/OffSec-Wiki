@@ -6,13 +6,13 @@ description: 'Source: https://book.hacktricks.xyz/shells/shells'
 
 ## ​[**Linux Shells**](linux-shells.md)​ <a href="#shells-linux" id="shells-linux"></a>
 
-## ​[**Windows Shells**](windows-shells.md)​ <a href="#shells-windows" id="shells-windows"></a>
+## ​[**Windows Shells**](broken-reference)​ <a href="#shells-windows" id="shells-windows"></a>
 
-## [​**MSFVenom Cheatsheet**​](msfvenom.md) <a href="#msfvenom-cheatsheet" id="msfvenom-cheatsheet"></a>
+## [​**MSFVenom Cheatsheet**​](broken-reference) <a href="#msfvenom-cheatsheet" id="msfvenom-cheatsheet"></a>
 
 ## ​[**Full TTYs**](full-ttys.md) <a href="#full-ttys" id="full-ttys"></a>
 
-## \*\*\*\*[**Meterpreter Cheatsheet**​](meterpreter.md) <a href="#full-ttys" id="full-ttys"></a>
+## [**Meterpreter Cheatsheet**​](meterpreter.md) <a href="#full-ttys" id="full-ttys"></a>
 
 ## **Auto-generated shells** <a href="#auto-generated-shells" id="auto-generated-shells"></a>
 

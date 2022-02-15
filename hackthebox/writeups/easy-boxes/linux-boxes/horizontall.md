@@ -1,6 +1,6 @@
 # Horizontall
 
-The first thing I did was run a Rustscan on the target
+The first thing I did was run a <mark style="color:green;">`Rustscan`</mark> on the target to quickly gather open ports.
 
 ```bash
 rustscan -a 10.129.151.240 -- -A -sC -sV
@@ -24,33 +24,33 @@ PORT   STATE SERVICE REASON  VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-We add <mark style="color:green;">horizontall.htb</mark> to our /etc/hosts file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
-
-Searching on Google informs us that the latest version of nginx is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind
+We add <mark style="color:green;">`horizontall.htb`</mark> to our <mark style="color:green;">`/etc/hosts`</mark> file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
 
 ![](<../../../../.gitbook/assets/image (7) (1).png>)
+
+Searching on Google informs us that the latest version of <mark style="color:green;">`nginx`</mark> is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind.
 
 Going to the site, we see a web page.
 
 ![](<../../../../.gitbook/assets/image (36).png>)
 
-Viewing the source code and going through the site really did not provide anything useful. However, is it possible for the nginx server to have more vhosts? Using ffuf, we will see something
+Viewing the source code and going through the site really did not provide anything useful. However, is it possible for the <mark style="color:green;">`nginx`</mark> server to have more vhosts or subdomains? Using <mark style="color:green;">`ffuf`</mark>, we will see something.
 
 ```bash
 ffuf -u http://horizontall.htb -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H 'Host: FUZZ.horizontall.htb' -fs 0 -mc 200 
 ```
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![api-prod subdomain](<../../../../.gitbook/assets/image (30).png>)
 
-Heading back over to the browser, we are presented with a basic welcome page
+Heading back over to the browser, we are presented with a basic welcome page.
 
 ![](<../../../../.gitbook/assets/image (42).png>)
 
-Time to enumerate some more. Now there are two interesting directory that we can explore
+Time to enumerate some more. Now there are two interesting directories that we can explore.
 
 ![](<../../../../.gitbook/assets/image (35).png>)
 
-The reviews directory yields us some users: <mark style="color:green;">wail</mark>, <mark style="color:green;">doe</mark>, and <mark style="color:green;">john</mark>
+The reviews directory yields us some users: <mark style="color:green;">`wail`</mark>, <mark style="color:green;">`doe`</mark>, and <mark style="color:green;">`john`</mark>
 
 ![](<../../../../.gitbook/assets/image (33) (1).png>)
 
@@ -58,17 +58,17 @@ And the admin page
 
 ![](<../../../../.gitbook/assets/image (40).png>)
 
-Doing a google search on strapi shows that it is an open source Node.js headless CMS
+Doing a google search on <mark style="color:green;">`strapi`</mark> shows that it is an open source Node.js headless Content Management System (CMS)
 
-Great! Now hopefully we can a version number somewhere
+Great! Now hopefully we can find a version number somewhere...
 
 ![](<../../../../.gitbook/assets/image (16).png>)
 
-It seems the current version of Strapi is 3.0.0-beta.17.4
+It seems the current version of is <mark style="color:green;">`Strapi 3.0.0-beta.17.4`</mark>
 
 ![](<../../../../.gitbook/assets/image (37) (1).png>)
 
-Using searchsploit gives us some good news. An [RCE](https://www.exploit-db.com/exploits/50239)!
+Using <mark style="color:green;">`searchsploit`</mark> gives us some good news. Remote Code Execution ([RCE](https://www.exploit-db.com/exploits/50239))!
 
 ![](<../../../../.gitbook/assets/image (58).png>)
 

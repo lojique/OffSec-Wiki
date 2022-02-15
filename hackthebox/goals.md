@@ -20,9 +20,9 @@ Our first live box may be the most difficult, as we are entirely dependent on ou
 
 #### Checklist
 
-* [ ] &#x20;Root a Retired Easy Box
-* [ ] &#x20;Root a Retired Medium Box
-* [ ] &#x20;Root an Active Box
+* [ ] &#x20;Root 5 Retired Easy Box
+* [ ] &#x20;Root 5 Retired Medium Box
+* [ ] &#x20;Root 5 Active Boxes
 * [ ] &#x20;Complete an Easy Challenge
 * [ ] &#x20;Share a Walkthrough of a Retired Box
 * [ ] &#x20;Complete Offensive Academy Modules

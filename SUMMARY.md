@@ -135,6 +135,7 @@
     * [Windows Boxes](hackthebox/writeups/easy-boxes/windows-boxes/README.md)
       * [Driver](hackthebox/writeups/easy-boxes/windows-boxes/driver.md)
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
+      * [Paper](hackthebox/writeups/easy-boxes/linux-boxes/paper.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
 * [Goals](hackthebox/goals.md)
 

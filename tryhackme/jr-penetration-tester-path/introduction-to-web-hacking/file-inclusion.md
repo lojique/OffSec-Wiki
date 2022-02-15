@@ -166,7 +166,7 @@ First, we can send the following payload to bypass it: ....//....//....//....//.
 
 This works because the PHP filter only matches and replaces the first subset string ../ it finds and doesn't do another pass, leaving what is pictured below.
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Finally, we'll discuss the case where the developer forces the include to read from a defined directory! For example, if the web application asks to supply input that has to include a directory such as: http://webapp.thm/index.php?lang=languages/EN.php then, to exploit this, we need to include the directory in the payload like so: ?lang=languages/../../../../../etc/passwd
 

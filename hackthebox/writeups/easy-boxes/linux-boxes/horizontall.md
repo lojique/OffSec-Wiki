@@ -40,7 +40,7 @@ Viewing the source code and going through the site really did not provide anythi
 ffuf -u http://horizontall.htb -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H 'Host: FUZZ.horizontall.htb' -fs 0 -mc 200 
 ```
 
-![api-prod subdomain](<../../../../.gitbook/assets/image (30).png>)
+![api-prod subdomain](<../../../../.gitbook/assets/image (30) (1).png>)
 
 Heading back over to the browser, we are presented with a basic welcome page.
 

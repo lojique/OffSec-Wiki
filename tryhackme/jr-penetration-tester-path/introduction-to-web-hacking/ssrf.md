@@ -103,7 +103,7 @@ If you choose one of the avatars and then click the Update Avatar button, you'll
 
 Now let's try making the request again but changing the avatar value to private in hopes that the server will access the resource and get past the IP address block. To do this, firstly, right-click on one of the radio buttons on the avatar form and select Inspect:
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1) (1).png>)
 
 And then edit the value of the radio button to private:
 

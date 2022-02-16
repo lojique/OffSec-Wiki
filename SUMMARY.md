@@ -10,6 +10,8 @@
 
 * [OffSec Notes](offsec-notes/README.md)
   * [Enumeration](offsec-notes/enumeration/README.md)
+    * [NFS](offsec-notes/enumeration/nfs.md)
+    * [SMB](offsec-notes/enumeration/smb.md)
     * [Jenkins](offsec-notes/enumeration/jenkins.md)
   * [Linux/Unix](offsec-notes/linux-unix/README.md)
     * [Checklist - PrivEsc](offsec-notes/linux-unix/linux-privilege-escalation/README.md)
@@ -149,7 +151,6 @@
 ***
 
 * [General Notes](general-notes/README.md)
-  * [OWASP Top 10](general-notes/owasp-top-10.md)
   * [Shells](general-notes/shells.md)
   * [Ports](general-notes/ports.md)
   * [Cheat Sheet](general-notes/cheat-sheet.md)

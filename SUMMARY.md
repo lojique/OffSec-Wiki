@@ -10,6 +10,7 @@
 
 * [OffSec Notes](offsec-notes/README.md)
   * [Enumeration](offsec-notes/enumeration/README.md)
+    * [Ports](offsec-notes/enumeration/ports.md)
     * [NFS](offsec-notes/enumeration/nfs.md)
     * [SMB](offsec-notes/enumeration/smb.md)
     * [Jenkins](offsec-notes/enumeration/jenkins.md)
@@ -110,25 +111,10 @@
 
 ## TryHackMe
 
-* [Jr Penetration Tester Path](tryhackme/jr-penetration-tester-path.md)
-  * [Introduction to Web Hacking](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/README.md)
-    * [Walking An Application](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/walking-an-application.md)
-    * [Content Discovery](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/content-discovery.md)
-    * [Subdomain Enumeration](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/subdomain-enumeration.md)
-    * [Authentication Bypass](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/authentication-bypass.md)
-    * [IDOR](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/idor.md)
-    * [File Inclusion](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/file-inclusion.md)
-    * [SSRF](tryhackme/jr-penetration-tester-path/introduction-to-web-hacking/ssrf.md)
 * [Writeups](tryhackme/writeups/README.md)
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
   * [Simple CTF](tryhackme/writeups/simple-ctf.md)
   * [RootMe](tryhackme/writeups/rootme.md)
-* [Web Hacking](tryhackme/web-hacking/README.md)
-  * [SSRF](tryhackme/web-hacking/ssrf.md)
-* [Linux](tryhackme/linux/README.md)
-  * [Linux Strength Training](tryhackme/linux/linux-strength-training.md)
-* [Windows](tryhackme/windows/README.md)
-  * [Active Directory](tryhackme/windows/active-directory.md)
 
 ## HackTheBox
 
@@ -140,18 +126,3 @@
       * [Paper](hackthebox/writeups/easy-boxes/linux-boxes/paper.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
 * [Goals](hackthebox/goals.md)
-
-## Shells
-
-* [Shells (Linux, Windows, MSFVenom)](shells/shells-linux-windows-msfvenom/README.md)
-  * [Linux Shells](shells/shells-linux-windows-msfvenom/linux-shells.md)
-  * [Full TTYs](shells/shells-linux-windows-msfvenom/full-ttys.md)
-  * [Meterpreter](shells/shells-linux-windows-msfvenom/meterpreter.md)
-
-***
-
-* [General Notes](general-notes/README.md)
-  * [Shells](general-notes/shells.md)
-  * [Ports](general-notes/ports.md)
-  * [Cheat Sheet](general-notes/cheat-sheet.md)
-  * [Service Scanning](general-notes/service-scanning.md)

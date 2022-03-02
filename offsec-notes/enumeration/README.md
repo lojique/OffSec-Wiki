@@ -1,5 +1,10 @@
 # Enumeration
 
+## Passive Information Gathering
+
+* netcraft
+* recon-ng
+
 ## Web
 
 ### Gobuster

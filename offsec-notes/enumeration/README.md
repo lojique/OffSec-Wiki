@@ -5,6 +5,24 @@
 * netcraft
 * recon-ng
 
+## Nmap
+
+```bash
+# stealth/SYN scan
+sudo nmap -sS 10.11.1.220
+# TCP connect scan
+nmap -sT 10.11.1.220
+# UDP scan
+sudo nmap -sU 10.11.1.115
+sudo nmap -sS -sU 10.11.1.115
+# network sweep
+nmap -sn 10.11.1.1-254
+# OS fingerprinting
+sudo nmap -O 10.11.1.220
+# banner grabbing/service enumeration
+nmap -sV -sT -A 10.11.1.220
+```
+
 ## Web
 
 ### Gobuster

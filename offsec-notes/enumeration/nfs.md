@@ -1,6 +1,18 @@
 # NFS
 
 ```
+ls -1 /usr/share/nmap/scripts/nfs*
+nmap -p 111 --script nfs* 10.11.1.72
+
+```
+
+```
+nmap -v -p 111 10.11.1.1-254
+# find services possibly registered with rpcbind
+nmap -sV -p 111 --script=rpcinfo 10.11.1.1-254 
+```
+
+```
 sudo mount -t nfs IP:share /tmp/mount/ -nolock
 ```
 

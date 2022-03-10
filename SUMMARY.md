@@ -13,6 +13,8 @@
     * [Ports](offsec-notes/enumeration/ports.md)
     * [NFS](offsec-notes/enumeration/nfs.md)
     * [SMB](offsec-notes/enumeration/smb.md)
+    * [SMTP](offsec-notes/enumeration/smtp.md)
+    * [SNMP](offsec-notes/enumeration/snmp.md)
     * [Jenkins](offsec-notes/enumeration/jenkins.md)
   * [Linux/Unix](offsec-notes/linux-unix/README.md)
     * [Checklist - PrivEsc](offsec-notes/linux-unix/linux-privilege-escalation/README.md)

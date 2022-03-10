@@ -2,19 +2,21 @@
 
 ## Using NMAP&#x20;
 
-### Scan for popular RCE exploits.
+```
+ls -1 /usr/share/nmap/scripts/smb*
+```
+
+```
+sudo nmap -v -p 139,445 -oG smb.txt <ip-addr>
+```
 
 ```
 sudo nmap -p 139,445 --script smb-vuln* <ip-addr> -oA nmap/smb-vuln
 ```
 
-### Identify the SMB/OS version.
-
 ```
 nmap -v -p 139,445 --script=smb-os-discovery.nse <ip-addr>
 ```
-
-### Enumerate users once you have valid credentials:
 
 ```
 sudo nmap --script=smb-enum-users -p 445 192.168.1.2 --script-args smbuser=<user>,smbpass=<password>
@@ -22,10 +24,10 @@ sudo nmap --script=smb-enum-users -p 445 192.168.1.2 --script-args smbuser=<user
 
 ## Using NBTSCAN&#x20;
 
-### To scan a subnet for list of hostnames:
-
 ```
-nbtscan -v <targetRange>
+sudo nbtscan -v -r <targetRange>
+# -r is used to specify the originating UDP port as 137, which is
+# used to query the NetBIOS name service for valid NetBIOS names
 ```
 
 ## Using SMBMAP&#x20;

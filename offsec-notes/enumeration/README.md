@@ -21,6 +21,8 @@ nmap -sn 10.11.1.1-254
 sudo nmap -O 10.11.1.220
 # banner grabbing/service enumeration
 nmap -sV -sT -A 10.11.1.220
+# vuln scan
+sudo nmap --script vuln 10.11.1.10 
 ```
 
 ## Web

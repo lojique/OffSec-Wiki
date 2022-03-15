@@ -37,6 +37,12 @@ gobuster vhost -u driver.htb -w /usr/share/seclists/Discovery/DNS/shubs-subdomai
 gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt &
 ```
 
+### Dirsearch
+
+```bash
+dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100 
+```
+
 ### Banner Grabbing/Web Server Headers
 
 ```bash

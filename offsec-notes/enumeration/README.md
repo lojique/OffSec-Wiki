@@ -43,6 +43,12 @@ gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.
 dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100 
 ```
 
+### [ffuf](https://github.com/ffuf/ffuf)
+
+```
+ffuf -w /path/to/wordlist -u https://target/FUZZ
+```
+
 ### Banner Grabbing/Web Server Headers
 
 ```bash

@@ -34,6 +34,7 @@
       * [LOLBAS](offsec-notes/windows/checklist-privesc/lolbas.md)
   * [Web Attacks](offsec-notes/web-attacks/README.md)
     * [XSS](offsec-notes/web-attacks/xss.md)
+    * [LFI](offsec-notes/web-attacks/lfi.md)
     * [SQL Injection](offsec-notes/web-attacks/sql-injection.md)
   * [Password Cracking](offsec-notes/password-cracking/README.md)
     * [Resources](offsec-notes/password-cracking/password-cracking.md)

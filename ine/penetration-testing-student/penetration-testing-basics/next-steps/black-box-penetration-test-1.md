@@ -153,7 +153,7 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 bash
 ```
 
-![](<../../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (1).png>)
 
 Here is the network that we couldn't reach: `192.57.96.2`
 
@@ -200,7 +200,7 @@ run
 
 As we can see ports 21 and 22 are open
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
 
 Now for port forwarding
 

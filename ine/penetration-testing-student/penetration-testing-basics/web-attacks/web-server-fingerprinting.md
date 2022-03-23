@@ -45,7 +45,7 @@ HEAD / HTTP/1.0
 ## Fingerprinting with Httprint
 
 * Tool that uses a signature-based technique to identify web servers
-* This is the most used syntax&#x20;
+* This is the most used syntax
 
 ```
 httprint -P0 -h <target hosts> -s <signature file>
@@ -54,4 +54,4 @@ httprint -P0 -h <target hosts> -s <signature file>
 // -s sets the signature file to use
 ```
 
-![httprint example](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![httprint example](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)

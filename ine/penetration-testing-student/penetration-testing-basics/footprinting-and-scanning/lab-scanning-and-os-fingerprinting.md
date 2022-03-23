@@ -333,7 +333,7 @@ Now let's answer the questions
 
 4\. What services are running on `pc2.ine.local` machine?
 
-![](<../../../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png>)
 
 5\. What is the version of the FTP server running on one of the machines?
 

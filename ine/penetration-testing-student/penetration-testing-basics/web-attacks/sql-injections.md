@@ -85,7 +85,7 @@ You can also perform a UNION with some chosen data:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT 'Example', 'Data';
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## SQL Queries Inside Web Apps
 
@@ -189,7 +189,7 @@ If our payload makes the results of the original query empty, then we can have t
 SELECT description FROM item WHERE id='' UNION SELECT user(); -- -';
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 The comment tells MySQL to ignore everything that will be added right after. This is because we don't want the web application to add other strings to our query
 
@@ -221,7 +221,7 @@ We'll inject some known values and checking the results
 
 Now we can exploit the injection. As an example, we'll query for user()
 
-![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Avoiding SQL Disaster
 

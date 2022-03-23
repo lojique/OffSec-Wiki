@@ -110,7 +110,7 @@ use exploit/multi/http/werkzeug_debug_rce
 
 ![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (8).png>)
+![](<../../../../.gitbook/assets/image (8) (1).png>)
 
 ## Server 2
 
@@ -138,13 +138,13 @@ use exploit/multi/mysql/mysql_udf_payload
 
 ![](<../../../../.gitbook/assets/image (65) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (46) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (46) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (52) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (14) (1).png>)
 
-![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31).png>)
+![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31) (1).png>)
 
 ## Server 3
 
@@ -160,7 +160,7 @@ dirb http://192.6.232.5:8080
 
 ![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (44).png>)
+![](<../../../../.gitbook/assets/image (44) (1).png>)
 
 ```
 use auxiliary/scanner/http/tomcat_mgr_login
@@ -172,7 +172,7 @@ use auxiliary/scanner/http/tomcat_mgr_login
 
 ![](<../../../../.gitbook/assets/image (58) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
 
 ### Exploit
 
@@ -256,7 +256,7 @@ sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 
 ![](<../../../../.gitbook/assets/image (68) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
 
 ![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50) (1) (1).png>)
 

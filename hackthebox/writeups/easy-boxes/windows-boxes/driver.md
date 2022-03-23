@@ -49,7 +49,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (29).png>)
 
-![](<../../../../.gitbook/assets/image (72).png>)
+![](<../../../../.gitbook/assets/image (72) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (55).png>)
 

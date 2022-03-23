@@ -99,7 +99,7 @@ route
 getuid
 ```
 
-![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 ### Privilege Escalation
 
@@ -170,7 +170,7 @@ set session <id>
 exploit
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
 
 ## Exploring the Victim System
 
@@ -190,4 +190,4 @@ You can run a standard OS shell
 shell
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1).png>)

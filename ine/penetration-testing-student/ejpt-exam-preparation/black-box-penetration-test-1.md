@@ -227,7 +227,7 @@ tomcat:s3cret
 
 ### Exploitation
 
-![](<../../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (56) (1).png>)
 
 ```
 use exploit/multi/http/tomcat_mgr_upload)
@@ -300,7 +300,7 @@ admin:admin
 
 ![](<../../../.gitbook/assets/image (60).png>)
 
-![](<../../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52) (1).png>)
 
 ### Exploitation + Credentials
 

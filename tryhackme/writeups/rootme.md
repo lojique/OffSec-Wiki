@@ -142,7 +142,7 @@ find / -perm -u=s -type f 2>/dev/null
 
 What stands out is /usr/bin/python
 
-![](<../../.gitbook/assets/image (70) (1).png>)
+![](<../../.gitbook/assets/image (70) (1) (1).png>)
 
 ![](<../../.gitbook/assets/image (23) (1).png>)
 
@@ -152,7 +152,7 @@ Here's how we can do this
 
 [https://gtfobins.github.io/gtfobins/python/#suid](https://gtfobins.github.io/gtfobins/python/#suid)
 
-![](<../../.gitbook/assets/image (46) (1).png>)
+![](<../../.gitbook/assets/image (46) (1) (1).png>)
 
 It works!
 

@@ -87,7 +87,7 @@ NET USE \\<target IP>\IPC$ '' \u:''
 
 This command does not work with C$
 
-![](<../../../../.gitbook/assets/image (31) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
 
 ### with Linux
 

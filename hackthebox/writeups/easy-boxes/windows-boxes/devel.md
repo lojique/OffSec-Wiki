@@ -167,9 +167,23 @@ Running systeminfo in the shell shows us some good information
 
 ![](<../../../../.gitbook/assets/image (44).png>)
 
-In particular, I'm interested in the OS Version, so I look up priv esc for this build and find a nice exploit to use
+In particular, I'm interested in the OS Version, so I look up priv esc for this build and find a nice exploit to use.
 
 {% embed url="https://www.exploit-db.com/exploits/40564" %}
+
+Per the description:
+
+> **Vulnerability description:**
+>
+> The Ancillary Function Driver (AFD) supports Windows sockets applications and is contained in the afd.sys file.&#x20;
+>
+> The afd.sys driver runs in kernel mode and manages the Winsock TCP/IP communications protocol.&#x20;
+>
+> An elevation of privilege vulnerability exists where the AFD improperly validates input passed from user mode to the kernel.&#x20;
+>
+> An attacker must have valid logon credentials and be able to log on locally to exploit the vulnerability.&#x20;
+>
+> An attacker who successfully exploited this vulnerability could run arbitrary code in kernel mode (i.e. with NT AUTHORITY\SYSTEM privileges)
 
 We'll compile the code as suggested by the exploit
 

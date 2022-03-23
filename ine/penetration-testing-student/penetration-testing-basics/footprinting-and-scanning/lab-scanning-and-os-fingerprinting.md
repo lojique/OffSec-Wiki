@@ -115,7 +115,6 @@ PORT      STATE SERVICE
 45654/tcp open  unknown
 
 Nmap done: 6 IP addresses (6 hosts up) scanned in 8.55 seconds
-
 ```
 
 It's beneficial to play around with nmap and try things you probably haven't to see how results might vary. I wanted to see how the results would show for a bunch of known ports and use the `--reason` tag
@@ -228,8 +227,6 @@ PORT     STATE  SERVICE      REASON
 Nmap done: 6 IP addresses (6 hosts up) scanned in 1.62 seconds
 ```
 
-
-
 Now let's try to get more information about our targets using -sV for service versions and -O for OS detection
 
 ```bash
@@ -322,8 +319,6 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 6 IP addresses (6 hosts up) scanned in 47.30 seconds
 ```
 
-
-
 Now let's answer the questions
 
 1. How many machines are there?
@@ -342,7 +337,7 @@ Now let's answer the questions
 
 5\. What is the version of the FTP server running on one of the machines?
 
-![Although our most recent nmap scan answers this question, this particular does as well but with less info to search through](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![Although our most recent nmap scan answers this question, this particular does as well but with less info to search through](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 6\. A caching server is also running on one of the machines. What is the domain name of that machine?
 
@@ -360,7 +355,7 @@ Now let's answer the questions
 
 ### NoSQL
 
-* I didn't really know what NoSQL was, but after researching MongoDB, I learned that it's classified as a NoSQL database program.  This [article ](https://www.mongodb.com/nosql-explained)explains it well.&#x20;
+* I didn't really know what NoSQL was, but after researching MongoDB, I learned that it's classified as a NoSQL database program. This [article ](https://www.mongodb.com/nosql-explained)explains it well.
 * NoSQL database service is running on target-2 so the syntax would be:
 
 ```bash

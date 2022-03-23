@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -159,7 +159,7 @@ Testing an input for SQLi means trying to inject:
 
 ![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 

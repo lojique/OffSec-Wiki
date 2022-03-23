@@ -110,7 +110,7 @@ To set options (e.g. RHOSTS), enter "set RHOST \[target IP]"
 
 With this information entered, we can now run the exploit with `run` or `exploit`
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../../.gitbook/assets/image (43) (1).png>)
 
 As shown in the image above, running getuid returns us NT AUTHORITY\SYSTEM which means no privilege escalation is needed as we have the highest privileges on the current system.
 

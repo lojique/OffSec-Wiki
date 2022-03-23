@@ -31,11 +31,11 @@ There was nothing useful here found so I moved on to see what the website looks 
 
 When going there, we are presented with a sign-in prompt
 
-![](<../../../../.gitbook/assets/image (24).png>)
+![](<../../../../.gitbook/assets/image (24) (1).png>)
 
 I try some default credentials such as <mark style="color:green;">`admin:admin`</mark> and we successfully log in
 
-![](<../../../../.gitbook/assets/image (41).png>)
+![](<../../../../.gitbook/assets/image (41) (1).png>)
 
 Navigating through the site, we can only access "Firmware Updates" which brings us to this page where we can upload a file
 
@@ -57,7 +57,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 {% embed url="https://book.hacktricks.xyz/pentesting/5985-5986-pentesting-winrm" %}
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (33).png>)
 

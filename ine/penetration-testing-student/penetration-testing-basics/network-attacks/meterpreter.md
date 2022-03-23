@@ -117,7 +117,7 @@ You can use `getsystem` if the owner of the process does not have high privilege
 getsystem
 ```
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 ### Bypassing UAC
 
@@ -125,7 +125,7 @@ getsystem
 In modern Windows operating systems, the User Account Control policy prevent privilege escalation
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
 
 You can bypass that restriction by u sing the `bypassuac` module
 

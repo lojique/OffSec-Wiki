@@ -62,7 +62,7 @@ The php reverse shell can be found here:
 
 {% embed url="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php" %}
 
-![](<../../.gitbook/assets/image (51).png>)
+![](<../../.gitbook/assets/image (51) (1).png>)
 
 As we can see, it accepted the file!
 
@@ -144,7 +144,7 @@ What stands out is /usr/bin/python
 
 ![](<../../.gitbook/assets/image (70) (1).png>)
 
-![](<../../.gitbook/assets/image (23).png>)
+![](<../../.gitbook/assets/image (23) (1).png>)
 
 As we can see, python can be executed as root!
 

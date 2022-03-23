@@ -23,7 +23,7 @@ To get detailed information about a module, you can use the `-U` command line sw
 
 You can check the available modules in the "supported services" section of the help
 
-![](<../../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 To launch a dictionary attack against a service with a list of usernames (inside a users.txt file) and a list of passwords (pass.txt file):
 
@@ -43,4 +43,4 @@ hydra -L users.txt -P pass.txt telnet://target.server
 hydra -L users.txt -P pass.txt http-get://localhost/
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1).png>)

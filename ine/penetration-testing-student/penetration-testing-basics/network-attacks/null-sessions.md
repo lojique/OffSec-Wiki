@@ -55,7 +55,7 @@ To perform the same operations of nbstat, we can use nmblookup with the same com
 nmblookup -A <target IP>
 ```
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Smbclient
 
@@ -117,11 +117,11 @@ enum -S <target IP>
 
 \-U enumerates users
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 \-P if you need to mount a network authentication attack, you can check the password policy
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
 
 Checking password policies before running an authentication attack lets you find-tune an attack tool to:
 

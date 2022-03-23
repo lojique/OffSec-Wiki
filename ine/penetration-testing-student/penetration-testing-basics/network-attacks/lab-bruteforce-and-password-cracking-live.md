@@ -46,7 +46,7 @@ hydra -l student -P /usr/share/wordlists/rockyou.txt demo.ine.local ssh -f
 
 Here's confirmation that it works
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 [This](https://linuxconfig.org/ssh-password-testing-with-hydra-on-kali-linux) can help with using Hydra for ssh
 

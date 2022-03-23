@@ -26,7 +26,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 We add <mark style="color:green;">`horizontall.htb`</mark> to our <mark style="color:green;">`/etc/hosts`</mark> file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
 
-![](<../../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
 
 Searching on Google informs us that the latest version of <mark style="color:green;">`nginx`</mark> is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind.
 
@@ -40,11 +40,11 @@ Viewing the source code and going through the site really did not provide anythi
 ffuf -u http://horizontall.htb -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H 'Host: FUZZ.horizontall.htb' -fs 0 -mc 200 
 ```
 
-![api-prod subdomain](<../../../../.gitbook/assets/image (30) (1).png>)
+![api-prod subdomain](<../../../../.gitbook/assets/image (30) (1) (1).png>)
 
 Heading back over to the browser, we are presented with a basic welcome page.
 
-![](<../../../../.gitbook/assets/image (42).png>)
+![](<../../../../.gitbook/assets/image (42) (1).png>)
 
 Time to enumerate some more. Now there are two interesting directories that we can explore.
 
@@ -56,7 +56,7 @@ The reviews directory yields us some users: <mark style="color:green;">`wail`</m
 
 And the admin page
 
-![](<../../../../.gitbook/assets/image (40).png>)
+![](<../../../../.gitbook/assets/image (40) (1).png>)
 
 Doing a google search on <mark style="color:green;">`strapi`</mark> shows that it is an open source Node.js headless Content Management System (CMS)
 
@@ -84,7 +84,7 @@ We run the exploit and then login
 
 ![](<../../../../.gitbook/assets/image (63).png>)
 
-![](<../../../../.gitbook/assets/image (24) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
 
 Awesome! Now there's Plugin called "Files Upload", let's see if we can upload a file to get a reverse shell.
 
@@ -112,7 +112,7 @@ After upgrading my shell, I searched for the user.txt file
 
 I ran linepeas.sh and noticed something interesting. Looks like there is MySQL running and something else on port 8000. What is that port used for?
 
-![](<../../../../.gitbook/assets/image (41) (1).png>)
+![](<../../../../.gitbook/assets/image (41) (1) (1).png>)
 
 A Google search gave me this result
 

@@ -127,7 +127,7 @@ Now we'll configure the options as such
 
 After typing run (or exploit), we get ourselves a meterpreter session!
 
-![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png>)
 
 Let's see what user we are
 
@@ -139,7 +139,7 @@ Wow we're root!
 
 We can try to retrieve the first flag. The first place I would check is root's home directory
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1).png>)
 
 Now that we've gotten the first flag, we need to do the second part, which is find the other machine in the setup which is not accessible from the Kali machine but is accessible from the web server
 
@@ -221,7 +221,7 @@ portfwd add -l 4242 -p 21 -r 192.57.96.3
 
 Now we need to run an nmap scan to gather more information about this new target
 
-![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 So we see here that this machine is running OpenSSH 6.6.1p1 (SSH) and vsftpd 2.0.8 or later (FTP)
 

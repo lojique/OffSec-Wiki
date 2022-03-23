@@ -24,7 +24,7 @@ Ability to upload a simple interactive webshell on the web server
 
 ### Curl
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 

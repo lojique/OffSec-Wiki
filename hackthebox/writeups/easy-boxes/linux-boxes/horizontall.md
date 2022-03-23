@@ -48,7 +48,7 @@ Heading back over to the browser, we are presented with a basic welcome page.
 
 Time to enumerate some more. Now there are two interesting directories that we can explore.
 
-![](<../../../../.gitbook/assets/image (35).png>)
+![](<../../../../.gitbook/assets/image (35) (1).png>)
 
 The reviews directory yields us some users: <mark style="color:green;">`wail`</mark>, <mark style="color:green;">`doe`</mark>, and <mark style="color:green;">`john`</mark>
 
@@ -90,7 +90,7 @@ Awesome! Now there's Plugin called "Files Upload", let's see if we can upload a 
 
 I tried multiple times to get a shell, but the output of following the file yielded something like this:
 
-![](<../../../../.gitbook/assets/image (69).png>)
+![](<../../../../.gitbook/assets/image (69) (1).png>)
 
 ```
 http://localhost:1337/uploads/0083c7ac6ed14dce9cc54821af03bf08.php
@@ -159,7 +159,7 @@ Then we'll run the below commands on our kali machine and the victim machine res
 
 Now when we go to <mark style="color:green;">`http://127.0.0.1:8000`</mark> in the browser, we can see the Laravel site
 
-![](<../../../../.gitbook/assets/image (49).png>)
+![](<../../../../.gitbook/assets/image (49) (1).png>)
 
 #### Priv Esc
 
@@ -169,7 +169,7 @@ Using the GitHub resource for the Laravel vulnerability, we'll execute the follo
 ./privesc.py http://localhost:8000 Monolog/RCE1 "whoami"
 ```
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../../.gitbook/assets/image (67) (1).png>)
 
 Awesome! Now we can cat the root.txt file
 

@@ -16,7 +16,7 @@ You're required to use a Metasploit listener in order to receive the shell conne
 
 The listerner payload has to be exactly the same as the msfvenom payload
 
-![](<../../../../.gitbook/assets/image (35) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (35) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
 

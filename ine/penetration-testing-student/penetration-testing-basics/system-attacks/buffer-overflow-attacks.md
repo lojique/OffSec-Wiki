@@ -66,7 +66,7 @@ To save some stack space for later use, the application can simply reserve some 
 
 ![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (6) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 
 ## The Stack in an Application
 

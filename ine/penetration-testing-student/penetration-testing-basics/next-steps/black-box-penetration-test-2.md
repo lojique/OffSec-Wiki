@@ -71,7 +71,7 @@ There's an error message when visiting port 8000
 
 One thing that stood out in the nmap scan was this file path
 
-![](<../../../../.gitbook/assets/image (43) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1) (1).png>)
 
 When you visit /.git itself, you receive an error
 
@@ -91,7 +91,7 @@ Now let's run a web discovery scan against the site for any hidden directories
 
 Nothing interesting on port 80
 
-![](<../../../../.gitbook/assets/image (48) (1).png>)
+![](<../../../../.gitbook/assets/image (48) (1) (1).png>)
 
 Nothing interesting on port 5000 either
 
@@ -191,7 +191,7 @@ We can confirm these changes with curl
 curl http://online-calc.com:8000/API.py
 ```
 
-![](<../../../../.gitbook/assets/image (35) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (35) (1) (1) (1).png>)
 
 ### Reverse Shell
 
@@ -268,7 +268,7 @@ set lhost 192.250.81.2
 run
 ```
 
-![](<../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
 
 Now we'll change the payload on the compromised machine to an executable and then run it!
 
@@ -309,7 +309,7 @@ show options
 
 Running an nmap scan against the second target yields us these results
 
-![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (49) (1) (1) (1).png>)
 
 There must be a firewall or something that is protecting what appears to be a web application
 

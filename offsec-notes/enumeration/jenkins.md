@@ -26,7 +26,7 @@ Using cURL
 curl -v <target-IP>
 ```
 
-![](<../../.gitbook/assets/image (61).png>)
+![](<../../.gitbook/assets/image (61) (1).png>)
 
 Or from intercepting traffic with Burp Suite
 

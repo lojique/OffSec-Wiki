@@ -102,7 +102,7 @@ use exploit/multi/http/werkzeug_debug_rce
 
 ![](<../../../../.gitbook/assets/image (60) (1).png>)
 
-![](<../../../../.gitbook/assets/image (49) (1).png>)
+![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
@@ -122,7 +122,7 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 
 ![](<../../../../.gitbook/assets/image (41) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (61) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (9) (1).png>)
 
@@ -168,7 +168,7 @@ use auxiliary/scanner/http/tomcat_mgr_login
 
 ![](<../../../../.gitbook/assets/image (53) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (57) (1).png>)
+![](<../../../../.gitbook/assets/image (57) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (58) (1) (1).png>)
 
@@ -200,7 +200,7 @@ CTRL+Z
 stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
 ```
 
-![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1) (1).png>)
+![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
@@ -211,20 +211,20 @@ robert:x:999:999:robert:/home/robert:
 robert:$6$D4O99Z5L$Q38CW.ym42GmIbjZRh8DA2rtLHxXgMj.ahVbrBrbWvuBXmP555cGuLG1hkQE1R0eQVX48Rs7yecdU7V96u5Tf0:17822::::::
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (63) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (48).png>)
+![](<../../../../.gitbook/assets/image (48) (1).png>)
 
 ```
 robert:robert@1234567890!@#
 username=robert | password=robert@1234567890!@#
 ```
 
-![](<../../../../.gitbook/assets/image (43) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1).png>)
 
-![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6).png>)
+![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 

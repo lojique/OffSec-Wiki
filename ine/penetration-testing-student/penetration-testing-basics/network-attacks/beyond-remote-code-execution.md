@@ -20,7 +20,7 @@ Ability to upload a simple interactive webshell on the web server
 
 ### Netcat
 
-![](<../../../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 ### Curl
 

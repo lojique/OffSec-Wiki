@@ -10,7 +10,7 @@ To identify the MAC address of a host, computers use the Address Resolution Prot
 
 After the MAC address resolution is comnplete, hosts save the destination address in their ARP cache table
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 If an attacker finds a way to manipulate the ARP cache, they will also be able to receive traffic destined to other IP addresses
 

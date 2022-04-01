@@ -258,7 +258,7 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 ![](<../../../.gitbook/assets/image (21) (1).png>)
 
-![](<../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 
@@ -272,7 +272,7 @@ role1:tomcat
 
 ![](<../../../.gitbook/assets/image (17) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (27) (1).png>)
+![](<../../../.gitbook/assets/image (27) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
@@ -339,7 +339,7 @@ use windows/mssql/mssql_payload
 
 ![](<../../../.gitbook/assets/image (63) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (66) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)
 

@@ -88,7 +88,7 @@ Now we'll upload it over ftp:
 
 We can access our webshell by visiting `10.129.203.118/cmd.aspx`
 
-![](<../../../../.gitbook/assets/image (25).png>)
+![](<../../../../.gitbook/assets/image (25) (1).png>)
 
 Here's what returns when entering `whoami`
 
@@ -100,7 +100,7 @@ I'll be getting a shell with `nc.exe`
 
 First I use smbserver.py to send the executable to the web server and then execute a netcat command
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../../.gitbook/assets/image (26) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (41).png>)
 
@@ -211,4 +211,4 @@ With our exploit executing successfully, we'll grab both the user and root flags
 
 ![](<../../../../.gitbook/assets/image (56).png>)
 
-![](<../../../../.gitbook/assets/image (23).png>)
+![](<../../../../.gitbook/assets/image (23) (1).png>)

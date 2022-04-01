@@ -43,4 +43,4 @@ hydra -L users.txt -P pass.txt telnet://target.server
 hydra -L users.txt -P pass.txt http-get://localhost/
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)

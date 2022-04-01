@@ -48,6 +48,7 @@
   * [Network Attacks](offsec-notes/network-attacks.md)
   * [Pivoting](offsec-notes/pivoting.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
+  * [BoF](offsec-notes/bof.md)
 
 ## INE
 
@@ -119,6 +120,7 @@
   * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
   * [Simple CTF](tryhackme/writeups/simple-ctf.md)
   * [RootMe](tryhackme/writeups/rootme.md)
+  * [Brainstorm](tryhackme/writeups/brainstorm.md)
 
 ## HackTheBox
 

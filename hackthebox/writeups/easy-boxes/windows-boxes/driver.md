@@ -2,7 +2,7 @@
 
 First I use Rustscan to get a quick overview of what ports are open
 
-![](<../../../../.gitbook/assets/image (27).png>)
+![](<../../../../.gitbook/assets/image (27) (1).png>)
 
 Afterwards I'll use Nmap to gather more information
 

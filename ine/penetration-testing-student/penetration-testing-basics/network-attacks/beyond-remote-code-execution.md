@@ -8,7 +8,7 @@ To check if code execution is occuring
 
 ### Time-Based Method
 
-![](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (27) (1) (1) (1) (1) (1).png>)
 
 ### Ping
 

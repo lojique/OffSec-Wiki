@@ -73,7 +73,7 @@ To retrieve information about the exploited machine: name, OS, architecture, sys
 sysinfo
 ```
 
-![](<../../../../.gitbook/assets/image (28) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (28) (1) (1) (1).png>)
 
 ### Network configuration
 
@@ -125,7 +125,7 @@ getsystem
 In modern Windows operating systems, the User Account Control policy prevent privilege escalation
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
 
 You can bypass that restriction by u sing the `bypassuac` module
 
@@ -190,4 +190,4 @@ You can run a standard OS shell
 shell
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1).png>)

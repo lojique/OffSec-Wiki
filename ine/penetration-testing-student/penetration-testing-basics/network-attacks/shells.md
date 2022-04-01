@@ -1,6 +1,6 @@
 # Shells
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1).png>)
 
 ## Staged Payloads
 
@@ -18,7 +18,7 @@ The listerner payload has to be exactly the same as the msfvenom payload
 
 ![](<../../../../.gitbook/assets/image (35) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1).png>)
 
 ## Stageless Payloads
 

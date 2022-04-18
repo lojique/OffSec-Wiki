@@ -4,6 +4,11 @@
 nc -nv 10.11.1.217 25
 ```
 
+```
+rpcinfo -s 10.11.1.72
+rpcinfo -p 10.11.1.72
+```
+
 ```python
 #!/usr/bin/python
 # opens a TCP socket, connects to the SMTP server, 

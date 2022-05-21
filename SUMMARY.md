@@ -16,6 +16,7 @@
     * [SMTP](offsec-notes/enumeration/smtp.md)
     * [SNMP](offsec-notes/enumeration/snmp.md)
     * [Jenkins](offsec-notes/enumeration/jenkins.md)
+  * [Privilege Escalation](offsec-notes/privilege-escalation.md)
   * [Linux/Unix](offsec-notes/linux-unix/README.md)
     * [Checklist - PrivEsc](offsec-notes/linux-unix/linux-privilege-escalation/README.md)
       * [Internal Ports](offsec-notes/linux-unix/linux-privilege-escalation/internal-ports.md)

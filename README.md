@@ -1,8 +1,8 @@
 ---
-coverY: 0
 description: >-
   Welcome to my cyber security wiki! Here you'll find everything that I've
   learned and discovered.
+coverY: 0
 ---
 
 # Welcome!
@@ -11,7 +11,7 @@ description: >-
 
 My name is Adam
 
-I currently work as Cyber Security Analyst with a heavy interest in Penetration Testing
+I currently work as a Penetration Tester
 
 Outside of work, I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning Italian (ever so slowly). I also understand some French, Swedish, Norwegian and Danish
 
@@ -26,8 +26,6 @@ TryHackMe: [https://tryhackme.com/p/lojique](https://tryhackme.com/p/lojique)
 HackTheBox: [https://app.hackthebox.com/profile/68453](https://app.hackthebox.com/profile/68453)
 
 Github: [https://github.com/lojique](https://github.com/lojique)
-
-Twitter: [https://twitter.com/iLojique](https://twitter.com/iLojique)
 
 {% hint style="warning" %}
 Still a very much work in progress, transferring old notes, writing new ones and organizing everything to my liking

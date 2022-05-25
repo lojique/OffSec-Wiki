@@ -111,6 +111,7 @@ We will use -u to suppress errors, -w to search for write access permissions, an
 ```
 # linux
 find / -writable -type d 2>/dev/null
+find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
 
 ### **Enumerating Unmounted Disks**

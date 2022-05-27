@@ -50,6 +50,7 @@
   * [Pivoting](offsec-notes/pivoting.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
   * [BoF](offsec-notes/bof.md)
+  * [Post-Exploitation](offsec-notes/post-exploitation.md)
 
 ## INE
 

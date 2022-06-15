@@ -40,7 +40,6 @@ uname -a
 # windows
 # return processes that are mapped to a specific Windows service
 tasklist /SVC
-wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows"
 
 #linux
 # list system processes (including those run by privileged users)

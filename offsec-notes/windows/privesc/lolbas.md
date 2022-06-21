@@ -1,6 +1,6 @@
 # LOLBAS
 
-Living Off The Land Binaries and Scripts (and also Libraries) : [https://lolbas-project.github.io/](https://lolbas-project.github.io)
+Living Off The Land Binaries and Scripts (and also Libraries) : [https://lolbas-project.github.io/](https://lolbas-project.github.io/)
 
 > The goal of the LOLBAS project is to document every binary, script, and library that can be used for Living Off The Land techniques.
 

@@ -268,7 +268,7 @@ tomcat:s3cret
 role1:tomcat
 ```
 
-![](<../../../.gitbook/assets/image (40) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (40) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (17) (1) (1).png>)
 
@@ -343,7 +343,7 @@ use windows/mssql/mssql_payload
 
 ![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (32) (1).png>)
 
 ![](<../../../.gitbook/assets/image (38) (1) (1) (1).png>)
 

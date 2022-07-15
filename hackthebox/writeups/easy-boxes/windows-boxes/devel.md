@@ -51,7 +51,7 @@ However, there isn't anything useful for us here.
 
 We see what looks to be the default landing page for IIS
 
-![](<../../../../.gitbook/assets/image (40).png>)
+![](<../../../../.gitbook/assets/image (40) (1).png>)
 
 Running a dirsearch on the website also did not prove to be useful.
 
@@ -104,7 +104,7 @@ First I use smbserver.py to send the executable to the web server and then execu
 
 ![](<../../../../.gitbook/assets/image (41).png>)
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../../.gitbook/assets/image (43) (1).png>)
 
 I also start a nc listener on my kali machine to catch a shell
 

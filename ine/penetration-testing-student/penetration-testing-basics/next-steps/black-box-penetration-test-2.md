@@ -71,7 +71,7 @@ There's an error message when visiting port 8000
 
 One thing that stood out in the nmap scan was this file path
 
-![](<../../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1) (1) (1) (1).png>)
 
 When you visit /.git itself, you receive an error
 
@@ -83,7 +83,7 @@ However, visiting .git/config gives you a file to download
 
 And its file content is interesting
 
-![](<../../../../.gitbook/assets/image (40) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (40) (1) (1) (1) (1) (1) (1).png>)
 
 We'll keep these credentials saved just in case they come in handy
 

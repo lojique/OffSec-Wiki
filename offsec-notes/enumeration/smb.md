@@ -70,6 +70,13 @@ smbmap -R <sharename> -H <ip-addr> -A <filename> -q
 smbclient -L \\\\<ip-addr>
 ```
 
+### To list shares as an authenticated user:
+
+```
+smbclient -L \\<IP> --user=domain/user%password
+smbclient -L \\<IP> -U user
+```
+
 ### To connect to shares:
 
 ```

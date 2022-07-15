@@ -90,7 +90,7 @@ Nmap done: 3 IP addresses (3 hosts up) scanned in 6.98 seconds
 
 ![](<../../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (32) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1).png>)
 
 ### Exploit
 
@@ -222,7 +222,7 @@ robert:robert@1234567890!@#
 username=robert | password=robert@1234567890!@#
 ```
 
-![](<../../../../.gitbook/assets/image (43) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
 
 ![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6) (1).png>)
 
@@ -264,6 +264,6 @@ sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 
 * [https://book.hacktricks.xyz/linux-unix/privilege-escalation#ld\_preload](https://book.hacktricks.xyz/linux-unix/privilege-escalation#ld\_preload)
 * [https://linuxhint.com/untar\_files\_linux/](https://linuxhint.com/untar\_files\_linux/)
-* [https://gtfobins.github.io/#](https://gtfobins.github.io/#)
+* [https://gtfobins.github.io/#](https://gtfobins.github.io)
 * [https://book.hacktricks.xyz/pentesting/pentesting-web/tomcat#msfvenom-reverse-shell](https://book.hacktricks.xyz/pentesting/pentesting-web/tomcat#msfvenom-reverse-shell)
 * [https://www.exploit-db.com/exploits/37814](https://www.exploit-db.com/exploits/37814)

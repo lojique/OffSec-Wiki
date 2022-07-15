@@ -56,7 +56,7 @@ The reviews directory yields us some users: <mark style="color:green;">`wail`</m
 
 And the admin page
 
-![](<../../../../.gitbook/assets/image (40) (1).png>)
+![](<../../../../.gitbook/assets/image (40) (1) (1).png>)
 
 Doing a google search on <mark style="color:green;">`strapi`</mark> shows that it is an open source Node.js headless Content Management System (CMS)
 

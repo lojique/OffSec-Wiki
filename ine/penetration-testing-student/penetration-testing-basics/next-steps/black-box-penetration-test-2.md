@@ -37,7 +37,7 @@ nmap -sC -sV -O -p1-10000 online-calc.com
 
 There is an Apache 2.4.29 HTTP server running on Port 80
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 Some strange unrecognizable service is running on Port 5000, but it must be a webapp due to the HTTP content printed
 

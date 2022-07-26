@@ -205,7 +205,7 @@ We know the injection is here, but we get an error which means the number of fie
 
 Trying with two fields seems to work
 
-![](<../../../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 Trying with three fields verifies if the original query just has two fields
 

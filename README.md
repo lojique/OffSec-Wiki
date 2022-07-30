@@ -2,6 +2,8 @@
 description: >-
   Welcome to my cyber security wiki! Here you'll find everything that I've
   learned and discovered.
+cover: >-
+  https://images.unsplash.com/photo-1500576992153-0271099def59?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHxoZWxsb3xlbnwwfHx8fDE2NTkyMTQ5NDg&ixlib=rb-1.2.1&q=80
 coverY: 0
 ---
 

@@ -1,4 +1,4 @@
-# Attacking AD
+# Enumerating AD
 
 ## PowerView
 
@@ -6,7 +6,7 @@
 
 {% embed url="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1" %}
 
-```
+```powershell
 powershell.exe -nop -exec bypass
 Import-Module .\PowerView.ps1
 Get-NetLoggedon -ComputerName "name"
@@ -15,7 +15,7 @@ Get-NetSession -ComputerName "DC"
 
 [https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)&#x20;
 
-## Enumeration
+## User Enum
 
 ```
 net user
@@ -31,12 +31,12 @@ You can use the python script in replacement of executing sharphound. Run `neo4j
 
 ### w/ hash
 
-```
+```python
 python3 bloodhound.py -ns nameserver/dc ip 10.11.1.20 -d domain.local -u Administrator --hashes ntlm -c All
 ```
 
 ### w/ password
 
-```
+```python
 python3 bloodhound.py -ns nameserver/dc ip -d domain.local -u user -p password -c All
 ```

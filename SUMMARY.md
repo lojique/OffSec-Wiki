@@ -22,6 +22,8 @@
       * [NFS no\_root\_squash/no\_all\_squash misconfig PE](offsec-notes/linux-unix/linux-privilege-escalation/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
       * [Writeable Files](offsec-notes/linux-unix/linux-privilege-escalation/writeable-files.md)
   * [Windows](offsec-notes/windows/README.md)
+    * [Client-Side Attacks](offsec-notes/windows/client-side-attacks/README.md)
+      * [Microsoft Office](offsec-notes/windows/client-side-attacks/microsoft-office.md)
     * [PrivEsc](offsec-notes/windows/privesc/README.md)
       * [MSSQL](offsec-notes/windows/privesc/mssql.md)
       * [SeImpersonateToken](offsec-notes/windows/privesc/seimpersonatetoken.md)
@@ -30,7 +32,7 @@
       * [GetUserSPNs.ps1](offsec-notes/windows/powershell-scripts/getuserspns.ps1.md)
       * [Master MDF Hash Extraction](offsec-notes/windows/powershell-scripts/master-mdf-hash-extraction.md)
       * [Spray-Passwords.ps1](offsec-notes/windows/powershell-scripts/spray-passwords.ps1.md)
-    * [Attacking AD](offsec-notes/windows/attacking-ad.md)
+    * [Enumerating AD](offsec-notes/windows/enumerating-ad.md)
     * [PrivEsc](offsec-notes/windows/privesc-1/README.md)
       * [LOLBAS](offsec-notes/windows/privesc-1/lolbas.md)
     * [Post-Exploitation](offsec-notes/windows/post-exploitation.md)
@@ -59,7 +61,7 @@
   * [Network Attacks](offsec-notes/network-attacks.md)
   * [Pivoting](offsec-notes/pivoting.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
-  * [Buffer Overflow](offsec-notes/buffer-overflow.md)
+  * [Buffer Overflow](offsec-notes/bof.md)
 
 ## INE
 

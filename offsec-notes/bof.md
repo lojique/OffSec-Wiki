@@ -33,7 +33,9 @@ while True:
 
 1. Fuzz and crash program w/ A's
 2. Create msfpattern
+   * `/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 600`
 3. Provide EIP to find offset
+   * `/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q (EIP value)`
 4. Check for bad characters
 5. Find JMP ESP/Return Address
    * make sure protection schemes are off and base address doesn't contain bad chars
@@ -50,7 +52,7 @@ while True:
 !mona jmp -r ESP -m "module"
 ```
 
-## Template
+## Exploit.py
 
 ```python
 import socket

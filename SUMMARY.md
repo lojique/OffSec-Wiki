@@ -59,7 +59,7 @@
   * [Network Attacks](offsec-notes/network-attacks.md)
   * [Pivoting](offsec-notes/pivoting.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
-  * [BoF](offsec-notes/bof.md)
+  * [Buffer Overflow](offsec-notes/buffer-overflow.md)
 
 ## INE
 

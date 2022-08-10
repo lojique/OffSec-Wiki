@@ -10,7 +10,7 @@ description: 10.10.10.11
 sudo nmap -Pn -p- 10.10.10.11 --min-rate=5000
 ```
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![](<../../../../.gitbook/assets/image (8).png>)
 
 Ran a script script based on open ports
 
@@ -49,37 +49,83 @@ OS and Service detection performed. Please report any incorrect results at https
 
 I look to see if there's anything interesting that can be looked at on the browser on this particular port
 
-![](<../../../../.gitbook/assets/image (28).png>)
+![](<../../../../.gitbook/assets/image (5).png>)
 
 Clicking on `CFIDE` leads to some pretty interesting findings
 
-![](../../../../.gitbook/assets/image.png)
+![](<../../../../.gitbook/assets/image (11).png>)
 
 I'm most interested in the `administrator` link, so going there takes me to an Admin page!
 
-![](<../../../../.gitbook/assets/image (33).png>)
+![](<../../../../.gitbook/assets/image (7).png>)
 
 ## Searchsploit
 
 I search for any public exploits in searchsploit
 
-![](<../../../../.gitbook/assets/image (2).png>)
+![](<../../../../.gitbook/assets/image (9).png>)
 
 The Remote Code Execution python script catches my eye so I'll view that one
 
-![](<../../../../.gitbook/assets/image (31).png>)
+![](<../../../../.gitbook/assets/image (6).png>)
 
 {% embed url="https://www.exploit-db.com/exploits/50057" %}
 
 {% embed url="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2265" %}
 
-| Multiple directory traversal vulnerabilities in FCKeditor before 2.6.4.1 allow remote attackers to create executable files in arbitrary directories via directory traversal sequences in the input to unspecified connector modules, as exploited in the wild for remote code execution in July 2009, related to the file browser and the editor/filemanager/connectors/ directory. |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                                                                                                                                                                                                     |
+> Multiple directory traversal vulnerabilities in FCKeditor before 2.6.4.1 allow remote attackers to create executable files in arbitrary directories via directory traversal sequences in the input to unspecified connector modules, as exploited in the wild for remote code execution in July 2009, related to the file browser and the editor/filemanager/connectors/ directory.
 
-> \
->
+## Foothold #1 - RCE Script
 
-## Foothold
+This python script does it all! We'll change the listening host IP and port number (in case firewall rules don't like weird port numbers)&#x20;
 
-This python script does it all! So we run it and get a shell!
+Then we run it and get a shell!
+
+![](<../../../../.gitbook/assets/image (2).png>)
+
+## Foothold #2 - Directory Traversal
+
+There was also a metasploit module for directory traversal. I was curious about it so I checked it out and found this
+
+{% embed url="https://www.exploit-db.com/exploits/14641" %}
+
+![](<../../../../.gitbook/assets/image (4).png>)
+
+I decided to do this without the python script since you technically don't need to
+
+{% code overflow="wrap" %}
+```
+http://arctic.htb:8500/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+```
+{% endcode %}
+
+As you can see, there's a password that's encrypted, so we should crack it.
+
+### Cracking the hash
+
+![](../../../../.gitbook/assets/image.png)
+
+```
+happyday
+```
+
+
+
+From my understanding, essentially whatever password you type, it takes the encrypted form of it and checks if it matches the valid one. Which is why when you type a password, or just hit login, you get this weird string of weird numbers and letters
+
+![](<../../../../.gitbook/assets/image (1).png>)
+
+Here I'm typing in `password`
+
+![](<../../../../.gitbook/assets/image (74).png>)
+
+![](<../../../../.gitbook/assets/image (76).png>)
+
+It's the same length, however it didn't get cracked. However I believe, theoretically, this is how it works.
+
+![](<../../../../.gitbook/assets/image (75).png>)
+
+
+
+## Priv Esc
+

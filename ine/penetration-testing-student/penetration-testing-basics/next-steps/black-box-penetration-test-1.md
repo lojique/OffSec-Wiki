@@ -153,7 +153,7 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 bash
 ```
 
-![](<../../../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 Here is the network that we couldn't reach: `192.57.96.2`
 

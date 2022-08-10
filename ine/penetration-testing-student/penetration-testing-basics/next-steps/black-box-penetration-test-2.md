@@ -161,7 +161,7 @@ We, however, want remote code execution, so we will modify the code in the API.p
 
 Comment out the part where there's input validation and commit this change to the repository
 
-![](<../../../../.gitbook/assets/image (31) (1) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 ```
 git status

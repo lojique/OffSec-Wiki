@@ -296,7 +296,7 @@ admin:admin
 
 ![](<../../../.gitbook/assets/image (67) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 ![](<../../../.gitbook/assets/image (60).png>)
 

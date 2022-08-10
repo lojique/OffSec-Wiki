@@ -47,7 +47,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (21).png>)
 
-![](<../../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../../.gitbook/assets/image (29).png>)
 
 ![](<../../../../.gitbook/assets/image (72) (1).png>)
 
@@ -59,7 +59,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (7) (1).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../../.gitbook/assets/image (33).png>)
 
 {% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}
 

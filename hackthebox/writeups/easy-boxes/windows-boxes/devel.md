@@ -100,11 +100,11 @@ I'll be getting a shell with `nc.exe`
 
 I use impacket-smbserver to host a windows netcat executable to then execute a connection to my kali machine
 
-![](<../../../../.gitbook/assets/image (2).png>)
+![](<../../../../.gitbook/assets/image (2) (1).png>)
 
 I also start a nc listener on my kali machine to catch a shell
 
-![](<../../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (3).png>)
 
 Entering the following command into the webshell:
 

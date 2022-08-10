@@ -140,6 +140,7 @@
 * [Writeups](hackthebox/writeups/README.md)
   * [Easy Boxes](hackthebox/writeups/easy-boxes/README.md)
     * [Windows Boxes](hackthebox/writeups/easy-boxes/windows-boxes/README.md)
+      * [Arctic](hackthebox/writeups/easy-boxes/windows-boxes/arctic.md)
       * [Driver](hackthebox/writeups/easy-boxes/windows-boxes/driver.md)
       * [Devel](hackthebox/writeups/easy-boxes/windows-boxes/devel.md)
       * [Legacy](hackthebox/writeups/easy-boxes/windows-boxes/legacy.md)

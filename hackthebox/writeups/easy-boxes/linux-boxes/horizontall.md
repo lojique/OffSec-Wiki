@@ -52,7 +52,7 @@ Time to enumerate some more. Now there are two interesting directories that we c
 
 The reviews directory yields us some users: <mark style="color:green;">`wail`</mark>, <mark style="color:green;">`doe`</mark>, and <mark style="color:green;">`john`</mark>
 
-![](<../../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 
 And the admin page
 

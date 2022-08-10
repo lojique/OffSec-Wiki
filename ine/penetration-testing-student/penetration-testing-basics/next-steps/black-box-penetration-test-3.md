@@ -144,7 +144,7 @@ use exploit/multi/mysql/mysql_udf_payload
 
 ![](<../../../../.gitbook/assets/image (14) (1).png>)
 
-![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31) (1).png>)
+![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 ## Server 3
 
@@ -158,7 +158,7 @@ dirb http://192.6.232.5:8080
 
 ![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (2).png>)
 
 ![](<../../../../.gitbook/assets/image (44) (1).png>)
 

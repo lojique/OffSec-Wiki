@@ -10,7 +10,7 @@ Choose VIEW ribbon and selecting Macros option. We type name for the macro and i
 
 {% embed url="https://www.revshells.com/" %}
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (29).png>)
 
 We have to edit the payload. We change related part of payload variable.&#x20;
 

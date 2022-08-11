@@ -89,13 +89,13 @@ Host: www.example.site
 
 * enumerate available methods or verbs
 
-![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (2).png>)
 
 ### Exploiting DELETE
 
 ![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 ### Exploiting PUT
 

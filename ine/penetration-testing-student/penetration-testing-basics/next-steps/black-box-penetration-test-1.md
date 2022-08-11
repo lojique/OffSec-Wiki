@@ -221,7 +221,7 @@ portfwd add -l 4242 -p 21 -r 192.57.96.3
 
 Now we need to run an nmap scan to gather more information about this new target
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (2).png>)
 
 So we see here that this machine is running OpenSSH 6.6.1p1 (SSH) and vsftpd 2.0.8 or later (FTP)
 

@@ -67,7 +67,7 @@ select Name, Description from products where ID='1';
 select Name, Description from products where Name='Shoes';
 ```
 
-![](<../../../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (4) (1) (1) (2).png>)
 
 ### UNION Example
 
@@ -209,7 +209,7 @@ Trying with two fields seems to work
 
 Trying with three fields verifies if the original query just has two fields
 
-![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 Once we know how many fields are in the query, we can test which fields are part of the output page
 

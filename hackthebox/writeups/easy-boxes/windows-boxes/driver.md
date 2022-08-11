@@ -57,7 +57,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 {% embed url="https://book.hacktricks.xyz/pentesting/5985-5986-pentesting-winrm" %}
 
-![](<../../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (33).png>)
 
@@ -67,11 +67,11 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (37).png>)
 
-![](<../../../../.gitbook/assets/image (15).png>)
+![](<../../../../.gitbook/assets/image (15) (2).png>)
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (2).png>)
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (18) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (38).png>)
 

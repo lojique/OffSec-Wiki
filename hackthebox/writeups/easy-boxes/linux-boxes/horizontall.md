@@ -26,7 +26,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 We add <mark style="color:green;">`horizontall.htb`</mark> to our <mark style="color:green;">`/etc/hosts`</mark> file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
 
-![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (2).png>)
 
 Searching on Google informs us that the latest version of <mark style="color:green;">`nginx`</mark> is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind.
 
@@ -177,7 +177,7 @@ Awesome! Now we can cat the root.txt file
 
 This is nice, but a shell would be nicer :)
 
-![](<../../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (55) (1).png>)
 

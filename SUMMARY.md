@@ -149,6 +149,7 @@
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
   * [Medium Boxes](hackthebox/writeups/medium-boxes/README.md)
     * [Windows](hackthebox/writeups/medium-boxes/windows/README.md)
+      * [Cronos](hackthebox/writeups/medium-boxes/windows/cronos.md)
       * [Bastard v.1](hackthebox/writeups/medium-boxes/windows/bastard-v.1.md)
       * [Bastard v.2](hackthebox/writeups/medium-boxes/windows/bastard-v.2.md)
 * [Goals](hackthebox/goals.md)

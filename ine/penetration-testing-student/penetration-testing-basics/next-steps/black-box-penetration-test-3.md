@@ -94,7 +94,7 @@ Nmap done: 3 IP addresses (3 hosts up) scanned in 6.98 seconds
 
 ### Exploit
 
-![](<../../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (2).png>)
 
 ```
 use exploit/multi/http/werkzeug_debug_rce

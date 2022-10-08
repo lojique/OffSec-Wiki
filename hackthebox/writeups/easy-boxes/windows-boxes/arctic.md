@@ -135,13 +135,13 @@ Make sure to save the output to a file in a valid directory. I had to check for 
 
 [https://help.adobe.com/archive/en\_US/coldfusion/8/cf8\_install.pdf](https://help.adobe.com/archive/en\_US/coldfusion/8/cf8\_install.pdf)
 
-![](<../../../../.gitbook/assets/image (8).png>)
+![](<../../../../.gitbook/assets/image (8) (2).png>)
 
 Before you run the scheduled task, make sure to have a web server (I use python) running so it will download your payload
 
-![](<../../../../.gitbook/assets/image (4).png>)
+![](<../../../../.gitbook/assets/image (4) (2).png>)
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (2).png>)
 
 ![](<../../../../.gitbook/assets/image (7).png>)
 
@@ -169,7 +169,7 @@ System Type:               x64-based PC
 
 ## Windows Exploit Suggester
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (2).png>)
 
 {% embed url="https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri/Compiled" %}
 

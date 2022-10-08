@@ -43,7 +43,7 @@ What's particularly interesting is that anonymous login is allowed on port 21 so
 
 We'll make sure that anonymous login does work, which indeed it does.
 
-![](<../../../../.gitbook/assets/image (11) (2).png>)
+![](<../../../../.gitbook/assets/image (11) (2) (1).png>)
 
 However, there isn't anything useful for us here.
 

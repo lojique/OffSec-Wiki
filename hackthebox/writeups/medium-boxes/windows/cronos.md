@@ -68,6 +68,8 @@ Found: admin.cronos.htb (Status: 200) [Size: 1547]
 
 ### SQLi
 
+{% embed url="https://book.hacktricks.xyz/pentesting-web/login-bypass#sql-injection-authentication-bypass" %}
+
 We use the following payload for authentication bypass
 
 ```sql

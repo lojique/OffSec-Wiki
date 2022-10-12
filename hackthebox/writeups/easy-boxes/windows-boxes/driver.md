@@ -43,9 +43,9 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 {% embed url="https://pentestlab.blog/2017/12/13/smb-share-scf-file-attacks" %}
 
-![](<../../../../.gitbook/assets/image (20) (2).png>)
+![](<../../../../.gitbook/assets/image (20).png>)
 
-![](<../../../../.gitbook/assets/image (21) (2).png>)
+![](<../../../../.gitbook/assets/image (21).png>)
 
 ![](<../../../../.gitbook/assets/image (29).png>)
 
@@ -63,7 +63,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 {% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}
 
-![](<../../../../.gitbook/assets/image (22) (2).png>)
+![](<../../../../.gitbook/assets/image (22).png>)
 
 ![](<../../../../.gitbook/assets/image (37).png>)
 
@@ -75,6 +75,6 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (38).png>)
 
-![](<../../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../../.gitbook/assets/image (19).png>)
 
 ![](<../../../../.gitbook/assets/image (71).png>)

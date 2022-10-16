@@ -9,14 +9,20 @@
 
 ```bash
 # stealth/SYN scan
-sudo nmap -sS 10.11.1.220
+sudo nmap -sS 10.10.10.10
 # TCP connect scan
-nmap -sT 10.11.1.220
+nmap -sT 10.10.10.10
 # UDP scan
 sudo nmap -sU 10.11.1.115
 sudo nmap -sS -sU 10.11.1.115
-# network sweep
-nmap -sn 10.11.1.1-254
+# host discovery/ping scan/skip port scan
+sudo nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5
+# skip DNS resolution (for simple scans against a large number of hosts)
+sudo nmap -n 10.10.10.10
+# skip ping scan
+sudo nmap -Pn 10.10.10.10
+# track how sent packets are handled on filtered ports
+sudo nmap -p 445 --packet-trace -n --disable-arp-ping -Pn 10.10.10.10
 # OS fingerprinting
 sudo nmap -O 10.11.1.220
 # banner grabbing/service enumeration

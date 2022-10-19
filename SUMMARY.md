@@ -146,6 +146,7 @@
       * [Devel](hackthebox/writeups/easy-boxes/windows-boxes/devel.md)
       * [Legacy](hackthebox/writeups/easy-boxes/windows-boxes/legacy.md)
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
+      * [SwagShop](hackthebox/writeups/easy-boxes/linux-boxes/swagshop.md)
       * [Paper](hackthebox/writeups/easy-boxes/linux-boxes/paper.md)
       * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
   * [Medium Boxes](hackthebox/writeups/medium-boxes/README.md)

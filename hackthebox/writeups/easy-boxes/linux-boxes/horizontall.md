@@ -32,7 +32,7 @@ Searching on Google informs us that the latest version of <mark style="color:gre
 
 Going to the site, we see a web page.
 
-![](<../../../../.gitbook/assets/image (36).png>)
+![](<../../../../.gitbook/assets/image (36) (2).png>)
 
 Viewing the source code and going through the site really did not provide anything useful. However, is it possible for the <mark style="color:green;">`nginx`</mark> server to have more vhosts or subdomains? Using <mark style="color:green;">`ffuf`</mark>, we will see something.
 
@@ -169,7 +169,7 @@ Using the GitHub resource for the Laravel vulnerability, we'll execute the follo
 ./privesc.py http://localhost:8000 Monolog/RCE1 "whoami"
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (2).png>)
 
 Awesome! Now we can cat the root.txt file
 

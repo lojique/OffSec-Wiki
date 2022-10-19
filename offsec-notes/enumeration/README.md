@@ -35,13 +35,11 @@ sudo nmap --script vuln 10.11.1.10
 
 ### Gobuster
 
-```bash
-gobuster dir -u driver.htb -w /usr/share/wordlists/dirb/common.txt -U admin -P admin -q &\
-gobuster dir -u driver.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -U admin -P admin -q &\
-gobuster dir -u driver.htb -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt -U admin -P admin -q &\
-gobuster vhost -u driver.htb -w /usr/share/seclists/Discovery/DNS/shubs-subdomains.txt -U admin -P admin -q &\
-gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt &
-```
+<pre class="language-bash"><code class="lang-bash">gobuster dir -u driver.htb -w /usr/share/wordlists/dirb/common.txt -U admin -P admin -q &#x26;\
+gobuster dir -u driver.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -U admin -P admin -q &#x26;\
+gobuster dir -u driver.htb -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt -U admin -P admin -q &#x26;\
+<strong>gobuster vhost -u driver.htb -w /usr/share/seclists/Discovery/DNS/shubs-subdomains.txt -U admin -P admin -q &#x26;\
+</strong>gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt &#x26;</code></pre>
 
 ### Dirsearch
 

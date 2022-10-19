@@ -46,7 +46,7 @@ Here we can see that we can upload files. So we should be interested in uploadin
 
 And we should be able to execute it here
 
-![](<../../.gitbook/assets/image (53).png>)
+![](<../../.gitbook/assets/image (53) (2).png>)
 
 Here's the PHP reverse shell. Now I start an netcat listener
 

@@ -100,7 +100,7 @@ The above command shows this machine is vulnerable to 2 SMB vulnerabilities.
 
 Using the Metasploit module `exploit/windows/smb/ms08_067_netapi`, we'll set up our payload as such:
 
-![](<../../../../.gitbook/assets/image (49).png>)
+![](<../../../../.gitbook/assets/image (49) (2).png>)
 
 ![](<../../../../.gitbook/assets/image (69).png>)
 
@@ -134,7 +134,7 @@ Then replace the shellcode in the code with the shellcode we just generated.
 
 Running an nmap scan on the target once more with -O (OS Detection) reveals that the target is running Microsoft Windows XP SP3 (94%). With this is mind, we'll trying using this sample command
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../../.gitbook/assets/image (67) (1).png>)
 
 Let's set up a netcat listener and then run the command and you should get a reverse shell.
 

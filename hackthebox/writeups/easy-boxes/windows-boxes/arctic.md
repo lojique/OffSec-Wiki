@@ -103,7 +103,7 @@ As you can see, there's a password that's encrypted, so we should crack it.
 
 ### Cracking the hash
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (18) (2).png>)
 
 ```
 happyday

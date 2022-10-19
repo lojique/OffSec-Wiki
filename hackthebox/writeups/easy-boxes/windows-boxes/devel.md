@@ -84,7 +84,7 @@ I decided to go with the webshell from SecLists
 
 Now we'll upload it over ftp:
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../../.gitbook/assets/image (46) (2).png>)
 
 We can access our webshell by visiting `10.129.203.118/cmd.aspx`
 

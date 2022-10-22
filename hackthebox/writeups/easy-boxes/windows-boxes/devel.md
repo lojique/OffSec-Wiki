@@ -161,7 +161,7 @@ And catch a shell!
 
 Running systeminfo in the shell shows us some good information
 
-![](<../../../../.gitbook/assets/image (44).png>)
+![](<../../../../.gitbook/assets/image (44) (1).png>)
 
 In particular, I'm interested in the OS Version, so I look up priv esc for this build and find a nice exploit to use.
 

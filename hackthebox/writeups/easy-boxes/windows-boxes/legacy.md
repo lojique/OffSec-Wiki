@@ -100,7 +100,7 @@ The above command shows this machine is vulnerable to 2 SMB vulnerabilities.
 
 Using the Metasploit module `exploit/windows/smb/ms08_067_netapi`, we'll set up our payload as such:
 
-![](<../../../../.gitbook/assets/image (49) (2).png>)
+![](<../../../../.gitbook/assets/image (49) (2) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (69).png>)
 

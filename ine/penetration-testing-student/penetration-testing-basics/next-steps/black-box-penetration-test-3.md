@@ -160,7 +160,7 @@ dirb http://192.6.232.5:8080
 
 ![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (44) (1).png>)
+![](<../../../../.gitbook/assets/image (44) (1) (2).png>)
 
 ```
 use auxiliary/scanner/http/tomcat_mgr_login

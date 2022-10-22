@@ -59,7 +59,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (33) (2).png>)
+![](<../../../../.gitbook/assets/image (33) (2) (1).png>)
 
 {% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}
 

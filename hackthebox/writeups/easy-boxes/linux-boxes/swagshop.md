@@ -52,13 +52,13 @@ Service detection performed. Please report any incorrect results at https://nmap
 dirsearch -u http://10.10.10.140 -w /usr/share/dirb/wordlists/common.txt -t 150 -x 404
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (79) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ran dirsearch and checked out the first item which was `http://10.10.10.140/app/`
 
 From there, I discovered a local.xml file:
 
-<figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (18) (3).png" alt=""><figcaption></figcaption></figure>
 
 Its contents reveal something interesting
 
@@ -71,57 +71,46 @@ root
 fMVWh7bDHpgZkyfqQXreTjU9
 ```
 
+I decided to revisit my webfuzzing because from prior experience, sometimes you need to fuzz beyond the initial given target.
+
+<figure><img src="../../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+
+Now we visit the URL
+
+<figure><img src="../../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+
+Tried the classic `admin:admin`, as well as the mysql username and password (in case of password reuse), and some other random credentials. Unfortunately none of these worked.
+
 ### searchsploit
 
 <figure><img src="../../../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-I wanted to double check if this was an eCommerce site and I believe it is based on the below screenshots. This can help narrow my search results.
+I used searchsploit to see if there were any public exploits for Magento. Based on how the site appears to work, it is safe to assume it is an eCommerce site.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+I verified that by checking good ol Google
 
-<figure><img src="../../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
-
-After some time, this led me nowhere and I was pretty stuck.
-
-So why was I stuck and what could I have done to prevent this? I believe I was so focused on quickly finding an exploit, that I didn't make sure I thoroughly fuzzed the URL
-
-Had I done that, I would've found this much quicker:
-
-<figure><img src="../../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
-
-Revisiting searchsploit, I decided to try out what was available
-
-I ended up using this one here which essentially creates an admin account with the username `forme` and password `forme` if the magento version is vulnerable
+I noticed a particularly interesting exploit
 
 {% embed url="https://www.exploit-db.com/exploits/37977" %}
 
-It's worth reading about the vulnerability here:
+Essentially this script run a query that takes a username and password and makes that user an admin. It sends the request, while encoded in base64 to a vulnerable URL that can be bypassed????? I need to read the original blog
 
-{% embed url="https://blog.checkpoint.com/2015/04/20/analyzing-magento-vulnerability/" %}
+I modified it as shown in the image below.
 
-I modified the script a little bit
+<figure><img src="../../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
-This script send a based64 encoded request of a query that adds a user and password to admin. If it works, then we should be able to log into the Magento Admin Panel
+Now that we are logged in as an admin user, the next step would typically be to see if we can find a way to upload files or edit files in a way that can result in us getting a shell on the box.
 
-I run the script and am told it worked
+I finally was able to find a version of Magento which is 1.9.0.0
 
-<figure><img src="../../../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
 
-I verify this
 
-<figure><img src="../../../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
-
-And it worked!
-
-Scrolling down we finally can confirm a version
-
-<figure><img src="../../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>

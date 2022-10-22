@@ -88,7 +88,7 @@ Now we'll upload it over ftp:
 
 We can access our webshell by visiting `10.129.203.118/cmd.aspx`
 
-![](<../../../../.gitbook/assets/image (25) (1).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (2).png>)
 
 Here's what returns when entering `whoami`
 

@@ -5,6 +5,60 @@
 * netcraft
 * recon-ng
 
+### Domain Information
+
+* [https://crt.sh/](https://crt.sh/) | certificate transparency
+  *   {% code overflow="wrap" %}
+      ```shell-session
+      curl -s https://crt.sh/\?q\=inlanefreight.com\&output\=json | jq .
+      ```
+      {% endcode %}
+
+
+
+      <figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+  *   {% code title="filter by unique subdomains" overflow="wrap" %}
+      ```shell-session
+      curl -s https://crt.sh/\?q\=inlanefreight.com\&output\=json | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\n/,"\n");}1;' | sort -u
+      ```
+      {% endcode %}
+
+      <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+  *   {% code title="identify company hosted servers" overflow="wrap" %}
+      ```shell-session
+      for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
+      ```
+      {% endcode %}
+
+
+
+      <figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+
+#### Shodan
+
+*   <pre class="language-shell-session"><code class="lang-shell-session"><strong>lojique@htb[/htb]$ for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
+    </strong>lojique@htb[/htb]$ for i in $(cat ip-addresses.txt);do shodan host $i;done</code></pre>
+
+
+
+    <figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+
+#### dig | DNS Records
+
+```shell-session
+dig any inlanefreight.com
+```
+
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+
+### Cloud Resources
+
+{% embed url="https://domain.glass/" %}
+
+{% embed url="https://buckets.grayhatwarfare.com/" %}
+
+Google Dorking --> `intext:domainname` `inurl:amazonaws.com` `inurl:blob.core.windows.net`
+
 ## Nmap
 
 ```bash

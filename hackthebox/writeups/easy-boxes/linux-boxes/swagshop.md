@@ -89,7 +89,7 @@ I used searchsploit to see if there were any public exploits for Magento. Based 
 
 I verified that by checking good ol Google
 
-<figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 I noticed a particularly interesting exploit
 

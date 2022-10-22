@@ -43,9 +43,9 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 {% embed url="https://pentestlab.blog/2017/12/13/smb-share-scf-file-attacks" %}
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../../.gitbook/assets/image (20) (3).png>)
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../../.gitbook/assets/image (21) (3).png>)
 
 ![](<../../../../.gitbook/assets/image (29).png>)
 
@@ -71,10 +71,10 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 ![](<../../../../.gitbook/assets/image (17) (2).png>)
 
-![](<../../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (2).png>)
 
 ![](<../../../../.gitbook/assets/image (38).png>)
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (3).png>)
 
 ![](<../../../../.gitbook/assets/image (71).png>)

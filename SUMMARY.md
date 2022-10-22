@@ -37,6 +37,7 @@
       * [LOLBAS](offsec-notes/windows/privesc-1/lolbas.md)
     * [Post-Exploitation](offsec-notes/windows/post-exploitation.md)
   * [Enumeration](offsec-notes/enumeration/README.md)
+    * [FTP](offsec-notes/enumeration/ftp.md)
     * [Ports](offsec-notes/enumeration/ports.md)
     * [NFS](offsec-notes/enumeration/nfs.md)
     * [SMB](offsec-notes/enumeration/smb.md)

@@ -114,3 +114,11 @@ I finally was able to find a version of Magento which is 1.9.0.0
 
 
 <figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+
+## Foothold
+
+{% embed url="https://blog.scrt.ch/2019/01/24/magento-rce-local-file-read-with-low-privilege-admin-rights/" %}
+
+## Priv Esc
+
+{% embed url="https://gtfobins.github.io/gtfobins/vi/#file-write" %}

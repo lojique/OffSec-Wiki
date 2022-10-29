@@ -146,6 +146,7 @@
       * [Arctic](hackthebox/writeups/easy-boxes/windows-boxes/arctic.md)
       * [Driver](hackthebox/writeups/easy-boxes/windows-boxes/driver.md)
       * [Devel](hackthebox/writeups/easy-boxes/windows-boxes/devel.md)
+      * [Granny](hackthebox/writeups/easy-boxes/windows-boxes/granny.md)
       * [Legacy](hackthebox/writeups/easy-boxes/windows-boxes/legacy.md)
     * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
       * [SwagShop](hackthebox/writeups/easy-boxes/linux-boxes/swagshop.md)

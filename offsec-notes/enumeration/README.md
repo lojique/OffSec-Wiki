@@ -59,7 +59,9 @@ dig any inlanefreight.com
 
 Google Dorking --> `intext:domainname` `inurl:amazonaws.com` `inurl:blob.core.windows.net`
 
-## Nmap
+## Active Information Gathering
+
+### Nmap
 
 ```bash
 # stealth/SYN scan
@@ -85,45 +87,4 @@ nmap -sV -sT -A 10.11.1.220
 sudo nmap --script vuln 10.11.1.10 
 ```
 
-## Web
-
-### Gobuster
-
-<pre class="language-bash"><code class="lang-bash">gobuster dir -u driver.htb -w /usr/share/wordlists/dirb/common.txt -U admin -P admin -q &#x26;\
-gobuster dir -u driver.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -U admin -P admin -q &#x26;\
-gobuster dir -u driver.htb -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt -U admin -P admin -q &#x26;\
-<strong>gobuster vhost -u driver.htb -w /usr/share/seclists/Discovery/DNS/shubs-subdomains.txt -U admin -P admin -q &#x26;\
-</strong>gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt &#x26;</code></pre>
-
-### Dirsearch
-
-```bash
-dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100 
-```
-
-### [ffuf](https://github.com/ffuf/ffuf)
-
-```
-ffuf -w /path/to/wordlist -u https://target/FUZZ
-```
-
-### Banner Grabbing/Web Server Headers
-
-```bash
-curl -IL https://www.inlanefreight.com
-```
-
-### EyeWitness
-
-Can be used to take screenshots of target web applications, fingerprint them, and identify possible default credentials
-
-```bash
-./EyeWitness.py -f filename --timeout optionaltimeout
-```
-
-### Whatweb
-
-```
-whatweb 10.10.10.10
-whatweb --no-errors 10.10.10.0/24
-```
+####

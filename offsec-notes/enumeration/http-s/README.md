@@ -12,6 +12,7 @@ openssl s_client -connect domain.com:443 # GET / HTTP/1.0
 ```bash
 whatweb -a 1 <URL> #Stealthy
 whatweb -a 3 <URL> #Aggresive
+whatweb --no-errors 10.10.10.0/24
 webtech -u <URL>
 webanalyze -host https://google.com -crawl 2
 ```
@@ -28,9 +29,9 @@ nuclei -ut && nuclei -target <URL>
 
 #### CMS Scanners
 
-```
+```bash
 cmsmap
-wpscan
+wpscan --url domain.local --enumerate ap,at,cb,dbe -o domain-wpscan
 ```
 
 ## Directory & File Brute Force
@@ -59,7 +60,7 @@ dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100
 
 ### [ffuf](https://github.com/ffuf/ffuf)
 
-```
+```bash
 ffuf -w /path/to/wordlist -u https://target/FUZZ
 ```
 
@@ -69,11 +70,4 @@ Can be used to take screenshots of target web applications, fingerprint them, an
 
 ```bash
 ./EyeWitness.py -f filename --timeout optionaltimeout
-```
-
-### Whatweb
-
-```
-whatweb 10.10.10.10
-whatweb --no-errors 10.10.10.0/24
 ```

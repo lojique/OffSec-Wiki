@@ -1,4 +1,4 @@
-# Enumerating AD
+# Attacking AD
 
 ## PowerView
 
@@ -39,4 +39,10 @@ python3 bloodhound.py -ns nameserver/dc ip 10.11.1.20 -d domain.local -u Adminis
 
 ```python
 python3 bloodhound.py -ns nameserver/dc ip -d domain.local -u user -p password -c All
+```
+
+## Decrypting GPP Password
+
+```
+gpp-decrypt asdlkfjOLKAjlksdf/DLkjslkjf;lkj234lkasd0+
 ```

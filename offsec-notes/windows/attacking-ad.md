@@ -46,3 +46,9 @@ python3 bloodhound.py -ns nameserver/dc ip -d domain.local -u user -p password -
 ```
 gpp-decrypt asdlkfjOLKAjlksdf/DLkjslkjf;lkj234lkasd0+
 ```
+
+## Impacket Stuff
+
+```
+impacket-GetUserSPNs test.local/john:password123 -dc-ip 10.10.10.1 -request
+```

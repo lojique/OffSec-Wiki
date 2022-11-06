@@ -69,6 +69,11 @@
   * [Port Forwarding](offsec-notes/port-forwarding.md)
   * [Buffer Overflow](offsec-notes/bof.md)
 
+## 🔟 Binary Exploitation
+
+* [Assembly Language](binary-exploitation/assembly-language/README.md)
+  * [Architecture](binary-exploitation/assembly-language/architecture.md)
+
 ## INE
 
 * [Penetration Testing Student](ine/penetration-testing-student/README.md)

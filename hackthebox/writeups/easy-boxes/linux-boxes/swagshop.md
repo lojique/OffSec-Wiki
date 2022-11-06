@@ -58,7 +58,7 @@ Ran dirsearch and checked out the first item which was `http://10.10.10.140/app/
 
 From there, I discovered a local.xml file:
 
-<figure><img src="../../../../.gitbook/assets/image (18) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (18) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Its contents reveal something interesting
 

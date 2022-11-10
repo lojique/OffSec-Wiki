@@ -4,7 +4,22 @@
 
 <summary>Windows Boxes</summary>
 
-[Routerspace](https://app.gitbook.com/s/eWRjPdiIoGFAKxpdtytK/linux/routerspace)
+* [ ] Forest (easy)
+* [ ] Sauna (easy)
+* [ ] Active (easy)
+* [ ] Blackfield (hard)
+* [ ] Resolute (medium)
+* [ ] Reel (hard)
+* [ ] Sizzle (insane)
+* [ ] Mantis (hard)
+* [ ] Cascade (medium)
+* [ ] Multimaster (insane)
+* [ ] Monteverde (medium)
+* [ ] Traversex (easy)
+* [ ] Fuse (medium)
+* [ ] Intelligence
+* [ ] Remote
+* [ ] Object
 
 
 
@@ -14,6 +29,6 @@
 
 <summary>Linux Boxes</summary>
 
-
+* [ ] Solid State
 
 </details>

@@ -74,6 +74,11 @@
 * [Assembly Language](binary-exploitation/assembly-language/README.md)
   * [Architecture](binary-exploitation/assembly-language/architecture.md)
 
+## OSCP Prep
+
+* [HackTheBox](oscp-prep/hackthebox.md)
+* [Proving Grounds](oscp-prep/proving-grounds.md)
+
 ## INE
 
 * [Penetration Testing Student](ine/penetration-testing-student/README.md)

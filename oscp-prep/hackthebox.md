@@ -4,19 +4,19 @@
 
 <summary>Windows Boxes</summary>
 
-* [ ] Forest (easy)
-* [ ] Sauna (easy)
-* [ ] Active (easy)
-* [ ] Blackfield (hard)
-* [ ] Resolute (medium)
-* [ ] Reel (hard)
-* [ ] Sizzle (insane)
-* [ ] Mantis (hard)
-* [ ] Cascade (medium)
-* [ ] Multimaster (insane)
-* [ ] Monteverde (medium)
-* [ ] Traversex (easy)
-* [ ] Fuse (medium)
+* [ ] Forest
+* [x] [Sauna](https://lojique.gitbook.io/sauna/)&#x20;
+* [ ] Active&#x20;
+* [ ] Blackfield&#x20;
+* [ ] Resolute&#x20;
+* [ ] Reel&#x20;
+* [ ] Sizzle&#x20;
+* [ ] Mantis&#x20;
+* [ ] Cascade&#x20;
+* [ ] Multimaster&#x20;
+* [ ] Monteverde
+* [ ] Traversex&#x20;
+* [ ] Fuse&#x20;
 * [ ] Intelligence
 * [ ] Remote
 * [ ] Object

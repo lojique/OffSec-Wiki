@@ -1,7 +1,5 @@
 # LDAP
 
-## ldapsearch
-
 ### anonymous authentication&#x20;
 
 If server accepts anonymous authentication
@@ -9,13 +7,13 @@ If server accepts anonymous authentication
 {% code overflow="wrap" %}
 ```bash
 # gets all attributes
-ldapsearch -x -h 10.10.10.161 -b "dc=htb,dc=local" "*" #i.e. domain = htb.local
+ldapsearch -x -H 'ldap://10.10.10.161:389' -b "dc=htb,dc=local" "*" #i.e. domain = htb.local
 # find user accounts
-ldapsearch -x -h 10.10.10.161 -b "dc=htb,dc=local" "objectclass=user"
+ldapsearch -x -H 'ldap://10.10.10.161:389' -b "dc=htb,dc=local" "objectclass=user"
 # get possible username
-ldapsearch -x -h 10.10.10.161 -b "dc=htb,dc=local" "objectclass=user" sAMAccountName | grep sAMAccountName | awk -F ": " '{print $2}'
+ldapsearch -x -H 'ldap://10.10.10.161:389' -b "dc=htb,dc=local" "objectclass=user" sAMAccountName | grep sAMAccountName | awk -F ": " '{print $2}'
 # dump LAPS passwords
-ldapsearch -D user@htb.local -w PASSWORD -o ldif-wrap=no -b 'dc=htb,dc=local' -h 10.10.10.123 "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd
+ldapsearch -D user@htb.local -w PASSWORD -o ldif-wrap=no -b 'dc=htb,dc=local' -H 'ldap://10.10.10.161:389' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd
 ```
 {% endcode %}
 
@@ -23,9 +21,29 @@ search LDAP with admin account
 
 {% code overflow="wrap" %}
 ```bash
-ldapsearch -x -h 10.10.10.100 -p 389 -D SVC_TGS -w GPPstillStandingStrong2k18 -b "dc=active,dc=htb"
+ldapsearch -x -H 'ldap://10.10.10.10:389' -D User -w P@ssw0rd123 -b "dc=htb,dc=local"
 ```
 {% endcode %}
+
+```
+nmap -n -sV --script "ldap* and not brute" -p389,3268 192.168.105.122
+```
+
+### null bind
+
+```
+ldapsearch -x -H 'ldap://192.168.105.122:389' -D '' -w '' -b "DC=domain,DC=local"
+ldapsearch -x -H 'ldap://10.10.10.182:389' -D '' -w '' -b "DC=domain,DC=local" | grep Pwd
+ldapsearch -x -H 'ldap://10.10.10.182:389' -D '' -w '' -b "DC=domain,DC=local" | grep pass
+# make a list of existing users
+ldapsearch -x -H 'ldap://10.10.10.172:389' -D '' -w '' -b "DC=DOMAIN,DC=LOCAL" | grep sAMAccountName | tr -d ':' | sed 's/s//' | sed 's/A//' | sed 's/M//' | sed 's/A//'| sed 's/c//' | sed 's/c//'| sed 's/o//' | sed 's/u//' | sed 's/n//'| sed 's/t//' | sed 's/N//'| sed 's/a//' | sed 's/m//' | sed 's/e//' > ldapusers.txt
+```
+
+### authenticated
+
+```
+ldapsearch -H ldap://10.10.10.248 -x -W -D "user@domain.local" -b "dc=domain,dc=local"
+```
 
 ## Resources
 

@@ -10,6 +10,7 @@ whoami
 #windows
 net user
 whoami /priv #enum privileges
+whoami /all
 
 #linux
 id

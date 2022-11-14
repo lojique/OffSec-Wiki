@@ -7,7 +7,7 @@ If server accepts anonymous authentication
 {% code overflow="wrap" %}
 ```bash
 # get naming contexts
-ldapsearch -x -h 10.10.10.175 -s base namingcontexts
+ldapsearch -x -H ldap://10.10.10.175 -s base namingcontexts
 # gets all attributes
 ldapsearch -x -H 'ldap://10.10.10.161:389' -b "dc=htb,dc=local" "*" #i.e. domain = htb.local
 # find user accounts

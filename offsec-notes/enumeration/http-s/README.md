@@ -52,6 +52,12 @@ gobuster dir -u domain.htb -t 100 -w /usr/share/seclists/Discovery/Web-Content/r
 <strong>gobuster vhost -u domain.htb -t 100 -w /usr/share/seclists/Discovery/DNS/shubs-subdomains.txt
 </strong>gobuster dns -d inlanefreight.com -t 100 -w /usr/share/SecLists/Discovery/DNS/namelist.txt</code></pre>
 
+### wfuzz
+
+```
+wfuzz -c --hc=404 -t 200 -w /usr/share/wordlists/SecLists/Discovery/Web-Content/IIS.fuzz.txt http://10.10.10.103:80/FUZZ
+```
+
 ### Dirsearch
 
 ```bash

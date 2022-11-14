@@ -14,6 +14,7 @@
       * [WebDav](offsec-notes/enumeration/http-s/webdav.md)
       * [WordPress](offsec-notes/enumeration/http-s/wordpress.md)
       * [Drupal](offsec-notes/enumeration/http-s/drupal.md)
+    * [DNS](offsec-notes/enumeration/dns.md)
     * [FTP](offsec-notes/enumeration/ftp.md)
     * [NFS](offsec-notes/enumeration/nfs.md)
     * [RPC](offsec-notes/enumeration/rpc.md)

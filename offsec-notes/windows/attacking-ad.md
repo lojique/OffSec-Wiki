@@ -38,7 +38,7 @@ python3 bloodhound.py -ns nameserver/dc ip 10.11.1.20 -d domain.local -u Adminis
 ### w/ password
 
 ```python
-python3 bloodhound.py -ns <DC IP> -d <domain> -dc <DC hostname> -u <username> -p <password> -c All
+python3 bloodhound.py -ns nameserver/dc ip -d domain.local -u user -p password -c All
 ```
 
 ## Decrypting GPP Password

@@ -4,7 +4,7 @@
 
 <summary>Windows Boxes</summary>
 
-* [ ] Forest
+* [x] [Forest](https://lojique.gitbook.io/hack-the-box/v/forest/)
 * [x] [Sauna](https://lojique.gitbook.io/sauna/)&#x20;
 * [x] Active&#x20;
 * [ ] Blackfield&#x20;

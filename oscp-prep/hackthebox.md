@@ -15,13 +15,10 @@
 * [ ] Cascade&#x20;
 * [ ] Multimaster&#x20;
 * [ ] Monteverde
-* [ ] Traversex&#x20;
-* [ ] Fuse&#x20;
+* [ ] Fuse
 * [ ] Intelligence
 * [ ] Remote
 * [ ] Object
-
-
 
 </details>
 
@@ -30,5 +27,6 @@
 <summary>Linux Boxes</summary>
 
 * [ ] Solid State
+* [ ] Traverxec
 
 </details>

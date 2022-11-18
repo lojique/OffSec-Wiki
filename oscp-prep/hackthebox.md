@@ -27,6 +27,6 @@
 <summary>Linux Boxes</summary>
 
 * [ ] Solid State
-* [ ] Traverxec
+* [x] [Traverxec](https://lojique.gitbook.io/hack-the-box/v/traverxec/)
 
 </details>

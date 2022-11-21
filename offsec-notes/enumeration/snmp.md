@@ -2,7 +2,7 @@
 description: Simple Network Management Protocol (SNMP) on UDP
 ---
 
-# 161 - SNMP
+# SNMP
 
 Commonly used SNMP protocols 1, 2, and 2c offer no traffic encryption, meaning that SNMP information and credentials can be easily intercepted over a local network. Traditional SNMP protocols also have weak authentication schemes and are commonly left configured with default public and private community strings.
 

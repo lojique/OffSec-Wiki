@@ -1,4 +1,4 @@
-# 389 - LDAP
+# LDAP
 
 ### anonymous authentication&#x20;
 

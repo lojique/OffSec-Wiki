@@ -1,4 +1,4 @@
-# 139/445 - SMB
+# SMB
 
 ## Using NMAP&#x20;
 

@@ -1,4 +1,4 @@
-# 88 - Kerberos
+# Kerberos
 
 ```
 # validate users

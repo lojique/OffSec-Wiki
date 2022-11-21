@@ -1,4 +1,4 @@
-# 80/443 - HTTP(S)
+# HTTP(S)
 
 ## Basic Info
 

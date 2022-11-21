@@ -1,4 +1,4 @@
-# 53 - DNS
+# DNS
 
 ```python
 dig any 10.10.10.10

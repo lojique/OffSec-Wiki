@@ -1,4 +1,4 @@
-# 21 - FTP
+# FTP
 
 ```bash
 ftp> status

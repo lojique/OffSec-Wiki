@@ -1,4 +1,4 @@
-# 25 - SMTP
+# SMTP
 
 #### banner grab
 

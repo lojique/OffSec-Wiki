@@ -3,7 +3,6 @@
 ```
 ls -1 /usr/share/nmap/scripts/nfs*
 nmap -p 111 --script nfs* 10.11.1.72
-
 ```
 
 ```
@@ -23,4 +22,8 @@ sudo mount -t nfs IP:share /tmp/mount/ -nolock
 | IP:share | The IP Address of the NFS server, and the name of the share we wish to mount |
 | -nolock  | Specifies not to use NLM locking                                             |
 
-\
+### Authenticated mount
+
+```
+sudo mount -0 username=admin,password='P@ssw0rd123!' -t cifs \\\\10.10.10.10\\share
+```

@@ -22,8 +22,8 @@ sudo mount -t nfs IP:share /tmp/mount/ -nolock
 | IP:share | The IP Address of the NFS server, and the name of the share we wish to mount |
 | -nolock  | Specifies not to use NLM locking                                             |
 
-### Authenticated mount
+### Authenticated mount locally
 
 ```
-sudo mount -0 username=admin,password='P@ssw0rd123!' -t cifs \\\\10.10.10.10\\share
+sudo mount -0 username=admin,password='P@ssw0rd123!' -t cifs \\\\10.10.10.10\\share /mnt
 ```

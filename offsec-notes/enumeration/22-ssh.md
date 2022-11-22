@@ -34,4 +34,6 @@ sudo nmap -p22 --script ssh2-enum-algos IP
 sudo nmap -p22 --script ssh-hostkey --script-args ssh_hostkey=full IP
 # Check authentication methods
 sudo nmap -p22 --script ssh-auth-methods --script-args="ssh.user=root" IP
+
+nmap -p22 --script ssh-hostkey,ssh-auth-methods --script-args ssh_hostkey=full,"ssh.user=root"
 ```

@@ -38,23 +38,23 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100 
 ```
 
-![](<../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1).png>)
 
 Here we can see that we can upload files. So we should be interested in uploading a reverse shell
 
-![](<../../../.gitbook/assets/image (1) (2).png>)
+![](<../../.gitbook/assets/image (1) (2).png>)
 
 And we should be able to execute it here
 
-![](<../../../.gitbook/assets/image (53) (2).png>)
+![](<../../.gitbook/assets/image (53) (2).png>)
 
 Here's the PHP reverse shell. Now I start an netcat listener
 
-![](<../../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../.gitbook/assets/image (64) (1) (1).png>)
 
 And attempt to load the file, however, php is not permitted
 
-![](<../../../.gitbook/assets/image (17) (1).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 What we can do, is bypass the filter by renaming the file to something like shell.php.jpg
 
@@ -62,17 +62,17 @@ The php reverse shell can be found here:
 
 {% embed url="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php" %}
 
-![](<../../../.gitbook/assets/image (51) (1).png>)
+![](<../../.gitbook/assets/image (51) (1).png>)
 
 As we can see, it accepted the file!
 
-![](<../../../.gitbook/assets/image (34) (1).png>)
+![](<../../.gitbook/assets/image (34) (1).png>)
 
 ## Getting a Shell
 
 We'll start a NetCat listener, go to the uploads directory and click on our file to get that reverse shell!
 
-![](<../../../.gitbook/assets/image (62).png>)
+![](<../../.gitbook/assets/image (62).png>)
 
 Unfortunately that did not work. Maybe we'll try any of these combinations: **php** phtml, .php, .php3, .php4, .php5
 
@@ -82,15 +82,15 @@ This was quite helpful
 
 Once again, our file was accepted and uploaded
 
-![](<../../../.gitbook/assets/image (54) (1) (1).png>)
+![](<../../.gitbook/assets/image (54) (1) (1).png>)
 
 And there's our shell!
 
-![](<../../../.gitbook/assets/image (55) (1) (1).png>)
+![](<../../.gitbook/assets/image (55) (1) (1).png>)
 
 Here is where the user.txt file is
 
-![](<../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../.gitbook/assets/image (29) (1) (1).png>)
 
 ## Privilege Escalation
 
@@ -119,7 +119,7 @@ This article helped me better understand SUID:
 
 Basically, you can change the permission of any file either using the “Numerical” method or “Symbolic” method. As result, it will **replace x from s** as shown in the below image which denotes especial execution permission with the higher privilege to a particular file/command. Since we are enabling SUID for Owner (user) therefore **bit 4** or **symbol s** will be added before read/write/execution operation.
 
-![](<../../../.gitbook/assets/image (38) (1) (1).png>)
+![](<../../.gitbook/assets/image (38) (1) (1).png>)
 
 If you execute **ls -al** with the file name and then you observe the small ‘s’ symbol as in the above image, then its means SUID bit is enabled for that file and can be executed with root privileges.
 
@@ -142,9 +142,9 @@ find / -perm -u=s -type f 2>/dev/null
 
 What stands out is /usr/bin/python
 
-![](<../../../.gitbook/assets/image (70) (1) (1).png>)
+![](<../../.gitbook/assets/image (70) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../.gitbook/assets/image (23) (1) (1).png>)
 
 As we can see, python can be executed as root!
 
@@ -152,14 +152,14 @@ Here's how we can do this
 
 [https://gtfobins.github.io/gtfobins/python/#suid](https://gtfobins.github.io/gtfobins/python/#suid)
 
-![](<../../../.gitbook/assets/image (46) (1) (1).png>)
+![](<../../.gitbook/assets/image (46) (1) (1).png>)
 
 It works!
 
-![](<../../../.gitbook/assets/image (47) (1).png>)
+![](<../../.gitbook/assets/image (47) (1).png>)
 
 Now let's get the flag
 
-![](<../../../.gitbook/assets/image (36) (1).png>)
+![](<../../.gitbook/assets/image (36) (1).png>)
 
 We're done!

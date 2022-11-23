@@ -44,7 +44,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ## HTTP
 
-<figure><img src="../../../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 ### webfuzz
 
@@ -52,17 +52,17 @@ Service detection performed. Please report any incorrect results at https://nmap
 dirsearch -u http://10.10.10.140 -w /usr/share/dirb/wordlists/common.txt -t 150 -x 404
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (79) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (79) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ran dirsearch and checked out the first item which was `http://10.10.10.140/app/`
 
 From there, I discovered a local.xml file:
 
-<figure><img src="../../../../.gitbook/assets/image (18) (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Its contents reveal something interesting
 
-<figure><img src="../../../../.gitbook/assets/image (67).png" alt=""><figcaption><p>local.xml file</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption><p>local.xml file</p></figcaption></figure>
 
 Based on the content shown in the image above, it would seem likely these credentials would work for mysql. However, because mysql wasn't shown in our  nmap scan, perhaps this is running internally.
 
@@ -73,23 +73,23 @@ fMVWh7bDHpgZkyfqQXreTjU9
 
 I decided to revisit my webfuzzing because from prior experience, sometimes you need to fuzz beyond the initial given target.
 
-<figure><img src="../../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
 Now we visit the URL
 
-<figure><img src="../../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
 Tried the classic `admin:admin`, as well as the mysql username and password (in case of password reuse), and some other random credentials. Unfortunately none of these worked.
 
 ### searchsploit
 
-<figure><img src="../../../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
 I used searchsploit to see if there were any public exploits for Magento. Based on how the site appears to work, it is safe to assume it is an eCommerce site.&#x20;
 
 I verified that by checking good ol Google
 
-<figure><img src="../../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 I noticed a particularly interesting exploit
 
@@ -99,21 +99,21 @@ Essentially this script run a query that takes a username and password and makes
 
 I modified it as shown in the image below.
 
-<figure><img src="../../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 Now that we are logged in as an admin user, the next step would typically be to see if we can find a way to upload files or edit files in a way that can result in us getting a shell on the box.
 
 I finally was able to find a version of Magento which is 1.9.0.0
 
-<figure><img src="../../../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
 
 
 
-<figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 ## Foothold
 

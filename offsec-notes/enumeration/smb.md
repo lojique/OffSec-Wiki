@@ -1,4 +1,4 @@
-# SMB
+# 139/445 - SMB
 
 ## Using NMAP&#x20;
 
@@ -42,6 +42,7 @@ smbclient -L \\\\<ip-addr>
 smbclient -L \\<IP> --user=domain/user%password
 smbclient -L \\<IP> -U user
 smbclient \\\\<ip-addr>\\<share>
+smbclient //$IP/profiles$ -c ls | awk '{print $1}' > users.lst
 ```
 
 ### Downloading files:&#x20;

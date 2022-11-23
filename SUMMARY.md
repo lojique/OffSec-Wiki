@@ -19,6 +19,7 @@
       * [WordPress](offsec-notes/enumeration/http-s/wordpress.md)
       * [Drupal](offsec-notes/enumeration/http-s/drupal.md)
     * [88 - Kerberos](offsec-notes/enumeration/kerberos.md)
+    * [111 - RPCBind/PortMapper](offsec-notes/enumeration/111-rpcbind-portmapper.md)
     * [139/445 - SMB](offsec-notes/enumeration/smb.md)
     * [161 - SNMP](offsec-notes/enumeration/snmp.md)
     * [389 - LDAP](offsec-notes/enumeration/ldap.md)
@@ -26,6 +27,8 @@
     * [RPC](offsec-notes/enumeration/rpc.md)
     * [Ports](offsec-notes/enumeration/ports.md)
   * [Active Directory](offsec-notes/active-directory.md)
+    * [Attack Vectors](offsec-notes/active-directory/attack-vectors/README.md)
+      * [Spraying](offsec-notes/active-directory/attack-vectors/spraying.md)
     * [Exploitation](offsec-notes/active-directory/exploitation/README.md)
       * [Force Change Password](offsec-notes/active-directory/exploitation/force-change-password.md)
     * [Resources](offsec-notes/active-directory/resources.md)
@@ -80,7 +83,7 @@
   * [Pivoting](offsec-notes/pivoting.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
   * [Buffer Overflow](offsec-notes/bof.md)
-  * [Brute Force - Cheatsheet](offsec-notes/brute-force-cheatsheet.md)
+  * [Brute Force](offsec-notes/brute-force.md)
 
 ## 🔟 Binary Exploitation
 

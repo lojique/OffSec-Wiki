@@ -83,7 +83,7 @@
   * [Pivoting](offsec-notes/pivoting.md)
   * [Port Forwarding](offsec-notes/port-forwarding.md)
   * [Buffer Overflow](offsec-notes/bof.md)
-  * [Brute Force](offsec-notes/brute-force.md)
+  * [Brute Force](offsec-notes/brute-force-cheatsheet.md)
 
 ## 🔟 Binary Exploitation
 

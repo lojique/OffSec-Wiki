@@ -1,4 +1,4 @@
-# Brute Force - Cheatsheet
+# Brute Force
 
 ## Services
 

@@ -34,15 +34,15 @@ Our first live box may be the most difficult, as we are entirely dependent on ou
 ## HTB AD Machines
 
 * [ ] Monteverde
-* [ ] cascade
-* [ ] traverxec
-* [ ] fuse
+* [x] cascade
+* [x] traverxec
+* [x] fuse
 * [ ] intelligence
 * [ ] remote
-* [ ] resolute
+* [x] resolute
 * [ ] sizzle
 * [ ] multimaster
-* [ ] sauna
-* [ ] forest
+* [x] sauna
+* [x] forest
 * [ ] object
 * [x] active

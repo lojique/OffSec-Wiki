@@ -111,19 +111,19 @@ Target: http://10.10.37.78/
 Task Completed
 ```
 
-![CMS Made Simple Version](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_CMS Made Simple Version.png>)
+![CMS Made Simple Version](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_CMS Made Simple Version.png>)
 
-![CMS Made Simple Admin Login](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_CMS Admin Console.png>)
+![CMS Made Simple Admin Login](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_CMS Admin Console.png>)
 
 ## Vulnerability Assessment
 
 This Content Management System is vulnerable to [CVE-2019-9053: Unauthenticated SQL Injection on CMS Made Simple <= 2.2.9](https://www.exploit-db.com/exploits/46635)
 
-### Proof of Concept&#x20;
+### Proof of Concept
 
 As shown in the image below, we see that the site produces output when we use some kind of SQL statement
 
-![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_POC.png>)
+![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_POC.png>)
 
 {% hint style="info" %}
 Used this for termcolor issue when trying to run the exploit
@@ -131,7 +131,7 @@ Used this for termcolor issue when trying to run the exploit
 [https://www.reddit.com/r/tryhackme/comments/p6v195/help\_with\_simple\_ctf/](https://www.reddit.com/r/tryhackme/comments/p6v195/help\_with\_simple\_ctf/)
 {% endhint %}
 
-![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_Exploit (1).png>)
+![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_Exploit (1).png>)
 
 ### Credentials
 
@@ -141,7 +141,7 @@ password: <mark style="color:green;">`secret`</mark>
 
 With these credentials and knowing the fact that SSH port 2222 was open, it would make the most sense to see if we can log into that service
 
-![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_ssh+user.txt.png>)
+![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_ssh+user.txt.png>)
 
 As we see, they work and we are able to grab the user.txt
 
@@ -149,7 +149,7 @@ As we see, they work and we are able to grab the user.txt
 
 Next comes privilege escalation. Let's see what commands mitch is able to run as root
 
-![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_Pasted image 20220202112308.png>)
+![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_Pasted image 20220202112308.png>)
 
 Vim is a very powerful text editor. We'll check out the infamous GTFObins for a list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems
 
@@ -157,7 +157,7 @@ In our case, we want to be able to run Vim in such a way that will grant our low
 
 [https://gtfobins.github.io/gtfobins/vim/#sudo](https://gtfobins.github.io/gtfobins/vim/#sudo)
 
-![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_sudo vim.png>)
+![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_sudo vim.png>)
 
 Just from a simple line of input, we are now root
 
@@ -174,7 +174,7 @@ root@Machine:/home#
 
 ## Root Flag
 
-![](<../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_rootFlag.png>)
+![](<../../../.gitbook/assets/C\_\_Users\_madam\_Documents\_Cybersecurity\_OffSec\_WriteUps\_THM\_Simple CTF\_Simple CTF Images\_rootFlag.png>)
 
 ## Mitigations
 

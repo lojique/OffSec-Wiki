@@ -1,4 +1,4 @@
-# 25 - SMTP
+# SMTP
 
 #### banner grab
 
@@ -22,9 +22,7 @@ dig +short mx domain
 ```
 
 ```
-dig . any @IP domain.local
-
-# zone transfer
-dig axfr @IP domain.local
+rpcinfo -s 10.11.1.72
+rpcinfo -p 10.11.1.72
 ```
 

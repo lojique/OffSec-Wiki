@@ -1,6 +1,4 @@
-# 389 - LDAP
-
-## Ldapsearch
+# LDAP
 
 ### anonymous authentication&#x20;
 
@@ -47,17 +45,6 @@ ldapsearch -x -H 'ldap://10.10.10.172:389' -D '' -w '' -b "DC=DOMAIN,DC=LOCAL" |
 
 ```
 ldapsearch -H ldap://10.10.10.248 -x -W -D "user@domain.local" -b "dc=domain,dc=local"
-```
-
-## windapsearch
-
-```
-# enumerate users
-./windapsearch.py --dc-ip $IP -U
-# Comma separated custom atrribute names to search for (e.g. 'badPwdCount,lastLogon')
-windapsearch.py --dc-ip $IP --attrs sAMAccountName,description -U
-# Dump all atrributes from LDAP
-windapsearch.py --dc-ip $IP --full -U
 ```
 
 ## Resources

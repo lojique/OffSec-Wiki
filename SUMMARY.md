@@ -30,6 +30,7 @@
     * [Attack Vectors](offsec-notes/active-directory/attack-vectors/README.md)
       * [Spraying](offsec-notes/active-directory/attack-vectors/spraying.md)
     * [Exploitation](offsec-notes/active-directory/exploitation/README.md)
+      * [DNS Admins Group](offsec-notes/active-directory/exploitation/dns-admins-group.md)
       * [Force Change Password](offsec-notes/active-directory/exploitation/force-change-password.md)
     * [Resources](offsec-notes/active-directory/resources.md)
   * [Windows](offsec-notes/windows/README.md)

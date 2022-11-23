@@ -7,15 +7,15 @@
 * [x] [Forest](https://lojique.gitbook.io/hack-the-box/v/forest/)
 * [x] [Sauna](https://lojique.gitbook.io/sauna/)&#x20;
 * [x] Active&#x20;
-* [x] Blackfield&#x20;
+* [ ] Blackfield&#x20;
 * [ ] Resolute&#x20;
 * [ ] Reel&#x20;
 * [ ] Sizzle&#x20;
 * [ ] Mantis&#x20;
-* [x] Cascade&#x20;
+* [ ] Cascade&#x20;
 * [ ] Multimaster&#x20;
 * [ ] Monteverde
-* [x] Fuse
+* [ ] Fuse
 * [ ] Intelligence
 * [ ] Remote
 * [ ] Object

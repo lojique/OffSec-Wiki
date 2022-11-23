@@ -25,7 +25,7 @@
     * [NFS](offsec-notes/enumeration/nfs.md)
     * [RPC](offsec-notes/enumeration/rpc.md)
     * [Ports](offsec-notes/enumeration/ports.md)
-  * [Active Directory](offsec-notes/active-directory/README.md)
+  * [Active Directory](offsec-notes/active-directory.md)
     * [Exploitation](offsec-notes/active-directory/exploitation/README.md)
       * [Force Change Password](offsec-notes/active-directory/exploitation/force-change-password.md)
     * [Resources](offsec-notes/active-directory/resources.md)

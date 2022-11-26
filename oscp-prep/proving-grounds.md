@@ -13,7 +13,7 @@
 * [ ] Jacko
 * [ ] Medjed
 * [x] [Algeron](https://lojique.gitbook.io/windows/v/algernon-1/)
-* [ ] Hutch
+* [x] [Hutch](https://lojique.gitbook.io/windows/v/hutch/)
 * [ ] Shenzi
 * [ ] DVR4
 * [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)

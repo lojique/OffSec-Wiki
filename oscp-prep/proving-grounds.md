@@ -12,7 +12,7 @@
 * [ ] MeatHead
 * [ ] Jacko
 * [ ] Medjed
-* [ ] Algeron
+* [x] Algeron
 * [ ] Hutch
 * [ ] Shenzi
 * [ ] DVR4
@@ -27,7 +27,7 @@
 
 <summary>Linux Machines</summary>
 
-* [ ] ClamAV
+* [x] ClamAV
 * [ ] Tico
 * [ ] Fail
 * [ ] Nibbles
@@ -35,7 +35,7 @@
 * [ ] Hunit
 * [ ] Zino
 * [ ] Peppo
-* [ ] Dbibble
+* [ ] Dibble
 * [ ] Hetemit
 * [ ] Sybaris
 * [ ] ZenPhoto

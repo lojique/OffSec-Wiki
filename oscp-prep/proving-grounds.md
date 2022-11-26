@@ -12,11 +12,11 @@
 * [ ] MeatHead
 * [ ] Jacko
 * [ ] Medjed
-* [x] Algeron
+* [x] [Algeron](https://lojique.gitbook.io/windows/v/algernon-1/)
 * [ ] Hutch
 * [ ] Shenzi
 * [ ] DVR4
-* [x] Internal
+* [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)
 * [ ] Craft
 * [ ] Vault
 * [ ] BillyBoss

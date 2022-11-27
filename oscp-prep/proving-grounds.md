@@ -9,7 +9,7 @@
 * [ ] Slort
 * [ ] AuthBy
 * [ ] UT99
-* [ ] MeatHead
+* [x] [MeatHead](https://lojique.gitbook.io/windows/v/meathead/)
 * [ ] Jacko
 * [ ] Medjed
 * [x] [Algeron](https://lojique.gitbook.io/windows/v/algernon-1/)

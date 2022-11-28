@@ -27,7 +27,7 @@
 
 <summary>Linux Machines</summary>
 
-* [x] ClamAV
+* [x] [ClamAV](https://lojique.gitbook.io/proving-grounds-1/v/clamav/)
 * [ ] Tico
 * [ ] Fail
 * [ ] Nibbles

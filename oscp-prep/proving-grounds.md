@@ -8,7 +8,7 @@
 * [ ] Squid
 * [ ] Slort
 * [ ] AuthBy
-* [x] [UT99](https://lojique.gitbook.io/windows/v/ut99/)
+* [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
 * [x] [MeatHead](https://lojique.gitbook.io/windows/v/meathead/)
 * [ ] Jacko
 * [ ] Medjed

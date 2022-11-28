@@ -19,6 +19,13 @@
 * [ ] Intelligence
 * [ ] Remote
 * [ ] Object
+* [ ] Arctic
+* [ ] Driver
+* [ ] Devel
+* [ ] Granny
+* [ ] Legacy
+* [ ] Cronos
+* [ ] Bastard
 
 </details>
 
@@ -28,5 +35,8 @@
 
 * [ ] Solid State
 * [x] [Traverxec](https://lojique.gitbook.io/hack-the-box/v/traverxec/)
+* [ ] SwagShop
+* [ ] Paper
+* [ ] Horizontall
 
 </details>

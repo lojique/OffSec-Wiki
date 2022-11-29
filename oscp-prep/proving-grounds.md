@@ -9,11 +9,11 @@
 * [ ] Slort
 * [ ] AuthBy
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
-* [x] [MeatHead](https://lojique.gitbook.io/windows/v/meathead/)
+* [x] [MeatHead](https://lojique.gitbook.io/proving-grounds-1/v/meathead/)
 * [ ] Jacko
 * [ ] Medjed
-* [x] [Algeron](https://lojique.gitbook.io/windows/v/algernon-1/)
-* [x] [Hutch](https://lojique.gitbook.io/windows/v/hutch/)
+* [x] [Algeron](https://lojique.gitbook.io/proving-grounds-1/v/algernon-1/)
+* [x] [Hutch](https://lojique.gitbook.io/proving-grounds-1/v/hutch/)
 * [x] [Heist](https://lojique.gitbook.io/proving-grounds-1/v/heist/)
 * [ ] Shenzi
 * [ ] DVR4

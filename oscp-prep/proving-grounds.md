@@ -5,7 +5,7 @@
 <summary>Windows Machines</summary>
 
 * [ ] HelpDesk
-* [ ] Squid
+* [x] Squid
 * [ ] Slort
 * [ ] AuthBy
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)

@@ -19,7 +19,7 @@
 * [ ] DVR4
 * [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)
 * [ ] Craft
-* [ ] Vault
+* [x] [Vault](https://lojique.gitbook.io/proving-grounds-1/v/vault/)
 * [ ] BillyBoss
 
 </details>

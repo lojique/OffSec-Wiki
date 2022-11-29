@@ -63,7 +63,7 @@ Navigating through the site, we can only access "Firmware Updates" which brings 
 
 {% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}
 
-![](<../../../../.gitbook/assets/image (22).png>)
+![](<../../../../.gitbook/assets/image (22) (3).png>)
 
 ![](<../../../../.gitbook/assets/image (37).png>)
 

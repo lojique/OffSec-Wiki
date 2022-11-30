@@ -4,7 +4,7 @@
 
 <summary>Windows Machines</summary>
 
-* [ ] HelpDesk
+* [x] HelpDesk
 * [x] Squid
 * [ ] Slort
 * [ ] AuthBy

@@ -1,4 +1,4 @@
-# 80/443 - HTTP(S)
+# HTTP(S)
 
 ## Basic Info
 
@@ -50,8 +50,7 @@ feroxbuster -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/raft-medi
 gobuster dir -u domain.htb -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
 gobuster dir -u domain.htb -t 100 -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt
 <strong>gobuster vhost -u domain.htb -t 100 -w /usr/share/seclists/Discovery/DNS/shubs-subdomains.txt
-</strong>gobuster dns -d inlanefreight.com -t 100 -w /usr/share/SecLists/Discovery/DNS/namelist.txt
-</code></pre>
+</strong>gobuster dns -d inlanefreight.com -t 100 -w /usr/share/SecLists/Discovery/DNS/namelist.txt</code></pre>
 
 ### wfuzz
 
@@ -77,11 +76,4 @@ Can be used to take screenshots of target web applications, fingerprint them, an
 
 ```bash
 ./EyeWitness.py -f filename --timeout optionaltimeout
-```
-
-## Curl
-
-```
-curl -sSik http://10.10.10.10
-curl -sSikf http://10.10.10.10
 ```

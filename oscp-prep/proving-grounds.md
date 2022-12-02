@@ -45,9 +45,9 @@
 * [ ] Walla
 * [ ] Pelican
 * [ ] Snookums
-* [ ] Exfiltrated
-* [ ] Twiggy
-* [ ] Bratarina
+* [x] [Exfiltrated](https://lojique.gitbook.io/proving-grounds-1/v/exfiltrated/)
+* [x] Twiggy
+* [x] Bratarina
 * [ ] BlackGate
 * [ ] Sirol
 

@@ -30,12 +30,4 @@ lsa_dump_secrets
 kerberos_list
 ```
 
-### Base64 decode
-
-```
-#inside mysql 
-SELECT username, CONVERT(FROM_BASE64(password), CHAR) FROM users;
-SELECT username, CONVERT(FROM_BASE64(FROM_BASE64(password)), CHAR) FROM users; # 2x encoded
-
-echo 'SOMETHING123==' | base64 -d
-```
+##

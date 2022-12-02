@@ -4,7 +4,7 @@
 
 <summary>Windows Machines</summary>
 
-* [x] HelpDesk
+* [x] [HelpDesk](https://lojique.gitbook.io/proving-grounds-1/v/helpdesk/)
 * [x] Squid
 * [ ] Slort
 * [ ] AuthBy

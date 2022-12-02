@@ -46,8 +46,8 @@
 * [ ] Pelican
 * [ ] Snookums
 * [x] [Exfiltrated](https://lojique.gitbook.io/proving-grounds-1/v/exfiltrated/)
-* [x] Twiggy
-* [x] Bratarina
+* [x] [Twiggy](https://lojique.gitbook.io/proving-grounds-1/v/twiggy/)
+* [x] [Bratarina](https://lojique.gitbook.io/proving-grounds-1/v/bratarina/)
 * [ ] BlackGate
 * [ ] Sirol
 

@@ -44,7 +44,7 @@
 * [ ] Nukem
 * [ ] Walla
 * [ ] Pelican
-* [ ] Snookums
+* [x] [Snookums](https://lojique.gitbook.io/proving-grounds-1/v/snookums/)
 * [x] [Exfiltrated](https://lojique.gitbook.io/proving-grounds-1/v/exfiltrated/)
 * [x] [Twiggy](https://lojique.gitbook.io/proving-grounds-1/v/twiggy/)
 * [x] [Bratarina](https://lojique.gitbook.io/proving-grounds-1/v/bratarina/)

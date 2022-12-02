@@ -89,7 +89,7 @@
   * [Buffer Overflow](offsec-notes/bof.md)
   * [Brute Force](offsec-notes/brute-force-cheatsheet.md)
 
-## 🔟 Binary Exploitation
+## Binary Exploitation
 
 * [Assembly Language](binary-exploitation/assembly-language/README.md)
   * [Architecture](binary-exploitation/assembly-language/architecture.md)

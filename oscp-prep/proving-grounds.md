@@ -34,7 +34,7 @@
 * [ ] Nibbles
 * [ ] Banzai
 * [ ] Hunit
-* [ ] Zino
+* [x] [Zino](https://lojique.gitbook.io/proving-grounds-1/v/zino/)
 * [ ] Peppo
 * [ ] Dibble
 * [ ] Hetemit

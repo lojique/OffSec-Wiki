@@ -10,7 +10,7 @@
 * [ ] AuthBy
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
 * [x] [MeatHead](https://lojique.gitbook.io/proving-grounds-1/v/meathead/)
-* [ ] Jacko
+* [x] Jacko
 * [ ] Medjed
 * [x] [Algeron](https://lojique.gitbook.io/proving-grounds-1/v/algernon-1/)
 * [x] [Hutch](https://lojique.gitbook.io/proving-grounds-1/v/hutch/)

@@ -7,7 +7,7 @@
 * [x] [HelpDesk](https://lojique.gitbook.io/proving-grounds-1/v/helpdesk/)
 * [x] Squid
 * [x] [Slort](https://lojique.gitbook.io/proving-grounds-1/v/slort/)
-* [ ] AuthBy
+* [x] AuthBy
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
 * [x] [MeatHead](https://lojique.gitbook.io/proving-grounds-1/v/meathead/)
 * [x] Jacko

@@ -28,3 +28,14 @@ dig . any @IP domain.local
 dig axfr @IP domain.local
 ```
 
+#### brute force
+
+```
+hydra -l <username> -P /path/to/passwords.txt <IP> smtp -V
+```
+
+#### user enum
+
+```
+smtp-user-enum -M VRFY -U {Big_Userlist} -t {IP}
+```

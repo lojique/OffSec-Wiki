@@ -6,7 +6,7 @@
 
 * [x] [HelpDesk](https://lojique.gitbook.io/proving-grounds-1/v/helpdesk/)
 * [x] Squid
-* [ ] Slort
+* [x] [Slort](https://lojique.gitbook.io/proving-grounds-1/v/slort/)
 * [ ] AuthBy
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
 * [x] [MeatHead](https://lojique.gitbook.io/proving-grounds-1/v/meathead/)
@@ -15,7 +15,7 @@
 * [x] [Algeron](https://lojique.gitbook.io/proving-grounds-1/v/algernon-1/)
 * [x] [Hutch](https://lojique.gitbook.io/proving-grounds-1/v/hutch/)
 * [x] [Heist](https://lojique.gitbook.io/proving-grounds-1/v/heist/)
-* [ ] Shenzi
+* [x] [Shenzi](https://lojique.gitbook.io/proving-grounds-1/v/shenzi/)
 * [ ] DVR4
 * [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)
 * [ ] Craft

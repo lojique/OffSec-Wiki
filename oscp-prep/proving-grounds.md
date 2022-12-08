@@ -39,7 +39,7 @@
 * [ ] Dibble
 * [ ] Hetemit
 * [ ] Sybaris
-* [ ] ZenPhoto
+* [x] [ZenPhoto](https://lojique.gitbook.io/proving-grounds-1/v/zenphoto/)
 * [ ] Readys
 * [ ] Nukem
 * [x] [Walla](https://lojique.gitbook.io/proving-grounds-1/v/walla/)

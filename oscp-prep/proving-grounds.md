@@ -32,7 +32,7 @@
 * [ ] Tico
 * [ ] Fail
 * [x] [Nibbles](https://lojique.gitbook.io/proving-grounds-1/v/nibbles/)
-* [ ] Banzai
+* [x] [Banzai](https://lojique.gitbook.io/proving-grounds-1/v/banzai/)
 * [ ] Hunit
 * [x] [Zino](https://lojique.gitbook.io/proving-grounds-1/v/zino/)
 * [ ] Peppo

@@ -30,7 +30,7 @@
 
 * [x] [ClamAV](https://lojique.gitbook.io/proving-grounds-1/v/clamav/)
 * [ ] Tico
-* [ ] Fail
+* [x] Fail
 * [x] [Nibbles](https://lojique.gitbook.io/proving-grounds-1/v/nibbles/)
 * [x] [Banzai](https://lojique.gitbook.io/proving-grounds-1/v/banzai/)
 * [ ] Hunit

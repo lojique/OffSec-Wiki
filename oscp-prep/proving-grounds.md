@@ -50,5 +50,7 @@
 * [x] [Bratarina](https://lojique.gitbook.io/proving-grounds-1/v/bratarina/)
 * [ ] BlackGate
 * [ ] Sirol
+* [x] Wombo
+* [x] Sorcerer
 
 </details>

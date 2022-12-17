@@ -16,7 +16,7 @@
 * [x] [Hutch](https://lojique.gitbook.io/proving-grounds-1/v/hutch/)
 * [x] [Heist](https://lojique.gitbook.io/proving-grounds-1/v/heist/)
 * [x] [Shenzi](https://lojique.gitbook.io/proving-grounds-1/v/shenzi/)
-* [ ] DVR4
+* [x] DVR4
 * [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)
 * [ ] Craft
 * [x] [Vault](https://lojique.gitbook.io/proving-grounds-1/v/vault/)
@@ -43,13 +43,13 @@
 * [ ] Readys
 * [ ] Nukem
 * [x] [Walla](https://lojique.gitbook.io/proving-grounds-1/v/walla/)
-* [ ] Pelican
+* [x] Pelican
 * [x] [Snookums](https://lojique.gitbook.io/proving-grounds-1/v/snookums/)
 * [x] [Exfiltrated](https://lojique.gitbook.io/proving-grounds-1/v/exfiltrated/)
 * [x] [Twiggy](https://lojique.gitbook.io/proving-grounds-1/v/twiggy/)
 * [x] [Bratarina](https://lojique.gitbook.io/proving-grounds-1/v/bratarina/)
 * [ ] BlackGate
-* [ ] Sirol
+* [x] Sirol
 * [x] Wombo
 * [x] Sorcerer
 

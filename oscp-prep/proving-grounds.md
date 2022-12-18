@@ -41,14 +41,14 @@
 * [ ] Sybaris
 * [x] [ZenPhoto](https://lojique.gitbook.io/proving-grounds-1/v/zenphoto/)
 * [ ] Readys
-* [ ] Nukem
+* [x] Nukem
 * [x] [Walla](https://lojique.gitbook.io/proving-grounds-1/v/walla/)
 * [x] Pelican
 * [x] [Snookums](https://lojique.gitbook.io/proving-grounds-1/v/snookums/)
 * [x] [Exfiltrated](https://lojique.gitbook.io/proving-grounds-1/v/exfiltrated/)
 * [x] [Twiggy](https://lojique.gitbook.io/proving-grounds-1/v/twiggy/)
 * [x] [Bratarina](https://lojique.gitbook.io/proving-grounds-1/v/bratarina/)
-* [ ] BlackGate
+* [x] BlackGate
 * [x] Sirol
 * [x] Wombo
 * [x] Sorcerer

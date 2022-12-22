@@ -11,7 +11,7 @@
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
 * [x] [MeatHead](https://lojique.gitbook.io/proving-grounds-1/v/meathead/)
 * [x] Jacko
-* [ ] Medjed
+* [x] Medjed
 * [x] [Algeron](https://lojique.gitbook.io/proving-grounds-1/v/algernon-1/)
 * [x] [Hutch](https://lojique.gitbook.io/proving-grounds-1/v/hutch/)
 * [x] [Heist](https://lojique.gitbook.io/proving-grounds-1/v/heist/)
@@ -29,13 +29,13 @@
 <summary>Linux Machines</summary>
 
 * [x] [ClamAV](https://lojique.gitbook.io/proving-grounds-1/v/clamav/)
-* [ ] Tico
+* [x] Tico
 * [x] Fail
 * [x] [Nibbles](https://lojique.gitbook.io/proving-grounds-1/v/nibbles/)
 * [x] [Banzai](https://lojique.gitbook.io/proving-grounds-1/v/banzai/)
-* [ ] Hunit
+* [x] Hunit
 * [x] [Zino](https://lojique.gitbook.io/proving-grounds-1/v/zino/)
-* [ ] Peppo
+* [x] Peppo
 * [ ] Dibble
 * [ ] Hetemit
 * [ ] Sybaris

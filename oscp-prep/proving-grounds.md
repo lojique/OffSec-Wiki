@@ -7,16 +7,16 @@
 * [x] [HelpDesk](https://lojique.gitbook.io/proving-grounds-1/v/helpdesk/)
 * [x] Squid
 * [x] [Slort](https://lojique.gitbook.io/proving-grounds-1/v/slort/)
-* [x] AuthBy
+* [x] [AuthBy](https://lojique.gitbook.io/proving-grounds-1/v/authby/)
 * [x] [UT99](https://lojique.gitbook.io/proving-grounds-1/v/ut99/)
 * [x] [MeatHead](https://lojique.gitbook.io/proving-grounds-1/v/meathead/)
-* [x] Jacko
-* [x] Medjed
+* [x] [Jacko](https://lojique.gitbook.io/proving-grounds-1/v/jacko/)
+* [x] [Medjed](https://lojique.gitbook.io/proving-grounds-1/v/medjed/)
 * [x] [Algeron](https://lojique.gitbook.io/proving-grounds-1/v/algernon-1/)
 * [x] [Hutch](https://lojique.gitbook.io/proving-grounds-1/v/hutch/)
 * [x] [Heist](https://lojique.gitbook.io/proving-grounds-1/v/heist/)
 * [x] [Shenzi](https://lojique.gitbook.io/proving-grounds-1/v/shenzi/)
-* [x] DVR4
+* [x] [DVR4](https://lojique.gitbook.io/proving-grounds-1/v/dvr4/)
 * [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)
 * [ ] Craft
 * [x] [Vault](https://lojique.gitbook.io/proving-grounds-1/v/vault/)
@@ -30,27 +30,29 @@
 
 * [x] [ClamAV](https://lojique.gitbook.io/proving-grounds-1/v/clamav/)
 * [x] Tico
-* [x] Fail
+* [x] [Fail](https://lojique.gitbook.io/proving-grounds-1/v/fail/)
 * [x] [Nibbles](https://lojique.gitbook.io/proving-grounds-1/v/nibbles/)
 * [x] [Banzai](https://lojique.gitbook.io/proving-grounds-1/v/banzai/)
-* [x] Hunit
+* [x] [Hunit](https://lojique.gitbook.io/proving-grounds-1/v/hunit/)
 * [x] [Zino](https://lojique.gitbook.io/proving-grounds-1/v/zino/)
-* [x] Peppo
+* [x] [Peppo](https://lojique.gitbook.io/proving-grounds-1/v/peppo/)
 * [ ] Dibble
 * [ ] Hetemit
 * [ ] Sybaris
 * [x] [ZenPhoto](https://lojique.gitbook.io/proving-grounds-1/v/zenphoto/)
 * [ ] Readys
-* [x] Nukem
+* [x] [Nukem](https://lojique.gitbook.io/proving-grounds-1/v/nukem/)
 * [x] [Walla](https://lojique.gitbook.io/proving-grounds-1/v/walla/)
-* [x] Pelican
+* [x] [Pelican](https://lojique.gitbook.io/proving-grounds-1/v/pelican/)
 * [x] [Snookums](https://lojique.gitbook.io/proving-grounds-1/v/snookums/)
 * [x] [Exfiltrated](https://lojique.gitbook.io/proving-grounds-1/v/exfiltrated/)
 * [x] [Twiggy](https://lojique.gitbook.io/proving-grounds-1/v/twiggy/)
 * [x] [Bratarina](https://lojique.gitbook.io/proving-grounds-1/v/bratarina/)
-* [x] BlackGate
-* [x] Sirol
-* [x] Wombo
-* [x] Sorcerer
+* [x] [BlackGate](https://lojique.gitbook.io/proving-grounds-1/v/blackgate/)
+* [x] [Sirol](https://lojique.gitbook.io/proving-grounds-1/v/sirol/)
+* [x] [Wombo](https://lojique.gitbook.io/proving-grounds-1/v/wombo/)
+* [x] [Sorcerer](https://lojique.gitbook.io/proving-grounds-1/v/sorcerer/)
+* [x] [Wheels](https://lojique.gitbook.io/proving-grounds-1/v/wheels/)
+* [x] [Malbec](https://lojique.gitbook.io/proving-grounds-1/v/malbec/)
 
 </details>

@@ -57,7 +57,7 @@ while True:
   * make sure protection schemes are off and base address doesn't contain bad chars
 
 ```
-!mona jmp -r ESP
+!mona jmp -r ESP -cpb "\x00" <-- put all bad characters
 ```
 
 * Generate Shellcode

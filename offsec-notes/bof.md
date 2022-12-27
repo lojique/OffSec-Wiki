@@ -79,11 +79,11 @@ ip = "192.168.0.1"
 port = 9999
 
 prefix = ""
-offset = ""
+offset = 0
 overflow = "A" * offset
 retn = "" # JMP ESP/Return Address
 padding = "" # "\x90" * 16 # nops
-payload = ()
+payload = ("")
 postfix = ""
 
 buffer = prefix + overflow + retn + padding + payload + postfix

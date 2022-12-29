@@ -35,6 +35,7 @@
       * [AS-REP Roasting](offsec-notes/active-directory/attack-vectors/as-rep-roasting.md)
       * [Spraying](offsec-notes/active-directory/attack-vectors/spraying.md)
     * [Exploitation](offsec-notes/active-directory/exploitation/README.md)
+      * [Resource-Based Constrained Delegation](offsec-notes/active-directory/exploitation/resource-based-constrained-delegation.md)
       * [Kerberoasting](offsec-notes/active-directory/exploitation/kerberoasting.md)
       * [GMSAPasswordRead](offsec-notes/active-directory/exploitation/gmsapasswordread.md)
       * [GPO Abuse](offsec-notes/active-directory/exploitation/gpo-abuse.md)

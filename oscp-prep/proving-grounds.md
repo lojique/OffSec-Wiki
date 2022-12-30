@@ -21,6 +21,7 @@
 * [ ] Craft
 * [x] [Vault](https://lojique.gitbook.io/proving-grounds-1/v/vault/)
 * [ ] BillyBoss
+* [x] [Resourced](https://lojique.gitbook.io/proving-grounds-1/v/resourced/)
 
 </details>
 
@@ -38,7 +39,7 @@
 * [x] [Peppo](https://lojique.gitbook.io/proving-grounds-1/v/peppo/)
 * [ ] Dibble
 * [ ] Hetemit
-* [ ] Sybaris
+* [x] [Sybaris](https://lojique.gitbook.io/proving-grounds-1/v/sybaris/)
 * [x] [ZenPhoto](https://lojique.gitbook.io/proving-grounds-1/v/zenphoto/)
 * [ ] Readys
 * [x] [Nukem](https://lojique.gitbook.io/proving-grounds-1/v/nukem/)

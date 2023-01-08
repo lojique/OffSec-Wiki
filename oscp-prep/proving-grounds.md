@@ -21,6 +21,7 @@
 * [ ] Craft
 * [x] [Vault](https://lojique.gitbook.io/proving-grounds-1/v/vault/)
 * [ ] BillyBoss
+* [x] [Nickel](https://lojique.gitbook.io/proving-grounds-1/v/nickel/)
 * [x] [Resourced](https://lojique.gitbook.io/proving-grounds-1/v/resourced/)
 
 </details>

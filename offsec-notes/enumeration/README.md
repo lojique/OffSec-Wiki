@@ -37,7 +37,8 @@
 #### Shodan
 
 *   <pre class="language-shell-session"><code class="lang-shell-session"><strong>lojique@htb[/htb]$ for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
-    </strong>lojique@htb[/htb]$ for i in $(cat ip-addresses.txt);do shodan host $i;done</code></pre>
+    </strong>lojique@htb[/htb]$ for i in $(cat ip-addresses.txt);do shodan host $i;done
+    </code></pre>
 
 
 
@@ -85,6 +86,10 @@ sudo nmap -O 10.11.1.220
 nmap -sV -sT -A 10.11.1.220
 # vuln scan
 sudo nmap --script vuln 10.11.1.10 
+# Firewall and IDS/IPS Evasion 
+sudo nmap -p -Pn -n --disable-arp-ping -D RND:5 10.10.10.10 # Scan by Using Decoys
+sudo nmap 10.129.2.28 -n -Pn -p 445 -O -S 10.129.2.200 -e tun0 # Scan by Using Different Source IP
+sudo nmap 10.129.2.28 -p50000 -sS -Pn -n --disable-arp-ping --packet-trace --source-port 53
 ```
 
 ####

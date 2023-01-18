@@ -22,6 +22,15 @@ nmap -v -p 139,445 --script=smb-os-discovery.nse <ip-addr>
 sudo nmap --script=smb-enum-users -p 445 192.168.1.2 --script-args smbuser=<user>,smbpass=<password>
 ```
 
+## Crackmapexec
+
+```
+crackmapexec smb $IP --users 
+crackmapexec smb $IP -u '' -p '' --shares
+crackmapexec smb $IP -u User -p 'P@$$w0rd!' --shares
+crackmapexec smb 192.168.112.312 -u userlist.txt -p 'someP@$$w0rd!'
+```
+
 ## SMBMAP&#x20;
 
 ```

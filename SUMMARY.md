@@ -75,7 +75,8 @@
   * [Web Attacks](offsec-notes/web-attacks/README.md)
     * [XSS](offsec-notes/web-attacks/xss.md)
     * [LFI](offsec-notes/web-attacks/lfi.md)
-    * [SQL Injection](offsec-notes/web-attacks/sql-injection.md)
+    * [SQL Injection](offsec-notes/web-attacks/sql-injection/README.md)
+      * [SQLi Cheat Sheet](offsec-notes/web-attacks/sql-injection/sqli-cheat-sheet.md)
   * [Password Attacks](offsec-notes/password-attacks/README.md)
     * [Force Change Password](offsec-notes/password-attacks/force-change-password.md)
     * [Password Extraction](offsec-notes/password-extraction.md)
@@ -94,8 +95,7 @@
 
 ## Binary Exploitation
 
-* [Assembly Language](binary-exploitation/assembly-language/README.md)
-  * [Architecture](binary-exploitation/assembly-language/architecture.md)
+* [Coming Soon!](binary-exploitation/coming-soon.md)
 
 ## Walkthroughs
 

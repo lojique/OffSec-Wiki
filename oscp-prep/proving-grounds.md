@@ -20,7 +20,7 @@
 * [x] [Internal](https://lojique.gitbook.io/windows/v/internal/)
 * [ ] Craft
 * [x] [Vault](https://lojique.gitbook.io/proving-grounds-1/v/vault/)
-* [ ] BillyBoss
+* [x] [BillyBoss](https://lojique.gitbook.io/proving-grounds-1/v/billyboss/)
 * [x] [Nickel](https://lojique.gitbook.io/proving-grounds-1/v/nickel/)
 * [x] [Resourced](https://lojique.gitbook.io/proving-grounds-1/v/resourced/)
 

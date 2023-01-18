@@ -28,6 +28,8 @@
     * [Ports](offsec-notes/enumeration/ports.md)
   * [Exploitation](offsec-notes/exploitation/README.md)
     * [Pwnkit](offsec-notes/exploitation/pwnkit.md)
+    * [Juicy Potato](offsec-notes/exploitation/juicy-potato.md)
+    * [PrintSpoofer](offsec-notes/exploitation/printspoofer.md)
     * [SMBGhost](offsec-notes/exploitation/smbghost.md)
   * [Active Directory](offsec-notes/active-directory.md)
     * [Attack Vectors](offsec-notes/active-directory/attack-vectors/README.md)

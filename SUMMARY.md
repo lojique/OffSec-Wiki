@@ -28,6 +28,7 @@
     * [Ports](offsec-notes/enumeration/ports.md)
   * [Exploitation](offsec-notes/exploitation/README.md)
     * [Pwnkit](offsec-notes/exploitation/pwnkit.md)
+    * [SMBGhost](offsec-notes/exploitation/smbghost.md)
   * [Active Directory](offsec-notes/active-directory.md)
     * [Attack Vectors](offsec-notes/active-directory/attack-vectors/README.md)
       * [Generating Usernames](offsec-notes/active-directory/attack-vectors/generating-usernames.md)

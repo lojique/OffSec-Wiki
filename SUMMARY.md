@@ -9,6 +9,10 @@
 ***
 
 * [OffSec Notes](offsec-notes/README.md)
+  * [OSINT](offsec-notes/osint/README.md)
+    * [Resources](offsec-notes/osint/resources.md)
+    * [OSINT Methodology](offsec-notes/osint/osint-methodology.md)
+    * [Questions to ask](offsec-notes/osint/questions-to-ask.md)
   * [Enumeration](offsec-notes/enumeration/README.md)
     * [21 - FTP](offsec-notes/enumeration/ftp.md)
     * [22 - SSH](offsec-notes/enumeration/22-ssh.md)

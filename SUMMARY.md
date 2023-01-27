@@ -10,6 +10,7 @@
 
 * [OffSec Notes](offsec-notes/README.md)
   * [OSINT](offsec-notes/osint/README.md)
+    * [Recon-ng](offsec-notes/osint/recon-ng.md)
     * [Resources](offsec-notes/osint/resources.md)
     * [OSINT Methodology](offsec-notes/osint/osint-methodology.md)
     * [Questions to ask](offsec-notes/osint/questions-to-ask.md)

@@ -18,9 +18,6 @@ modules load recon/companies-domains/censys_subdomains
 modules load recon/companies-multi/censys_org
 modules load recon/companies-multi/censys_tls_subjects
 modules load recon/contacts-domains/censys_email_to_domains
-modules load recon/hosts-ports/censys_hostname
-modules load recon/hosts-ports/censys_ip
-modules load recon/netblocks-ports/censysio
 modules load recon/domains-hosts/hackertarget
 modules load recon/companies-multi/github_miner
 <strong>modules load recon/profiles-contacts/github_users
@@ -38,6 +35,5 @@ modules load recon/ports-hosts/ssl_scan
 modules load recon/hosts-ports/binaryedge
 modules load recon/hosts-ports/shodan_ip
 modules load recon/ports-hosts/migrate_ports
-modules load recon/hosts-hosts/ipinfodb
 modules load recon/companies-multi/shodan_org
 </code></pre>

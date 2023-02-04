@@ -141,7 +141,7 @@ Before you run the scheduled task, make sure to have a web server (I use python)
 
 ![](<../../../../.gitbook/assets/image (4).png>)
 
-![](<../../../../.gitbook/assets/image (1) (4).png>)
+![](<../../../../.gitbook/assets/image (1).png>)
 
 ![](<../../../../.gitbook/assets/image (7).png>)
 

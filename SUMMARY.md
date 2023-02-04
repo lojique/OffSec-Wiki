@@ -55,6 +55,7 @@
     * [Resources](offsec-notes/active-directory/resources.md)
   * [Windows](offsec-notes/windows/README.md)
     * [Client-Side Attacks](offsec-notes/windows/client-side-attacks/README.md)
+      * [LibreOffice](offsec-notes/windows/client-side-attacks/libreoffice.md)
       * [Microsoft Office](offsec-notes/windows/client-side-attacks/microsoft-office.md)
     * [PrivEsc](offsec-notes/windows/privesc/README.md)
       * [MSSQL](offsec-notes/windows/privesc/mssql.md)

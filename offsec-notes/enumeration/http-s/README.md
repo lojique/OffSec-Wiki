@@ -75,6 +75,7 @@ dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100
 
 ```bash
 ffuf -w /path/to/wordlist -u https://target/FUZZ
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/shubs-subdomains.txt -u http://machine.htb/ -H "Host:FUZZ.machine.htb" -fs 178
 ```
 
 ### EyeWitness

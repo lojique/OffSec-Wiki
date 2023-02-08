@@ -1,13 +1,6 @@
 # Table of contents
 
 * [Welcome!](README.md)
-
-## Methodology
-
-* [Pentesting Methodology Mindmap](methodology/pentesting-methodology-mindmap.md)
-
-***
-
 * [OffSec Notes](offsec-notes/README.md)
   * [OSINT](offsec-notes/osint/README.md)
     * [Recon-ng](offsec-notes/osint/recon-ng.md)
@@ -23,14 +16,13 @@
       * [WebDav](offsec-notes/enumeration/http-s/webdav.md)
       * [WordPress](offsec-notes/enumeration/http-s/wordpress.md)
       * [Drupal](offsec-notes/enumeration/http-s/drupal.md)
-    * [88 - Kerberos](offsec-notes/enumeration/kerberos.md)
+    * [88/464 - Kerberos](offsec-notes/enumeration/88-464-kerberos.md)
     * [111 - RPCBind/PortMapper](offsec-notes/enumeration/111-rpcbind-portmapper.md)
     * [139/445 - SMB](offsec-notes/enumeration/smb.md)
     * [161 - SNMP](offsec-notes/enumeration/snmp.md)
-    * [389 - LDAP](offsec-notes/enumeration/ldap.md)
-    * [NFS](offsec-notes/enumeration/nfs.md)
+    * [389/636 - LDAP](offsec-notes/enumeration/389-636-ldap.md)
+    * [2049 - NFS](offsec-notes/enumeration/2049-nfs.md)
     * [RPC](offsec-notes/enumeration/rpc.md)
-    * [Ports](offsec-notes/enumeration/ports.md)
   * [Exploitation](offsec-notes/exploitation/README.md)
     * [Pwnkit](offsec-notes/exploitation/pwnkit.md)
     * [Juicy Potato](offsec-notes/exploitation/juicy-potato.md)
@@ -194,3 +186,7 @@
     * [Black-box Penetration Test 1](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-1.md)
     * [Black-box Penetration Test 2](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-2.md)
     * [Black-box Penetration Test 3](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-3.md)
+
+## Group 1
+
+* [Page 1](group-1/page-1.md)

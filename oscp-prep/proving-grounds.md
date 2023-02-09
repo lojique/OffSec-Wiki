@@ -56,6 +56,6 @@
 * [x] [Sorcerer](https://lojique.gitbook.io/proving-grounds-1/v/sorcerer/)
 * [x] [Wheels](https://lojique.gitbook.io/proving-grounds-1/v/wheels/)
 * [x] [Malbec](https://lojique.gitbook.io/proving-grounds-1/v/malbec/)
-* [x] XposedAPI
+* [x] [XposedAPI](https://lojique.gitbook.io/proving-grounds/v/xposedapi/)
 
 </details>

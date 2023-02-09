@@ -42,7 +42,7 @@
 * [ ] Hetemit
 * [x] [Sybaris](https://lojique.gitbook.io/proving-grounds-1/v/sybaris/)
 * [x] [ZenPhoto](https://lojique.gitbook.io/proving-grounds-1/v/zenphoto/)
-* [ ] Readys
+* [x] [Readys](https://lojique.gitbook.io/proving-grounds/v/readys/)
 * [x] [Nukem](https://lojique.gitbook.io/proving-grounds-1/v/nukem/)
 * [x] [Walla](https://lojique.gitbook.io/proving-grounds-1/v/walla/)
 * [x] [Pelican](https://lojique.gitbook.io/proving-grounds-1/v/pelican/)
@@ -56,5 +56,6 @@
 * [x] [Sorcerer](https://lojique.gitbook.io/proving-grounds-1/v/sorcerer/)
 * [x] [Wheels](https://lojique.gitbook.io/proving-grounds-1/v/wheels/)
 * [x] [Malbec](https://lojique.gitbook.io/proving-grounds-1/v/malbec/)
+* [x] XposedAPI
 
 </details>

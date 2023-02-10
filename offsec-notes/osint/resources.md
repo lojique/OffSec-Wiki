@@ -18,6 +18,8 @@ We can use `search engines` we know from which we will discover other employees,
 
 If files are found, we can use exiftool to extract metadata
 
+{% embed url="https://www.hackers-arise.com/post/2019/05/28/osint-part-3-extracting-employee-names-from-companies-tesla-and-breitbart-on-linkedin" %}
+
 ### Contact Information
 
 If the company wants to present itself and clarify individual needs in the best possible way, the `contact details` page on their website will list people from different departments.

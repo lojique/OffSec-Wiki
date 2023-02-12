@@ -26,3 +26,4 @@ sudo sshuttle -r sean@10.11.1.251 10.1.1.0/24
 sudo sshuttle -r mario@10.1.1.1:222 10.3.3.0/24
 ```
 
+{% embed url="https://pentest.coffee/active-directory-lateral-movement-and-post-exploitation-cheat-sheet-3170982a7055" %}

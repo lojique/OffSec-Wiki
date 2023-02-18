@@ -65,7 +65,7 @@
       * [Automated](offsec-notes/privilege-escalation/windows/automated.md)
       * [SeBackupPrivilege](offsec-notes/privilege-escalation/windows/sebackupprivilege.md)
     * [Linux/Unix](offsec-notes/privilege-escalation/linux-unix/README.md)
-      * [Wildcard](offsec-notes/privilege-escalation/linux-unix/wildcard.md)
+      * [Checklists](offsec-notes/privilege-escalation/linux-unix/checklists.md)
       * [Groups](offsec-notes/privilege-escalation/linux-unix/groups.md)
       * [Kernel Exploits](offsec-notes/privilege-escalation/linux-unix/kernel-exploits.md)
       * [Looting for password](offsec-notes/privilege-escalation/linux-unix/looting-for-password.md)

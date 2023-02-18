@@ -13,8 +13,7 @@ whoami /priv #enum privileges
 whoami /all
 
 #linux
-id
-cat /etc/passwd
+
 ```
 
 ### **Enumerating the Hostname**
@@ -32,9 +31,7 @@ systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 
 #linux
-cat /etc/issue
-cat /etc/*-release
-uname -a
+
 ```
 
 ### **Enumerating Running Processes and Services**
@@ -46,8 +43,7 @@ tasklist /SVC
 wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows"
 
 #linux
-# list system processes (including those run by privileged users)
-ps axu
+
 ```
 
 ### **Enumerating Networking Information**

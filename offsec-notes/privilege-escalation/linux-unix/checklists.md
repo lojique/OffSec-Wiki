@@ -26,8 +26,14 @@ There are many scripts that you can execute on a linux machine which automatical
     ```bash
     ./LinEnum.sh -s -k keyword -r report -e /tmp/ -t
     ```
-* [BeRoot - Privilege Escalation Project - Windows / Linux / Mac](https://github.com/AlessandroZ/BeRoot)
+*   [linux-exploit-suggester](https://github.com/The-Z-Labs/linux-exploit-suggester)\
+
+
+    ```bash
+    wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+    ```
 * [linuxprivchecker.py - a Linux Privilege Escalation Check Script](https://github.com/sleventyeleven/linuxprivchecker)
+* [BeRoot - Privilege Escalation Project - Windows / Linux / Mac](https://github.com/AlessandroZ/BeRoot)
 * [unix-privesc-check - Automatically exported from code.google.com/p/unix-privesc-check](https://github.com/pentestmonkey/unix-privesc-check)
 * [Privilege Escalation through sudo - Linux](https://github.com/TH3xACE/SUDO\_KILLER)
 

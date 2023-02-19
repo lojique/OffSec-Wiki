@@ -323,7 +323,7 @@ The following exploits are known to work well, search for more exploits with `se
 
 Another way to find a kernel exploit is to get the specific kernel version and linux distro of the machine by doing
 
-```
+```bash
 uname -a
 cat /etc/issue
 cat /etc/*-release
@@ -385,11 +385,14 @@ https://www.exploit-db.com/exploits/15704/
 
 Linux Kernel 2.6.39 < 3.2.2 (Gentoo / Ubuntu x86/x64)
 
-```bash
-https://www.exploit-db.com/exploits/18411
-```
+{% embed url="https://www.exploit-db.com/exploits/18411" %}
 
-##
+{% embed url="https://www.exploit-db.com/exploits/35161" %}
+
+```bash
+ gcc mempodipper.c -o mempodipper
+ ./mempodipper
+```
 
 ## Automated Resources
 

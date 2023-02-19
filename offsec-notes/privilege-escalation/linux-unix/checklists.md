@@ -24,6 +24,7 @@ There are many scripts that you can execute on a linux machine which automatical
 *   [LinEnum - Scripted Local Linux Enumeration & Privilege Escalation Checks](https://github.com/rebootuser/LinEnum)
 
     ```bash
+    https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
     ./LinEnum.sh -s -k keyword -r report -e /tmp/ -t
     ```
 *   [linux-exploit-suggester](https://github.com/The-Z-Labs/linux-exploit-suggester)\
@@ -33,6 +34,11 @@ There are many scripts that you can execute on a linux machine which automatical
     wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
     ```
 * [linuxprivchecker.py - a Linux Privilege Escalation Check Script](https://github.com/sleventyeleven/linuxprivchecker)
+
+```
+wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py
+```
+
 * [BeRoot - Privilege Escalation Project - Windows / Linux / Mac](https://github.com/AlessandroZ/BeRoot)
 * [unix-privesc-check - Automatically exported from code.google.com/p/unix-privesc-check](https://github.com/pentestmonkey/unix-privesc-check)
 * [Privilege Escalation through sudo - Linux](https://github.com/TH3xACE/SUDO\_KILLER)

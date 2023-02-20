@@ -13,8 +13,7 @@ whoami /priv #enum privileges
 whoami /all
 
 #linux
-id
-cat /etc/passwd
+
 ```
 
 ### **Enumerating the Hostname**
@@ -32,9 +31,7 @@ systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 
 #linux
-cat /etc/issue
-cat /etc/*-release
-uname -a
+
 ```
 
 ### **Enumerating Running Processes and Services**
@@ -46,8 +43,7 @@ tasklist /SVC
 wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows"
 
 #linux
-# list system processes (including those run by privileged users)
-ps axu
+
 ```
 
 ### **Enumerating Networking Information**
@@ -58,10 +54,7 @@ ipconfig /all # to display the full TCP/IP configuration of all adapters
 route print # To display the networking routing tables
 netstat -ano # to view the active network connections
 
-# linux
-ip a #list the TCP/IP configuration of every network adapter
-/sbin/route(l) # display network routing tables
-ss -anp # display active network connections and listening ports 
+
 ```
 
 ### **Enumerating Firewall Status and Rules**
@@ -157,7 +150,7 @@ HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
     AlwaysInstallElevated    REG_DWORD    0x1
     
 # linux
-find / -perm -u=s -type f 2>/dev/null
+
 ```
 
 

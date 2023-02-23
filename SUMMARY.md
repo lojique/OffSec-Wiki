@@ -73,6 +73,7 @@
     * [SQL Injection](offsec-notes/web-attacks/sql-injection/README.md)
       * [SQLi Cheat Sheet](offsec-notes/web-attacks/sql-injection.md)
     * [XSS](offsec-notes/web-attacks/xss.md)
+    * [Command Injection](offsec-notes/web-attacks/command-injection.md)
     * [LFI](offsec-notes/web-attacks/lfi.md)
   * [Password Attacks](offsec-notes/password-attacks/README.md)
     * [Force Change Password](offsec-notes/password-attacks/force-change-password.md)

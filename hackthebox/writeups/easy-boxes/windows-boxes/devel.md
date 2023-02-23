@@ -116,7 +116,7 @@ Entering the following command into the webshell:
 
 And I get a shell!
 
-![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (2).png>)
 
 ## Foothold w/ Metasploit
 

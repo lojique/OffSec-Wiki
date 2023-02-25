@@ -5,6 +5,13 @@
 * netcraft
 * recon-ng
 
+## Host Discovery&#x20;
+
+```
+arp-scan -l
+netdiscover -r <ATTACKER IP>.0/24
+```
+
 ### Domain Information
 
 * [https://crt.sh/](https://crt.sh/) | certificate transparency

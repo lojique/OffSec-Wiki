@@ -77,7 +77,7 @@ responder -I eth1 -v
 ## Cracking NTLMv2
 
 ```
-hashcat -m5600 'pasted hash' -a 3 /usr/share/wordlists/rockyou.txt --force --potfile-disable
+hashcat -m 5600 'pasted hash' -a 3 /usr/share/wordlists/rockyou.txt --force --potfile-disable
 hashcat -m 5600 ntlmhash.txt /usr/share/wordlists/rockyou.txt --force
 john --wordlist=/usr/share/wordlists/rockyou.txt ntlmhash.txt
 ```

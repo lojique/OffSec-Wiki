@@ -31,7 +31,7 @@ There was nothing useful here found so I moved on to see what the website looks 
 
 When going there, we are presented with a sign-in prompt
 
-![](<../../../../.gitbook/assets/image (24) (1).png>)
+![](<../../../../.gitbook/assets/image (24) (1) (2).png>)
 
 I try some default credentials such as <mark style="color:green;">`admin:admin`</mark> and we successfully log in
 
@@ -39,7 +39,7 @@ I try some default credentials such as <mark style="color:green;">`admin:admin`<
 
 Navigating through the site, we can only access "Firmware Updates" which brings us to this page where we can upload a file
 
-![](<../../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1).png>)
 
 {% embed url="https://pentestlab.blog/2017/12/13/smb-share-scf-file-attacks" %}
 

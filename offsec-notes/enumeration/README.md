@@ -49,7 +49,7 @@ netdiscover -r <ATTACKER IP>.0/24
 
 
 
-    <figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (32) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### dig | DNS Records
 

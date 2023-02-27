@@ -153,7 +153,7 @@ Let's check the other commit difference
 git diff 4bcfb590014321deb984237da2a319206975170f 9aa6151c1d5e92ae0bd3d8ad8789ae9bb2d29edd
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (2).png>)
 
 Essentially what was added seems to be user-input sanitation via the isValid function
 

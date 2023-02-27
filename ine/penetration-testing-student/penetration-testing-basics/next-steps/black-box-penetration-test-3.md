@@ -104,7 +104,7 @@ use exploit/multi/http/werkzeug_debug_rce
 
 ![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (59) (1) (1).png>)
 
@@ -156,7 +156,7 @@ dirb http://192.6.232.5:8080
 
 ![](<../../../../.gitbook/assets/image (51) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (2).png>)
 
 ![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
 

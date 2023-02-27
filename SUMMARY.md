@@ -34,6 +34,7 @@
     * [Attack Vectors](offsec-notes/active-directory/attack-vectors/README.md)
       * [Generating Usernames](offsec-notes/active-directory/attack-vectors/generating-usernames.md)
       * [LLMNR Poisoning/Forced Authentication](offsec-notes/active-directory/attack-vectors/llmnr-poisoning-forced-authentication.md)
+      * [SMB Relay](offsec-notes/active-directory/attack-vectors/smb-relay.md)
       * [AS-REP Roasting](offsec-notes/active-directory/attack-vectors/as-rep-roasting.md)
       * [Spraying](offsec-notes/active-directory/attack-vectors/spraying.md)
     * [Exploitation](offsec-notes/active-directory/exploitation/README.md)

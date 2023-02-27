@@ -139,11 +139,11 @@ Make sure to save the output to a file in a valid directory. I had to check for 
 
 Before you run the scheduled task, make sure to have a web server (I use python) running so it will download your payload
 
-![](<../../../../.gitbook/assets/image (4).png>)
+![](<../../../../.gitbook/assets/image (4) (3).png>)
 
-![](<../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (3).png>)
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (3).png>)
 
 Now start your listener and go to the file in your web browser to catch a shell!
 

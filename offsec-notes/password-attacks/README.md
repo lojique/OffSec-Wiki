@@ -1,2 +1,2 @@
-# Password/Hash Attacks
+# Password Attacks
 

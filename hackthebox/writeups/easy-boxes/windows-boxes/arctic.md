@@ -81,7 +81,7 @@ This python script does it all! We'll change the listening host IP and port numb
 
 Then we run it and get a shell!
 
-![](<../../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (3).png>)
 
 ## Foothold #2 - Directory Traversal
 
@@ -135,13 +135,13 @@ Make sure to save the output to a file in a valid directory. I had to check for 
 
 [https://help.adobe.com/archive/en\_US/coldfusion/8/cf8\_install.pdf](https://help.adobe.com/archive/en\_US/coldfusion/8/cf8\_install.pdf)
 
-![](<../../../../.gitbook/assets/image (8).png>)
+![](<../../../../.gitbook/assets/image (8) (3).png>)
 
 Before you run the scheduled task, make sure to have a web server (I use python) running so it will download your payload
 
 ![](<../../../../.gitbook/assets/image (4) (3).png>)
 
-![](<../../../../.gitbook/assets/image (1) (1) (3).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (3) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (7) (3).png>)
 

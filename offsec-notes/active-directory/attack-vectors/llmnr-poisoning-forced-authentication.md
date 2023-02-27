@@ -10,7 +10,7 @@ Link-Local Multicast Name Resolution (LLMNR) is a protocol that is able to perfo
 
 Once DNS has failed to resolve the request and LLMNR kicks in the requesting machine will send out a broadcast on the subnet asking if anyone of the other devices can connect them to the share `\\Filesharez` The attacking machine on the network will respond to the request stating that it can get them connected to the share. At this point the requesting (victim) machine will send the username and NTLMv2 hash of the account requesting the resource over to the malicious machine.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 

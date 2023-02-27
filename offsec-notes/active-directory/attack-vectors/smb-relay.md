@@ -47,7 +47,7 @@ As per the prerequisites the user account hash we will be capturing (MARVEL\fcas
 
 Ideally we will use `Responder` for this attack which comes preinstalled on Kali Linux. Before we start `Responder` we need to make a small change to the configuration file.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 We need to turn off SMB and HTTP servers as we do not want to respond to these protocols as we will be capturing the hash and relaying it to a different tool called `ntlmrelayx.py` from Impacket.
 
@@ -97,7 +97,7 @@ Start netcat with a localhost address and the port specified in the output above
 nc 127.0.0.1 <port>
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 

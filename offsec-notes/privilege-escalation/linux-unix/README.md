@@ -11,8 +11,11 @@ cat /etc/passwd
 ## Services/Processes Running
 
 ```bash
+ps
 ps aux
 ps aux | grep root
+ps -A # View all running processes
+ps axjf # View process tree
 ```
 
 ## History
@@ -32,6 +35,11 @@ route
 ip route
 # display active network connections and listening ports
 netstat -ano
+netstat -a # shows all listening ports and established connections
+netstat -at # list tcp protocols
+netstat -au # list udp protocols
+netstat -l # list ports in “listening” mode
+netstat -tp(l) # list connections with the service name and PID information
 ss -anp 
 arp -a
 ip neigh

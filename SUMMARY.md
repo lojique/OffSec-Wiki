@@ -30,7 +30,7 @@
     * [Juicy Potato](offsec-notes/exploitation/juicy-potato.md)
     * [PrintSpoofer](offsec-notes/exploitation/printspoofer.md)
     * [SMBGhost](offsec-notes/exploitation/smbghost.md)
-    * [MSSQL](offsec-notes/exploitation/mssql.md)
+    * [MSSQL](offsec-notes/windows/privesc/mssql.md)
   * [Active Directory](offsec-notes/active-directory.md)
     * [Attack Vectors](offsec-notes/active-directory/attack-vectors/README.md)
       * [Generating Usernames](offsec-notes/active-directory/attack-vectors/generating-usernames.md)
@@ -73,10 +73,9 @@
     * [Dump Hashes](offsec-notes/password-hash-attacks/dump-hashes.md)
     * [Pass-The-Hash](offsec-notes/password-hash-attacks/pass-the-hash.md)
     * [Force Change Password](offsec-notes/password-attacks/force-change-password.md)
-    * [Password Extraction](offsec-notes/password-hash-attacks/password-extraction/README.md)
-      * [Master MDF Hash Extraction](offsec-notes/password-hash-attacks/password-extraction/master-mdf-hash-extraction.md)
     * [Password Cracking](offsec-notes/password-cracking/README.md)
       * [Resources](offsec-notes/password-cracking/password-cracking.md)
+    * [Master MDF Hash Extraction](offsec-notes/password-hash-attacks/master-mdf-hash-extraction.md)
   * [Shells](offsec-notes/shells/README.md)
     * [Reverse Shells](offsec-notes/shells/reverse-shells.md)
     * [Bind Shell](offsec-notes/shells/bind-shell.md)
@@ -88,9 +87,9 @@
   * [Buffer Overflow](offsec-notes/bof.md)
   * [Brute Force](offsec-notes/brute-force-cheatsheet.md)
 
-## Binary Exploitation
+## Malware Development
 
-* [Coming Soon!](binary-exploitation/assembly-language/README.md)
+* [Coming Soon!](malware-development/coming-soon.md)
 
 ## Walkthroughs
 

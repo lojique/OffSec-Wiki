@@ -77,6 +77,7 @@ download system
 
 # on kali
 pypykatz registry --sam sam system
+impacket-secretsdump -sam sam -system system LOCAL
 ```
 
 #### Domain Controller

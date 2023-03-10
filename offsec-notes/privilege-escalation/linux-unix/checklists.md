@@ -115,3 +115,7 @@ wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/li
   * Checks to determine if we're in a Docker container
   * Checks to see if the host has Docker installed
   * Checks to determine if we're in an LXC container
+
+## Resources
+
+{% embed url="https://book.hacktricks.xyz/linux-hardening/privilege-escalation" %}

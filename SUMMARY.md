@@ -58,7 +58,7 @@
     * [Post-Exploitation](offsec-notes/windows/post-exploitation.md)
   * [Privilege Escalation](offsec-notes/privilege-escalation/README.md)
     * [Windows](offsec-notes/privilege-escalation/windows.md)
-      * [Automated](offsec-notes/privilege-escalation/windows/automated.md)
+      * [Tools & Resources](offsec-notes/privilege-escalation/windows/tools-and-resources.md)
     * [Linux/Unix](offsec-notes/privilege-escalation/linux-unix/README.md)
       * [Checklists](offsec-notes/privilege-escalation/linux-unix/checklists.md)
       * [Groups](offsec-notes/privilege-escalation/linux-unix/groups.md)
@@ -87,6 +87,7 @@
   * [Pivoting/Port Forwarding](offsec-notes/pivoting.md)
   * [Buffer Overflow](offsec-notes/bof.md)
   * [Brute Force](offsec-notes/brute-force-cheatsheet.md)
+  * [Misc](offsec-notes/misc.md)
 
 ## Malware Development
 

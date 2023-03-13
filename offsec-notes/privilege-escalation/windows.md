@@ -7,6 +7,12 @@ systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ```
 
+## Unpatched Software
+
+```
+wmic product get name,version,vendor
+```
+
 ## PrintNightmare (CVE-2021-1675)
 
 {% embed url="https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html" %}

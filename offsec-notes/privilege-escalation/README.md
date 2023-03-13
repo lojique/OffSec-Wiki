@@ -1,38 +1,8 @@
 # Privilege Escalation
 
-### Enumerate Users
+###
 
-```
-#Linux and Windows
-whoami
-whoami
-
-#windows
-net user
-whoami /priv #enum privileges
-whoami /all
-
-#linux
-
-```
-
-### **Enumerating the Hostname**
-
-```
-#linux/windows
-hostname
-```
-
-### **Enumerating OS Version and Architecture**
-
-```
-#windows
-systeminfo
-systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
-
-#linux
-
-```
+### ****
 
 ### **Enumerating Running Processes and Services**
 
@@ -68,17 +38,7 @@ netsh advfirewall firewall show rule name=all
 grep -Hs iptables /etc/*
 ```
 
-### **Enumerating Scheduled Tasks**
-
-```
-# windows
-schtasks /query /fo LIST /v
-
-# linux
-ls -lah /etc/cron*
-cat /etc/crontab
-grep "CRON" /var/log/cron.log
-```
+****
 
 ### **Enumerating Installed Applications and Patch Levels**
 

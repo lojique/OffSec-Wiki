@@ -58,8 +58,10 @@
     * [Post-Exploitation](offsec-notes/windows/post-exploitation.md)
   * [Privilege Escalation](offsec-notes/privilege-escalation/README.md)
     * [Windows](offsec-notes/privilege-escalation/windows.md)
+      * [Mind Map](offsec-notes/privilege-escalation/windows/mind-map.md)
       * [Tools & Resources](offsec-notes/privilege-escalation/windows/tools-and-resources.md)
     * [Linux/Unix](offsec-notes/privilege-escalation/linux-unix/README.md)
+      * [MindMap](offsec-notes/privilege-escalation/linux-unix/mindmap.md)
       * [Checklists](offsec-notes/privilege-escalation/linux-unix/checklists.md)
       * [Groups](offsec-notes/privilege-escalation/linux-unix/groups.md)
       * [NFS no\_root\_squash/no\_all\_squash misconfig PE](offsec-notes/privilege-escalation/linux-unix/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
@@ -181,3 +183,7 @@
     * [Black-box Penetration Test 1](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-1.md)
     * [Black-box Penetration Test 2](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-2.md)
     * [Black-box Penetration Test 3](ine/penetration-testing-student/ejpt-exam-preparation/black-box-penetration-test-3.md)
+
+## General Resources
+
+* [Resources](general-resources/resources.md)

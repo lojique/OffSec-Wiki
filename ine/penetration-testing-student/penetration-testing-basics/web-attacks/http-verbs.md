@@ -95,7 +95,7 @@ Host: www.example.site
 
 ![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (3).png>)
 
 ### Exploiting PUT
 

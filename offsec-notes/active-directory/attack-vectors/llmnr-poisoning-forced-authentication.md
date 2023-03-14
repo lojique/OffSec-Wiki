@@ -10,13 +10,51 @@ Link-Local Multicast Name Resolution (LLMNR) is a protocol that is able to perfo
 
 Once DNS has failed to resolve the request and LLMNR kicks in the requesting machine will send out a broadcast on the subnet asking if anyone of the other devices can connect them to the share `\\Filesharez` The attacking machine on the network will respond to the request stating that it can get them connected to the share. At this point the requesting (victim) machine will send the username and NTLMv2 hash of the account requesting the resource over to the malicious machine.
 
+Responder will print it out on screen and write it to a log file per host located in the `/usr/share/responder/logs` directory. Hashes are saved in the format `(MODULE_NAME)-(HASH_TYPE)-(CLIENT_IP).txt`, and one hash is printed to the console and stored in its associated log file unless `-v` mode is enabled
+
 <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
+Analysis Mode
+
+```
+sudo responder -I ens224 -A 
+```
+
 ### via SSRF
 
 {% embed url="https://lojique.gitbook.io/proving-grounds/v/heist/web-enum/website" %}
+
+### Inveigh
+
+LLMNR & NBT-NS poisoning is possible from a Windows host as well. The tool [Inveigh](https://github.com/Kevin-Robertson/Inveigh) works similar to Responder, but is written in PowerShell and C#. The PowerShell version of Inveigh is the original version and is no longer updated. The tool author maintains the C# version, which combines the original PoC C# code and a C# port of most of the code from the PowerShell version. Inveigh can listen to IPv4 and IPv6 and several other protocols, including `LLMNR`, DNS, `mDNS`, NBNS, `DHCPv6`, ICMPv6, `HTTP`, HTTPS, `SMB`, LDAP, `WebDAV`, and Proxy Auth.&#x20;
+
+#### Powershell
+
+```powershell
+PS C:\htb> Import-Module .\Inveigh.ps1
+PS C:\htb> (Get-Command Invoke-Inveigh).Parameters
+
+PS C:\htb> Invoke-Inveigh Y -NBNS Y -ConsoleOutput Y -FileOutput Y
+```
+
+#### C# ([InveighZero](https://github.com/Flangvik/SharpCollection/blob/master/NetFramework\_4.7\_x86/Inveigh.exe))
+
+```powershell-session
+.\Inveigh.exe
+GET NTLMV2UNIQUE
+GET NTLMV2USERNAMES
+```
+
+We can also see the message `Press ESC to enter/exit interactive console`, which is very useful while running the tool. The console gives us access to captured credentials/hashes, allows us to stop Inveigh, and more.
+
+We can quickly view unique captured hashes by typing `GET NTLMV2UNIQUE`.
+
+We can type in `GET NTLMV2USERNAMES` and see which usernames we have collected. This is helpful if we want a listing of users to perform additional enumeration against and see which are worth attempting to crack offline using Hashcat.
+
+\
+
 
 ## Forced Authentication
 

@@ -10,6 +10,7 @@
 ```
 arp-scan -l
 netdiscover -r <ATTACKER IP>.0/24
+fping -asgq 172.16.5.0/23
 ```
 
 ### Domain Information

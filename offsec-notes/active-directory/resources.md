@@ -9,3 +9,5 @@
 {% embed url="https://github.com/GhostPack/Rubeus" %}
 
 {% embed url="https://github.com/tothi/rbcd-attack" %}
+
+{% embed url="https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet" %}

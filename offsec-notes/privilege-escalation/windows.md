@@ -158,6 +158,8 @@ impacket-secretsdump -ntds ntds.dit -system system local
 
 SeImpersonateToken or SeAssignPrimaryToken - Enabled
 
+{% embed url="https://jlajara.gitlab.io/Potatoes_Windows_Privesc" %}
+
 ### Exploiting with Juicy Potato
 
 [http://ohpe.it/juicy-potato/\

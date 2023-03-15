@@ -63,7 +63,6 @@
     * [Linux/Unix](offsec-notes/privilege-escalation/linux-unix/README.md)
       * [MindMap](offsec-notes/privilege-escalation/linux-unix/mindmap.md)
       * [Checklists](offsec-notes/privilege-escalation/linux-unix/checklists.md)
-      * [Groups](offsec-notes/privilege-escalation/linux-unix/groups.md)
       * [NFS no\_root\_squash/no\_all\_squash misconfig PE](offsec-notes/privilege-escalation/linux-unix/nfs-no\_root\_squash-no\_all\_squash-misconfig-pe.md)
       * [Internal Ports](offsec-notes/privilege-escalation/linux-unix/internal-ports.md)
   * [Web Attacks](offsec-notes/web-attacks/README.md)

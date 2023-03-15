@@ -689,6 +689,9 @@ cat (Get-PSReadlineOption).HistorySavePath | sls passw
 {% code title="in powershell" %}
 ```powershell
 type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+(Get-PSReadlineOption).HistorySavePath
+(Get-PSReadlineOption).HistorySavePath | sls pass
+Get-History
 ```
 {% endcode %}
 

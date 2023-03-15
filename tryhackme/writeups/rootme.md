@@ -42,7 +42,7 @@ dirsearch -u 10.10.62.196 -w /usr/share/wordlists/dirb/common.txt -x 404 -t 100
 
 Here we can see that we can upload files. So we should be interested in uploading a reverse shell
 
-![](<../../.gitbook/assets/image (1) (2).png>)
+![](<../../.gitbook/assets/image (1) (2) (1).png>)
 
 And we should be able to execute it here
 

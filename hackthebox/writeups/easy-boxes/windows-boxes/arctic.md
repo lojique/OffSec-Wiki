@@ -63,7 +63,7 @@ I'm most interested in the `administrator` link, so going there takes me to an A
 
 I search for any public exploits in searchsploit
 
-![](<../../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (3).png>)
 
 The Remote Code Execution python script catches my eye so I'll view that one
 
@@ -147,7 +147,7 @@ Before you run the scheduled task, make sure to have a web server (I use python)
 
 Now start your listener and go to the file in your web browser to catch a shell!
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (3).png>)
 
 ## Priv Esc
 

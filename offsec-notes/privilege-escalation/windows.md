@@ -669,6 +669,12 @@ Tools to extract passwords from browsers:
 * [**SharpChromium**](https://github.com/djhohnstein/SharpChromium)
 * [**SharpDPAPI**](https://github.com/GhostPack/SharpDPAPI)\*\*\*\*
 
+```
+PS C:\htb> gc 'C:\Users\htb-student\AppData\Local\Google\Chrome\User Data\Default\Custom Dictionary.txt' | Select-String password
+
+Password1234!
+```
+
 ### **Generic Password search in files and registry**
 
 **Search for file contents**

@@ -47,6 +47,12 @@ arp -a
 ip neigh
 ```
 
+## **Firewall Status and Rules**
+
+```
+grep -Hs iptables /etc/*
+```
+
 ## Looting for passwords
 
 #### Files containing passwords

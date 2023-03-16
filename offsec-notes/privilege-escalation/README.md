@@ -16,30 +16,6 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 
 ```
 
-### **Enumerating Networking Information**
-
-```
-# windows
-ipconfig /all # to display the full TCP/IP configuration of all adapters
-route print # To display the networking routing tables
-netstat -ano # to view the active network connections
-
-
-```
-
-### **Enumerating Firewall Status and Rules**
-
-```
-# windows
-netsh advfirewall show currentprofile
-netsh advfirewall firewall show rule name=all
-
-# linux
-grep -Hs iptables /etc/*
-```
-
-****
-
 ### **Enumerating Installed Applications and Patch Levels**
 
 ```

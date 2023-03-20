@@ -27,6 +27,7 @@
   * [Exploitation](offsec-notes/exploitation/README.md)
     * [Redis](offsec-notes/exploitation/redis.md)
     * [Pwnkit](offsec-notes/exploitation/pwnkit.md)
+    * [Page 1](offsec-notes/exploitation/page-1.md)
     * [Juicy Potato](offsec-notes/exploitation/juicy-potato.md)
     * [PrintSpoofer](offsec-notes/exploitation/printspoofer.md)
     * [SMBGhost](offsec-notes/exploitation/smbghost.md)

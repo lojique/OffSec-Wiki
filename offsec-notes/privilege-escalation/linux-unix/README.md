@@ -1050,7 +1050,7 @@ lscpu
 
 Copy the kernel version and distribution, and search for it in google or in [https://www.exploit-db.com/](https://www.exploit-db.com/).
 
-#### CVE-2022-0847 (DirtyPipe)
+### CVE-2022-0847 (DirtyPipe)
 
 Linux Privilege Escalation - Linux Kernel 5.8 < 5.16.11
 
@@ -1058,7 +1058,7 @@ Linux Privilege Escalation - Linux Kernel 5.8 < 5.16.11
 https://www.exploit-db.com/exploits/50808
 ```
 
-#### CVE-2016-5195 (DirtyCow)
+### CVE-2016-5195 (DirtyCow)
 
 Linux Privilege Escalation - Linux Kernel <= 3.19.0-73.8
 
@@ -1082,7 +1082,7 @@ https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs
 https://github.com/evait-security/ClickNRoot/blob/master/1/exploit.c
 ```
 
-#### CVE-2010-3904 (RDS)
+### CVE-2010-3904 (RDS)
 
 Linux RDS Exploit - Linux Kernel <= 2.6.36-rc8
 
@@ -1090,7 +1090,7 @@ Linux RDS Exploit - Linux Kernel <= 2.6.36-rc8
 https://www.exploit-db.com/exploits/15285/
 ```
 
-#### CVE-2010-4258 (Full Nelson)
+### CVE-2010-4258 (Full Nelson)
 
 Linux Kernel 2.6.37 (RedHat / Ubuntu 10.04)
 
@@ -1098,7 +1098,7 @@ Linux Kernel 2.6.37 (RedHat / Ubuntu 10.04)
 https://www.exploit-db.com/exploits/15704/
 ```
 
-#### CVE-2012-0056 (Mempodipper)
+### CVE-2012-0056 (Mempodipper)
 
 Linux Kernel 2.6.39 < 3.2.2 (Gentoo / Ubuntu x86/x64)
 
@@ -1110,6 +1110,10 @@ Linux Kernel 2.6.39 < 3.2.2 (Gentoo / Ubuntu x86/x64)
  gcc mempodipper.c -o mempodipper
  ./mempodipper
 ```
+
+### CVE-2022-2588
+
+{% embed url="https://github.com/Markakd/CVE-2022-2588" %}
 
 ## Credential Hunting
 

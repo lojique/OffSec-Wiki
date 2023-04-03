@@ -26,3 +26,14 @@ telnet 10.129.14.136 21
 # ftp server with TLS/SSL encryption
 openssl s_client -connect 10.129.14.136:21 -starttls ftp
 ```
+
+| **Setting**               | **Description**                                                                  |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `dirmessage_enable=YES`   | Show a message when they first enter a new directory?                            |
+| `chown_uploads=YES`       | Change ownership of anonymously uploaded files?                                  |
+| `chown_username=username` | User who is given ownership of anonymously uploaded files.                       |
+| `local_enable=YES`        | Enable local users to login?                                                     |
+| `chroot_local_user=YES`   | Place local users into their home directory?                                     |
+| `chroot_list_enable=YES`  | Use a list of local users that will be placed in their home directory?           |
+| `hide_ids=YES`            | All user and group information in directory listings will be displayed as "ftp". |
+| `ls_recurse_enable=YES`   | Allows the use of recurse listings.                                              |

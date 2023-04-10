@@ -13,7 +13,7 @@ coverY: 0
 
 My name is Adam
 
-I currently work as a Penetration Tester. My current interests seem to gravitate towards Web App Pentesting, Active Directory and Malware Development.
+I currently work as a Penetration Tester. My current interests seem to gravitate towards Active Directory and Malware Development.
 
 Outside of work I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning Italian and German. I also understand some of the Scandinavian languages.
 

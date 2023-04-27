@@ -1,5 +1,11 @@
 # Pivoting/Port Forwarding
 
+## SSH
+
+```
+ssh user@10.10.11.208 -L 3000:127.0.0.1:3000
+```
+
 ## Chisel
 
 ```python

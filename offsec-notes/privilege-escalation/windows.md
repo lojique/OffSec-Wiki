@@ -240,6 +240,7 @@ net start
 wmic service list brief
 sc query
 Get-Service
+tasklist /svc
 ```
 
 ### Permissions

@@ -27,7 +27,7 @@ cd <SHAREDD_FOLDER>
 ./bash -p #ROOT shell
 ```
 
-* **Mounting that directory** in a client machine, and **as root copying** inside the mounted folder our C compiled payload that will abuse the SUID permission, give to it **SUID** rights, and **execute from the victim** machine that binary (you can find here some[ C SUID payloads](../../../../linux-unix/linux-privilege-escalation/broken-reference/)).
+* **Mounting that directory** in a client machine, and **as root copying** inside the mounted folder our C compiled payload that will abuse the SUID permission, give to it **SUID** rights, and **execute from the victim** machine that binary (you can find here some[ C SUID payloads](../../../linux-unix/linux-privilege-escalation/broken-reference/)).
 
 ```bash
 #Attacker, as root user
@@ -50,4 +50,3 @@ cd <SHAREDD_FOLDER>
 [**https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/**](https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/)\
 [**https://www.hackingarticles.in/linux-privilege-escalation-using-misconfigured-nfs/**](https://www.hackingarticles.in/linux-privilege-escalation-using-misconfigured-nfs/)
 
-***

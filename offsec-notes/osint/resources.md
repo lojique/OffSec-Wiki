@@ -80,8 +80,7 @@ Another excellent way to find out information about our target domain is to use 
 
 Development platforms also offer excellent information resources for us here, as we will often find code that sometimes even provide information that is dangerous for the company. This information can range from `IP addresses` and `hostnames`, configuration files to `credentials`. These platforms include, but are not limited to:
 
-| [Github](https://github.com/) | [GitLab](https://gitlab.com/) | [Google Code](https://code.google.com/) | [Bitbucket](https://bitbucket.org/) |
-| ----------------------------- | ----------------------------- | --------------------------------------- | ----------------------------------- |
+<table data-header-hidden><thead><tr><th width="158"></th><th width="139"></th><th width="184"></th><th width="163"></th></tr></thead><tbody><tr><td><a href="https://github.com/">Github</a></td><td><a href="https://gitlab.com/">GitLab</a></td><td><a href="https://code.google.com/">Google Code</a></td><td><a href="https://bitbucket.org/">Bitbucket</a></td></tr></tbody></table>
 
 Another source that searches against many different developer platforms is [Searchcode](https://searchcode.com/). It searches all possible codes for terms that we specify in the search and shows us the sources accordingly
 
@@ -93,8 +92,7 @@ After we have identified and filtered out all the domains that belong to them, w
 
 we need to find out at least four components:
 
-| `1. Netblocks / CIDR` | `2. ASN` | `3. DNS Servers` | `4. Mail Servers` |
-| --------------------- | -------- | ---------------- | ----------------- |
+<table data-header-hidden><thead><tr><th width="241"></th><th width="101"></th><th width="177"></th><th></th></tr></thead><tbody><tr><td><code>1. Netblocks / CIDR</code></td><td><code>2. ASN</code></td><td><code>3. DNS Servers</code></td><td><code>4. Mail Servers</code></td></tr></tbody></table>
 
 1. **Netblocks / CIDR**
 

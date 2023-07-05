@@ -2,7 +2,7 @@
 
 ###
 
-### ****
+###
 
 ### **Enumerating Running Processes and Services**
 

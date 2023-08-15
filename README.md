@@ -2,9 +2,8 @@
 description: >-
   Welcome to my cyber security wiki! Here you'll find everything that I've
   learned and discovered.
-cover: >-
-  https://images.squarespace-cdn.com/content/v1/5b23e822f79392038cbd486c/1630849641470-JKHB2TRUIY3H0L01ACHS/33ae06d2f4f62bf0710791d257bd302f.gif
-coverY: 154
+cover: https://media.tenor.com/03AD88fsCT8AAAAC/anime-night-walk.gif
+coverY: -37
 layout:
   cover:
     visible: true

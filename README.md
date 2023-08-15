@@ -3,8 +3,22 @@ description: >-
   Welcome to my cyber security wiki! Here you'll find everything that I've
   learned and discovered.
 cover: >-
-  https://images.unsplash.com/photo-1500576992153-0271099def59?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHxoZWxsb3xlbnwwfHx8fDE2NTkyMTQ5NDg&ixlib=rb-1.2.1&q=80
-coverY: 0
+  https://images.squarespace-cdn.com/content/v1/5b23e822f79392038cbd486c/1630849641470-JKHB2TRUIY3H0L01ACHS/33ae06d2f4f62bf0710791d257bd302f.gif
+coverY: 203
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Welcome!

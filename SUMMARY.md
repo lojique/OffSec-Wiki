@@ -91,8 +91,16 @@
 
 ## Malware Development
 
+* [Terms and Definitions](malware-development/terms-and-definitions.md)
 * [Payloads](malware-development/payloads/README.md)
-  * [Windows](malware-development/payloads/windows.md)
+  * [Windows](malware-development/payloads/windows/README.md)
+    * [AMSI](malware-development/payloads/windows/amsi.md)
+    * [AV Evasion](malware-development/payloads/windows/av-evasion.md)
+    * [C#](malware-development/payloads/windows/c.md)
+    * [HTML Smuggling](malware-development/payloads/windows/html-smuggling.md)
+    * [JScript](malware-development/payloads/windows/jscript.md)
+    * [PowerShell](malware-development/payloads/windows/powershell.md)
+    * [UAC](malware-development/payloads/windows/uac.md)
 
 ## Walkthroughs
 

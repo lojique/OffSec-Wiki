@@ -15,11 +15,11 @@ My name is Adam
 
 I currently work as a Penetration Tester. My current interests seem to gravitate towards Active Directory and Malware Development.
 
-Outside of work I enjoy playing ice hockey, video games and learning languages. I speak English and Russian and I'm currently learning French and German. I also understand some of the Scandinavian languages.
+Outside of work I enjoy playing ice hockey, chess, video games and learning languages. I speak English and Russian and I'm currently learning French and German. I also understand some of the Scandinavian languages.
 
 I plan on using this book to document and store information that I deem worth saving and share it with others so that others can learn too
 
-It should be noted that a lot of **information is copy/pasted from other resources and that content belongs to the original writers/rightful owners**. I will try to keep that consistent where needed
+It should be noted that there will be **information copy/pasted from other resources and that content belongs to the original writers/rightful owners**. I will try to keep that consistent where needed.
 
 ## Connect with me!
 

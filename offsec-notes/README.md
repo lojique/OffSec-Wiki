@@ -1,2 +1,0 @@
-# OffSec Notes
-

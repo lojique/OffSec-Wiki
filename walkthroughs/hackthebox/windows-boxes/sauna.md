@@ -1,3 +1,3 @@
 # Sauna
 
-{% embed url="https://lojique.gitbook.io/hack-the-box/v/sauna" %}
+{% embed url="https://lojique-1.gitbook.io/hack-the-box/" %}

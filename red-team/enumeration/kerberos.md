@@ -1,4 +1,4 @@
-# 88/464 - Kerberos
+# Kerberos
 
 ## Kerbrute
 
@@ -9,7 +9,7 @@
 ./kerbrute userenum userlist.txt -d spookysec.local --dc 10.10.70.25
 ```
 
-![](<../../.gitbook/assets/image (32) (2) (1).png>)
+![](<../../.gitbook/assets/image (220).png>)
 
 ```
 # validate users and grabbing TGTs if NO PREAUTH is present

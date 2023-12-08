@@ -89,51 +89,51 @@ Host: www.example.site
 
 * enumerate available methods or verbs
 
-![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (93).png>)
 
 ### Exploiting DELETE
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (275).png>)
 
-![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (3).png>)
+![Logging in becomes impossible for every user](<../../../../.gitbook/assets/image (474).png>)
 
 ### Exploiting PUT
 
 * you have to know the size of the file you want to upload on the server
 
-![](<../../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (257).png>)
 
 * You can then use the size you got to build the PUT message
   * Example: Upload a page displaying info about the PHP installation on a server
 
-![](<../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (385).png>)
 
 ### Uploading a PHP Shell with PUT
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (632).png>)
 
 * This can be used by passing our commands via the cmd GET parameter
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (371).png>)
 
 * The shell has the same permissions of the web server it runs on.
 * For example, we can write a file
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (47).png>)
 
 * We can also read it
 
-![](<../../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (504).png>)
 
 * And we can even read a system file
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (225).png>)
 
 {% hint style="warning" %}
 Remember that PUT requires that we pass the content length. So we have to know the shell size
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (48).png>)
 
 * We can then build a valid PUT request
 

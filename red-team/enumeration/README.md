@@ -24,14 +24,14 @@ fping -asgq 172.16.5.0/23
 
 
 
-      <figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (535).png" alt=""><figcaption></figcaption></figure>
   *   {% code title="filter by unique subdomains" overflow="wrap" %}
       ```shell-session
       curl -s https://crt.sh/\?q\=inlanefreight.com\&output\=json | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\n/,"\n");}1;' | sort -u
       ```
       {% endcode %}
 
-      <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
   *   {% code title="identify company hosted servers" overflow="wrap" %}
       ```shell-session
       for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
@@ -40,7 +40,7 @@ fping -asgq 172.16.5.0/23
 
 
 
-      <figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (302).png" alt=""><figcaption></figcaption></figure>
 
 #### Shodan
 
@@ -50,7 +50,7 @@ fping -asgq 172.16.5.0/23
 
 
 
-    <figure><img src="../../.gitbook/assets/image (32) (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
 
 #### dig | DNS Records
 
@@ -58,7 +58,7 @@ fping -asgq 172.16.5.0/23
 dig any inlanefreight.com
 ```
 
-<figure><img src="../../.gitbook/assets/image (20) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (487).png" alt=""><figcaption></figcaption></figure>
 
 ### Cloud Resources
 

@@ -17,20 +17,20 @@ zeek -Cr 0.pcap
 less -S fileName.log
 ```
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (590).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption><p>By default zeek hides passwords</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (336).png" alt=""><figcaption><p>By default zeek hides passwords</p></figcaption></figure>
 
 ```bash
 # Changing the Zeek FTP Configuration to show passwords
 sudo nano /usr/share/zeek/base/protocols/ftp/info.zeek
 ```
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (328).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 zeek -Cr 0.pcap
 less -S fileName.log
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (529).png" alt=""><figcaption></figcaption></figure>

@@ -42,11 +42,11 @@ The command I ran to find the password for student was:
 hydra -l student -P /usr/share/wordlists/rockyou.txt demo.ine.local ssh -f
 ```
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (453).png>)
 
 Here's confirmation that it works
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (127).png>)
 
 [This](https://linuxconfig.org/ssh-password-testing-with-hydra-on-kali-linux) can help with using Hydra for ssh
 
@@ -66,7 +66,7 @@ nmap -p22 --script=ssh-brute --script-args userdb=users.lst,passdb=/usr/share/nm
 
 Now we verify the credentials
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (384).png>)
 
 ### Metasploit
 
@@ -78,10 +78,10 @@ Then type: `use auxiliary/scanner/ssh/ssh_login`
 
 View options with "show options" and set the ones we need as such:
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (229).png>)
 
 Now type run and enter
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (350).png>)
 
 As you can see, the password for root is attack and we're given a session that we can interact with using `sessions -i <id number>` and verify that we are indeed root

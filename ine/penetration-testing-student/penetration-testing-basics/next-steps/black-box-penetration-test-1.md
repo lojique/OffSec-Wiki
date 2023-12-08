@@ -24,7 +24,7 @@ The best tools for this lab are:
 
 My IP: 192.104.6.2
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (544).png>)
 
 ## Footprinting & Scanning
 
@@ -101,7 +101,7 @@ Web Server IP: 192.104.6.3
 
 Going to the website (demo.ine.local), it seems to be the way to get a foothold into the web server due to the fact that it's running v-cms v1.0
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (142).png>)
 
 We'll go ahead and fire up metasploit and search for available exploits
 
@@ -109,7 +109,7 @@ We'll go ahead and fire up metasploit and search for available exploits
 
 The second option makes the most sense
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (435).png>)
 
 We should read information about the exploit so we understand what's happening
 
@@ -123,15 +123,15 @@ Description:
 
 Now we'll configure the options as such
 
-![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (618).png>)
 
 After typing run (or exploit), we get ourselves a meterpreter session!
 
-![](<../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (154).png>)
 
 Let's see what user we are
 
-![](<../../../../.gitbook/assets/image (38) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (89).png>)
 
 Wow we're root!
 
@@ -139,7 +139,7 @@ Wow we're root!
 
 We can try to retrieve the first flag. The first place I would check is root's home directory
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (440).png>)
 
 Now that we've gotten the first flag, we need to do the second part, which is find the other machine in the setup which is not accessible from the Kali machine but is accessible from the web server
 
@@ -153,11 +153,11 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 bash
 ```
 
-![](<../../../../.gitbook/assets/image (8) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1).png>)
 
 Here is the network that we couldn't reach: `192.57.96.2`
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (585).png>)
 
 To get back to our meterpreter shell, we'll enter in "exit" 3 times
 
@@ -176,7 +176,7 @@ run autoroute -s 192.57.96.0/24
 run autoroute -p
 ```
 
-![](<../../../../.gitbook/assets/image (36) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (253).png>)
 
 ### Port Scan
 
@@ -188,7 +188,7 @@ use auxiliary/scanner/portscan/tcp
 show options
 ```
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (130).png>)
 
 I don't expect anything wild so I'll just check for a few initial hosts
 
@@ -200,7 +200,7 @@ run
 
 As we can see ports 21 and 22 are open
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (299).png>)
 
 Now for port forwarding
 
@@ -215,13 +215,13 @@ sessions -i 3
 portfwd add -l 4242 -p 21 -r 192.57.96.3
 ```
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (489).png>)
 
 ## Scanning Second Target
 
 Now we need to run an nmap scan to gather more information about this new target
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (565).png>)
 
 So we see here that this machine is running OpenSSH 6.6.1p1 (SSH) and vsftpd 2.0.8 or later (FTP)
 
@@ -229,11 +229,11 @@ So we see here that this machine is running OpenSSH 6.6.1p1 (SSH) and vsftpd 2.0
 
 While searching for exploits, it becomes obvious we need the vsftpd exploit
 
-![](<../../../../.gitbook/assets/image (12) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (261).png>)
 
 Now we'll set up the payload and run it
 
-![](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (260).png>)
 
 Awesome, we got on the other machine!
 
@@ -241,6 +241,6 @@ Awesome, we got on the other machine!
 
 Now let's get that last flag
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (77).png>)
 
 We have successfully exploited both machines and retrieved both flags!

@@ -24,7 +24,7 @@ Nmap can be used to check for potential SMB relay targets.&#x20;
 sudo nmap --script=smb2-security-mode.nse -p 445 192.168.183.0/24 -Pn --open
 ```
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (578).png" alt=""><figcaption></figcaption></figure>
 
 As we can see, the two Windows 10 hosts have 'Message signing enabled but not required' meaning we can perform a SMB relay attack as signing is not required.
 
@@ -39,7 +39,7 @@ We will be capturing a hash on WS01 using LLMNR Poisoning and performing a SMB r
 
 As per the prerequisites the user account hash we will be capturing (MARVEL\fcastle) is a member of the local administrators group on the machine we will be relaying to WS02.
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (319).png" alt=""><figcaption></figcaption></figure>
 
 ## How to perform the attack
 
@@ -47,7 +47,7 @@ As per the prerequisites the user account hash we will be capturing (MARVEL\fcas
 
 Ideally we will use `Responder` for this attack which comes preinstalled on Kali Linux. Before we start `Responder` we need to make a small change to the configuration file.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (589).png" alt=""><figcaption></figcaption></figure>
 
 We need to turn off SMB and HTTP servers as we do not want to respond to these protocols as we will be capturing the hash and relaying it to a different tool called `ntlmrelayx.py` from Impacket.
 
@@ -73,7 +73,7 @@ ntlmrelayx.py then forwards the hash over to the machines specified with the `-t
 
 As the user 'fcastle' is an administrator on WS02, `ntlmrelayx.py` has allowed us to dump the hashes in the SAM database.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (549).png" alt=""><figcaption></figcaption></figure>
 
 We can then take these hashes and crack them or we can even attempt a pass-the-hash attack and attempt to gain a shell with the NTLMv2 hash on a different machine on the network.
 
@@ -89,7 +89,7 @@ sudo impacket-ntlmrelayx -tf targets.txt -smb2support -i
 
 When we get a successful authentication message in ntlmrelayx.py we will need to open a netcat bind shell on the localhost and port specified in the ntlmrelayx.py output.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (566).png" alt=""><figcaption></figcaption></figure>
 
 Start netcat with a localhost address and the port specified in the output above.
 
@@ -97,9 +97,9 @@ Start netcat with a localhost address and the port specified in the output above
 nc 127.0.0.1 <port>
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (381).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (554).png" alt=""><figcaption></figcaption></figure>
 
 ## Resource
 

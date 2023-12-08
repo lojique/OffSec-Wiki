@@ -6,7 +6,7 @@ Network Basic Input Output System
 
 Servers and clients use NetBIOS when viewing network shares on the local area network
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (391).png>)
 
 NetBIOS can supply some of the following information when querying a computer:
 
@@ -15,7 +15,7 @@ NetBIOS can supply some of the following information when querying a computer:
 * Domain
 * Network shares
 
-![Structure of NetBIOS](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
+![Structure of NetBIOS](<../../../../.gitbook/assets/image (392).png>)
 
 The NetBIOS layer sits between the application layer and the IP layer
 

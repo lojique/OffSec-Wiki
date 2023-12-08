@@ -2,7 +2,7 @@
 
 Most web apps use some kind of backend database to store the data they process. To interact with it, Structured Query Language (SQL) is used.
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (120).png>)
 
 SQLi attacks allow an unauthorized user to take control over SQL statements used by a web app
 
@@ -58,7 +58,7 @@ select field from table; -- this is another comment
 
 ### SELECT Example
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (412).png>)
 
 These two queries provide the same result
 
@@ -67,7 +67,7 @@ select Name, Description from products where ID='1';
 select Name, Description from products where Name='Shoes';
 ```
 
-![](<../../../../.gitbook/assets/image (4) (1) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (422).png>)
 
 ### UNION Example
 
@@ -77,7 +77,7 @@ This is a UNION example between two SELECT statements:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT Username, Password FROM Accounts;
 ```
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (30).png>)
 
 You can also perform a UNION with some chosen data:
 
@@ -85,7 +85,7 @@ You can also perform a UNION with some chosen data:
 SELECT name, Description FROM Products WHERE ID='3' UNION SELECT 'Example', 'Data';
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (482).png>)
 
 ## SQL Queries Inside Web Apps
 
@@ -99,7 +99,7 @@ In order to do the same thing from within a web app, the web app must
 
 PHP example code of a connection to a MySQL database and execution of a static query
 
-![](<../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (424).png>)
 
 ## Vulnerable Dynamic Queries
 
@@ -107,7 +107,7 @@ Most of the time, queries are not static like in the example above, but rather d
 
 Here's an example of a vulnerable dynamic query
 
-![](<../../../../.gitbook/assets/image (24) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (354).png>)
 
 As you can see, the code uses user-supplied input to build a query (the id parameter of the GET request) and then submits it to the database
 
@@ -157,23 +157,23 @@ Testing an input for SQLi means trying to inject:
 
 ### Example
 
-![](<../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (541).png>)
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (399).png>)
 
 Taking note of the **id** GET parameter, since this is a user input, we can test it to verify if it is vulnerable
 
 We see that id is an injection point
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (76).png>)
 
 ## Boolean Based SQLi
 
 You want to transform a query in a True/False condition, which reflects its state to the web app output
 
-![always true condition](<../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![always true condition](<../../../../.gitbook/assets/image (547).png>)
 
-![always false condition](<../../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![always false condition](<../../../../.gitbook/assets/image (604).png>)
 
 Since there is no image or view counter, this is clearly an exploitable SQL injection
 
@@ -189,7 +189,7 @@ If our payload makes the results of the original query empty, then we can have t
 SELECT description FROM item WHERE id='' UNION SELECT user(); -- -';
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (512).png>)
 
 The comment tells MySQL to ignore everything that will be added right after. This is because we don't want the web application to add other strings to our query
 
@@ -199,29 +199,29 @@ The reason for the third dash is because most browsers automatically remove trai
 
 You first need to know how many fields the vulnerable query selects
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (409).png>)
 
 We know the injection is here, but we get an error which means the number of fields of the original query and our payload do not match
 
 Trying with two fields seems to work
 
-![](<../../../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (347).png>)
 
 Trying with three fields verifies if the original query just has two fields
 
-![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (596).png>)
 
 Once we know how many fields are in the query, we can test which fields are part of the output page
 
 We'll inject some known values and checking the results
 
-![](<../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (262).png>)
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (170).png>)
 
 Now we can exploit the injection. As an example, we'll query for user()
 
-![](<../../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (609).png>)
 
 ### Avoiding SQL Disaster
 

@@ -73,7 +73,7 @@ To retrieve information about the exploited machine: name, OS, architecture, sys
 sysinfo
 ```
 
-![](<../../../../.gitbook/assets/image (28) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (376).png>)
 
 ### Network configuration
 
@@ -83,7 +83,7 @@ To print the network configuration:
 ifconfig
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (196).png>)
 
 ### Routing information
 
@@ -91,7 +91,7 @@ ifconfig
 route
 ```
 
-![](<../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (218).png>)
 
 ### Current User
 
@@ -99,7 +99,7 @@ route
 getuid
 ```
 
-![](<../../../../.gitbook/assets/image (31) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (92).png>)
 
 ### Privilege Escalation
 
@@ -109,7 +109,7 @@ To just current privileges on Windows
 run post/windows/gather/win_privs
 ```
 
-![](<../../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (545).png>)
 
 You can use `getsystem` if the owner of the process does not have high privileges on the victim system
 
@@ -117,7 +117,7 @@ You can use `getsystem` if the owner of the process does not have high privilege
 getsystem
 ```
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (468).png>)
 
 ### Bypassing UAC
 
@@ -125,7 +125,7 @@ getsystem
 In modern Windows operating systems, the User Account Control policy prevent privilege escalation
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (25) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (443).png>)
 
 You can bypass that restriction by u sing the `bypassuac` module
 
@@ -141,7 +141,7 @@ set session <id>
 
 Launch the exploit to get a new Meterpreter session with the UAC policy disabled and use `getsystem`
 
-![](<../../../../.gitbook/assets/image (10) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (6).png>)
 
 ## Staying Stealthy
 
@@ -151,7 +151,7 @@ As you can imagine, this process name is not very stealthy and is also suspiciou
 
 A user checking their process list may notice something strange on their machine
 
-![](<../../../../.gitbook/assets/image (35) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (436).png>)
 
 Therefore, in order to remain stealthy, we can use the `migrate` command to attach our session on a different process
 
@@ -170,17 +170,17 @@ set session <id>
 exploit
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (410).png>)
 
 ## Exploring the Victim System
 
 You can navigate the hard drive by using Unix-like shell commands
 
-![](<../../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (597).png>)
 
 ## Uploading and Downloading
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (352).png>)
 
 ## Running an OS Shell
 
@@ -190,4 +190,4 @@ You can run a standard OS shell
 shell
 ```
 
-![](<../../../../.gitbook/assets/image (26) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (114).png>)

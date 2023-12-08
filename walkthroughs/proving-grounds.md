@@ -55,7 +55,7 @@
 * [x] [Wombo](https://lojique.gitbook.io/proving-grounds-1/v/wombo/)
 * [x] [Sorcerer](https://lojique.gitbook.io/proving-grounds-1/v/sorcerer/)
 * [x] [Wheels](https://lojique.gitbook.io/proving-grounds-1/v/wheels/)
-* [x] [Malbec](https://lojique.gitbook.io/proving-grounds-1/v/malbec/)
-* [x] [XposedAPI](https://lojique.gitbook.io/proving-grounds/v/xposedapi/)
+* [x] [Malbec](https://app.gitbook.com/o/j3a0JpqheQc5XzA8hkQw/s/Kp7hZW79TnLMSA4uq3Xx/)
+* [x] [XposedAPI](https://app.gitbook.com/o/j3a0JpqheQc5XzA8hkQw/s/gHhgx9njrnMQYmNJqXaG/)
 
 </details>

